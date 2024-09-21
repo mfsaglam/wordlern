@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1217AB132C9F3E9900D167A0 /* LeitnerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1217AB122C9F3E9900D167A0 /* LeitnerSwift */; };
 		127FAFEC2C9CC7750015F742 /* thousandApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FAFEB2C9CC7750015F742 /* thousandApp.swift */; };
 		127FAFEE2C9CC7750015F742 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FAFED2C9CC7750015F742 /* ContentView.swift */; };
 		127FAFF02C9CC7770015F742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127FAFEF2C9CC7770015F742 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1217AB132C9F3E9900D167A0 /* LeitnerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +73,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1217AB112C9F3E9900D167A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		127FAFDF2C9CC7750015F742 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +87,7 @@
 				127FAFFB2C9CC7770015F742 /* thousandTests */,
 				127FB0052C9CC7770015F742 /* thousandUITests */,
 				127FAFE92C9CC7750015F742 /* Products */,
+				1217AB112C9F3E9900D167A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +153,9 @@
 			dependencies = (
 			);
 			name = thousand;
+			packageProductDependencies = (
+				1217AB122C9F3E9900D167A0 /* LeitnerSwift */,
+			);
 			productName = thousand;
 			productReference = 127FAFE82C9CC7750015F742 /* thousand.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 127FAFDF2C9CC7750015F742;
+			packageReferences = (
+				1217AB102C9F3E8500D167A0 /* XCRemoteSwiftPackageReference "LeitnerSwift" */,
+			);
 			productRefGroup = 127FAFE92C9CC7750015F742 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -588,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1217AB102C9F3E8500D167A0 /* XCRemoteSwiftPackageReference "LeitnerSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mfsaglam/LeitnerSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1217AB122C9F3E9900D167A0 /* LeitnerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1217AB102C9F3E8500D167A0 /* XCRemoteSwiftPackageReference "LeitnerSwift" */;
+			productName = LeitnerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 127FAFE02C9CC7750015F742 /* Project object */;
 }

@@ -1,0 +1,15 @@
+{
+  "originHash" : "62e0c0ae638f2f745dcc20958b383a94cf2a4cbd098cd35b123ec4f0f5892c48",
+  "pins" : [
+    {
+      "identity" : "leitnerswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mfsaglam/LeitnerSwift",
+      "state" : {
+        "revision" : "f91f83409df0d929b7538067b4eb30d38d4240a1",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}
