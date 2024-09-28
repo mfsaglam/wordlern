@@ -10,19 +10,27 @@ import LeitnerSwift
 
 import Foundation
 
+protocol CacheService { }
+protocol LeitnerSystemProtocol { 
+    func updateCard(_ card: Card, correct: Bool)
+    func dueForReview(limit: Int) -> [Card]
+    func loadBoxes(boxes: [Box])
+}
+
 class WordViewModel: ObservableObject {
     @Published var currentCard: Card?  // The current card to display
     @Published var showMeaning: Bool = false  // Controls whether the word meaning is visible
-    @Published var isEmpty: Bool = false  // Indicates if there are no more cards in the set
 
-    private var leitnerSystem: LeitnerSystem
-    private var cardSet: [Card] = []
+    private var leitnerSystem: LeitnerSystemProtocol
+    private(set) var cardSet: [Card] = []
     private var currentIndex: Int = 0
-    private let cacheKey = "userProgress"
+    private let cacheService: CacheService
 
-    init(leitnerSystem: LeitnerSystem) {
+    init(cacheService: CacheService, leitnerSystem: LeitnerSystemProtocol) {
+        self.cacheService = cacheService
         self.leitnerSystem = leitnerSystem
         loadCachedProgress()
+        print("viewModel initialized")
     }
 
     func onAppear() {
@@ -36,19 +44,17 @@ class WordViewModel: ObservableObject {
     // Fetches the first set of cards from the Leitner system
     private func fetchFirstSet() {
         let dueCards = leitnerSystem.dueForReview(limit: 10)
-        if dueCards.isEmpty {
-            isEmpty = true
-        } else {
-            cardSet = dueCards
-            currentIndex = 0
-            loadNextCard()
-        }
+        print(dueCards)
+        
+        cardSet = dueCards
+        currentIndex = 0
+        loadNextCard()
     }
 
     // Loads the next card in the set
     private func loadNextCard() {
         guard currentIndex < cardSet.count else {
-            isEmpty = true
+            cardSet.removeAll()
             return
         }
         currentCard = cardSet[currentIndex]
@@ -63,8 +69,7 @@ class WordViewModel: ObservableObject {
     // Handles marking a card as correct or incorrect
     func markCard(correct: Bool) {
         guard let card = currentCard else { return }
-        var updatedCard = card
-        leitnerSystem.updateCard(updatedCard, correct: correct)
+        leitnerSystem.updateCard(card, correct: correct)
         saveProgress()
 
         currentIndex += 1
@@ -82,9 +87,14 @@ class WordViewModel: ObservableObject {
     }
 }
 
+class AnyCacheService: CacheService { }
 
 struct ContentView: View {
-    @ObservedObject var viewModel = WordViewModel(leitnerSystem: LeitnerSystem())
+    @ObservedObject var viewModel: WordViewModel
+    
+    init(viewModel: WordViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         VStack {
@@ -130,8 +140,14 @@ struct ContentView: View {
         }
     }
 }
-
-#Preview {
-    ContentView()
-}
+//
+//#Preview {
+//    ContentView(viewModel: .forPreview())
+//}
+//
+//extension WordViewModel {
+//    static func forPreview() -> WordViewModel {
+//        .init(cacheService: AnyCacheService, leitnerSystem: LeitnerSystem())
+//    }
+//}
 
