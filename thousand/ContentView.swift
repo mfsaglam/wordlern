@@ -55,6 +55,7 @@ class WordViewModel: ObservableObject {
     private func loadNextCard() {
         guard currentIndex < cardSet.count else {
             cardSet.removeAll()
+            currentCard = nil
             return
         }
         currentCard = cardSet[currentIndex]
