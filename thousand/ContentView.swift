@@ -12,8 +12,9 @@ import Foundation
 
 protocol CacheService { }
 protocol LeitnerSystemProtocol { 
-    func updateCard(_ card: Card, correct: Bool)
-    func dueForReview(limit: Int) -> [Card]
+    var cardCountsPerBox: [Int] { get }
+    func updateCard(_ card: Card, correct: Bool) throws
+    func dueForReview(limit: Int) throws -> [Card]
     func loadBoxes(boxes: [Box])
 }
 
@@ -43,11 +44,16 @@ class WordViewModel: ObservableObject {
 
     // Fetches the next set of cards from the Leitner system
     func fetchNextSet() {
-        let dueCards = leitnerSystem.dueForReview(limit: 10)
-        
-        cardSet = dueCards
-        currentIndex = 0
-        loadNextCard()
+        do {
+            let dueCards = try leitnerSystem.dueForReview(limit: 10)
+            (print(dueCards.count))
+            
+            cardSet = dueCards
+            currentIndex = 0
+            loadNextCard()
+        } catch {
+            print(error)
+        }
     }
 
     // Loads the next card in the set
@@ -69,11 +75,16 @@ class WordViewModel: ObservableObject {
     // Handles marking a card as correct or incorrect
     func markCard(correct: Bool) {
         guard let card = currentCard else { return }
-        leitnerSystem.updateCard(card, correct: correct)
-        saveProgress()
-
-        currentIndex += 1
-        loadNextCard()
+        do {
+            try leitnerSystem.updateCard(card, correct: correct)
+            print("------------\(leitnerSystem.cardCountsPerBox)")
+            saveProgress()
+            
+            currentIndex += 1
+            loadNextCard()
+        } catch {
+            print(error)
+        }
     }
 
     // Caches user progress
