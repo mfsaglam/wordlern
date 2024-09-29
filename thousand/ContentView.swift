@@ -35,16 +35,15 @@ class WordViewModel: ObservableObject {
 
     func onAppear() {
         if cardSet.isEmpty {
-            fetchFirstSet()
+            fetchNextSet()
         } else {
             loadNextCard()
         }
     }
 
-    // Fetches the first set of cards from the Leitner system
-    private func fetchFirstSet() {
+    // Fetches the next set of cards from the Leitner system
+    func fetchNextSet() {
         let dueCards = leitnerSystem.dueForReview(limit: 10)
-        print(dueCards)
         
         cardSet = dueCards
         currentIndex = 0
@@ -133,7 +132,16 @@ struct ContentView: View {
                     .cornerRadius(10)
                 }
             } else {
-                Text("No words to review.")
+                VStack {
+                    Text("No words to review.")
+                    Button("Load next set of cards") {
+                        viewModel.fetchNextSet()
+                    }
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                }
             }
         }
         .onAppear {

@@ -36,13 +36,21 @@ struct thousandApp: App {
     
     func addAllGermanWords(to system: LeitnerSystem) {
         let germanWords = [
-            ("Haus", "House"),
-            ("Baum", "Tree"),
-            ("ich", "i"),
-            ("seine", "his"),
-            ("dass", "that"),
-            ("Er", "he"),
-            ("war", "was"),
+            ("1", "House"),
+            ("2", "Tree"),
+            ("3", "i"),
+            ("4", "his"),
+            ("5", "that"),
+            ("6", "he"),
+            ("7", "was"),
+            ("8", "was"),
+            ("9", "was"),
+            ("10", "was"),
+            ("11", "was"),
+            ("12", "was"),
+            ("13", "was"),
+            ("14", "was"),
+            ("15", "was"),
             // Add more words here
         ]
         
