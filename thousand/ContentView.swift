@@ -31,7 +31,6 @@ class WordViewModel: ObservableObject {
         self.cacheService = cacheService
         self.leitnerSystem = leitnerSystem
         loadCachedProgress()
-        print("viewModel initialized")
     }
 
     func onAppear() {
