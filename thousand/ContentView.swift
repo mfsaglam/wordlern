@@ -10,25 +10,25 @@ import LeitnerSwift
 
 import Foundation
 
-protocol CacheService { }
-protocol LeitnerSystemProtocol { 
-    var cardCountsPerBox: [Int] { get }
-    func updateCard(_ card: Card, correct: Bool) throws
-    func dueForReview(limit: Int) throws -> [Card]
-    func loadBoxes(boxes: [Box])
+protocol CardStore {
+    func saveBox(_ box: Box) throws
+    func fetchBoxes() -> [Box]
+    func fetchBox(byId id: String) -> Box?
+    func updateBox(_ box: Box) throws
+    func deleteBox(_ box: Box) throws
 }
 
 class WordViewModel: ObservableObject {
     @Published var currentCard: Card?  // The current card to display
     @Published var showMeaning: Bool = false  // Controls whether the word meaning is visible
 
-    private var leitnerSystem: LeitnerSystemProtocol
+    private var leitnerSystem: LeitnerSystem
     private(set) var cardSet: [Card] = []
     private var currentIndex: Int = 0
-    private let cacheService: CacheService
+    private let cardStore: CardStore
 
-    init(cacheService: CacheService, leitnerSystem: LeitnerSystemProtocol) {
-        self.cacheService = cacheService
+    init(cardStore: CardStore, leitnerSystem: LeitnerSystem) {
+        self.cardStore = cardStore
         self.leitnerSystem = leitnerSystem
         loadCachedProgress()
     }
@@ -88,16 +88,157 @@ class WordViewModel: ObservableObject {
 
     // Caches user progress
     private func saveProgress() {
+//        cardStore.saveBox(<#T##box: Box##Box#>)
         // Implement saving logic (e.g., UserDefaults, file storage)
     }
 
     // Loads cached progress if available
     private func loadCachedProgress() {
+//        cardStore.fetchBoxes()
         // Implement loading logic from cache
     }
 }
 
-class AnyCacheService: CacheService { }
+import RealmSwift
+
+// Realm model for Box
+class RealmBox: Object {
+    @Persisted(primaryKey: true) var id: String = UUID().uuidString // Primary key
+    @Persisted var cards = List<RealmCard>()
+    @Persisted var reviewInterval: TimeInterval = 0
+    @Persisted var lastReviewedDate: Date?
+    
+    convenience init(cards: [RealmCard], reviewInterval: TimeInterval, lastReviewedDate: Date?) {
+        self.init()
+        self.cards.append(objectsIn: cards)
+        self.reviewInterval = reviewInterval
+        self.lastReviewedDate = lastReviewedDate
+    }
+}
+
+class RealmCard: Object {
+    @Persisted(primaryKey: true) var id: String = ""
+    @Persisted var word: RealmWord? // Now it holds the RealmWord object
+    
+    convenience init(id: UUID, word: Word) {
+        self.init()
+        self.id = id.uuidString
+        self.word = RealmWord(word: word) // Convert Word to RealmWord
+    }
+}
+
+// Realm model for Word
+class RealmWord: Object {
+    @Persisted var word: String = ""
+    @Persisted var languageCode: String = ""
+    @Persisted var meaning: String = ""
+    @Persisted var exampleSentence: String?
+
+    convenience init(word: Word) {
+        self.init()
+        self.word = word.word
+        self.languageCode = word.languageCode
+        self.meaning = word.meaning
+        self.exampleSentence = word.exampleSentence
+    }
+
+    // Convert from RealmWord to Word
+    func toWord() -> Word {
+        return Word(
+            word: self.word,
+            languageCode: self.languageCode,
+            meaning: self.meaning,
+            exampleSentence: self.exampleSentence
+        )
+    }
+}
+
+// Convert RealmCard to Card
+extension RealmCard {
+    func toCard() -> Card {
+        return Card(
+            id: UUID(uuidString: self.id)!,
+            word: self.word!.toWord() // Convert RealmWord back to Word
+        )
+    }
+}
+
+// Convert Card to RealmCard
+extension Card {
+    func toRealmCard() -> RealmCard {
+        return RealmCard(id: self.id, word: self.word)
+    }
+}
+
+// Convert RealmBox to Box
+extension RealmBox {
+    func toBox() -> Box {
+        let cards = self.cards.map { $0.toCard() }
+        return Box(cards: cards, reviewInterval: self.reviewInterval, lastReviewedDate: self.lastReviewedDate)
+    }
+}
+
+// Convert Box to RealmBox
+extension Box {
+    func toRealmBox() -> RealmBox {
+        let realmCards = self.cards.map { $0.toRealmCard() }
+        return RealmBox(cards: realmCards, reviewInterval: self.reviewInterval, lastReviewedDate: self.lastReviewedDate)
+    }
+}
+
+
+class RealmCardStore: CardStore {
+    private let realm: Realm
+
+    init(realm: Realm = try! Realm()) {
+        self.realm = realm
+    }
+
+    // Create a new Box
+    func saveBox(_ box: Box) throws {
+        let realmBox = box.toRealmBox()
+        try realm.write {
+            realm.add(realmBox)
+        }
+    }
+
+    // Read all Boxes
+    func fetchBoxes() -> [Box] {
+        let realmBoxes = realm.objects(RealmBox.self)
+        return realmBoxes.map { $0.toBox() }
+    }
+
+    // Read a Box by ID (for single Box fetch)
+    func fetchBox(byId id: String) -> Box? {
+        if let realmBox = realm.object(ofType: RealmBox.self, forPrimaryKey: id) {
+            return realmBox.toBox()
+        }
+        return nil
+    }
+
+    // Update a Box
+    func updateBox(_ box: Box) throws {
+        let realmBox = box.toRealmBox()
+        try realm.write {
+            if let existingBox = realm.object(ofType: RealmBox.self, forPrimaryKey: realmBox.id) {
+                existingBox.cards.removeAll()
+                existingBox.cards.append(objectsIn: realmBox.cards)
+                existingBox.reviewInterval = box.reviewInterval
+                existingBox.lastReviewedDate = box.lastReviewedDate
+            }
+        }
+    }
+
+    // Delete a Box
+    func deleteBox(_ box: Box) throws {
+        let realmBox = box.toRealmBox()
+        try realm.write {
+            if let existingBox = realm.object(ofType: RealmBox.self, forPrimaryKey: realmBox.id) {
+                realm.delete(existingBox)
+            }
+        }
+    }
+}
 
 struct ContentView: View {
     @ObservedObject var viewModel: WordViewModel

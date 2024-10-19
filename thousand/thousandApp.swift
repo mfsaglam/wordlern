@@ -8,8 +8,6 @@
 import SwiftUI
 import LeitnerSwift
 
-extension LeitnerSystem: LeitnerSystemProtocol { }
-
 @main
 struct thousandApp: App {
     var body: some Scene {
