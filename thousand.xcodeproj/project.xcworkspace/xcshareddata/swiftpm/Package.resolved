@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mfsaglam/LeitnerSwift",
       "state" : {
-        "revision" : "f0dd7d56e07d7a80743be20fcc715d8c71c5e23f",
-        "version" : "1.3.7"
+        "revision" : "c3bed818f938c8f5f1340652a5c7a3394dae39fc",
+        "version" : "1.3.8"
       }
     },
     {
@@ -25,7 +25,7 @@
       "location" : "https://github.com/realm/realm-swift",
       "state" : {
         "branch" : "master",
-        "revision" : "2f7bd406b1893b820134fa231797ba5f00fb6c4a"
+        "revision" : "5553cfd1c789efdb3d6daf7f0cc0733cfe601846"
       }
     }
   ],

@@ -14,7 +14,7 @@ struct thousandApp: App {
         WindowGroup {
             ContentView(
                 viewModel: WordViewModel(
-                    cacheService: AnyCacheService(),
+                    cardStore: RealmCardStore(),
                     leitnerSystem: setupLeitnerSystem()
                 )
             )

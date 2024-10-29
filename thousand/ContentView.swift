@@ -11,7 +11,7 @@ import LeitnerSwift
 import Foundation
 
 protocol CardStore {
-    func saveBox(_ box: Box) throws
+    func saveBoxes(_ box: [Box]) throws
     func fetchBoxes() -> [Box]
     func fetchBox(byId id: String) -> Box?
     func updateBox(_ box: Box) throws
@@ -88,13 +88,14 @@ class WordViewModel: ObservableObject {
 
     // Caches user progress
     private func saveProgress() {
-//        cardStore.saveBox(<#T##box: Box##Box#>)
+        try! cardStore.saveBoxes(leitnerSystem.allBoxes)
         // Implement saving logic (e.g., UserDefaults, file storage)
     }
 
     // Loads cached progress if available
     private func loadCachedProgress() {
-//        cardStore.fetchBoxes()
+        let cached = cardStore.fetchBoxes()
+        leitnerSystem.loadBoxes(boxes: cached)
         // Implement loading logic from cache
     }
 }
@@ -104,8 +105,8 @@ import RealmSwift
 // Realm model for Box
 class RealmBox: Object {
     @Persisted(primaryKey: true) var id: String = UUID().uuidString // Primary key
-    @Persisted var cards = List<RealmCard>()
-    @Persisted var reviewInterval: TimeInterval = 0
+    @Persisted var cards: RealmSwift.List<RealmCard>
+    @Persisted var reviewInterval: TimeInterval
     @Persisted var lastReviewedDate: Date?
     
     convenience init(cards: [RealmCard], reviewInterval: TimeInterval, lastReviewedDate: Date?) {
@@ -117,7 +118,7 @@ class RealmBox: Object {
 }
 
 class RealmCard: Object {
-    @Persisted(primaryKey: true) var id: String = ""
+    @Persisted(primaryKey: true) var id: String
     @Persisted var word: RealmWord? // Now it holds the RealmWord object
     
     convenience init(id: UUID, word: Word) {
@@ -173,7 +174,7 @@ extension Card {
 // Convert RealmBox to Box
 extension RealmBox {
     func toBox() -> Box {
-        let cards = self.cards.map { $0.toCard() }
+        let cards: [Card] = self.cards.map { $0.toCard() }
         return Box(cards: cards, reviewInterval: self.reviewInterval, lastReviewedDate: self.lastReviewedDate)
     }
 }
@@ -194,11 +195,12 @@ class RealmCardStore: CardStore {
         self.realm = realm
     }
 
-    // Create a new Box
-    func saveBox(_ box: Box) throws {
-        let realmBox = box.toRealmBox()
+    // Save all boxes
+    func saveBoxes(_ boxes: [Box]) throws {
+        let realmBoxes = boxes.map { $0.toRealmBox() }
         try realm.write {
-            realm.add(realmBox)
+            realm.delete(realm.objects(RealmBox.self)) // Delete all existing RealmBox objects
+            realm.add(realmBoxes) // Add new RealmBox objects
         }
     }
 
