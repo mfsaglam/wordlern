@@ -95,8 +95,9 @@ class WordViewModel: ObservableObject {
     // Loads cached progress if available
     private func loadCachedProgress() {
         let cached = cardStore.fetchBoxes()
-        leitnerSystem.loadBoxes(boxes: cached)
-        // Implement loading logic from cache
+        if !cached.isEmpty {
+            leitnerSystem.loadBoxes(boxes: cached)
+        }
     }
 }
 
@@ -198,9 +199,12 @@ class RealmCardStore: CardStore {
     // Save all boxes
     func saveBoxes(_ boxes: [Box]) throws {
         let realmBoxes = boxes.map { $0.toRealmBox() }
+        
         try realm.write {
             realm.delete(realm.objects(RealmBox.self)) // Delete all existing RealmBox objects
-            realm.add(realmBoxes) // Add new RealmBox objects
+            for realmBox in realmBoxes {
+                realm.add(realmBox, update: .modified) // This will add new objects or update existing ones
+            }
         }
     }
 
