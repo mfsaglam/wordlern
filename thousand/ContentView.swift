@@ -40,6 +40,10 @@ class WordViewModel: ObservableObject {
             loadNextCard()
         }
     }
+    
+    var progress: [Int] {
+        leitnerSystem.cardCountsPerBox
+    }
 
     // Fetches the next set of cards from the Leitner system
     func fetchNextSet() {
@@ -248,6 +252,7 @@ class RealmCardStore: CardStore {
 
 struct ContentView: View {
     @ObservedObject var viewModel: WordViewModel
+    let boxLabels = ["Box 1", "Box 2", "Box 3", "Box 4", "Box 5"] // Labels for each box
     
     init(viewModel: WordViewModel) {
         self.viewModel = viewModel
@@ -298,6 +303,24 @@ struct ContentView: View {
                     .background(Color.blue)
                     .foregroundColor(.white)
                     .cornerRadius(10)
+                    
+                    VStack {
+                        ForEach(viewModel.progress.indices, id: \.self) { index in
+                            VStack(alignment: .leading) {
+                                Text(boxLabels[index])
+                                    .font(.headline)
+                                HStack {
+                                    Text("\(viewModel.progress[index]) cards")
+                                        .font(.subheadline)
+                                    Spacer()
+                                    ProgressView(value: Float(viewModel.progress[index]), total: 1000) // Adjust total if needed
+                                        .frame(width: 200) // Set desired width
+                                }
+                                .padding(.vertical, 5)
+                            }
+                        }
+                    }
+                    .padding()
                 }
             }
         }
