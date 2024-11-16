@@ -9,7 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel: WordViewModel
-    let boxLabels = ["Box 1", "Box 2", "Box 3", "Box 4", "Box 5"] // Labels for each box
+    let boxLabels = [
+        NSLocalizedString("Box 1", comment: ""),
+        NSLocalizedString("Box 2", comment: ""),
+        NSLocalizedString("Box 3", comment: ""),
+        NSLocalizedString("Box 4", comment: ""),
+        NSLocalizedString("Box 5", comment: "")
+    ] // Labels for each box
     
     init(viewModel: WordViewModel) {
         self.viewModel = viewModel
@@ -28,13 +34,13 @@ struct ContentView: View {
                         .padding()
                 }
                 
-                Button(viewModel.showMeaning ? "Hide Translation" : "Show Translation") {
+                Button(viewModel.showMeaning ? NSLocalizedString("Hide Translation", comment: "") : NSLocalizedString("Show Translation", comment: "")) {
                     viewModel.toggleMeaning()
                 }
                 .padding()
                 
                 HStack {
-                    Button("Correct") {
+                    Button(NSLocalizedString("Correct", comment: "")) {
                         viewModel.markCard(correct: true)
                     }
                     .padding()
@@ -42,7 +48,7 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .cornerRadius(10)
 
-                    Button("Incorrect") {
+                    Button(NSLocalizedString("Incorrect", comment: "")) {
                         viewModel.markCard(correct: false)
                     }
                     .padding()
@@ -52,8 +58,8 @@ struct ContentView: View {
                 }
             } else {
                 VStack {
-                    Text("No words to review.")
-                    Button("Load next set of cards") {
+                    Text(NSLocalizedString("No words to review.", comment: ""))
+                    Button(NSLocalizedString("Load next set of cards", comment: "")) {
                         viewModel.fetchNextSet()
                     }
                     .padding()
@@ -67,7 +73,7 @@ struct ContentView: View {
                                 Text(boxLabels[index])
                                     .font(.headline)
                                 HStack {
-                                    Text("\(viewModel.progress[index]) cards")
+                                    Text(NSLocalizedString("\(viewModel.progress[index]) cards", comment: ""))
                                         .font(.subheadline)
                                     Spacer()
                                     ProgressView(value: Float(viewModel.progress[index]), total: 1000)
