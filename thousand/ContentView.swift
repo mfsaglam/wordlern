@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct ContentView: View {
     @ObservedObject var viewModel: WordViewModel
@@ -21,12 +22,39 @@ struct ContentView: View {
         self.viewModel = viewModel
     }
     
+    @State private var synthesizer = AVSpeechSynthesizer()
+    
+    private func speakWord(_ word: String) {
+        let utterance = AVSpeechUtterance(string: word)
+        utterance.voice = AVSpeechSynthesisVoice(language: "de")
+        
+        // Set the rate to a slower value
+        utterance.rate = 0.3 // Lower values make it slower (range is from 0.0 to 1.0)
+        
+        // You can also adjust pitch or volume if needed
+        utterance.pitchMultiplier = 1.0  // Normal pitch (range: 0.5 to 2.0)
+        utterance.volume = 1.0  // Volume (range: 0.0 to 1.0)
+        
+        synthesizer.speak(utterance)
+    }
+    
     var body: some View {
         VStack {
             if let card = viewModel.currentCard {
-                Text(card.word.word)
-                    .font(.largeTitle)
-                    .padding()
+                HStack {
+                    Text(card.word.word)
+                        .font(.largeTitle)
+                        .padding()
+                    
+                    Button(action: {
+                        speakWord(card.word.word)
+                    }) {
+                        Image(systemName: "speaker.3.fill")
+                            .font(.title)
+                            .foregroundColor(.blue)
+                    }
+                    .padding(.leading, 10)
+                }
 
                 if viewModel.showMeaning {
                     Text(card.word.meaning)
