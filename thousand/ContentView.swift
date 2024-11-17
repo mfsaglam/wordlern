@@ -44,6 +44,7 @@ struct ContentView: View {
                 HStack {
                     Text(card.word.word)
                         .font(.largeTitle)
+                        .textSelection(.enabled)
                         .padding()
                     
                     Button(action: {
@@ -59,6 +60,7 @@ struct ContentView: View {
                 if viewModel.showMeaning {
                     Text(card.word.meaning)
                         .font(.title)
+                        .textSelection(.enabled)
                         .padding()
                 }
                 
