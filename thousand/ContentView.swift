@@ -44,6 +44,7 @@ struct ContentView: View {
                 HStack {
                     Text(card.word.word)
                         .font(.largeTitle)
+                        .bold()
                         .textSelection(.enabled)
                         .padding()
                     
