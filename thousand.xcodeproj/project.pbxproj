@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120AC5E52CEA1D540093E194 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 120AC5E42CEA1D540093E194 /* Localizable.xcstrings */; };
+		120AC5E72CEA230E0093E194 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = 120AC5E62CEA230E0093E194 /* words.json */; };
 		1217AB132C9F3E9900D167A0 /* LeitnerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1217AB122C9F3E9900D167A0 /* LeitnerSwift */; };
 		127FAFEC2C9CC7750015F742 /* thousandApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FAFEB2C9CC7750015F742 /* thousandApp.swift */; };
 		127FAFEE2C9CC7750015F742 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FAFED2C9CC7750015F742 /* ContentView.swift */; };
@@ -59,6 +61,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		120AC5E42CEA1D540093E194 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		120AC5E62CEA230E0093E194 /* words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 		127FAFE82C9CC7750015F742 /* thousand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thousand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		127FAFEB2C9CC7750015F742 /* thousandApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thousandApp.swift; sourceTree = "<group>"; };
 		127FAFED2C9CC7750015F742 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 				129C4C4B2CDF9B010071FB6D /* Card+Extension.swift */,
 				129C4C4D2CDF9B850071FB6D /* Box+Extension.swift */,
 				129C4C4F2CDF9BA60071FB6D /* RealmCardStore.swift */,
+				120AC5E42CEA1D540093E194 /* Localizable.xcstrings */,
+				120AC5E62CEA230E0093E194 /* words.json */,
 			);
 			path = thousand;
 			sourceTree = "<group>";
@@ -269,6 +275,18 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				ar,
+				cs,
+				nl,
+				da,
+				ru,
+				pl,
+				tr,
+				hi,
+				ko,
+				ja,
+				"pt-BR",
 			);
 			mainGroup = 127FAFDF2C9CC7750015F742;
 			packageReferences = (
@@ -292,7 +310,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				127FAFF32C9CC7770015F742 /* Preview Assets.xcassets in Resources */,
+				120AC5E72CEA230E0093E194 /* words.json in Resources */,
 				127FAFF02C9CC7770015F742 /* Assets.xcassets in Resources */,
+				120AC5E52CEA1D540093E194 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
