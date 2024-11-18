@@ -53,7 +53,7 @@ struct thousandApp: App {
     }
     
     func loadGermanWords() -> [(String, String)] {
-        guard let url = Bundle.main.url(forResource: "words", withExtension: "json") else {
+        guard let url = Bundle.main.url(forResource: "de", withExtension: "json") else {
             print("Error: JSON file not found.")
             return []
         }

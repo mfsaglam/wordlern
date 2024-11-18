@@ -26,21 +26,19 @@ struct ContentView: View {
     
     private func speakWord(_ word: String) {
         let utterance = AVSpeechUtterance(string: word)
-        utterance.voice = AVSpeechSynthesisVoice(language: "de")
-        
-        // Set the rate to a slower value
-        utterance.rate = 0.3 // Lower values make it slower (range is from 0.0 to 1.0)
-        
-        // You can also adjust pitch or volume if needed
-        utterance.pitchMultiplier = 1.0  // Normal pitch (range: 0.5 to 2.0)
-        utterance.volume = 1.0  // Volume (range: 0.0 to 1.0)
-        
+        if let highQualityVoice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.siri_female_de-DE_compact") {
+            utterance.voice = highQualityVoice
+        } else {
+            utterance.voice = AVSpeechSynthesisVoice(language: "de")
+        }
+        utterance.rate = 0.4
         synthesizer.speak(utterance)
     }
     
     var body: some View {
         VStack {
             if let card = viewModel.currentCard {
+                Spacer()
                 HStack {
                     Text(card.word.word)
                         .font(.largeTitle)
@@ -70,52 +68,35 @@ struct ContentView: View {
                 }
                 .padding()
                 
-                HStack {
-                    Button(LocalizedStringKey("Correct")) {
+                Spacer()
+                
+                HStack(spacing: 20) {
+                    Button(action: {
                         viewModel.markCard(correct: true)
+                    }) {
+                        Image(systemName: "checkmark")
+                            .font(.system(size: 24, weight: .bold))
+                            .foregroundColor(.white)
+                            .frame(width: 60, height: 60)
+                            .background(Circle().fill(Color.green))
                     }
-                    .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-
-                    Button(LocalizedStringKey("Incorrect")) {
+                    
+                    Button(action: {
                         viewModel.markCard(correct: false)
+                    }) {
+                        Image(systemName: "xmark")
+                            .font(.system(size: 24, weight: .bold))
+                            .foregroundColor(.white)
+                            .frame(width: 60, height: 60)
+                            .background(Circle().fill(Color.pink))
                     }
-                    .padding()
-                    .background(Color.red)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
                 }
             } else {
-                VStack {
-                    Text(LocalizedStringKey("No words to review."))
-                    Button(LocalizedStringKey("Load next set of cards")) {
+                BoxesOverview(
+                    boxLabels: boxLabels,
+                    progress: viewModel.progress) {
                         viewModel.fetchNextSet()
                     }
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    
-                    VStack {
-                        ForEach(viewModel.progress.indices, id: \.self) { index in
-                            VStack(alignment: .leading) {
-                                Text(boxLabels[index])
-                                    .font(.headline)
-                                HStack {
-                                    Text(LocalizedStringKey("\(viewModel.progress[index]) cards"))
-                                        .font(.subheadline)
-                                    Spacer()
-                                    ProgressView(value: Float(viewModel.progress[index]), total: 1000)
-                                        .frame(width: 200)
-                                }
-                                .padding(.vertical, 5)
-                            }
-                        }
-                    }
-                    .padding()
-                }
             }
         }
         .onAppear {
@@ -123,14 +104,8 @@ struct ContentView: View {
         }
     }
 }
-//
-//#Preview {
-//    ContentView(viewModel: .forPreview())
-//}
-//
-//extension WordViewModel {
-//    static func forPreview() -> WordViewModel {
-//        .init(cacheService: AnyCacheService, leitnerSystem: LeitnerSystem())
-//    }
-//}
+
+#Preview {
+    ContentView(viewModel: .forPreview())
+}
 

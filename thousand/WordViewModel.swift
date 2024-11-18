@@ -94,3 +94,49 @@ class WordViewModel: ObservableObject {
         }
     }
 }
+
+extension WordViewModel {
+    static func forPreview() -> WordViewModel {
+        .init(cardStore: AnyCardStore(), leitnerSystem: .forPreview())
+    }
+}
+
+class AnyCardStore: CardStore {
+    func saveBoxes(_ box: [Box]) throws {}
+    func fetchBoxes() -> [Box] {
+        [.forPreview()]
+    }
+    func fetchBox(byId id: String) -> Box? {
+        .forPreview()
+    }
+    func updateBox(_ box: Box) throws {}
+    func deleteBox(_ box: Box) throws {}
+}
+
+extension Box {
+    static func forPreview() -> Box {
+        .init(
+            cards: [.forPreview()],
+            reviewInterval: 1,
+            lastReviewedDate: nil
+        )
+    }
+}
+
+extension Card {
+    static func forPreview() -> Card {
+        .init(word: .forPreview())
+    }
+}
+
+extension Word {
+    static func forPreview() -> Word {
+        .init(word: "sample word", languageCode: "de", meaning: "sample meaning", exampleSentence: nil)
+    }
+}
+
+extension LeitnerSystem {
+    static func forPreview() -> LeitnerSystem {
+        .init()
+    }
+}
