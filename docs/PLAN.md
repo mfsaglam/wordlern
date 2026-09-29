@@ -8,7 +8,7 @@ bigger model, mechanical steps are not.
 
 | # | Branch | Step | Model | Status |
 |---|--------|------|-------|--------|
-| 01 | `step/01-card-screen` | Card screen redesign | opus | todo |
+| 01 | `step/01-card-screen` | Card screen redesign | opus | done |
 | 02 | `step/02-content-version` | `contentVersion` counter | sonnet | todo |
 | 03 | `step/03-word-source` | Pick a real German frequency list | opus | todo |
 | 04 | `step/04-dictionary-merge` | Merge frequency list with a dictionary | sonnet | todo |
