@@ -51,7 +51,10 @@ private struct UndoButton: View {
     let action: () -> Void
 
     var body: some View {
-        Button(action: action) {
+        Button {
+            Haptics.undo()
+            action()
+        } label: {
             Image(systemName: "arrow.uturn.backward")
                 .font(.system(size: 13, weight: .semibold))
                 .frame(width: 28, height: 28)

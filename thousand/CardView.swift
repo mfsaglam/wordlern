@@ -25,6 +25,9 @@ struct CardView: View {
     @State private var dragWidth: CGFloat = 0
     /// Set while the card flies off screen, so a second drag cannot answer twice.
     @State private var isLeaving = false
+    /// Whether the drag is currently far enough to answer, so the haptic fires
+    /// on the crossing rather than on every frame beyond it.
+    @State private var isArmed = false
 
     /// 0 at rest, 1 once the drag is far enough to commit.
     private var swipeProgress: CGFloat {
@@ -80,10 +83,20 @@ struct CardView: View {
         DragGesture(minimumDistance: 12)
             .onChanged { value in
                 guard onSwipe != nil, !isLeaving else { return }
+                if dragWidth == 0 {
+                    Haptics.prepareForDrag()
+                }
                 dragWidth = value.translation.width
+
+                let armed = abs(value.translation.width) >= commitDistance
+                if armed != isArmed {
+                    isArmed = armed
+                    Haptics.swipeArmingChanged()
+                }
             }
             .onEnded { value in
                 guard let onSwipe, !isLeaving else { return }
+                isArmed = false
                 if abs(value.translation.width) >= commitDistance {
                     flyOff(correct: value.translation.width > 0, then: onSwipe)
                 } else {
@@ -96,6 +109,9 @@ struct CardView: View {
 
     private func flyOff(correct: Bool, then onSwipe: @escaping (Bool) -> Void) {
         let duration = 0.22
+        // On release, not when the card lands: the tap has to belong to the
+        // finger's last moment of contact, or it feels like a separate event.
+        Haptics.answer(correct: correct)
         withAnimation(.easeOut(duration: duration)) {
             isLeaving = true
             dragWidth = correct ? 700 : -700

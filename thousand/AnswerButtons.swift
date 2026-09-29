@@ -13,9 +13,15 @@ struct AnswerButtons: View {
 
     var body: some View {
         HStack(spacing: 44) {
-            AnswerButton(symbol: "xmark", tint: .red) { onAnswer(false) }
-            AnswerButton(symbol: "checkmark", tint: .green) { onAnswer(true) }
+            AnswerButton(symbol: "xmark", tint: .red) { answer(false) }
+            AnswerButton(symbol: "checkmark", tint: .green) { answer(true) }
         }
+    }
+
+    /// The same tap the swipe gives, so the two ways of answering feel alike.
+    private func answer(_ correct: Bool) {
+        Haptics.answer(correct: correct)
+        onAnswer(correct)
     }
 }
 

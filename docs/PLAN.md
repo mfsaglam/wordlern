@@ -190,6 +190,13 @@ enough to read as a new card, too small to be a choreography. The answered card 
 transition at all: it is already off screen, and a fading exit gave it time to snap its drag
 offset back to centre — the old card visibly flashing in before the new one faded up.
 
+`Haptics` holds the four taps, primed generators so the first one of a drag is not late. One per
+thing the user did, at the moment they did it: a selection tick as the drag crosses the commit
+distance and again if it comes back under, then the answer on release — `.rigid` for correct,
+`.soft` for incorrect, told apart by texture rather than strength so neither is a reward or a
+reprimand. The ✓/✗ buttons give the same answer tap; undo gets a lighter one. Nothing fires on
+the new card's arrival: it lands 0.22s after the answer tap, and two taps per card is chatter.
+
 Undo is one level deep and lives only inside a session. `LeitnerSystem` has no reverse of
 `updateCard`, so `WordViewModel` snapshots `allBoxes` plus the session index before each answer
 and restores it through `loadBoxes`. The control is a small muted arrow left of the box badge,
