@@ -4,6 +4,9 @@
     "%lld cards" : {
 
     },
+    "box %lld" : {
+
+    },
     "Box 1" : {
 
     },
@@ -19,10 +22,13 @@
     "Box 5" : {
 
     },
-    "Hide Translation" : {
+    "in a sentence" : {
 
     },
-    "Show Translation" : {
+    "pronounce" : {
+
+    },
+    "tap the card to flip" : {
 
     }
   },

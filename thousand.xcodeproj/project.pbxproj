@@ -12,6 +12,12 @@
 		120AC5EC2CEADEDA0093E194 /* BoxesOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120AC5EB2CEADEDA0093E194 /* BoxesOverview.swift */; };
 		12DB01002CEADEDA0093E194 /* StoredModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DA01002CEADEDA0093E194 /* StoredModels.swift */; };
 		12DB01012CEADEDA0093E194 /* SwiftDataCardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DA01012CEADEDA0093E194 /* SwiftDataCardStore.swift */; };
+		12CB01002CEADEDA0093E194 /* SpeakerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA01002CEADEDA0093E194 /* SpeakerButton.swift */; };
+		12CB01012CEADEDA0093E194 /* SessionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA01012CEADEDA0093E194 /* SessionHeader.swift */; };
+		12CB01022CEADEDA0093E194 /* SentenceBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA01022CEADEDA0093E194 /* SentenceBox.swift */; };
+		12CB01032CEADEDA0093E194 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA01032CEADEDA0093E194 /* CardView.swift */; };
+		12CB01042CEADEDA0093E194 /* AnswerButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA01042CEADEDA0093E194 /* AnswerButtons.swift */; };
+		12CB01052CEADEDA0093E194 /* CardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA01052CEADEDA0093E194 /* CardScreen.swift */; };
 		1217AB132C9F3E9900D167A0 /* LeitnerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1217AB122C9F3E9900D167A0 /* LeitnerSwift */; };
 		127FAFEC2C9CC7750015F742 /* thousandApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FAFEB2C9CC7750015F742 /* thousandApp.swift */; };
 		127FAFEE2C9CC7750015F742 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FAFED2C9CC7750015F742 /* ContentView.swift */; };
@@ -61,6 +67,12 @@
 		120AC5EB2CEADEDA0093E194 /* BoxesOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxesOverview.swift; sourceTree = "<group>"; };
 		12DA01002CEADEDA0093E194 /* StoredModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredModels.swift; sourceTree = "<group>"; };
 		12DA01012CEADEDA0093E194 /* SwiftDataCardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataCardStore.swift; sourceTree = "<group>"; };
+		12CA01002CEADEDA0093E194 /* SpeakerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerButton.swift; sourceTree = "<group>"; };
+		12CA01012CEADEDA0093E194 /* SessionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHeader.swift; sourceTree = "<group>"; };
+		12CA01022CEADEDA0093E194 /* SentenceBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceBox.swift; sourceTree = "<group>"; };
+		12CA01032CEADEDA0093E194 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		12CA01042CEADEDA0093E194 /* AnswerButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtons.swift; sourceTree = "<group>"; };
+		12CA01052CEADEDA0093E194 /* CardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScreen.swift; sourceTree = "<group>"; };
 		127FAFE82C9CC7750015F742 /* thousand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thousand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		127FAFEB2C9CC7750015F742 /* thousandApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thousandApp.swift; sourceTree = "<group>"; };
 		127FAFED2C9CC7750015F742 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -144,6 +156,12 @@
 				120AC5EB2CEADEDA0093E194 /* BoxesOverview.swift */,
 				12DA01002CEADEDA0093E194 /* StoredModels.swift */,
 				12DA01012CEADEDA0093E194 /* SwiftDataCardStore.swift */,
+				12CA01002CEADEDA0093E194 /* SpeakerButton.swift */,
+				12CA01012CEADEDA0093E194 /* SessionHeader.swift */,
+				12CA01022CEADEDA0093E194 /* SentenceBox.swift */,
+				12CA01032CEADEDA0093E194 /* CardView.swift */,
+				12CA01042CEADEDA0093E194 /* AnswerButtons.swift */,
+				12CA01052CEADEDA0093E194 /* CardScreen.swift */,
 			);
 			path = thousand;
 			sourceTree = "<group>";
@@ -331,6 +349,12 @@
 				120AC5EC2CEADEDA0093E194 /* BoxesOverview.swift in Sources */,
 				12DB01002CEADEDA0093E194 /* StoredModels.swift in Sources */,
 				12DB01012CEADEDA0093E194 /* SwiftDataCardStore.swift in Sources */,
+				12CB01002CEADEDA0093E194 /* SpeakerButton.swift in Sources */,
+				12CB01012CEADEDA0093E194 /* SessionHeader.swift in Sources */,
+				12CB01022CEADEDA0093E194 /* SentenceBox.swift in Sources */,
+				12CB01032CEADEDA0093E194 /* CardView.swift in Sources */,
+				12CB01042CEADEDA0093E194 /* AnswerButtons.swift in Sources */,
+				12CB01052CEADEDA0093E194 /* CardScreen.swift in Sources */,
 				127FAFEC2C9CC7750015F742 /* thousandApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

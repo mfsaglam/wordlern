@@ -35,6 +35,24 @@ class WordViewModel: ObservableObject {
         leitnerSystem.cardCountsPerBox
     }
 
+    /// 1-based box the card on screen currently lives in, for the header badge.
+    var currentBoxNumber: Int? {
+        guard let currentCard else { return nil }
+        guard let index = leitnerSystem.allBoxes.firstIndex(where: { box in
+            box.cards.contains { $0.id == currentCard.id }
+        }) else { return nil }
+        return index + 1
+    }
+
+    /// 1-based position of the card on screen within the current session.
+    var sessionPosition: Int {
+        currentIndex + 1
+    }
+
+    var sessionTotal: Int {
+        cardSet.count
+    }
+
     // Fetches the next set of cards from the Leitner system
     func fetchNextSet() {
         do {
