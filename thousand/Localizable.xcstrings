@@ -30,6 +30,9 @@
     },
     "tap the card to flip" : {
 
+    },
+    "undo" : {
+
     }
   },
   "version" : "1.0"

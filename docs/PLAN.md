@@ -16,7 +16,7 @@ bigger model, mechanical steps are not.
 | 06 | `step/06-sentence-pilot` | Example sentence pilot (50 words) | opus | done |
 | 07 | `step/07-sentences` | Remaining example sentences | opus | done |
 | 08 | `step/08-swiftdata` | Replace Realm with SwiftData | opus | done |
-| 09 | `step/09-swipe-undo` | Swipe gesture + undo | opus | todo |
+| 09 | `step/09-swipe-undo` | Swipe gesture + undo | opus | done |
 | 10 | `step/10-summary-screen` | Summary screen redesign | opus | todo |
 | 11 | `step/11-session-end` | Session end screen | opus | todo |
 | 12 | `step/12-cleanup` | Cleanup | sonnet | todo |
@@ -177,6 +177,32 @@ calls them. See step 12.
 
 Add swipe as a shortcut on top of the ✓/✗ buttons: swipe toward ✓ is correct, toward ✗ is
 incorrect. The buttons stay. Ship undo in the same step — a mis-swipe must be recoverable.
+
+Done: `CardView` takes an optional `onSwipe`; a drag past 96pt flies the card off in 0.22s and
+answers, anything shorter springs back. While the finger is down the card carries the answer
+colour — a green or red border plus the matching ✓/✗ glyph, fading in with the distance. The
+✓/✗ buttons are untouched.
+
+The card is keyed on the card's id, because the usual flow is flip-then-swipe: without the key
+the next card inherits the previous card's flipped view and animates back to its front. With it
+every card is built fresh, front up. Its arrival is a fade from 96% scale over a ~0.3s spring —
+enough to read as a new card, too small to be a choreography. The answered card leaves with no
+transition at all: it is already off screen, and a fading exit gave it time to snap its drag
+offset back to centre — the old card visibly flashing in before the new one faded up.
+
+`Haptics` holds the four taps, primed generators so the first one of a drag is not late. One per
+thing the user did, at the moment they did it: a selection tick as the drag crosses the commit
+distance and again if it comes back under, then the answer on release — `.rigid` for correct,
+`.soft` for incorrect, told apart by texture rather than strength so neither is a reward or a
+reprimand. The ✓/✗ buttons give the same answer tap; undo gets a lighter one. Nothing fires on
+the new card's arrival: it lands 0.22s after the answer tap, and two taps per card is chatter.
+
+Undo is one level deep and lives only inside a session. `LeitnerSystem` has no reverse of
+`updateCard`, so `WordViewModel` snapshots `allBoxes` plus the session index before each answer
+and restores it through `loadBoxes`. The control is a small muted arrow left of the box badge,
+per the user's call — the ✓/✗ row stays exactly as `docs/DESIGN.md` specifies. It appears only
+when there is an answer to take back, and the last card of a session clears it, since finishing
+leaves the card screen.
 
 ## 10 — Summary screen redesign
 

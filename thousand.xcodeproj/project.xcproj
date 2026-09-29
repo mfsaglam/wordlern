@@ -59,6 +59,7 @@
         { "path": "CardView.swift", "target-membership": [ "thousand/compile-sources" ] },
         { "path": "AnswerButtons.swift", "target-membership": [ "thousand/compile-sources" ] },
         { "path": "CardScreen.swift", "target-membership": [ "thousand/compile-sources" ] },
+        { "path": "Haptics.swift", "target-membership": [ "thousand/compile-sources" ] },
       ],
     }, {
       "kind": "group",

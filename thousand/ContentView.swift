@@ -26,13 +26,16 @@ struct ContentView: View {
         Group {
             if let card = viewModel.currentCard {
                 CardScreen(
+                    cardID: card.id,
                     word: card.word,
                     boxNumber: viewModel.currentBoxNumber,
                     position: viewModel.sessionPosition,
                     total: viewModel.sessionTotal,
                     isFlipped: viewModel.showMeaning,
                     onFlip: { viewModel.toggleMeaning() },
-                    onAnswer: { viewModel.markCard(correct: $0) }
+                    onAnswer: { viewModel.markCard(correct: $0) },
+                    canUndo: viewModel.canUndo,
+                    onUndo: { viewModel.undoLastAnswer() }
                 )
             } else {
                 BoxesOverview(

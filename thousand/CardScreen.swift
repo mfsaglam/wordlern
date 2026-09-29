@@ -5,12 +5,17 @@
 //  Created by Fatih Sağlam on 29.09.2026.
 //
 
+import Foundation
 import LeitnerSwift
 import SwiftUI
 
 /// Screens 1 and 2 of `docs/DESIGN.md`: header and progress bar on top, the
 /// flippable card in the middle, ✗/✓ at the bottom.
 struct CardScreen: View {
+    /// Identity of the card on screen. It scopes the flip state to one card, so
+    /// the next card is built fresh, front up, instead of animating back from
+    /// the face the previous card was left on.
+    let cardID: UUID
     let word: Word
     let boxNumber: Int?
     let position: Int
@@ -18,17 +23,44 @@ struct CardScreen: View {
     let isFlipped: Bool
     let onFlip: () -> Void
     let onAnswer: (Bool) -> Void
+    var canUndo: Bool = false
+    var onUndo: () -> Void = {}
 
     var body: some View {
         VStack(spacing: 0) {
-            SessionHeader(boxNumber: boxNumber, position: position, total: total)
-                .padding(.horizontal, 24)
-                .padding(.top, 8)
+            SessionHeader(
+                boxNumber: boxNumber,
+                position: position,
+                total: total,
+                canUndo: canUndo,
+                onUndo: onUndo
+            )
+            .padding(.horizontal, 24)
+            .padding(.top, 8)
 
             Spacer(minLength: 24)
 
-            CardView(word: word, isFlipped: isFlipped, onTap: onFlip)
-                .padding(.horizontal, 20)
+            // The ZStack is what makes the arrival animation possible: it holds
+            // the stable `.animation` the id change is read against, and it lets
+            // the outgoing and incoming card overlap instead of briefly
+            // stacking and shoving the layout around.
+            ZStack {
+                CardView(word: word, isFlipped: isFlipped, onTap: onFlip, onSwipe: onAnswer)
+                    .id(cardID)
+                    // The answered card leaves without a transition. It has
+                    // already taken itself off screen under the swipe, and
+                    // keeping it around to fade would let it reappear: it resets
+                    // its drag offset once the answer lands, which on a fading
+                    // view reads as the old card flashing back into place.
+                    .transition(
+                        .asymmetric(
+                            insertion: .opacity.combined(with: .scale(scale: 0.96)),
+                            removal: .identity
+                        )
+                    )
+            }
+            .animation(.spring(response: 0.32, dampingFraction: 0.9), value: cardID)
+            .padding(.horizontal, 20)
 
             Spacer(minLength: 24)
 
@@ -42,6 +74,7 @@ struct CardScreen: View {
 
 #Preview("front") {
     CardScreen(
+        cardID: UUID(),
         word: .init(word: "das Haus", languageCode: "de", meaning: "house", exampleSentence: "Das Haus ist groß."),
         boxNumber: 2,
         position: 4,
@@ -54,12 +87,15 @@ struct CardScreen: View {
 
 #Preview("back") {
     CardScreen(
+        cardID: UUID(),
         word: .init(word: "die Zeit", languageCode: "de", meaning: "time", exampleSentence: "Ich habe keine Zeit."),
         boxNumber: 3,
         position: 7,
         total: 10,
         isFlipped: true,
         onFlip: {},
-        onAnswer: { _ in }
+        onAnswer: { _ in },
+        canUndo: true,
+        onUndo: {}
     )
 }
