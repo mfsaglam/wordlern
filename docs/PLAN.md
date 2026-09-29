@@ -15,7 +15,7 @@ bigger model, mechanical steps are not.
 | 05 | `step/05-word-list-editorial` | Editorial pass over the 1000 words | opus | todo |
 | 06 | `step/06-sentence-pilot` | Example sentence pilot (50 words) | opus | todo |
 | 07 | `step/07-sentences` | Remaining example sentences | opus | todo |
-| 08 | `step/08-persistence` | Persistence performance | sonnet | todo |
+| 08 | `step/08-swiftdata` | Replace Realm with SwiftData | opus | done |
 | 09 | `step/09-swipe-undo` | Swipe gesture + undo | opus | todo |
 | 10 | `step/10-summary-screen` | Summary screen redesign | opus | todo |
 | 11 | `step/11-session-end` | Session end screen | opus | todo |
@@ -36,8 +36,8 @@ Touch `ContentView.swift` and new view files only.
 
 Add `"contentVersion": 1` to `thousand/de.json`. Replace the `InitialCardsAdded: Bool`
 UserDefaults flag in `thousandApp.swift` with `seededContentVersion: Int`. On launch, if the
-bundled version is higher than the stored one, wipe Realm and re-seed from scratch, then store
-the new version.
+bundled version is higher than the stored one, wipe the SwiftData store and re-seed from
+scratch, then store the new version.
 
 No progress preservation, no matching, no user-facing notice — see `CLAUDE.md`.
 
@@ -80,11 +80,21 @@ German only, A1 level, no English translation.
 Same rules as step 06, in batches of 50, each batch passing the validation script.
 Bump `contentVersion` so the new sentences actually appear on device.
 
-## 08 — Persistence performance
+## 08 — Replace Realm with SwiftData
 
-`RealmCardStore.saveBoxes` currently deletes every box and rewrites all 1000 cards on every
-answer, called with `try!` on the main thread. Make it incremental, remove the `try!`, and move
-it off the main thread. Needed before swipe, or every gesture will stutter.
+Done out of order, ahead of steps 02–07: `realm-core 14.13.1` does not compile against the
+iOS 27 SDK (`'is_pod' cannot be specialized`), which blocked every build.
+
+Realm is gone — package reference, `RealmBox/RealmCard/RealmWord/RealmCardStore` and the two
+`toRealm…` extensions with it. `StoredBox`/`StoredCard` are the SwiftData models; cards are flat
+and point at their box by index, so moving a card between boxes is one field write.
+
+This absorbs the old "persistence performance" step: `saveBoxes` no longer deletes and rewrites
+all 1000 cards, `try!` is gone, and writes run on a background `@ModelActor`, chained so they
+land in call order. The `CardStore` protocol and `WordViewModel` are untouched.
+
+`fetchBox(byId:)`, `updateBox` and `deleteBox` are dead API — nothing but the preview stub
+calls them. See step 12.
 
 ## 09 — Swipe gesture + undo
 
@@ -110,3 +120,5 @@ conflates three different moments.
   and duplicate English words would collide as keys if it were ever populated. Decide whether
   word meanings are localised at all, and drop the mechanism if not.
 - The test files are entirely commented out; restore what still applies.
+  (`SwiftDataCardStoreTests` from step 08 is live and should stay.)
+- `CardStore.fetchBox(byId:)`, `updateBox` and `deleteBox` have no callers. Drop them.
