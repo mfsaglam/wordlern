@@ -11,10 +11,21 @@ import SwiftUI
 class WordViewModel: ObservableObject {
     @Published var currentCard: Card?  // The current card to display
     @Published var showMeaning: Bool = false  // Controls whether the word meaning is visible
+    /// True while the last answer can still be taken back.
+    @Published private(set) var canUndo: Bool = false
+
+    /// Everything needed to put the session back the way it was before one answer.
+    /// The whole box layout is kept rather than the single move, because
+    /// `LeitnerSystem` exposes no reverse of `updateCard` — only `loadBoxes`.
+    private struct UndoState {
+        let boxes: [Box]
+        let index: Int
+    }
 
     private var leitnerSystem: LeitnerSystem
     private(set) var cardSet: [Card] = []
     private var currentIndex: Int = 0
+    private var undoState: UndoState?
     private let cardStore: CardStore
 
     init(cardStore: CardStore, leitnerSystem: LeitnerSystem) {
@@ -61,6 +72,7 @@ class WordViewModel: ObservableObject {
             
             cardSet = dueCards
             currentIndex = 0
+            clearUndo()
             loadNextCard()
         } catch {
             print(error)
@@ -72,6 +84,9 @@ class WordViewModel: ObservableObject {
         guard currentIndex < cardSet.count else {
             cardSet.removeAll()
             currentCard = nil
+            // The session is over and the card screen is gone, so there is
+            // nothing left to undo onto.
+            clearUndo()
             return
         }
         currentCard = cardSet[currentIndex]
@@ -86,16 +101,37 @@ class WordViewModel: ObservableObject {
     // Handles marking a card as correct or incorrect
     func markCard(correct: Bool) {
         guard let card = currentCard else { return }
+        let snapshot = UndoState(boxes: leitnerSystem.allBoxes, index: currentIndex)
         do {
             try leitnerSystem.updateCard(card, correct: correct)
-            print("------------\(leitnerSystem.cardCountsPerBox)")
             saveProgress()
-            
+
             currentIndex += 1
             loadNextCard()
+            // After the last card `loadNextCard` clears the undo state again.
+            if currentCard != nil {
+                undoState = snapshot
+                canUndo = true
+            }
         } catch {
             print(error)
         }
+    }
+
+    /// Takes back the last answer and puts its card back on screen. Only the
+    /// most recent answer can be undone, and only while the session is running.
+    func undoLastAnswer() {
+        guard let undoState else { return }
+        leitnerSystem.loadBoxes(boxes: undoState.boxes)
+        currentIndex = undoState.index
+        clearUndo()
+        saveProgress()
+        loadNextCard()
+    }
+
+    private func clearUndo() {
+        undoState = nil
+        canUndo = false
     }
 
     // Caches user progress

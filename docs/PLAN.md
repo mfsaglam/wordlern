@@ -16,7 +16,7 @@ bigger model, mechanical steps are not.
 | 06 | `step/06-sentence-pilot` | Example sentence pilot (50 words) | opus | done |
 | 07 | `step/07-sentences` | Remaining example sentences | opus | done |
 | 08 | `step/08-swiftdata` | Replace Realm with SwiftData | opus | done |
-| 09 | `step/09-swipe-undo` | Swipe gesture + undo | opus | todo |
+| 09 | `step/09-swipe-undo` | Swipe gesture + undo | opus | done |
 | 10 | `step/10-summary-screen` | Summary screen redesign | opus | todo |
 | 11 | `step/11-session-end` | Session end screen | opus | todo |
 | 12 | `step/12-cleanup` | Cleanup | sonnet | todo |
@@ -177,6 +177,18 @@ calls them. See step 12.
 
 Add swipe as a shortcut on top of the ✓/✗ buttons: swipe toward ✓ is correct, toward ✗ is
 incorrect. The buttons stay. Ship undo in the same step — a mis-swipe must be recoverable.
+
+Done: `CardView` takes an optional `onSwipe`; a drag past 96pt flies the card off in 0.22s and
+answers, anything shorter springs back. While the finger is down the card carries the answer
+colour — a green or red border plus the matching ✓/✗ glyph, fading in with the distance. The
+✓/✗ buttons are untouched.
+
+Undo is one level deep and lives only inside a session. `LeitnerSystem` has no reverse of
+`updateCard`, so `WordViewModel` snapshots `allBoxes` plus the session index before each answer
+and restores it through `loadBoxes`. The control is a small muted arrow left of the box badge,
+per the user's call — the ✓/✗ row stays exactly as `docs/DESIGN.md` specifies. It appears only
+when there is an answer to take back, and the last card of a session clears it, since finishing
+leaves the card screen.
 
 ## 10 — Summary screen redesign
 

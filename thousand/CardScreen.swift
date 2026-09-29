@@ -18,16 +18,24 @@ struct CardScreen: View {
     let isFlipped: Bool
     let onFlip: () -> Void
     let onAnswer: (Bool) -> Void
+    var canUndo: Bool = false
+    var onUndo: () -> Void = {}
 
     var body: some View {
         VStack(spacing: 0) {
-            SessionHeader(boxNumber: boxNumber, position: position, total: total)
-                .padding(.horizontal, 24)
-                .padding(.top, 8)
+            SessionHeader(
+                boxNumber: boxNumber,
+                position: position,
+                total: total,
+                canUndo: canUndo,
+                onUndo: onUndo
+            )
+            .padding(.horizontal, 24)
+            .padding(.top, 8)
 
             Spacer(minLength: 24)
 
-            CardView(word: word, isFlipped: isFlipped, onTap: onFlip)
+            CardView(word: word, isFlipped: isFlipped, onTap: onFlip, onSwipe: onAnswer)
                 .padding(.horizontal, 20)
 
             Spacer(minLength: 24)
@@ -60,6 +68,8 @@ struct CardScreen: View {
         total: 10,
         isFlipped: true,
         onFlip: {},
-        onAnswer: { _ in }
+        onAnswer: { _ in },
+        canUndo: true,
+        onUndo: {}
     )
 }
