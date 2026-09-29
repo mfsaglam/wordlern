@@ -12,7 +12,7 @@ bigger model, mechanical steps are not.
 | 02 | `step/02-content-version` | `contentVersion` counter | sonnet | done |
 | 03 | `step/03-word-source` | Pick a real German frequency list | opus | done |
 | 04 | `step/04-dictionary-merge` | Merge frequency list with a dictionary | sonnet | done |
-| 05 | `step/05-word-list-editorial` | Editorial pass over the 1000 words | opus | todo |
+| 05 | `step/05-word-list-editorial` | Editorial pass over the 1000 words | opus | done |
 | 06 | `step/06-sentence-pilot` | Example sentence pilot (50 words) | opus | todo |
 | 07 | `step/07-sentences` | Remaining example sentences | opus | todo |
 | 08 | `step/08-swiftdata` | Replace Realm with SwiftData | opus | done |
@@ -89,6 +89,28 @@ For every word pick exactly one, most common English sense. Prefix nouns with th
 (`das Haus`), put verbs in the infinitive (`gehen`).
 
 Deliverable: the final `thousand/de.json`, same schema as today plus `contentVersion`.
+
+Done: `tools/de_editorial.tsv` is the hand-written result, `tools/editorial.py` turns it into
+`thousand/de.json` at `contentVersion` 2. 1000 words, every one with a single English gloss,
+nouns carrying their article and verbs in the infinitive.
+
+55 of the draft's 1000 entries were thrown away, and the list was filled back up with 51 words
+from ranks 1001–1057 of the frequency list plus `Sie` and three weekdays. What went: corpus
+noise (`of`, `The`, `de`, `New`, `A`, `m`, `II`), initialisms and organisation names
+(`FC`, `SPD`, `EU`, `AG`, `Union`), every proper noun including `Deutschland`, personal names,
+lemmatiser stems (`ander`, `jed`, `beid`, `zuminde`, `viert` …, restored to their citation
+forms instead of dropped), bare participles (`gefunden`, `gebracht`, `verloren`, `gebaut` …)
+and three lemmatiser slips where the stem is a rare word the corpus never used —
+`feilbieten`, `belieben`, `fällen`.
+
+Three calls from the `docs/WORDLIST.md` defect list went the way that file recommended:
+proper nouns are all gone, `sie` and `Sie` are two cards, and the four missing weekdays were
+added against frequency (`Dienstag` is rank 1836 in the corpus) because teaching five of
+seven is worse than teaching all of them. The preposition contractions (`im`, `am`, `zum`,
+`zur`, `vom`, `beim`, `ins`) were kept — they are worth a card each. Where two German words
+would have collided on one English gloss, the rarer one was given a narrower gloss
+(`schon` = "already" vs `bereits` = "already (formal)"); `build` fails if any collision is
+left.
 
 ## 06 — Example sentence pilot
 

@@ -45,3 +45,34 @@ Tab separated, one lemma per row, ranked best first.
 | `capital_share` | fraction of tokens written capitalised — ≥0.9 means noun |
 | `<corpus>_pm` | occurrences per million tokens in that corpus |
 | `<corpus>_rank` | rank within that corpus alone |
+
+## `build_dictionary_draft.py` — step 04
+
+Streams the wiktextract dump of English Wiktionary's German entries and joins it with
+`de_frequency_top2000.tsv`, producing `de_draft.json` (candidate glosses, POS, noun article)
+and `de_draft_report.md` (the words that found no match). The dump is 1 GB and is not
+committed.
+
+```sh
+curl -O https://kaikki.org/dictionary/German/kaikki.org-dictionary-German.jsonl
+python3 tools/build_dictionary_draft.py --dictionary kaikki.org-dictionary-German.jsonl
+```
+
+## `editorial.py` — step 05
+
+The editorial pass that turns candidates into the shipped word list.
+
+```sh
+python3 tools/editorial.py show 1 100   # compact candidate view for one batch
+python3 tools/editorial.py build        # de_editorial.tsv -> thousand/de.json
+```
+
+`de_editorial.tsv` is the hand-written half and the real deliverable of step 05: one row per
+word, `rank<TAB>targetWord<TAB>englishWord`. The rank column keeps the *draft* rank, so it has
+gaps where a word was dropped and repeats where one was inserted (`Sie` next to `sie`, the
+three missing weekdays next to `Freitag`). `build` sorts by that column and renumbers 1..1000,
+so the shipped rank is the position in the edited list.
+
+`build` refuses to write if two rows share an English gloss — the gloss doubles as a lookup
+key in the app — or if two rows share a German word. `sie`/`Sie` are the one deliberate
+case-only pair, so the German side is compared case-sensitively.

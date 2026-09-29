@@ -121,6 +121,12 @@ were left alone.
 
 ## Known defects — the step 05 checklist
 
+**Worked through in step 05; kept here as the record of what the raw list looks like.** How
+each item was settled is in the step 05 section of `docs/PLAN.md`; the resulting word list is
+`tools/de_editorial.tsv`. The two judgement calls resolved against this file's suggestion:
+the preposition contractions were kept, and the weekdays were completed to all seven even
+though `Dienstag` is only rank 1836.
+
 The list is a *candidate* list. These are the things the editorial pass has to deal with, all
 of them found by reading the top 1000:
 

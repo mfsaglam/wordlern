@@ -1,5008 +1,5008 @@
 {
   "languageCode": "de",
-  "contentVersion": 1,
   "languageName": "German",
   "languageNativeName": "Deutsch",
+  "contentVersion": 2,
   "words": [
     {
       "rank": 1,
-      "targetWord": "wie",
-      "englishWord": "as"
-    },
-    {
-      "rank": 2,
-      "targetWord": "ich",
-      "englishWord": "I"
-    },
-    {
-      "rank": 3,
-      "targetWord": "seine",
-      "englishWord": "his"
-    },
-    {
-      "rank": 4,
-      "targetWord": "dass",
-      "englishWord": "that"
-    },
-    {
-      "rank": 5,
-      "targetWord": "er",
-      "englishWord": "he"
-    },
-    {
-      "rank": 6,
-      "targetWord": "war",
-      "englishWord": "was"
-    },
-    {
-      "rank": 7,
-      "targetWord": "für",
-      "englishWord": "for"
-    },
-    {
-      "rank": 8,
-      "targetWord": "auf",
-      "englishWord": "on"
-    },
-    {
-      "rank": 9,
-      "targetWord": "sind",
-      "englishWord": "are"
-    },
-    {
-      "rank": 10,
-      "targetWord": "mit",
-      "englishWord": "with"
-    },
-    {
-      "rank": 11,
-      "targetWord": "sie",
-      "englishWord": "they"
-    },
-    {
-      "rank": 12,
-      "targetWord": "sein",
-      "englishWord": "be"
-    },
-    {
-      "rank": 13,
-      "targetWord": "bei",
-      "englishWord": "at"
-    },
-    {
-      "rank": 14,
-      "targetWord": "ein",
-      "englishWord": "one"
-    },
-    {
-      "rank": 15,
-      "targetWord": "haben",
-      "englishWord": "have"
-    },
-    {
-      "rank": 16,
-      "targetWord": "dies",
-      "englishWord": "this"
-    },
-    {
-      "rank": 17,
-      "targetWord": "aus",
-      "englishWord": "from"
-    },
-    {
-      "rank": 18,
-      "targetWord": "durch",
-      "englishWord": "by"
-    },
-    {
-      "rank": 19,
-      "targetWord": "heiß",
-      "englishWord": "hot"
-    },
-    {
-      "rank": 20,
-      "targetWord": "Wort",
-      "englishWord": "word"
-    },
-    {
-      "rank": 21,
-      "targetWord": "aber",
-      "englishWord": "but"
-    },
-    {
-      "rank": 22,
-      "targetWord": "was",
-      "englishWord": "what"
-    },
-    {
-      "rank": 23,
-      "targetWord": "einige",
-      "englishWord": "some"
-    },
-    {
-      "rank": 24,
-      "targetWord": "ist",
-      "englishWord": "is"
-    },
-    {
-      "rank": 25,
-      "targetWord": "es",
-      "englishWord": "it"
-    },
-    {
-      "rank": 26,
-      "targetWord": "Sie",
-      "englishWord": "you"
-    },
-    {
-      "rank": 27,
-      "targetWord": "oder",
-      "englishWord": "or"
-    },
-    {
-      "rank": 28,
-      "targetWord": "hatte",
-      "englishWord": "had"
-    },
-    {
-      "rank": 29,
-      "targetWord": "die",
+      "targetWord": "der",
       "englishWord": "the"
     },
     {
-      "rank": 30,
-      "targetWord": "von",
-      "englishWord": "of"
-    },
-    {
-      "rank": 31,
-      "targetWord": "zu",
-      "englishWord": "to"
-    },
-    {
-      "rank": 32,
+      "rank": 2,
       "targetWord": "und",
       "englishWord": "and"
     },
     {
-      "rank": 33,
+      "rank": 3,
       "targetWord": "ein",
-      "englishWord": "a"
+      "englishWord": "a, an"
     },
     {
-      "rank": 34,
-      "targetWord": "bei",
+      "rank": 4,
+      "targetWord": "sein",
+      "englishWord": "to be"
+    },
+    {
+      "rank": 5,
+      "targetWord": "in",
       "englishWord": "in"
     },
     {
-      "rank": 35,
-      "targetWord": "wir",
-      "englishWord": "we"
-    },
-    {
-      "rank": 36,
-      "targetWord": "können",
-      "englishWord": "can"
-    },
-    {
-      "rank": 37,
-      "targetWord": "aus",
-      "englishWord": "out"
-    },
-    {
-      "rank": 38,
-      "targetWord": "andere",
-      "englishWord": "other"
-    },
-    {
-      "rank": 39,
-      "targetWord": "waren",
-      "englishWord": "were"
-    },
-    {
-      "rank": 40,
-      "targetWord": "die",
-      "englishWord": "which"
-    },
-    {
-      "rank": 41,
-      "targetWord": "tun",
-      "englishWord": "do"
-    },
-    {
-      "rank": 42,
-      "targetWord": "ihre",
-      "englishWord": "their"
-    },
-    {
-      "rank": 43,
-      "targetWord": "Zeit",
-      "englishWord": "time"
-    },
-    {
-      "rank": 44,
-      "targetWord": "wenn",
-      "englishWord": "if"
-    },
-    {
-      "rank": 45,
+      "rank": 6,
       "targetWord": "werden",
-      "englishWord": "will"
+      "englishWord": "to become"
     },
     {
-      "rank": 46,
-      "targetWord": "wie",
-      "englishWord": "how"
+      "rank": 7,
+      "targetWord": "er",
+      "englishWord": "he"
     },
     {
-      "rank": 47,
-      "targetWord": "sagte",
-      "englishWord": "said"
+      "rank": 8,
+      "targetWord": "von",
+      "englishWord": "of, from"
     },
     {
-      "rank": 48,
-      "targetWord": "ein",
-      "englishWord": "an"
+      "rank": 9,
+      "targetWord": "mit",
+      "englishWord": "with"
     },
     {
-      "rank": 49,
-      "targetWord": "jeder",
-      "englishWord": "each"
+      "rank": 10,
+      "targetWord": "im",
+      "englishWord": "in the"
     },
     {
-      "rank": 50,
-      "targetWord": "sagen",
-      "englishWord": "tell"
+      "rank": 11,
+      "targetWord": "zu",
+      "englishWord": "to"
     },
     {
-      "rank": 51,
-      "targetWord": "tut",
-      "englishWord": "does"
+      "rank": 12,
+      "targetWord": "für",
+      "englishWord": "for"
     },
     {
-      "rank": 52,
-      "targetWord": "Satz",
-      "englishWord": "set"
+      "rank": 13,
+      "targetWord": "auf",
+      "englishWord": "on"
     },
     {
-      "rank": 53,
-      "targetWord": "drei",
-      "englishWord": "three"
+      "rank": 14,
+      "targetWord": "haben",
+      "englishWord": "to have"
     },
     {
-      "rank": 54,
-      "targetWord": "wollen",
-      "englishWord": "want"
+      "rank": 15,
+      "targetWord": "sie",
+      "englishWord": "she; they"
     },
     {
-      "rank": 55,
-      "targetWord": "Luft",
-      "englishWord": "air"
+      "rank": 16,
+      "targetWord": "Sie",
+      "englishWord": "you (formal)"
     },
     {
-      "rank": 56,
-      "targetWord": "gut",
-      "englishWord": "well"
-    },
-    {
-      "rank": 57,
+      "rank": 17,
       "targetWord": "auch",
       "englishWord": "also"
     },
     {
-      "rank": 58,
-      "targetWord": "spielen",
-      "englishWord": "play"
+      "rank": 18,
+      "targetWord": "es",
+      "englishWord": "it"
     },
     {
-      "rank": 59,
-      "targetWord": "klein",
-      "englishWord": "small"
+      "rank": 19,
+      "targetWord": "als",
+      "englishWord": "when, as"
     },
     {
-      "rank": 60,
-      "targetWord": "Ende",
-      "englishWord": "end"
+      "rank": 20,
+      "targetWord": "dies",
+      "englishWord": "this"
     },
     {
-      "rank": 61,
-      "targetWord": "setzen",
-      "englishWord": "put"
+      "rank": 21,
+      "targetWord": "an",
+      "englishWord": "at, on"
     },
     {
-      "rank": 62,
-      "targetWord": "Zuhause",
-      "englishWord": "home"
+      "rank": 22,
+      "targetWord": "nicht",
+      "englishWord": "not"
     },
     {
-      "rank": 63,
-      "targetWord": "lesen",
-      "englishWord": "read"
+      "rank": 23,
+      "targetWord": "können",
+      "englishWord": "can, to be able to"
     },
     {
-      "rank": 64,
-      "targetWord": "seits",
-      "englishWord": "hand"
+      "rank": 24,
+      "targetWord": "ihr",
+      "englishWord": "her (possessive)"
     },
     {
-      "rank": 65,
-      "targetWord": "Hafen",
-      "englishWord": "port"
+      "rank": 25,
+      "targetWord": "bei",
+      "englishWord": "at, near"
     },
     {
-      "rank": 66,
-      "targetWord": "groß",
-      "englishWord": "large"
-    },
-    {
-      "rank": 67,
-      "targetWord": "buchstabieren",
-      "englishWord": "spell"
-    },
-    {
-      "rank": 68,
-      "targetWord": "hinzufügen",
-      "englishWord": "add"
-    },
-    {
-      "rank": 69,
-      "targetWord": "auch",
-      "englishWord": "even"
-    },
-    {
-      "rank": 70,
-      "targetWord": "Lande",
-      "englishWord": "land"
-    },
-    {
-      "rank": 71,
-      "targetWord": "hier",
-      "englishWord": "here"
-    },
-    {
-      "rank": 72,
-      "targetWord": "muss",
-      "englishWord": "must"
-    },
-    {
-      "rank": 73,
-      "targetWord": "groß",
-      "englishWord": "big"
-    },
-    {
-      "rank": 74,
-      "targetWord": "hoch",
-      "englishWord": "high"
-    },
-    {
-      "rank": 75,
-      "targetWord": "so",
-      "englishWord": "such"
-    },
-    {
-      "rank": 76,
-      "targetWord": "folgen",
-      "englishWord": "follow"
-    },
-    {
-      "rank": 77,
-      "targetWord": "Akt",
-      "englishWord": "act"
-    },
-    {
-      "rank": 78,
-      "targetWord": "warum",
-      "englishWord": "why"
-    },
-    {
-      "rank": 79,
-      "targetWord": "fragen",
-      "englishWord": "ask"
-    },
-    {
-      "rank": 80,
-      "targetWord": "Männer",
-      "englishWord": "men"
-    },
-    {
-      "rank": 81,
-      "targetWord": "Veränderung",
-      "englishWord": "change"
-    },
-    {
-      "rank": 82,
-      "targetWord": "ging",
-      "englishWord": "went"
-    },
-    {
-      "rank": 83,
-      "targetWord": "Licht",
-      "englishWord": "light"
-    },
-    {
-      "rank": 84,
-      "targetWord": "Art",
-      "englishWord": "kind"
-    },
-    {
-      "rank": 85,
-      "targetWord": "aus",
-      "englishWord": "off"
-    },
-    {
-      "rank": 86,
-      "targetWord": "müssen",
-      "englishWord": "need"
-    },
-    {
-      "rank": 87,
-      "targetWord": "Haus",
-      "englishWord": "house"
-    },
-    {
-      "rank": 88,
-      "targetWord": "Bild",
-      "englishWord": "picture"
-    },
-    {
-      "rank": 89,
-      "targetWord": "versuchen",
-      "englishWord": "try"
-    },
-    {
-      "rank": 90,
-      "targetWord": "uns",
-      "englishWord": "us"
-    },
-    {
-      "rank": 91,
-      "targetWord": "wieder",
-      "englishWord": "again"
-    },
-    {
-      "rank": 92,
-      "targetWord": "Tier",
-      "englishWord": "animal"
-    },
-    {
-      "rank": 93,
-      "targetWord": "Punkt",
-      "englishWord": "point"
-    },
-    {
-      "rank": 94,
-      "targetWord": "Mutter",
-      "englishWord": "mother"
-    },
-    {
-      "rank": 95,
-      "targetWord": "Welt",
-      "englishWord": "world"
-    },
-    {
-      "rank": 96,
-      "targetWord": "in der Nähe von",
-      "englishWord": "near"
-    },
-    {
-      "rank": 97,
-      "targetWord": "bauen",
-      "englishWord": "build"
-    },
-    {
-      "rank": 98,
-      "targetWord": "selbst",
-      "englishWord": "self"
-    },
-    {
-      "rank": 99,
-      "targetWord": "Erde",
-      "englishWord": "earth"
-    },
-    {
-      "rank": 100,
-      "targetWord": "Vater",
-      "englishWord": "father"
-    },
-    {
-      "rank": 101,
-      "targetWord": "jeder",
-      "englishWord": "any"
-    },
-    {
-      "rank": 102,
-      "targetWord": "neu",
-      "englishWord": "new"
-    },
-    {
-      "rank": 103,
-      "targetWord": "Arbeit",
-      "englishWord": "work"
-    },
-    {
-      "rank": 104,
-      "targetWord": "Teil",
-      "englishWord": "part"
-    },
-    {
-      "rank": 105,
-      "targetWord": "nehmen",
-      "englishWord": "take"
-    },
-    {
-      "rank": 106,
-      "targetWord": "erhalten",
-      "englishWord": "get"
-    },
-    {
-      "rank": 107,
-      "targetWord": "Ort",
-      "englishWord": "place"
-    },
-    {
-      "rank": 108,
-      "targetWord": "gemacht",
-      "englishWord": "made"
-    },
-    {
-      "rank": 109,
-      "targetWord": "leben",
-      "englishWord": "live"
-    },
-    {
-      "rank": 110,
-      "targetWord": "wo",
-      "englishWord": "where"
-    },
-    {
-      "rank": 111,
+      "rank": 26,
       "targetWord": "nach",
       "englishWord": "after"
     },
     {
-      "rank": 112,
-      "targetWord": "zurück",
-      "englishWord": "back"
+      "rank": 27,
+      "targetWord": "am",
+      "englishWord": "at the"
     },
     {
-      "rank": 113,
-      "targetWord": "wenig",
-      "englishWord": "little"
+      "rank": 28,
+      "targetWord": "aus",
+      "englishWord": "out of"
     },
     {
-      "rank": 114,
-      "targetWord": "nur",
-      "englishWord": "only"
-    },
-    {
-      "rank": 115,
-      "targetWord": "Runde",
-      "englishWord": "round"
-    },
-    {
-      "rank": 116,
-      "targetWord": "Mann",
-      "englishWord": "man"
-    },
-    {
-      "rank": 117,
-      "targetWord": "Jahr",
+      "rank": 29,
+      "targetWord": "das Jahr",
       "englishWord": "year"
     },
     {
-      "rank": 118,
-      "targetWord": "kam",
-      "englishWord": "came"
+      "rank": 30,
+      "targetWord": "dass",
+      "englishWord": "that (conjunction)"
     },
     {
-      "rank": 119,
-      "targetWord": "zeigen",
-      "englishWord": "show"
+      "rank": 31,
+      "targetWord": "um",
+      "englishWord": "around"
     },
     {
-      "rank": 120,
-      "targetWord": "jeder",
-      "englishWord": "every"
+      "rank": 32,
+      "targetWord": "zum",
+      "englishWord": "to the (masculine/neuter)"
     },
     {
-      "rank": 121,
-      "targetWord": "gut",
-      "englishWord": "good"
-    },
-    {
-      "rank": 122,
-      "targetWord": "mir",
-      "englishWord": "me"
-    },
-    {
-      "rank": 123,
-      "targetWord": "geben",
-      "englishWord": "give"
-    },
-    {
-      "rank": 124,
-      "targetWord": "unsere",
-      "englishWord": "our"
-    },
-    {
-      "rank": 125,
-      "targetWord": "unter",
-      "englishWord": "under"
-    },
-    {
-      "rank": 126,
-      "targetWord": "Name",
-      "englishWord": "name"
-    },
-    {
-      "rank": 127,
-      "targetWord": "sehr",
-      "englishWord": "very"
-    },
-    {
-      "rank": 128,
-      "targetWord": "durch",
-      "englishWord": "through"
-    },
-    {
-      "rank": 129,
-      "targetWord": "nur",
-      "englishWord": "just"
-    },
-    {
-      "rank": 130,
-      "targetWord": "Formular",
-      "englishWord": "form"
-    },
-    {
-      "rank": 131,
-      "targetWord": "Satz",
-      "englishWord": "sentence"
-    },
-    {
-      "rank": 132,
-      "targetWord": "groß",
-      "englishWord": "great"
-    },
-    {
-      "rank": 133,
-      "targetWord": "denken",
-      "englishWord": "think"
-    },
-    {
-      "rank": 134,
-      "targetWord": "sagen",
-      "englishWord": "say"
-    },
-    {
-      "rank": 135,
-      "targetWord": "Hilfe",
-      "englishWord": "help"
-    },
-    {
-      "rank": 136,
-      "targetWord": "niedrig",
-      "englishWord": "low"
-    },
-    {
-      "rank": 137,
-      "targetWord": "Linie",
-      "englishWord": "line"
-    },
-    {
-      "rank": 138,
-      "targetWord": "abweichen",
-      "englishWord": "differ"
-    },
-    {
-      "rank": 139,
-      "targetWord": "wiederum",
-      "englishWord": "turn"
-    },
-    {
-      "rank": 140,
-      "targetWord": "Ursache",
-      "englishWord": "cause"
-    },
-    {
-      "rank": 141,
-      "targetWord": "viel",
-      "englishWord": "much"
-    },
-    {
-      "rank": 142,
-      "targetWord": "bedeuten",
-      "englishWord": "mean"
-    },
-    {
-      "rank": 143,
-      "targetWord": "vor",
-      "englishWord": "before"
-    },
-    {
-      "rank": 144,
-      "targetWord": "Umzug",
-      "englishWord": "move"
-    },
-    {
-      "rank": 145,
-      "targetWord": "Recht",
-      "englishWord": "right"
-    },
-    {
-      "rank": 146,
-      "targetWord": "Junge",
-      "englishWord": "boy"
-    },
-    {
-      "rank": 147,
-      "targetWord": "alt",
-      "englishWord": "old"
-    },
-    {
-      "rank": 148,
-      "targetWord": "zu",
-      "englishWord": "too"
-    },
-    {
-      "rank": 149,
-      "targetWord": "gleich",
-      "englishWord": "same"
-    },
-    {
-      "rank": 150,
-      "targetWord": "sie",
-      "englishWord": "she"
-    },
-    {
-      "rank": 151,
-      "targetWord": "alle",
-      "englishWord": "all"
-    },
-    {
-      "rank": 152,
-      "targetWord": "da",
-      "englishWord": "there"
-    },
-    {
-      "rank": 153,
-      "targetWord": "wenn",
-      "englishWord": "when"
-    },
-    {
-      "rank": 154,
-      "targetWord": "nach oben",
-      "englishWord": "up"
-    },
-    {
-      "rank": 155,
-      "targetWord": "Verwendung",
-      "englishWord": "use"
-    },
-    {
-      "rank": 156,
-      "targetWord": "Ihre",
-      "englishWord": "your"
-    },
-    {
-      "rank": 157,
-      "targetWord": "Weg",
-      "englishWord": "way"
-    },
-    {
-      "rank": 158,
-      "targetWord": "über",
-      "englishWord": "about"
-    },
-    {
-      "rank": 159,
-      "targetWord": "viele",
-      "englishWord": "many"
-    },
-    {
-      "rank": 160,
-      "targetWord": "dann",
-      "englishWord": "then"
-    },
-    {
-      "rank": 161,
-      "targetWord": "sie",
-      "englishWord": "them"
-    },
-    {
-      "rank": 162,
-      "targetWord": "schreiben",
-      "englishWord": "write"
-    },
-    {
-      "rank": 163,
-      "targetWord": "würde",
-      "englishWord": "would"
-    },
-    {
-      "rank": 164,
+      "rank": 33,
       "targetWord": "wie",
-      "englishWord": "like"
+      "englishWord": "how"
     },
     {
-      "rank": 165,
-      "targetWord": "so",
-      "englishWord": "so"
-    },
-    {
-      "rank": 166,
-      "targetWord": "diese",
-      "englishWord": "these"
-    },
-    {
-      "rank": 167,
-      "targetWord": "sie",
-      "englishWord": "her"
-    },
-    {
-      "rank": 168,
-      "targetWord": "lange",
-      "englishWord": "long"
-    },
-    {
-      "rank": 169,
-      "targetWord": "machen",
-      "englishWord": "make"
-    },
-    {
-      "rank": 170,
-      "targetWord": "Sache",
-      "englishWord": "thing"
-    },
-    {
-      "rank": 171,
-      "targetWord": "sehen",
-      "englishWord": "see"
-    },
-    {
-      "rank": 172,
-      "targetWord": "ihm",
-      "englishWord": "him"
-    },
-    {
-      "rank": 173,
-      "targetWord": "zwei",
-      "englishWord": "two"
-    },
-    {
-      "rank": 174,
-      "targetWord": "hat",
-      "englishWord": "has"
-    },
-    {
-      "rank": 175,
-      "targetWord": "suchen",
-      "englishWord": "look"
-    },
-    {
-      "rank": 176,
-      "targetWord": "mehr",
-      "englishWord": "more"
-    },
-    {
-      "rank": 177,
-      "targetWord": "Tag",
-      "englishWord": "day"
-    },
-    {
-      "rank": 178,
-      "targetWord": "könnte",
-      "englishWord": "could"
-    },
-    {
-      "rank": 179,
-      "targetWord": "gehen",
-      "englishWord": "go"
-    },
-    {
-      "rank": 180,
-      "targetWord": "kommen",
-      "englishWord": "come"
-    },
-    {
-      "rank": 181,
-      "targetWord": "tat",
-      "englishWord": "did"
-    },
-    {
-      "rank": 182,
-      "targetWord": "Anzahl",
-      "englishWord": "number"
-    },
-    {
-      "rank": 183,
-      "targetWord": "klingen",
-      "englishWord": "sound"
-    },
-    {
-      "rank": 184,
-      "targetWord": "nicht",
-      "englishWord": "no"
-    },
-    {
-      "rank": 185,
-      "targetWord": "am meisten",
-      "englishWord": "most"
-    },
-    {
-      "rank": 186,
-      "targetWord": "Menschen",
-      "englishWord": "people"
-    },
-    {
-      "rank": 187,
-      "targetWord": "meine",
-      "englishWord": "my"
-    },
-    {
-      "rank": 188,
+      "rank": 34,
       "targetWord": "über",
-      "englishWord": "over"
+      "englishWord": "over, about"
     },
     {
-      "rank": 189,
-      "targetWord": "wissen",
-      "englishWord": "know"
+      "rank": 35,
+      "targetWord": "oder",
+      "englishWord": "or"
     },
     {
-      "rank": 190,
-      "targetWord": "Wasser",
-      "englishWord": "water"
-    },
-    {
-      "rank": 191,
-      "targetWord": "als",
-      "englishWord": "than"
-    },
-    {
-      "rank": 192,
-      "targetWord": "Anruf",
-      "englishWord": "call"
-    },
-    {
-      "rank": 193,
-      "targetWord": "erste",
-      "englishWord": "first"
-    },
-    {
-      "rank": 194,
-      "targetWord": "die",
-      "englishWord": "who"
-    },
-    {
-      "rank": 195,
-      "targetWord": "können",
-      "englishWord": "may"
-    },
-    {
-      "rank": 196,
-      "targetWord": "nach unten",
-      "englishWord": "down"
-    },
-    {
-      "rank": 197,
-      "targetWord": "Seite",
-      "englishWord": "side"
-    },
-    {
-      "rank": 198,
-      "targetWord": "gewesen",
-      "englishWord": "been"
-    },
-    {
-      "rank": 199,
-      "targetWord": "jetzt",
-      "englishWord": "now"
-    },
-    {
-      "rank": 200,
-      "targetWord": "finden",
-      "englishWord": "find"
-    },
-    {
-      "rank": 201,
-      "targetWord": "Kopf",
-      "englishWord": "head"
-    },
-    {
-      "rank": 202,
-      "targetWord": "stehen",
-      "englishWord": "stand"
-    },
-    {
-      "rank": 203,
-      "targetWord": "besitzen",
-      "englishWord": "own"
-    },
-    {
-      "rank": 204,
-      "targetWord": "Seite",
-      "englishWord": "page"
-    },
-    {
-      "rank": 205,
-      "targetWord": "sollte",
-      "englishWord": "should"
-    },
-    {
-      "rank": 206,
-      "targetWord": "Land",
-      "englishWord": "country"
-    },
-    {
-      "rank": 207,
-      "targetWord": "gefunden",
-      "englishWord": "found"
-    },
-    {
-      "rank": 208,
-      "targetWord": "Antwort",
-      "englishWord": "answer"
-    },
-    {
-      "rank": 209,
-      "targetWord": "Schule",
-      "englishWord": "school"
-    },
-    {
-      "rank": 210,
-      "targetWord": "wachsen",
-      "englishWord": "grow"
-    },
-    {
-      "rank": 211,
-      "targetWord": "Studie",
-      "englishWord": "study"
-    },
-    {
-      "rank": 212,
-      "targetWord": "noch",
-      "englishWord": "still"
-    },
-    {
-      "rank": 213,
-      "targetWord": "lernen",
-      "englishWord": "learn"
-    },
-    {
-      "rank": 214,
-      "targetWord": "Anlage",
-      "englishWord": "plant"
-    },
-    {
-      "rank": 215,
-      "targetWord": "Abdeckung",
-      "englishWord": "cover"
-    },
-    {
-      "rank": 216,
-      "targetWord": "Lebensmittel",
-      "englishWord": "food"
-    },
-    {
-      "rank": 217,
-      "targetWord": "Sonne",
-      "englishWord": "sun"
-    },
-    {
-      "rank": 218,
-      "targetWord": "vier",
-      "englishWord": "four"
-    },
-    {
-      "rank": 219,
-      "targetWord": "zwischen",
-      "englishWord": "between"
-    },
-    {
-      "rank": 220,
-      "targetWord": "Zustand",
-      "englishWord": "state"
-    },
-    {
-      "rank": 221,
-      "targetWord": "halten",
-      "englishWord": "keep"
-    },
-    {
-      "rank": 222,
-      "targetWord": "Auge",
-      "englishWord": "eye"
-    },
-    {
-      "rank": 223,
-      "targetWord": "nie",
-      "englishWord": "never"
-    },
-    {
-      "rank": 224,
-      "targetWord": "letzte",
-      "englishWord": "last"
-    },
-    {
-      "rank": 225,
-      "targetWord": "lassen",
-      "englishWord": "let"
-    },
-    {
-      "rank": 226,
-      "targetWord": "Gedanken",
-      "englishWord": "thought"
-    },
-    {
-      "rank": 227,
-      "targetWord": "Stadt",
-      "englishWord": "city"
-    },
-    {
-      "rank": 228,
-      "targetWord": "Baum",
-      "englishWord": "tree"
-    },
-    {
-      "rank": 229,
-      "targetWord": "überqueren",
-      "englishWord": "cross"
-    },
-    {
-      "rank": 230,
-      "targetWord": "Bauernhof",
-      "englishWord": "farm"
-    },
-    {
-      "rank": 231,
-      "targetWord": "schwer",
-      "englishWord": "hard"
-    },
-    {
-      "rank": 232,
-      "targetWord": "Beginn",
-      "englishWord": "start"
-    },
-    {
-      "rank": 233,
-      "targetWord": "Macht",
-      "englishWord": "might"
-    },
-    {
-      "rank": 234,
-      "targetWord": "Geschichte",
-      "englishWord": "story"
-    },
-    {
-      "rank": 235,
-      "targetWord": "Säge",
-      "englishWord": "saw"
-    },
-    {
-      "rank": 236,
-      "targetWord": "weit",
-      "englishWord": "far"
-    },
-    {
-      "rank": 237,
-      "targetWord": "Meer",
-      "englishWord": "sea"
-    },
-    {
-      "rank": 238,
-      "targetWord": "ziehen",
-      "englishWord": "draw"
-    },
-    {
-      "rank": 239,
-      "targetWord": "links",
-      "englishWord": "left"
-    },
-    {
-      "rank": 240,
-      "targetWord": "spät",
-      "englishWord": "late"
-    },
-    {
-      "rank": 241,
-      "targetWord": "laufen",
-      "englishWord": "run"
-    },
-    {
-      "rank": 242,
-      "targetWord": "unterlassen Sie",
-      "englishWord": "don’t"
-    },
-    {
-      "rank": 243,
-      "targetWord": "während",
-      "englishWord": "while"
-    },
-    {
-      "rank": 244,
-      "targetWord": "Presse",
-      "englishWord": "press"
-    },
-    {
-      "rank": 245,
-      "targetWord": "Schließen",
-      "englishWord": "close"
-    },
-    {
-      "rank": 246,
-      "targetWord": "Nacht",
-      "englishWord": "night"
-    },
-    {
-      "rank": 247,
-      "targetWord": "realen",
-      "englishWord": "real"
-    },
-    {
-      "rank": 248,
-      "targetWord": "Leben",
-      "englishWord": "life"
-    },
-    {
-      "rank": 249,
-      "targetWord": "wenige",
-      "englishWord": "few"
-    },
-    {
-      "rank": 250,
-      "targetWord": "Norden",
-      "englishWord": "north"
-    },
-    {
-      "rank": 251,
-      "targetWord": "Buch",
-      "englishWord": "book"
-    },
-    {
-      "rank": 252,
-      "targetWord": "tragen",
-      "englishWord": "carry"
-    },
-    {
-      "rank": 253,
-      "targetWord": "nahm",
-      "englishWord": "took"
-    },
-    {
-      "rank": 254,
-      "targetWord": "Wissenschaft",
-      "englishWord": "science"
-    },
-    {
-      "rank": 255,
-      "targetWord": "essen",
-      "englishWord": "eat"
-    },
-    {
-      "rank": 256,
-      "targetWord": "Zimmer",
-      "englishWord": "room"
-    },
-    {
-      "rank": 257,
-      "targetWord": "Freund",
-      "englishWord": "friend"
-    },
-    {
-      "rank": 258,
-      "targetWord": "begann",
-      "englishWord": "began"
-    },
-    {
-      "rank": 259,
-      "targetWord": "Idee",
-      "englishWord": "idea"
-    },
-    {
-      "rank": 260,
-      "targetWord": "Fisch",
-      "englishWord": "fish"
-    },
-    {
-      "rank": 261,
-      "targetWord": "berg",
-      "englishWord": "mountain"
-    },
-    {
-      "rank": 262,
-      "targetWord": "Stopp",
-      "englishWord": "stop"
-    },
-    {
-      "rank": 263,
-      "targetWord": "einmal",
-      "englishWord": "once"
-    },
-    {
-      "rank": 264,
-      "targetWord": "Basis",
-      "englishWord": "base"
-    },
-    {
-      "rank": 265,
-      "targetWord": "hören",
-      "englishWord": "hear"
-    },
-    {
-      "rank": 266,
-      "targetWord": "Pferd",
-      "englishWord": "horse"
-    },
-    {
-      "rank": 267,
-      "targetWord": "Schnitt",
-      "englishWord": "cut"
-    },
-    {
-      "rank": 268,
-      "targetWord": "sicher",
-      "englishWord": "sure"
-    },
-    {
-      "rank": 269,
-      "targetWord": "beobachten",
-      "englishWord": "watch"
-    },
-    {
-      "rank": 270,
-      "targetWord": "Farbe",
-      "englishWord": "color"
-    },
-    {
-      "rank": 271,
-      "targetWord": "Gesicht",
-      "englishWord": "face"
-    },
-    {
-      "rank": 272,
-      "targetWord": "Holz",
-      "englishWord": "wood"
-    },
-    {
-      "rank": 273,
-      "targetWord": "Haupt-",
-      "englishWord": "main"
-    },
-    {
-      "rank": 274,
-      "targetWord": "geöffnet",
-      "englishWord": "open"
-    },
-    {
-      "rank": 275,
-      "targetWord": "scheinen",
-      "englishWord": "seem"
-    },
-    {
-      "rank": 276,
-      "targetWord": "zusammen",
-      "englishWord": "together"
-    },
-    {
-      "rank": 277,
-      "targetWord": "nächste",
-      "englishWord": "next"
-    },
-    {
-      "rank": 278,
-      "targetWord": "weiß",
-      "englishWord": "white"
-    },
-    {
-      "rank": 279,
-      "targetWord": "Kinder",
-      "englishWord": "children"
-    },
-    {
-      "rank": 280,
-      "targetWord": "Start",
-      "englishWord": "begin"
-    },
-    {
-      "rank": 281,
-      "targetWord": "bekam",
-      "englishWord": "got"
-    },
-    {
-      "rank": 282,
-      "targetWord": "gehen",
-      "englishWord": "walk"
-    },
-    {
-      "rank": 283,
-      "targetWord": "Beispiel",
-      "englishWord": "example"
-    },
-    {
-      "rank": 284,
-      "targetWord": "erleichtern",
-      "englishWord": "ease"
-    },
-    {
-      "rank": 285,
-      "targetWord": "Papier",
-      "englishWord": "paper"
-    },
-    {
-      "rank": 286,
-      "targetWord": "Gruppe",
-      "englishWord": "group"
-    },
-    {
-      "rank": 287,
-      "targetWord": "immer",
-      "englishWord": "always"
-    },
-    {
-      "rank": 288,
-      "targetWord": "Musik",
-      "englishWord": "music"
-    },
-    {
-      "rank": 289,
-      "targetWord": "diejenigen",
-      "englishWord": "those"
-    },
-    {
-      "rank": 290,
-      "targetWord": "beide",
-      "englishWord": "both"
-    },
-    {
-      "rank": 291,
-      "targetWord": "Marke",
-      "englishWord": "mark"
-    },
-    {
-      "rank": 292,
-      "targetWord": "oft",
-      "englishWord": "often"
-    },
-    {
-      "rank": 293,
-      "targetWord": "Schreiben",
-      "englishWord": "letter"
-    },
-    {
-      "rank": 294,
+      "rank": 36,
       "targetWord": "bis",
       "englishWord": "until"
     },
     {
-      "rank": 295,
-      "targetWord": "Meile",
-      "englishWord": "mile"
+      "rank": 37,
+      "targetWord": "vor",
+      "englishWord": "before, in front of"
     },
     {
-      "rank": 296,
-      "targetWord": "Fluss",
-      "englishWord": "river"
+      "rank": 38,
+      "targetWord": "noch",
+      "englishWord": "still"
     },
     {
-      "rank": 297,
-      "targetWord": "Auto",
-      "englishWord": "car"
+      "rank": 39,
+      "targetWord": "zur",
+      "englishWord": "to the (feminine)"
     },
     {
-      "rank": 298,
-      "targetWord": "Füße",
-      "englishWord": "feet"
+      "rank": 40,
+      "targetWord": "durch",
+      "englishWord": "through"
     },
     {
-      "rank": 299,
-      "targetWord": "Pflege",
-      "englishWord": "care"
+      "rank": 41,
+      "targetWord": "aber",
+      "englishWord": "but"
     },
     {
-      "rank": 300,
-      "targetWord": "zweite",
-      "englishWord": "second"
+      "rank": 42,
+      "targetWord": "nur",
+      "englishWord": "only"
     },
     {
-      "rank": 301,
-      "targetWord": "genug",
-      "englishWord": "enough"
+      "rank": 43,
+      "targetWord": "so",
+      "englishWord": "so"
     },
     {
-      "rank": 302,
-      "targetWord": "Ebene",
-      "englishWord": "plain"
+      "rank": 44,
+      "targetWord": "geben",
+      "englishWord": "to give"
     },
     {
-      "rank": 303,
-      "targetWord": "Mädchen",
-      "englishWord": "girl"
+      "rank": 45,
+      "targetWord": "alle",
+      "englishWord": "all"
     },
     {
-      "rank": 304,
-      "targetWord": "üblich",
-      "englishWord": "usual"
+      "rank": 46,
+      "targetWord": "neu",
+      "englishWord": "new"
     },
     {
-      "rank": 305,
-      "targetWord": "jung",
-      "englishWord": "young"
+      "rank": 47,
+      "targetWord": "sollen",
+      "englishWord": "should"
     },
     {
-      "rank": 306,
-      "targetWord": "bereit",
-      "englishWord": "ready"
+      "rank": 48,
+      "targetWord": "erst",
+      "englishWord": "first, only then"
     },
     {
-      "rank": 307,
-      "targetWord": "oben",
-      "englishWord": "above"
+      "rank": 49,
+      "targetWord": "müssen",
+      "englishWord": "must"
     },
     {
-      "rank": 308,
-      "targetWord": "je",
-      "englishWord": "ever"
+      "rank": 50,
+      "targetWord": "groß",
+      "englishWord": "big"
     },
     {
-      "rank": 309,
-      "targetWord": "rot",
-      "englishWord": "red"
+      "rank": 51,
+      "targetWord": "mehr",
+      "englishWord": "more"
     },
     {
-      "rank": 310,
-      "targetWord": "Liste",
-      "englishWord": "list"
+      "rank": 52,
+      "targetWord": "man",
+      "englishWord": "one (impersonal)"
     },
     {
-      "rank": 311,
-      "targetWord": "obwohl",
-      "englishWord": "though"
+      "rank": 53,
+      "targetWord": "viel",
+      "englishWord": "much"
     },
     {
-      "rank": 312,
-      "targetWord": "fühlen",
-      "englishWord": "feel"
+      "rank": 54,
+      "targetWord": "andere",
+      "englishWord": "other"
     },
     {
-      "rank": 313,
-      "targetWord": "Vortrag",
-      "englishWord": "talk"
+      "rank": 55,
+      "targetWord": "unter",
+      "englishWord": "under"
     },
     {
-      "rank": 314,
-      "targetWord": "Vogel",
-      "englishWord": "bird"
+      "rank": 56,
+      "targetWord": "gut",
+      "englishWord": "good"
     },
     {
-      "rank": 315,
-      "targetWord": "bald",
-      "englishWord": "soon"
+      "rank": 57,
+      "targetWord": "kommen",
+      "englishWord": "to come"
     },
     {
-      "rank": 316,
-      "targetWord": "Körper",
-      "englishWord": "body"
+      "rank": 58,
+      "targetWord": "kein",
+      "englishWord": "no, not any"
     },
     {
-      "rank": 317,
-      "targetWord": "Hund",
-      "englishWord": "dog"
+      "rank": 59,
+      "targetWord": "ich",
+      "englishWord": "I"
     },
     {
-      "rank": 318,
-      "targetWord": "Familie",
-      "englishWord": "family"
+      "rank": 60,
+      "targetWord": "vom",
+      "englishWord": "from the"
     },
     {
-      "rank": 319,
-      "targetWord": "direkt",
-      "englishWord": "direct"
+      "rank": 61,
+      "targetWord": "wir",
+      "englishWord": "we"
     },
     {
-      "rank": 320,
-      "targetWord": "Pose",
-      "englishWord": "pose"
+      "rank": 62,
+      "targetWord": "weit",
+      "englishWord": "far"
     },
     {
-      "rank": 321,
-      "targetWord": "verlassen",
-      "englishWord": "leave"
+      "rank": 63,
+      "targetWord": "gehen",
+      "englishWord": "to go"
     },
     {
-      "rank": 322,
-      "targetWord": "Lied",
-      "englishWord": "song"
+      "rank": 64,
+      "targetWord": "wieder",
+      "englishWord": "again"
     },
     {
-      "rank": 323,
-      "targetWord": "messen",
-      "englishWord": "measure"
+      "rank": 65,
+      "targetWord": "zwei",
+      "englishWord": "two"
     },
     {
-      "rank": 324,
-      "targetWord": "Tür",
-      "englishWord": "door"
-    },
-    {
-      "rank": 325,
-      "targetWord": "Produkt",
-      "englishWord": "product"
-    },
-    {
-      "rank": 326,
-      "targetWord": "schwarz",
-      "englishWord": "black"
-    },
-    {
-      "rank": 327,
-      "targetWord": "kurz",
-      "englishWord": "short"
-    },
-    {
-      "rank": 328,
-      "targetWord": "Zahl",
-      "englishWord": "numeral"
-    },
-    {
-      "rank": 329,
-      "targetWord": "Klasse",
-      "englishWord": "class"
-    },
-    {
-      "rank": 330,
-      "targetWord": "Wind",
-      "englishWord": "wind"
-    },
-    {
-      "rank": 331,
-      "targetWord": "Frage",
-      "englishWord": "question"
-    },
-    {
-      "rank": 332,
-      "targetWord": "passieren",
-      "englishWord": "happen"
-    },
-    {
-      "rank": 333,
-      "targetWord": "vollständig",
-      "englishWord": "complete"
-    },
-    {
-      "rank": 334,
-      "targetWord": "Schiff",
-      "englishWord": "ship"
-    },
-    {
-      "rank": 335,
-      "targetWord": "Bereich",
-      "englishWord": "area"
-    },
-    {
-      "rank": 336,
-      "targetWord": "Hälfte",
-      "englishWord": "half"
-    },
-    {
-      "rank": 337,
-      "targetWord": "Stein",
-      "englishWord": "rock"
-    },
-    {
-      "rank": 338,
-      "targetWord": "bestellen",
-      "englishWord": "order"
-    },
-    {
-      "rank": 339,
-      "targetWord": "Feuer",
-      "englishWord": "fire"
-    },
-    {
-      "rank": 340,
-      "targetWord": "Süden",
-      "englishWord": "south"
-    },
-    {
-      "rank": 341,
-      "targetWord": "Problem",
-      "englishWord": "problem"
-    },
-    {
-      "rank": 342,
-      "targetWord": "Stück",
-      "englishWord": "piece"
-    },
-    {
-      "rank": 343,
-      "targetWord": "sagte",
-      "englishWord": "told"
-    },
-    {
-      "rank": 344,
-      "targetWord": "wusste",
-      "englishWord": "knew"
-    },
-    {
-      "rank": 345,
-      "targetWord": "passieren",
-      "englishWord": "pass"
-    },
-    {
-      "rank": 346,
+      "rank": 66,
       "targetWord": "seit",
       "englishWord": "since"
     },
     {
-      "rank": 347,
-      "targetWord": "obere",
-      "englishWord": "top"
+      "rank": 67,
+      "targetWord": "stehen",
+      "englishWord": "to stand"
     },
     {
-      "rank": 348,
-      "targetWord": "ganze",
-      "englishWord": "whole"
+      "rank": 68,
+      "targetWord": "wenn",
+      "englishWord": "if"
     },
     {
-      "rank": 349,
-      "targetWord": "König",
-      "englishWord": "king"
+      "rank": 69,
+      "targetWord": "ab",
+      "englishWord": "as of, from"
     },
     {
-      "rank": 350,
-      "targetWord": "Straße",
-      "englishWord": "street"
+      "rank": 70,
+      "targetWord": "dann",
+      "englishWord": "then"
     },
     {
-      "rank": 351,
-      "targetWord": "Zoll",
-      "englishWord": "inch"
+      "rank": 71,
+      "targetWord": "machen",
+      "englishWord": "to make"
     },
     {
-      "rank": 352,
-      "targetWord": "multiplizieren",
-      "englishWord": "multiply"
+      "rank": 72,
+      "targetWord": "finden",
+      "englishWord": "to find"
     },
     {
-      "rank": 353,
-      "targetWord": "nichts",
-      "englishWord": "nothing"
+      "rank": 73,
+      "targetWord": "was",
+      "englishWord": "what"
     },
     {
-      "rank": 354,
-      "targetWord": "Kurs",
-      "englishWord": "course"
+      "rank": 74,
+      "targetWord": "dabei",
+      "englishWord": "in doing so"
     },
     {
-      "rank": 355,
-      "targetWord": "bleiben",
-      "englishWord": "stay"
+      "rank": 75,
+      "targetWord": "beim",
+      "englishWord": "at the (masculine/neuter)"
     },
     {
-      "rank": 356,
-      "targetWord": "Rad",
-      "englishWord": "wheel"
+      "rank": 76,
+      "targetWord": "da",
+      "englishWord": "there"
     },
     {
-      "rank": 357,
-      "targetWord": "voll",
-      "englishWord": "full"
-    },
-    {
-      "rank": 358,
-      "targetWord": "Kraft",
-      "englishWord": "force"
-    },
-    {
-      "rank": 359,
-      "targetWord": "blau",
-      "englishWord": "blue"
-    },
-    {
-      "rank": 360,
-      "targetWord": "Objekt",
-      "englishWord": "object"
-    },
-    {
-      "rank": 361,
-      "targetWord": "entscheiden",
-      "englishWord": "decide"
-    },
-    {
-      "rank": 362,
-      "targetWord": "Oberfläche",
-      "englishWord": "surface"
-    },
-    {
-      "rank": 363,
-      "targetWord": "tief",
-      "englishWord": "deep"
-    },
-    {
-      "rank": 364,
-      "targetWord": "Mond",
-      "englishWord": "moon"
-    },
-    {
-      "rank": 365,
-      "targetWord": "Insel",
-      "englishWord": "island"
-    },
-    {
-      "rank": 366,
-      "targetWord": "Fuß",
-      "englishWord": "foot"
-    },
-    {
-      "rank": 367,
-      "targetWord": "System",
-      "englishWord": "system"
-    },
-    {
-      "rank": 368,
-      "targetWord": "beschäftigt",
-      "englishWord": "busy"
-    },
-    {
-      "rank": 369,
-      "targetWord": "Prüfung",
-      "englishWord": "test"
-    },
-    {
-      "rank": 370,
-      "targetWord": "Rekord",
-      "englishWord": "record"
-    },
-    {
-      "rank": 371,
-      "targetWord": "Boot",
-      "englishWord": "boat"
-    },
-    {
-      "rank": 372,
-      "targetWord": "gemeinsam",
-      "englishWord": "common"
-    },
-    {
-      "rank": 373,
-      "targetWord": "goldenen",
-      "englishWord": "gold"
-    },
-    {
-      "rank": 374,
-      "targetWord": "möglich",
-      "englishWord": "possible"
-    },
-    {
-      "rank": 375,
-      "targetWord": "Flugzeug",
-      "englishWord": "plane"
-    },
-    {
-      "rank": 376,
-      "targetWord": "statt",
-      "englishWord": "stead"
-    },
-    {
-      "rank": 377,
-      "targetWord": "trocken",
-      "englishWord": "dry"
-    },
-    {
-      "rank": 378,
-      "targetWord": "Wunder",
-      "englishWord": "wonder"
-    },
-    {
-      "rank": 379,
-      "targetWord": "Lachen",
-      "englishWord": "laugh"
-    },
-    {
-      "rank": 380,
-      "targetWord": "tausend",
-      "englishWord": "thousand"
-    },
-    {
-      "rank": 381,
-      "targetWord": "vor",
-      "englishWord": "ago"
-    },
-    {
-      "rank": 382,
-      "targetWord": "lief",
-      "englishWord": "ran"
-    },
-    {
-      "rank": 383,
-      "targetWord": "überprüfen",
-      "englishWord": "check"
-    },
-    {
-      "rank": 384,
-      "targetWord": "Spiel",
-      "englishWord": "game"
-    },
-    {
-      "rank": 385,
-      "targetWord": "Form",
-      "englishWord": "shape"
-    },
-    {
-      "rank": 386,
-      "targetWord": "gleichsetzen",
-      "englishWord": "equate"
-    },
-    {
-      "rank": 387,
-      "targetWord": "heiß",
-      "englishWord": "hot"
-    },
-    {
-      "rank": 388,
-      "targetWord": "Fehl",
-      "englishWord": "miss"
-    },
-    {
-      "rank": 389,
-      "targetWord": "gebracht",
-      "englishWord": "brought"
-    },
-    {
-      "rank": 390,
-      "targetWord": "Wärme",
-      "englishWord": "heat"
-    },
-    {
-      "rank": 391,
-      "targetWord": "Schnee",
-      "englishWord": "snow"
-    },
-    {
-      "rank": 392,
-      "targetWord": "Reifen",
-      "englishWord": "tire"
-    },
-    {
-      "rank": 393,
-      "targetWord": "bringen",
-      "englishWord": "bring"
-    },
-    {
-      "rank": 394,
-      "targetWord": "ja",
-      "englishWord": "yes"
-    },
-    {
-      "rank": 395,
-      "targetWord": "entfernt",
-      "englishWord": "distant"
-    },
-    {
-      "rank": 396,
-      "targetWord": "füllen",
-      "englishWord": "fill"
-    },
-    {
-      "rank": 397,
-      "targetWord": "Osten",
-      "englishWord": "east"
-    },
-    {
-      "rank": 398,
-      "targetWord": "malen",
-      "englishWord": "paint"
-    },
-    {
-      "rank": 399,
-      "targetWord": "Sprache",
-      "englishWord": "language"
-    },
-    {
-      "rank": 400,
-      "targetWord": "unter",
-      "englishWord": "among"
-    },
-    {
-      "rank": 401,
-      "targetWord": "Einheit",
-      "englishWord": "unit"
-    },
-    {
-      "rank": 402,
-      "targetWord": "Macht",
-      "englishWord": "power"
-    },
-    {
-      "rank": 403,
-      "targetWord": "Stadt",
-      "englishWord": "town"
-    },
-    {
-      "rank": 404,
-      "targetWord": "fein",
-      "englishWord": "fine"
-    },
-    {
-      "rank": 405,
-      "targetWord": "sicher",
-      "englishWord": "certain"
-    },
-    {
-      "rank": 406,
-      "targetWord": "fliegen",
-      "englishWord": "fly"
-    },
-    {
-      "rank": 407,
-      "targetWord": "fallen",
-      "englishWord": "fall"
-    },
-    {
-      "rank": 408,
-      "targetWord": "führen",
-      "englishWord": "lead"
-    },
-    {
-      "rank": 409,
-      "targetWord": "Schrei",
-      "englishWord": "cry"
-    },
-    {
-      "rank": 410,
-      "targetWord": "dunkel",
-      "englishWord": "dark"
-    },
-    {
-      "rank": 411,
-      "targetWord": "Maschine",
-      "englishWord": "machine"
-    },
-    {
-      "rank": 412,
-      "targetWord": "note",
-      "englishWord": "note"
-    },
-    {
-      "rank": 413,
-      "targetWord": "warten",
-      "englishWord": "wait"
-    },
-    {
-      "rank": 414,
-      "targetWord": "Plan",
-      "englishWord": "plan"
-    },
-    {
-      "rank": 415,
-      "targetWord": "Abbildung",
-      "englishWord": "figure"
-    },
-    {
-      "rank": 416,
-      "targetWord": "Stern",
-      "englishWord": "star"
-    },
-    {
-      "rank": 417,
-      "targetWord": "Kasten",
-      "englishWord": "box"
-    },
-    {
-      "rank": 418,
-      "targetWord": "Nomen",
-      "englishWord": "noun"
-    },
-    {
-      "rank": 419,
-      "targetWord": "Feld",
-      "englishWord": "field"
-    },
-    {
-      "rank": 420,
-      "targetWord": "Rest",
-      "englishWord": "rest"
-    },
-    {
-      "rank": 421,
-      "targetWord": "richtig",
-      "englishWord": "correct"
-    },
-    {
-      "rank": 422,
-      "targetWord": "fähig",
-      "englishWord": "able"
-    },
-    {
-      "rank": 423,
-      "targetWord": "Pfund",
-      "englishWord": "pound"
-    },
-    {
-      "rank": 424,
-      "targetWord": "getan",
-      "englishWord": "done"
-    },
-    {
-      "rank": 425,
-      "targetWord": "Schönheit",
-      "englishWord": "beauty"
-    },
-    {
-      "rank": 426,
-      "targetWord": "Antriebs",
-      "englishWord": "drive"
-    },
-    {
-      "rank": 427,
-      "targetWord": "stand",
-      "englishWord": "stood"
-    },
-    {
-      "rank": 428,
-      "targetWord": "enthalten",
-      "englishWord": "contain"
-    },
-    {
-      "rank": 429,
-      "targetWord": "Front",
-      "englishWord": "front"
-    },
-    {
-      "rank": 430,
-      "targetWord": "lehren",
-      "englishWord": "teach"
-    },
-    {
-      "rank": 431,
-      "targetWord": "Woche",
-      "englishWord": "week"
-    },
-    {
-      "rank": 432,
-      "targetWord": "Finale",
-      "englishWord": "final"
-    },
-    {
-      "rank": 433,
-      "targetWord": "gab",
-      "englishWord": "gave"
-    },
-    {
-      "rank": 434,
-      "targetWord": "grün",
-      "englishWord": "green"
-    },
-    {
-      "rank": 435,
-      "targetWord": "oh",
-      "englishWord": "oh"
-    },
-    {
-      "rank": 436,
-      "targetWord": "schnell",
-      "englishWord": "quick"
-    },
-    {
-      "rank": 437,
-      "targetWord": "entwickeln",
-      "englishWord": "develop"
-    },
-    {
-      "rank": 438,
-      "targetWord": "Ozean",
-      "englishWord": "ocean"
-    },
-    {
-      "rank": 439,
-      "targetWord": "warme",
-      "englishWord": "warm"
-    },
-    {
-      "rank": 440,
-      "targetWord": "kostenlos",
-      "englishWord": "free"
-    },
-    {
-      "rank": 441,
-      "targetWord": "Minute",
-      "englishWord": "minute"
-    },
-    {
-      "rank": 442,
-      "targetWord": "stark",
-      "englishWord": "strong"
-    },
-    {
-      "rank": 443,
-      "targetWord": "besondere",
-      "englishWord": "special"
-    },
-    {
-      "rank": 444,
-      "targetWord": "Geist",
-      "englishWord": "mind"
-    },
-    {
-      "rank": 445,
-      "targetWord": "hinter",
-      "englishWord": "behind"
-    },
-    {
-      "rank": 446,
-      "targetWord": "klar",
-      "englishWord": "clear"
-    },
-    {
-      "rank": 447,
-      "targetWord": "Schwanz",
-      "englishWord": "tail"
-    },
-    {
-      "rank": 448,
-      "targetWord": "produzieren",
-      "englishWord": "produce"
-    },
-    {
-      "rank": 449,
-      "targetWord": "Tatsache",
-      "englishWord": "fact"
-    },
-    {
-      "rank": 450,
-      "targetWord": "Raum",
-      "englishWord": "space"
-    },
-    {
-      "rank": 451,
-      "targetWord": "gehört",
-      "englishWord": "heard"
-    },
-    {
-      "rank": 452,
-      "targetWord": "beste",
-      "englishWord": "best"
-    },
-    {
-      "rank": 453,
-      "targetWord": "Stunde",
-      "englishWord": "hour"
-    },
-    {
-      "rank": 454,
-      "targetWord": "besser",
-      "englishWord": "better"
-    },
-    {
-      "rank": 455,
-      "targetWord": "wahr",
-      "englishWord": "true"
-    },
-    {
-      "rank": 456,
-      "targetWord": "während",
-      "englishWord": "during"
-    },
-    {
-      "rank": 457,
-      "targetWord": "hundert",
-      "englishWord": "hundred"
-    },
-    {
-      "rank": 458,
-      "targetWord": "fünf",
-      "englishWord": "five"
-    },
-    {
-      "rank": 459,
-      "targetWord": "merken",
-      "englishWord": "remember"
-    },
-    {
-      "rank": 460,
-      "targetWord": "Schritt",
-      "englishWord": "step"
-    },
-    {
-      "rank": 461,
-      "targetWord": "früh",
-      "englishWord": "early"
-    },
-    {
-      "rank": 462,
-      "targetWord": "halten",
-      "englishWord": "hold"
-    },
-    {
-      "rank": 463,
-      "targetWord": "Westen",
-      "englishWord": "west"
-    },
-    {
-      "rank": 464,
-      "targetWord": "Boden",
-      "englishWord": "ground"
-    },
-    {
-      "rank": 465,
-      "targetWord": "Interesse",
-      "englishWord": "interest"
-    },
-    {
-      "rank": 466,
-      "targetWord": "erreichen",
-      "englishWord": "reach"
-    },
-    {
-      "rank": 467,
-      "targetWord": "schnell",
-      "englishWord": "fast"
-    },
-    {
-      "rank": 468,
-      "targetWord": "Verbum",
-      "englishWord": "verb"
-    },
-    {
-      "rank": 469,
-      "targetWord": "singen",
-      "englishWord": "sing"
-    },
-    {
-      "rank": 470,
-      "targetWord": "hören",
-      "englishWord": "listen"
-    },
-    {
-      "rank": 471,
-      "targetWord": "sechs",
-      "englishWord": "six"
-    },
-    {
-      "rank": 472,
-      "targetWord": "Tabelle",
-      "englishWord": "table"
-    },
-    {
-      "rank": 473,
-      "targetWord": "Reise",
-      "englishWord": "travel"
-    },
-    {
-      "rank": 474,
-      "targetWord": "weniger",
-      "englishWord": "less"
-    },
-    {
-      "rank": 475,
-      "targetWord": "Morgen",
-      "englishWord": "morning"
-    },
-    {
-      "rank": 476,
-      "targetWord": "zehn",
-      "englishWord": "ten"
-    },
-    {
-      "rank": 477,
-      "targetWord": "einfach",
-      "englishWord": "simple"
-    },
-    {
-      "rank": 478,
-      "targetWord": "mehrere",
-      "englishWord": "several"
-    },
-    {
-      "rank": 479,
-      "targetWord": "Vokal",
-      "englishWord": "vowel"
-    },
-    {
-      "rank": 480,
-      "targetWord": "auf",
-      "englishWord": "toward"
-    },
-    {
-      "rank": 481,
-      "targetWord": "Krieg",
-      "englishWord": "war"
-    },
-    {
-      "rank": 482,
-      "targetWord": "legen",
-      "englishWord": "lay"
-    },
-    {
-      "rank": 483,
+      "rank": 77,
       "targetWord": "gegen",
       "englishWord": "against"
     },
     {
-      "rank": 484,
-      "targetWord": "Muster",
-      "englishWord": "pattern"
+      "rank": 78,
+      "targetWord": "sowie",
+      "englishWord": "as well as"
     },
     {
-      "rank": 485,
-      "targetWord": "schleppend",
-      "englishWord": "slow"
+      "rank": 79,
+      "targetWord": "hier",
+      "englishWord": "here"
     },
     {
-      "rank": 486,
-      "targetWord": "Zentrum",
-      "englishWord": "center"
+      "rank": 80,
+      "targetWord": "bereits",
+      "englishWord": "already (formal)"
     },
     {
-      "rank": 487,
-      "targetWord": "Liebe",
-      "englishWord": "love"
+      "rank": 81,
+      "targetWord": "damit",
+      "englishWord": "so that"
     },
     {
-      "rank": 488,
-      "targetWord": "Person",
-      "englishWord": "person"
+      "rank": 82,
+      "targetWord": "die Zeit",
+      "englishWord": "time"
     },
     {
-      "rank": 489,
-      "targetWord": "Geld",
-      "englishWord": "money"
+      "rank": 83,
+      "targetWord": "zwischen",
+      "englishWord": "between"
     },
     {
-      "rank": 490,
-      "targetWord": "dienen",
-      "englishWord": "serve"
+      "rank": 84,
+      "targetWord": "wollen",
+      "englishWord": "to want"
     },
     {
-      "rank": 491,
-      "targetWord": "erscheinen",
-      "englishWord": "appear"
+      "rank": 85,
+      "targetWord": "lassen",
+      "englishWord": "to let"
     },
     {
-      "rank": 492,
-      "targetWord": "Straße",
-      "englishWord": "road"
+      "rank": 86,
+      "targetWord": "immer",
+      "englishWord": "always"
     },
     {
-      "rank": 493,
-      "targetWord": "Karte",
-      "englishWord": "map"
+      "rank": 87,
+      "targetWord": "sehr",
+      "englishWord": "very"
     },
     {
-      "rank": 494,
-      "targetWord": "regen",
-      "englishWord": "rain"
+      "rank": 88,
+      "targetWord": "schon",
+      "englishWord": "already"
     },
     {
-      "rank": 495,
-      "targetWord": "Regel",
-      "englishWord": "rule"
+      "rank": 89,
+      "targetWord": "liegen",
+      "englishWord": "to lie, to be located"
     },
     {
-      "rank": 496,
-      "targetWord": "regieren",
-      "englishWord": "govern"
+      "rank": 90,
+      "targetWord": "hoch",
+      "englishWord": "high"
     },
     {
-      "rank": 497,
-      "targetWord": "ziehen",
-      "englishWord": "pull"
+      "rank": 91,
+      "targetWord": "der Mensch",
+      "englishWord": "human being"
     },
     {
-      "rank": 498,
-      "targetWord": "Kälte",
-      "englishWord": "cold"
+      "rank": 92,
+      "targetWord": "drei",
+      "englishWord": "three"
     },
     {
-      "rank": 499,
-      "targetWord": "Hinweis",
-      "englishWord": "notice"
+      "rank": 93,
+      "targetWord": "sehen",
+      "englishWord": "to see"
     },
     {
-      "rank": 500,
-      "targetWord": "Stimme",
-      "englishWord": "voice"
+      "rank": 94,
+      "targetWord": "die Stadt",
+      "englishWord": "city"
     },
     {
-      "rank": 501,
-      "targetWord": "Energie",
-      "englishWord": "energy"
-    },
-    {
-      "rank": 502,
-      "targetWord": "Jagd",
-      "englishWord": "hunt"
-    },
-    {
-      "rank": 503,
-      "targetWord": "wahrscheinlich",
-      "englishWord": "probable"
-    },
-    {
-      "rank": 504,
-      "targetWord": "Bett",
-      "englishWord": "bed"
-    },
-    {
-      "rank": 505,
-      "targetWord": "Bruder",
-      "englishWord": "brother"
-    },
-    {
-      "rank": 506,
-      "targetWord": "Ei",
-      "englishWord": "egg"
-    },
-    {
-      "rank": 507,
-      "targetWord": "Fahrt",
-      "englishWord": "ride"
-    },
-    {
-      "rank": 508,
-      "targetWord": "Zelle",
-      "englishWord": "cell"
-    },
-    {
-      "rank": 509,
-      "targetWord": "glauben",
-      "englishWord": "believe"
-    },
-    {
-      "rank": 510,
-      "targetWord": "vielleicht",
-      "englishWord": "perhaps"
-    },
-    {
-      "rank": 511,
-      "targetWord": "pflücken",
-      "englishWord": "pick"
-    },
-    {
-      "rank": 512,
-      "targetWord": "plötzlich",
-      "englishWord": "sudden"
-    },
-    {
-      "rank": 513,
-      "targetWord": "zählen",
-      "englishWord": "count"
-    },
-    {
-      "rank": 514,
-      "targetWord": "Platz",
-      "englishWord": "square"
-    },
-    {
-      "rank": 515,
-      "targetWord": "Grund",
-      "englishWord": "reason"
-    },
-    {
-      "rank": 516,
-      "targetWord": "Dauer",
-      "englishWord": "length"
-    },
-    {
-      "rank": 517,
-      "targetWord": "vertreten",
-      "englishWord": "represent"
-    },
-    {
-      "rank": 518,
-      "targetWord": "Kunst",
-      "englishWord": "art"
-    },
-    {
-      "rank": 519,
-      "targetWord": "Thema",
-      "englishWord": "subject"
-    },
-    {
-      "rank": 520,
-      "targetWord": "Region",
-      "englishWord": "region"
-    },
-    {
-      "rank": 521,
-      "targetWord": "Größe",
-      "englishWord": "size"
-    },
-    {
-      "rank": 522,
-      "targetWord": "variieren",
-      "englishWord": "vary"
-    },
-    {
-      "rank": 523,
-      "targetWord": "regeln",
-      "englishWord": "settle"
-    },
-    {
-      "rank": 524,
-      "targetWord": "sprechen",
-      "englishWord": "speak"
-    },
-    {
-      "rank": 525,
-      "targetWord": "Gewicht",
-      "englishWord": "weight"
-    },
-    {
-      "rank": 526,
-      "targetWord": "allgemein",
-      "englishWord": "general"
-    },
-    {
-      "rank": 527,
-      "targetWord": "Eis",
-      "englishWord": "ice"
-    },
-    {
-      "rank": 528,
-      "targetWord": "Materie",
-      "englishWord": "matter"
-    },
-    {
-      "rank": 529,
-      "targetWord": "Kreis",
-      "englishWord": "circle"
-    },
-    {
-      "rank": 530,
-      "targetWord": "Paar",
-      "englishWord": "pair"
-    },
-    {
-      "rank": 531,
-      "targetWord": "umfassen",
-      "englishWord": "include"
-    },
-    {
-      "rank": 532,
-      "targetWord": "Kluft",
-      "englishWord": "divide"
-    },
-    {
-      "rank": 533,
-      "targetWord": "Silbe",
-      "englishWord": "syllable"
-    },
-    {
-      "rank": 534,
-      "targetWord": "Filz",
-      "englishWord": "felt"
-    },
-    {
-      "rank": 535,
-      "targetWord": "groß",
-      "englishWord": "grand"
-    },
-    {
-      "rank": 536,
-      "targetWord": "Kugel",
-      "englishWord": "ball"
-    },
-    {
-      "rank": 537,
-      "targetWord": "noch",
-      "englishWord": "yet"
-    },
-    {
-      "rank": 538,
-      "targetWord": "Welle",
-      "englishWord": "wave"
-    },
-    {
-      "rank": 539,
-      "targetWord": "fallen",
-      "englishWord": "drop"
-    },
-    {
-      "rank": 540,
-      "targetWord": "Herz",
-      "englishWord": "heart"
-    },
-    {
-      "rank": 541,
-      "targetWord": "Uhr",
-      "englishWord": "am"
-    },
-    {
-      "rank": 542,
-      "targetWord": "vorhanden",
-      "englishWord": "present"
-    },
-    {
-      "rank": 543,
-      "targetWord": "schwer",
-      "englishWord": "heavy"
-    },
-    {
-      "rank": 544,
-      "targetWord": "Tanz",
-      "englishWord": "dance"
-    },
-    {
-      "rank": 545,
-      "targetWord": "Motor",
-      "englishWord": "engine"
-    },
-    {
-      "rank": 546,
-      "targetWord": "Position",
-      "englishWord": "position"
-    },
-    {
-      "rank": 547,
-      "targetWord": "Arm",
-      "englishWord": "arm"
-    },
-    {
-      "rank": 548,
-      "targetWord": "breit",
-      "englishWord": "wide"
-    },
-    {
-      "rank": 549,
-      "targetWord": "Segel",
-      "englishWord": "sail"
-    },
-    {
-      "rank": 550,
-      "targetWord": "Material",
-      "englishWord": "material"
-    },
-    {
-      "rank": 551,
-      "targetWord": "Fraktion",
-      "englishWord": "fraction"
-    },
-    {
-      "rank": 552,
-      "targetWord": "Wald",
-      "englishWord": "forest"
-    },
-    {
-      "rank": 553,
-      "targetWord": "sitzen",
-      "englishWord": "sit"
-    },
-    {
-      "rank": 554,
-      "targetWord": "Rennen",
-      "englishWord": "race"
-    },
-    {
-      "rank": 555,
-      "targetWord": "Fenster",
-      "englishWord": "window"
-    },
-    {
-      "rank": 556,
-      "targetWord": "Speicher",
-      "englishWord": "store"
-    },
-    {
-      "rank": 557,
-      "targetWord": "Sommer",
-      "englishWord": "summer"
-    },
-    {
-      "rank": 558,
-      "targetWord": "Zug",
-      "englishWord": "train"
-    },
-    {
-      "rank": 559,
-      "targetWord": "Schlaf",
-      "englishWord": "sleep"
-    },
-    {
-      "rank": 560,
-      "targetWord": "beweisen",
-      "englishWord": "prove"
-    },
-    {
-      "rank": 561,
-      "targetWord": "einsam",
-      "englishWord": "lone"
-    },
-    {
-      "rank": 562,
-      "targetWord": "Bein",
-      "englishWord": "leg"
-    },
-    {
-      "rank": 563,
-      "targetWord": "Übung",
-      "englishWord": "exercise"
-    },
-    {
-      "rank": 564,
-      "targetWord": "Wand",
-      "englishWord": "wall"
-    },
-    {
-      "rank": 565,
-      "targetWord": "Fang",
-      "englishWord": "catch"
-    },
-    {
-      "rank": 566,
-      "targetWord": "Berg",
-      "englishWord": "mount"
-    },
-    {
-      "rank": 567,
-      "targetWord": "wünschen",
-      "englishWord": "wish"
-    },
-    {
-      "rank": 568,
-      "targetWord": "Himmel",
-      "englishWord": "sky"
-    },
-    {
-      "rank": 569,
-      "targetWord": "Board",
-      "englishWord": "board"
-    },
-    {
-      "rank": 570,
-      "targetWord": "Freude",
-      "englishWord": "joy"
-    },
-    {
-      "rank": 571,
-      "targetWord": "Winter",
-      "englishWord": "winter"
-    },
-    {
-      "rank": 572,
-      "targetWord": "sa",
-      "englishWord": "sat"
-    },
-    {
-      "rank": 573,
-      "targetWord": "geschrieben",
-      "englishWord": "written"
-    },
-    {
-      "rank": 574,
-      "targetWord": "wilden",
-      "englishWord": "wild"
-    },
-    {
-      "rank": 575,
-      "targetWord": "Instrument",
-      "englishWord": "instrument"
-    },
-    {
-      "rank": 576,
-      "targetWord": "gehalten",
-      "englishWord": "kept"
-    },
-    {
-      "rank": 577,
-      "targetWord": "Glas",
-      "englishWord": "glass"
-    },
-    {
-      "rank": 578,
-      "targetWord": "Gras",
-      "englishWord": "grass"
-    },
-    {
-      "rank": 579,
-      "targetWord": "Kuh",
-      "englishWord": "cow"
-    },
-    {
-      "rank": 580,
-      "targetWord": "Arbeit",
-      "englishWord": "job"
-    },
-    {
-      "rank": 581,
-      "targetWord": "Rand",
-      "englishWord": "edge"
-    },
-    {
-      "rank": 582,
-      "targetWord": "Zeichen",
-      "englishWord": "sign"
-    },
-    {
-      "rank": 583,
-      "targetWord": "Besuch",
-      "englishWord": "visit"
-    },
-    {
-      "rank": 584,
-      "targetWord": "Vergangenheit",
-      "englishWord": "past"
-    },
-    {
-      "rank": 585,
-      "targetWord": "weich",
-      "englishWord": "soft"
-    },
-    {
-      "rank": 586,
-      "targetWord": "Spaß",
-      "englishWord": "fun"
-    },
-    {
-      "rank": 587,
-      "targetWord": "hell",
-      "englishWord": "bright"
-    },
-    {
-      "rank": 588,
-      "targetWord": "Gases",
-      "englishWord": "gas"
-    },
-    {
-      "rank": 589,
-      "targetWord": "Wetter",
-      "englishWord": "weather"
-    },
-    {
-      "rank": 590,
-      "targetWord": "Monat",
-      "englishWord": "month"
-    },
-    {
-      "rank": 591,
-      "targetWord": "Million",
-      "englishWord": "million"
-    },
-    {
-      "rank": 592,
-      "targetWord": "tragen",
-      "englishWord": "bear"
-    },
-    {
-      "rank": 593,
-      "targetWord": "Finish",
-      "englishWord": "finish"
-    },
-    {
-      "rank": 594,
-      "targetWord": "glücklich",
-      "englishWord": "happy"
-    },
-    {
-      "rank": 595,
-      "targetWord": "hoffen",
-      "englishWord": "hope"
-    },
-    {
-      "rank": 596,
-      "targetWord": "blume",
-      "englishWord": "flower"
-    },
-    {
-      "rank": 597,
-      "targetWord": "kleiden",
-      "englishWord": "clothe"
-    },
-    {
-      "rank": 598,
-      "targetWord": "seltsam",
-      "englishWord": "strange"
-    },
-    {
-      "rank": 599,
-      "targetWord": "Vorbei",
-      "englishWord": "gone"
-    },
-    {
-      "rank": 600,
-      "targetWord": "Handel",
-      "englishWord": "trade"
-    },
-    {
-      "rank": 601,
-      "targetWord": "Melodie",
-      "englishWord": "melody"
-    },
-    {
-      "rank": 602,
-      "targetWord": "Reise",
-      "englishWord": "trip"
-    },
-    {
-      "rank": 603,
-      "targetWord": "Büro",
-      "englishWord": "office"
-    },
-    {
-      "rank": 604,
-      "targetWord": "empfangen",
-      "englishWord": "receive"
-    },
-    {
-      "rank": 605,
-      "targetWord": "Reihe",
-      "englishWord": "row"
-    },
-    {
-      "rank": 606,
-      "targetWord": "Mund",
-      "englishWord": "mouth"
-    },
-    {
-      "rank": 607,
-      "targetWord": "genau",
-      "englishWord": "exact"
-    },
-    {
-      "rank": 608,
-      "targetWord": "Zeichen",
-      "englishWord": "symbol"
-    },
-    {
-      "rank": 609,
-      "targetWord": "sterben",
-      "englishWord": "die"
-    },
-    {
-      "rank": 610,
-      "targetWord": "am wenigsten",
-      "englishWord": "least"
-    },
-    {
-      "rank": 611,
-      "targetWord": "Ärger",
-      "englishWord": "trouble"
-    },
-    {
-      "rank": 612,
-      "targetWord": "Schrei",
-      "englishWord": "shout"
-    },
-    {
-      "rank": 613,
-      "targetWord": "außer",
-      "englishWord": "except"
-    },
-    {
-      "rank": 614,
-      "targetWord": "schrieb",
-      "englishWord": "wrote"
-    },
-    {
-      "rank": 615,
-      "targetWord": "Samen",
-      "englishWord": "seed"
-    },
-    {
-      "rank": 616,
-      "targetWord": "Ton",
-      "englishWord": "tone"
-    },
-    {
-      "rank": 617,
-      "targetWord": "beitreten",
-      "englishWord": "join"
-    },
-    {
-      "rank": 618,
-      "targetWord": "vorschlagen",
-      "englishWord": "suggest"
-    },
-    {
-      "rank": 619,
-      "targetWord": "sauber",
-      "englishWord": "clean"
-    },
-    {
-      "rank": 620,
-      "targetWord": "Pause",
-      "englishWord": "break"
-    },
-    {
-      "rank": 621,
-      "targetWord": "Dame",
-      "englishWord": "lady"
-    },
-    {
-      "rank": 622,
-      "targetWord": "Hof",
-      "englishWord": "yard"
-    },
-    {
-      "rank": 623,
-      "targetWord": "steigen",
-      "englishWord": "rise"
-    },
-    {
-      "rank": 624,
-      "targetWord": "schlecht",
-      "englishWord": "bad"
-    },
-    {
-      "rank": 625,
-      "targetWord": "Schlag",
-      "englishWord": "blow"
-    },
-    {
-      "rank": 626,
-      "targetWord": "Öl",
-      "englishWord": "oil"
-    },
-    {
-      "rank": 627,
-      "targetWord": "Blut",
-      "englishWord": "blood"
-    },
-    {
-      "rank": 628,
-      "targetWord": "berühren",
-      "englishWord": "touch"
-    },
-    {
-      "rank": 629,
-      "targetWord": "wuchs",
-      "englishWord": "grew"
-    },
-    {
-      "rank": 630,
-      "targetWord": "Cent",
-      "englishWord": "cent"
-    },
-    {
-      "rank": 631,
-      "targetWord": "mischen",
-      "englishWord": "mix"
-    },
-    {
-      "rank": 632,
-      "targetWord": "Mannschaft",
-      "englishWord": "team"
-    },
-    {
-      "rank": 633,
-      "targetWord": "Draht",
-      "englishWord": "wire"
-    },
-    {
-      "rank": 634,
-      "targetWord": "Kosten",
-      "englishWord": "cost"
-    },
-    {
-      "rank": 635,
-      "targetWord": "verloren",
-      "englishWord": "lost"
-    },
-    {
-      "rank": 636,
-      "targetWord": "braun",
-      "englishWord": "brown"
-    },
-    {
-      "rank": 637,
-      "targetWord": "tragen",
-      "englishWord": "wear"
-    },
-    {
-      "rank": 638,
-      "targetWord": "Garten",
-      "englishWord": "garden"
-    },
-    {
-      "rank": 639,
-      "targetWord": "gleich",
-      "englishWord": "equal"
-    },
-    {
-      "rank": 640,
-      "targetWord": "gesendet",
-      "englishWord": "sent"
-    },
-    {
-      "rank": 641,
-      "targetWord": "wählen",
-      "englishWord": "choose"
-    },
-    {
-      "rank": 642,
-      "targetWord": "fiel",
-      "englishWord": "fell"
-    },
-    {
-      "rank": 643,
-      "targetWord": "passen",
-      "englishWord": "fit"
-    },
-    {
-      "rank": 644,
-      "targetWord": "fließen",
-      "englishWord": "flow"
-    },
-    {
-      "rank": 645,
-      "targetWord": "Messe",
-      "englishWord": "fair"
-    },
-    {
-      "rank": 646,
-      "targetWord": "Bank",
-      "englishWord": "bank"
-    },
-    {
-      "rank": 647,
-      "targetWord": "sammeln",
-      "englishWord": "collect"
-    },
-    {
-      "rank": 648,
-      "targetWord": "sparen",
-      "englishWord": "save"
-    },
-    {
-      "rank": 649,
-      "targetWord": "Kontrolle",
-      "englishWord": "control"
-    },
-    {
-      "rank": 650,
-      "targetWord": "dezimal",
-      "englishWord": "decimal"
-    },
-    {
-      "rank": 651,
-      "targetWord": "Ohr",
-      "englishWord": "ear"
-    },
-    {
-      "rank": 652,
-      "targetWord": "sonst",
-      "englishWord": "else"
-    },
-    {
-      "rank": 653,
-      "targetWord": "ganz",
-      "englishWord": "quite"
-    },
-    {
-      "rank": 654,
-      "targetWord": "pleite",
-      "englishWord": "broke"
-    },
-    {
-      "rank": 655,
-      "targetWord": "Fall",
-      "englishWord": "case"
-    },
-    {
-      "rank": 656,
-      "targetWord": "Mitte",
-      "englishWord": "middle"
-    },
-    {
-      "rank": 657,
-      "targetWord": "töten",
-      "englishWord": "kill"
-    },
-    {
-      "rank": 658,
-      "targetWord": "Sohn",
-      "englishWord": "son"
-    },
-    {
-      "rank": 659,
-      "targetWord": "See",
-      "englishWord": "lake"
-    },
-    {
-      "rank": 660,
-      "targetWord": "Moment",
-      "englishWord": "moment"
-    },
-    {
-      "rank": 661,
-      "targetWord": "Maßstab",
-      "englishWord": "scale"
-    },
-    {
-      "rank": 662,
-      "targetWord": "laut",
-      "englishWord": "loud"
-    },
-    {
-      "rank": 663,
-      "targetWord": "Frühling",
-      "englishWord": "spring"
-    },
-    {
-      "rank": 664,
-      "targetWord": "beobachten",
-      "englishWord": "observe"
-    },
-    {
-      "rank": 665,
-      "targetWord": "Kind",
+      "rank": 95,
+      "targetWord": "das Kind",
       "englishWord": "child"
     },
     {
-      "rank": 666,
-      "targetWord": "gerade",
-      "englishWord": "straight"
+      "rank": 96,
+      "targetWord": "doch",
+      "englishWord": "but, after all"
     },
     {
-      "rank": 667,
-      "targetWord": "Konsonant",
-      "englishWord": "consonant"
+      "rank": 97,
+      "targetWord": "stellen",
+      "englishWord": "to place"
     },
     {
-      "rank": 668,
-      "targetWord": "Nation",
-      "englishWord": "nation"
+      "rank": 98,
+      "targetWord": "wenig",
+      "englishWord": "little, few"
     },
     {
-      "rank": 669,
-      "targetWord": "Wörterbuch",
-      "englishWord": "dictionary"
+      "rank": 99,
+      "targetWord": "das Leben",
+      "englishWord": "life"
     },
     {
-      "rank": 670,
-      "targetWord": "milch",
-      "englishWord": "milk"
+      "rank": 100,
+      "targetWord": "zeigen",
+      "englishWord": "to show"
     },
     {
-      "rank": 671,
-      "targetWord": "Geschwindigkeit",
-      "englishWord": "speed"
+      "rank": 101,
+      "targetWord": "jedoch",
+      "englishWord": "however"
     },
     {
-      "rank": 672,
-      "targetWord": "Verfahren",
-      "englishWord": "method"
+      "rank": 102,
+      "targetWord": "etwa",
+      "englishWord": "approximately"
     },
     {
-      "rank": 673,
-      "targetWord": "Orgel",
-      "englishWord": "organ"
+      "rank": 103,
+      "targetWord": "ganz",
+      "englishWord": "whole, entire"
     },
     {
-      "rank": 674,
-      "targetWord": "zahlen",
-      "englishWord": "pay"
+      "rank": 104,
+      "targetWord": "nun",
+      "englishWord": "now, well then"
     },
     {
-      "rank": 675,
-      "targetWord": "Alter",
-      "englishWord": "age"
+      "rank": 105,
+      "targetWord": "der Tag",
+      "englishWord": "day"
     },
     {
-      "rank": 676,
-      "targetWord": "Abschnitt",
-      "englishWord": "section"
+      "rank": 106,
+      "targetWord": "dort",
+      "englishWord": "over there"
     },
     {
-      "rank": 677,
-      "targetWord": "Kleid",
-      "englishWord": "dress"
+      "rank": 107,
+      "targetWord": "beide",
+      "englishWord": "both"
     },
     {
-      "rank": 678,
-      "targetWord": "Wolke",
-      "englishWord": "cloud"
+      "rank": 108,
+      "targetWord": "klein",
+      "englishWord": "small"
     },
     {
-      "rank": 679,
-      "targetWord": "Überraschung",
-      "englishWord": "surprise"
+      "rank": 109,
+      "targetWord": "nehmen",
+      "englishWord": "to take"
     },
     {
-      "rank": 680,
-      "targetWord": "ruhig",
-      "englishWord": "quiet"
+      "rank": 110,
+      "targetWord": "erhalten",
+      "englishWord": "to receive"
     },
     {
-      "rank": 681,
-      "targetWord": "Stein",
-      "englishWord": "stone"
+      "rank": 111,
+      "targetWord": "heute",
+      "englishWord": "today"
     },
     {
-      "rank": 682,
-      "targetWord": "winzig",
-      "englishWord": "tiny"
+      "rank": 112,
+      "targetWord": "während",
+      "englishWord": "during, while"
     },
     {
-      "rank": 683,
-      "targetWord": "Aufstieg",
-      "englishWord": "climb"
+      "rank": 113,
+      "targetWord": "der Teil",
+      "englishWord": "part"
     },
     {
-      "rank": 684,
-      "targetWord": "kühlen",
-      "englishWord": "cool"
+      "rank": 114,
+      "targetWord": "bleiben",
+      "englishWord": "to stay"
     },
     {
-      "rank": 685,
-      "targetWord": "Entwurf",
-      "englishWord": "design"
+      "rank": 115,
+      "targetWord": "selbst",
+      "englishWord": "oneself"
     },
     {
-      "rank": 686,
-      "targetWord": "arm",
-      "englishWord": "poor"
+      "rank": 116,
+      "targetWord": "das Ende",
+      "englishWord": "end"
     },
     {
-      "rank": 687,
-      "targetWord": "Menge",
-      "englishWord": "lot"
+      "rank": 117,
+      "targetWord": "deutsch",
+      "englishWord": "German"
     },
     {
-      "rank": 688,
-      "targetWord": "Versuch",
-      "englishWord": "experiment"
+      "rank": 118,
+      "targetWord": "alt",
+      "englishWord": "old"
     },
     {
-      "rank": 689,
-      "targetWord": "Boden",
-      "englishWord": "bottom"
+      "rank": 119,
+      "targetWord": "das Land",
+      "englishWord": "country"
     },
     {
-      "rank": 690,
-      "targetWord": "Schlüssel",
-      "englishWord": "key"
+      "rank": 120,
+      "targetWord": "rund",
+      "englishWord": "round"
     },
     {
-      "rank": 691,
-      "targetWord": "Eisen",
-      "englishWord": "iron"
+      "rank": 121,
+      "targetWord": "führen",
+      "englishWord": "to lead"
     },
     {
-      "rank": 692,
-      "targetWord": "Einzel",
-      "englishWord": "single"
+      "rank": 122,
+      "targetWord": "die Frau",
+      "englishWord": "woman"
     },
     {
-      "rank": 693,
-      "targetWord": "Stick",
-      "englishWord": "stick"
+      "rank": 123,
+      "targetWord": "wichtig",
+      "englishWord": "important"
     },
     {
-      "rank": 694,
-      "targetWord": "Wohnung",
-      "englishWord": "flat"
+      "rank": 124,
+      "targetWord": "ohne",
+      "englishWord": "without"
     },
     {
-      "rank": 695,
-      "targetWord": "zwanzig",
-      "englishWord": "twenty"
+      "rank": 125,
+      "targetWord": "dazu",
+      "englishWord": "in addition"
     },
     {
-      "rank": 696,
-      "targetWord": "Haut",
-      "englishWord": "skin"
+      "rank": 126,
+      "targetWord": "das Unternehmen",
+      "englishWord": "company"
     },
     {
-      "rank": 697,
-      "targetWord": "Lächeln",
-      "englishWord": "smile"
+      "rank": 127,
+      "targetWord": "eigen",
+      "englishWord": "own"
     },
     {
-      "rank": 698,
-      "targetWord": "Falte",
-      "englishWord": "crease"
+      "rank": 128,
+      "targetWord": "spät",
+      "englishWord": "late"
     },
     {
-      "rank": 699,
-      "targetWord": "Loch",
-      "englishWord": "hole"
+      "rank": 129,
+      "targetWord": "der Euro",
+      "englishWord": "euro"
     },
     {
-      "rank": 700,
-      "targetWord": "springen",
-      "englishWord": "jump"
+      "rank": 130,
+      "targetWord": "stark",
+      "englishWord": "strong"
     },
     {
-      "rank": 701,
-      "targetWord": "Kind",
-      "englishWord": "baby"
+      "rank": 131,
+      "targetWord": "sagen",
+      "englishWord": "to say"
     },
     {
-      "rank": 702,
-      "targetWord": "acht",
-      "englishWord": "eight"
+      "rank": 132,
+      "targetWord": "das Prozent",
+      "englishWord": "percent"
     },
     {
-      "rank": 703,
-      "targetWord": "Dorf",
-      "englishWord": "village"
+      "rank": 133,
+      "targetWord": "sondern",
+      "englishWord": "but rather"
     },
     {
-      "rank": 704,
-      "targetWord": "treffen",
-      "englishWord": "meet"
+      "rank": 134,
+      "targetWord": "lang",
+      "englishWord": "long"
     },
     {
-      "rank": 705,
-      "targetWord": "Wurzel",
-      "englishWord": "root"
+      "rank": 135,
+      "targetWord": "einige",
+      "englishWord": "some, a few"
     },
     {
-      "rank": 706,
-      "targetWord": "kaufen",
-      "englishWord": "buy"
+      "rank": 136,
+      "targetWord": "allerdings",
+      "englishWord": "admittedly, though"
     },
     {
-      "rank": 707,
-      "targetWord": "erhöhen",
-      "englishWord": "raise"
+      "rank": 137,
+      "targetWord": "weiter",
+      "englishWord": "further"
     },
     {
-      "rank": 708,
-      "targetWord": "lösen",
-      "englishWord": "solve"
+      "rank": 138,
+      "targetWord": "das Mal",
+      "englishWord": "time (occurrence)"
     },
     {
-      "rank": 709,
-      "targetWord": "Metall",
-      "englishWord": "metal"
+      "rank": 139,
+      "targetWord": "gelten",
+      "englishWord": "to be valid"
     },
     {
-      "rank": 710,
+      "rank": 140,
+      "targetWord": "dürfen",
+      "englishWord": "to be allowed to"
+    },
+    {
+      "rank": 141,
+      "targetWord": "jeder",
+      "englishWord": "each, every"
+    },
+    {
+      "rank": 142,
+      "targetWord": "spielen",
+      "englishWord": "to play"
+    },
+    {
+      "rank": 143,
+      "targetWord": "zweite",
+      "englishWord": "second"
+    },
+    {
+      "rank": 144,
+      "targetWord": "kurz",
+      "englishWord": "short"
+    },
+    {
+      "rank": 145,
+      "targetWord": "setzen",
+      "englishWord": "to set, to seat"
+    },
+    {
+      "rank": 146,
+      "targetWord": "mehrere",
+      "englishWord": "several"
+    },
+    {
+      "rank": 147,
+      "targetWord": "möglich",
+      "englishWord": "possible"
+    },
+    {
+      "rank": 148,
+      "targetWord": "vier",
+      "englishWord": "four"
+    },
+    {
+      "rank": 149,
+      "targetWord": "neben",
+      "englishWord": "next to"
+    },
+    {
+      "rank": 150,
+      "targetWord": "verschieden",
+      "englishWord": "different"
+    },
+    {
+      "rank": 151,
+      "targetWord": "halten",
+      "englishWord": "to hold"
+    },
+    {
+      "rank": 152,
+      "targetWord": "ins",
+      "englishWord": "into the"
+    },
+    {
+      "rank": 153,
+      "targetWord": "welcher",
+      "englishWord": "which"
+    },
+    {
+      "rank": 154,
+      "targetWord": "der Weg",
+      "englishWord": "way, path"
+    },
+    {
+      "rank": 155,
+      "targetWord": "der Fall",
+      "englishWord": "case"
+    },
+    {
+      "rank": 156,
+      "targetWord": "unser",
+      "englishWord": "our"
+    },
+    {
+      "rank": 157,
       "targetWord": "ob",
       "englishWord": "whether"
     },
     {
-      "rank": 711,
-      "targetWord": "drücken",
-      "englishWord": "push"
+      "rank": 158,
+      "targetWord": "der Mann",
+      "englishWord": "man"
     },
     {
-      "rank": 712,
-      "targetWord": "sieben",
-      "englishWord": "seven"
+      "rank": 159,
+      "targetWord": "die Arbeit",
+      "englishWord": "work"
     },
     {
-      "rank": 713,
-      "targetWord": "Absatz",
-      "englishWord": "paragraph"
+      "rank": 160,
+      "targetWord": "der Ort",
+      "englishWord": "place"
     },
     {
-      "rank": 714,
-      "targetWord": "dritte",
-      "englishWord": "third"
+      "rank": 161,
+      "targetWord": "nutzen",
+      "englishWord": "to use"
     },
     {
-      "rank": 715,
-      "targetWord": "wird",
-      "englishWord": "shall"
+      "rank": 162,
+      "targetWord": "zudem",
+      "englishWord": "moreover"
     },
     {
-      "rank": 716,
-      "targetWord": "Hand",
-      "englishWord": "held"
+      "rank": 163,
+      "targetWord": "erreichen",
+      "englishWord": "to reach"
     },
     {
-      "rank": 717,
-      "targetWord": "Haar",
-      "englishWord": "hair"
+      "rank": 164,
+      "targetWord": "bekannt",
+      "englishWord": "known"
     },
     {
-      "rank": 718,
-      "targetWord": "beschreiben",
-      "englishWord": "describe"
+      "rank": 165,
+      "targetWord": "das Haus",
+      "englishWord": "house"
     },
     {
-      "rank": 719,
-      "targetWord": "Koch",
-      "englishWord": "cook"
+      "rank": 166,
+      "targetWord": "jung",
+      "englishWord": "young"
     },
     {
-      "rank": 720,
-      "targetWord": "Boden",
-      "englishWord": "floor"
+      "rank": 167,
+      "targetWord": "wo",
+      "englishWord": "where"
     },
     {
-      "rank": 721,
-      "targetWord": "entweder",
-      "englishWord": "either"
+      "rank": 168,
+      "targetWord": "etwas",
+      "englishWord": "something"
     },
     {
-      "rank": 722,
-      "targetWord": "Ergebnis",
+      "rank": 169,
+      "targetWord": "gemeinsam",
+      "englishWord": "joint, together"
+    },
+    {
+      "rank": 170,
+      "targetWord": "du",
+      "englishWord": "you (singular)"
+    },
+    {
+      "rank": 171,
+      "targetWord": "dafür",
+      "englishWord": "for it"
+    },
+    {
+      "rank": 172,
+      "targetWord": "das Spiel",
+      "englishWord": "game"
+    },
+    {
+      "rank": 173,
+      "targetWord": "besonders",
+      "englishWord": "especially"
+    },
+    {
+      "rank": 174,
+      "targetWord": "bestehen",
+      "englishWord": "to consist, to exist"
+    },
+    {
+      "rank": 175,
+      "targetWord": "denn",
+      "englishWord": "for, since"
+    },
+    {
+      "rank": 176,
+      "targetWord": "statt",
+      "englishWord": "instead of"
+    },
+    {
+      "rank": 177,
+      "targetWord": "der Bereich",
+      "englishWord": "area, field"
+    },
+    {
+      "rank": 178,
+      "targetWord": "der Platz",
+      "englishWord": "square, spot"
+    },
+    {
+      "rank": 179,
+      "targetWord": "die Uhr",
+      "englishWord": "clock, o'clock"
+    },
+    {
+      "rank": 180,
+      "targetWord": "meist",
+      "englishWord": "mostly"
+    },
+    {
+      "rank": 181,
+      "targetWord": "also",
+      "englishWord": "so, therefore"
+    },
+    {
+      "rank": 182,
+      "targetWord": "der Deutsche",
+      "englishWord": "German (person)"
+    },
+    {
+      "rank": 183,
+      "targetWord": "jetzt",
+      "englishWord": "now"
+    },
+    {
+      "rank": 184,
+      "targetWord": "weil",
+      "englishWord": "because"
+    },
+    {
+      "rank": 185,
+      "targetWord": "bringen",
+      "englishWord": "to bring"
+    },
+    {
+      "rank": 186,
+      "targetWord": "einfach",
+      "englishWord": "simple, easy"
+    },
+    {
+      "rank": 187,
+      "targetWord": "die Familie",
+      "englishWord": "family"
+    },
+    {
+      "rank": 188,
+      "targetWord": "ebenfalls",
+      "englishWord": "likewise"
+    },
+    {
+      "rank": 189,
+      "targetWord": "letzte",
+      "englishWord": "last"
+    },
+    {
+      "rank": 190,
+      "targetWord": "die Seite",
+      "englishWord": "side, page"
+    },
+    {
+      "rank": 191,
+      "targetWord": "das Thema",
+      "englishWord": "topic"
+    },
+    {
+      "rank": 192,
+      "targetWord": "zurück",
+      "englishWord": "back"
+    },
+    {
+      "rank": 193,
+      "targetWord": "außerdem",
+      "englishWord": "besides"
+    },
+    {
+      "rank": 194,
+      "targetWord": "insgesamt",
+      "englishWord": "in total"
+    },
+    {
+      "rank": 195,
+      "targetWord": "befinden",
+      "englishWord": "to be situated"
+    },
+    {
+      "rank": 196,
+      "targetWord": "die Million",
+      "englishWord": "million"
+    },
+    {
+      "rank": 197,
+      "targetWord": "arbeiten",
+      "englishWord": "to work"
+    },
+    {
+      "rank": 198,
+      "targetWord": "deutlich",
+      "englishWord": "clear"
+    },
+    {
+      "rank": 199,
+      "targetWord": "die Person",
+      "englishWord": "person"
+    },
+    {
+      "rank": 200,
+      "targetWord": "die Frage",
+      "englishWord": "question"
+    },
+    {
+      "rank": 201,
+      "targetWord": "treffen",
+      "englishWord": "to meet"
+    },
+    {
+      "rank": 202,
+      "targetWord": "aktuell",
+      "englishWord": "current"
+    },
+    {
+      "rank": 203,
+      "targetWord": "wissen",
+      "englishWord": "to know (a fact)"
+    },
+    {
+      "rank": 204,
+      "targetWord": "beginnen",
+      "englishWord": "to begin"
+    },
+    {
+      "rank": 205,
+      "targetWord": "oft",
+      "englishWord": "often"
+    },
+    {
+      "rank": 206,
+      "targetWord": "schnell",
+      "englishWord": "fast"
+    },
+    {
+      "rank": 207,
+      "targetWord": "die Woche",
+      "englishWord": "week"
+    },
+    {
+      "rank": 208,
+      "targetWord": "zusammen",
+      "englishWord": "together"
+    },
+    {
+      "rank": 209,
+      "targetWord": "die Geschichte",
+      "englishWord": "history, story"
+    },
+    {
+      "rank": 210,
+      "targetWord": "der Monat",
+      "englishWord": "month"
+    },
+    {
+      "rank": 211,
+      "targetWord": "davon",
+      "englishWord": "from it"
+    },
+    {
+      "rank": 212,
+      "targetWord": "darauf",
+      "englishWord": "on it"
+    },
+    {
+      "rank": 213,
+      "targetWord": "der Grund",
+      "englishWord": "reason"
+    },
+    {
+      "rank": 214,
+      "targetWord": "das Ziel",
+      "englishWord": "goal, target"
+    },
+    {
+      "rank": 215,
+      "targetWord": "fünf",
+      "englishWord": "five"
+    },
+    {
+      "rank": 216,
+      "targetWord": "entstehen",
+      "englishWord": "to arise"
+    },
+    {
+      "rank": 217,
+      "targetWord": "hören",
+      "englishWord": "to hear"
+    },
+    {
+      "rank": 218,
+      "targetWord": "nah",
+      "englishWord": "near"
+    },
+    {
+      "rank": 219,
+      "targetWord": "direkt",
+      "englishWord": "direct"
+    },
+    {
+      "rank": 220,
+      "targetWord": "handeln",
+      "englishWord": "to act"
+    },
+    {
+      "rank": 221,
+      "targetWord": "der Name",
+      "englishWord": "name"
+    },
+    {
+      "rank": 222,
+      "targetWord": "zahlreich",
+      "englishWord": "numerous"
+    },
+    {
+      "rank": 223,
+      "targetWord": "die Schule",
+      "englishWord": "school"
+    },
+    {
+      "rank": 224,
+      "targetWord": "bieten",
+      "englishWord": "to offer"
+    },
+    {
+      "rank": 225,
+      "targetWord": "bekommen",
+      "englishWord": "to get"
+    },
+    {
+      "rank": 226,
+      "targetWord": "daher",
+      "englishWord": "hence"
+    },
+    {
+      "rank": 227,
+      "targetWord": "die Art",
+      "englishWord": "kind, type"
+    },
+    {
+      "rank": 228,
+      "targetWord": "ziehen",
+      "englishWord": "to pull"
+    },
+    {
+      "rank": 229,
+      "targetWord": "der September",
+      "englishWord": "September"
+    },
+    {
+      "rank": 230,
+      "targetWord": "das Projekt",
+      "englishWord": "project"
+    },
+    {
+      "rank": 231,
+      "targetWord": "gleich",
+      "englishWord": "same, equal"
+    },
+    {
+      "rank": 232,
+      "targetWord": "fast",
+      "englishWord": "almost"
+    },
+    {
+      "rank": 233,
+      "targetWord": "erklären",
+      "englishWord": "to explain"
+    },
+    {
+      "rank": 234,
+      "targetWord": "das Beispiel",
+      "englishWord": "example"
+    },
+    {
+      "rank": 235,
+      "targetWord": "lange",
+      "englishWord": "for a long time"
+    },
+    {
+      "rank": 236,
+      "targetWord": "international",
+      "englishWord": "international"
+    },
+    {
+      "rank": 237,
+      "targetWord": "entwickeln",
+      "englishWord": "to develop"
+    },
+    {
+      "rank": 238,
+      "targetWord": "einmal",
+      "englishWord": "once"
+    },
+    {
+      "rank": 239,
+      "targetWord": "laut",
+      "englishWord": "loud"
+    },
+    {
+      "rank": 240,
+      "targetWord": "zunächst",
+      "englishWord": "at first"
+    },
+    {
+      "rank": 241,
+      "targetWord": "sprechen",
+      "englishWord": "to speak"
+    },
+    {
+      "rank": 242,
+      "targetWord": "die Gemeinde",
+      "englishWord": "municipality"
+    },
+    {
+      "rank": 243,
+      "targetWord": "die Welt",
+      "englishWord": "world"
+    },
+    {
+      "rank": 244,
+      "targetWord": "schwer",
+      "englishWord": "heavy, difficult"
+    },
+    {
+      "rank": 245,
+      "targetWord": "das Mitglied",
+      "englishWord": "member"
+    },
+    {
+      "rank": 246,
+      "targetWord": "wegen",
+      "englishWord": "because of"
+    },
+    {
+      "rank": 247,
+      "targetWord": "wer",
+      "englishWord": "who"
+    },
+    {
+      "rank": 248,
+      "targetWord": "der Oktober",
+      "englishWord": "October"
+    },
+    {
+      "rank": 249,
+      "targetWord": "der Mai",
+      "englishWord": "May"
+    },
+    {
+      "rank": 250,
+      "targetWord": "der Einsatz",
+      "englishWord": "deployment, use"
+    },
+    {
+      "rank": 251,
+      "targetWord": "der Juni",
+      "englishWord": "June"
+    },
+    {
+      "rank": 252,
+      "targetWord": "schaffen",
+      "englishWord": "to manage, to achieve"
+    },
+    {
+      "rank": 253,
+      "targetWord": "genau",
+      "englishWord": "exact"
+    },
+    {
+      "rank": 254,
+      "targetWord": "darüber",
+      "englishWord": "about it"
+    },
+    {
+      "rank": 255,
+      "targetWord": "tragen",
+      "englishWord": "to carry, to wear"
+    },
+    {
+      "rank": 256,
+      "targetWord": "zwar",
+      "englishWord": "indeed, it is true"
+    },
+    {
+      "rank": 257,
+      "targetWord": "das Team",
+      "englishWord": "team"
+    },
+    {
+      "rank": 258,
+      "targetWord": "die Straße",
+      "englishWord": "street"
+    },
+    {
+      "rank": 259,
+      "targetWord": "recht",
+      "englishWord": "right, quite"
+    },
+    {
+      "rank": 260,
+      "targetWord": "unterstützen",
+      "englishWord": "to support"
+    },
+    {
+      "rank": 261,
+      "targetWord": "aufgrund",
+      "englishWord": "due to"
+    },
+    {
+      "rank": 262,
+      "targetWord": "öffentlich",
+      "englishWord": "public"
+    },
+    {
+      "rank": 263,
+      "targetWord": "erfolgen",
+      "englishWord": "to take place"
+    },
+    {
+      "rank": 264,
+      "targetWord": "das Bild",
+      "englishWord": "picture, image"
+    },
+    {
+      "rank": 265,
+      "targetWord": "die Entwicklung",
+      "englishWord": "development"
+    },
+    {
+      "rank": 266,
+      "targetWord": "sogar",
+      "englishWord": "even"
+    },
+    {
+      "rank": 267,
+      "targetWord": "das Problem",
+      "englishWord": "problem"
+    },
+    {
+      "rank": 268,
+      "targetWord": "zusätzlich",
+      "englishWord": "additional"
+    },
+    {
+      "rank": 269,
+      "targetWord": "schreiben",
+      "englishWord": "to write"
+    },
+    {
+      "rank": 270,
+      "targetWord": "mögen",
+      "englishWord": "to like"
+    },
+    {
+      "rank": 271,
+      "targetWord": "der Anfang",
+      "englishWord": "beginning"
+    },
+    {
+      "rank": 272,
+      "targetWord": "politisch",
+      "englishWord": "political"
+    },
+    {
+      "rank": 273,
+      "targetWord": "die Möglichkeit",
+      "englishWord": "possibility"
+    },
+    {
+      "rank": 274,
+      "targetWord": "früh",
+      "englishWord": "early"
+    },
+    {
+      "rank": 275,
+      "targetWord": "die Gruppe",
+      "englishWord": "group"
+    },
+    {
+      "rank": 276,
+      "targetWord": "je",
+      "englishWord": "ever; each"
+    },
+    {
+      "rank": 277,
+      "targetWord": "heißen",
+      "englishWord": "to be called"
+    },
+    {
+      "rank": 278,
+      "targetWord": "bestimmen",
+      "englishWord": "to determine"
+    },
+    {
+      "rank": 279,
+      "targetWord": "pro",
+      "englishWord": "per"
+    },
+    {
+      "rank": 280,
+      "targetWord": "der Januar",
+      "englishWord": "January"
+    },
+    {
+      "rank": 281,
+      "targetWord": "nennen",
+      "englishWord": "to name"
+    },
+    {
+      "rank": 282,
+      "targetWord": "der Verein",
+      "englishWord": "club, association"
+    },
+    {
+      "rank": 283,
+      "targetWord": "der Film",
+      "englishWord": "film, movie"
+    },
+    {
+      "rank": 284,
+      "targetWord": "verwenden",
+      "englishWord": "to employ, to apply"
+    },
+    {
+      "rank": 285,
+      "targetWord": "der November",
+      "englishWord": "November"
+    },
+    {
+      "rank": 286,
+      "targetWord": "die Folge",
+      "englishWord": "consequence, episode"
+    },
+    {
+      "rank": 287,
+      "targetWord": "der März",
+      "englishWord": "March"
+    },
+    {
+      "rank": 288,
+      "targetWord": "leicht",
+      "englishWord": "light, easy"
+    },
+    {
+      "rank": 289,
+      "targetWord": "gerade",
+      "englishWord": "just now"
+    },
+    {
+      "rank": 290,
+      "targetWord": "der Meter",
+      "englishWord": "meter"
+    },
+    {
+      "rank": 291,
+      "targetWord": "deshalb",
+      "englishWord": "that is why"
+    },
+    {
+      "rank": 292,
+      "targetWord": "treten",
+      "englishWord": "to step"
+    },
+    {
+      "rank": 293,
+      "targetWord": "der April",
+      "englishWord": "April"
+    },
+    {
+      "rank": 294,
+      "targetWord": "gewinnen",
+      "englishWord": "to win"
+    },
+    {
+      "rank": 295,
+      "targetWord": "erfolgreich",
+      "englishWord": "successful"
+    },
+    {
+      "rank": 296,
+      "targetWord": "folgen",
+      "englishWord": "to follow"
+    },
+    {
+      "rank": 297,
+      "targetWord": "laufen",
+      "englishWord": "to run"
+    },
+    {
+      "rank": 298,
+      "targetWord": "der Punkt",
+      "englishWord": "point"
+    },
+    {
+      "rank": 299,
+      "targetWord": "sechs",
+      "englishWord": "six"
+    },
+    {
+      "rank": 300,
+      "targetWord": "der Juli",
+      "englishWord": "July"
+    },
+    {
+      "rank": 301,
+      "targetWord": "mein",
+      "englishWord": "my"
+    },
+    {
+      "rank": 302,
+      "targetWord": "legen",
+      "englishWord": "to lay, to put down"
+    },
+    {
+      "rank": 303,
+      "targetWord": "das Ergebnis",
       "englishWord": "result"
     },
     {
-      "rank": 723,
-      "targetWord": "brennen",
-      "englishWord": "burn"
+      "rank": 304,
+      "targetWord": "der Rahmen",
+      "englishWord": "frame, framework"
     },
     {
-      "rank": 724,
-      "targetWord": "Hügel",
-      "englishWord": "hill"
+      "rank": 305,
+      "targetWord": "unterschiedlich",
+      "englishWord": "varying, differing"
     },
     {
-      "rank": 725,
-      "targetWord": "sicher",
-      "englishWord": "safe"
+      "rank": 306,
+      "targetWord": "der August",
+      "englishWord": "August"
     },
     {
-      "rank": 726,
-      "targetWord": "Katze",
-      "englishWord": "cat"
+      "rank": 307,
+      "targetWord": "fest",
+      "englishWord": "firm, fixed"
     },
     {
-      "rank": 727,
-      "targetWord": "Jahrhundert",
+      "rank": 308,
+      "targetWord": "der Dezember",
+      "englishWord": "December"
+    },
+    {
+      "rank": 309,
+      "targetWord": "gegenüber",
+      "englishWord": "opposite"
+    },
+    {
+      "rank": 310,
+      "targetWord": "das Jahrhundert",
       "englishWord": "century"
     },
     {
-      "rank": 728,
-      "targetWord": "betrachten",
-      "englishWord": "consider"
+      "rank": 311,
+      "targetWord": "die Region",
+      "englishWord": "region"
     },
     {
-      "rank": 729,
-      "targetWord": "Typ",
-      "englishWord": "type"
+      "rank": 312,
+      "targetWord": "die Kosten",
+      "englishWord": "costs"
     },
     {
-      "rank": 730,
-      "targetWord": "Gesetz",
-      "englishWord": "law"
+      "rank": 313,
+      "targetWord": "häufig",
+      "englishWord": "frequent"
     },
     {
-      "rank": 731,
-      "targetWord": "Bit",
-      "englishWord": "bit"
+      "rank": 314,
+      "targetWord": "steigen",
+      "englishWord": "to rise"
     },
     {
-      "rank": 732,
-      "targetWord": "Küste",
-      "englishWord": "coast"
+      "rank": 315,
+      "targetWord": "natürlich",
+      "englishWord": "natural; of course"
     },
     {
-      "rank": 733,
-      "targetWord": "Kopie",
-      "englishWord": "copy"
+      "rank": 316,
+      "targetWord": "nachdem",
+      "englishWord": "after (that)"
     },
     {
-      "rank": 734,
-      "targetWord": "Ausdruck",
-      "englishWord": "phrase"
+      "rank": 317,
+      "targetWord": "nichts",
+      "englishWord": "nothing"
     },
     {
-      "rank": 735,
-      "targetWord": "still",
-      "englishWord": "silent"
+      "rank": 318,
+      "targetWord": "zehn",
+      "englishWord": "ten"
     },
     {
-      "rank": 736,
-      "targetWord": "hoch",
-      "englishWord": "tall"
+      "rank": 319,
+      "targetWord": "die Zahl",
+      "englishWord": "number"
     },
     {
-      "rank": 737,
-      "targetWord": "Sand",
-      "englishWord": "sand"
+      "rank": 320,
+      "targetWord": "die Rolle",
+      "englishWord": "role"
     },
     {
-      "rank": 738,
-      "targetWord": "Boden",
-      "englishWord": "soil"
+      "rank": 321,
+      "targetWord": "danach",
+      "englishWord": "after that"
     },
     {
-      "rank": 739,
-      "targetWord": "Rolle",
-      "englishWord": "roll"
+      "rank": 322,
+      "targetWord": "versuchen",
+      "englishWord": "to try"
     },
     {
-      "rank": 740,
-      "targetWord": "Temperatur",
-      "englishWord": "temperature"
+      "rank": 323,
+      "targetWord": "die Stunde",
+      "englishWord": "hour"
     },
     {
-      "rank": 741,
-      "targetWord": "Finger",
-      "englishWord": "finger"
+      "rank": 324,
+      "targetWord": "frei",
+      "englishWord": "free"
     },
     {
-      "rank": 742,
-      "targetWord": "Industrie",
-      "englishWord": "industry"
+      "rank": 325,
+      "targetWord": "die Stelle",
+      "englishWord": "spot, position"
     },
     {
-      "rank": 743,
-      "targetWord": "Wert",
+      "rank": 326,
+      "targetWord": "hin",
+      "englishWord": "there (towards)"
+    },
+    {
+      "rank": 327,
+      "targetWord": "bisher",
+      "englishWord": "so far"
+    },
+    {
+      "rank": 328,
+      "targetWord": "tun",
+      "englishWord": "to do"
+    },
+    {
+      "rank": 329,
+      "targetWord": "veröffentlichen",
+      "englishWord": "to publish"
+    },
+    {
+      "rank": 330,
+      "targetWord": "solcher",
+      "englishWord": "such"
+    },
+    {
+      "rank": 331,
+      "targetWord": "suchen",
+      "englishWord": "to search for"
+    },
+    {
+      "rank": 332,
+      "targetWord": "sorgen",
+      "englishWord": "to take care of"
+    },
+    {
+      "rank": 333,
+      "targetWord": "erneut",
+      "englishWord": "anew, once again"
+    },
+    {
+      "rank": 334,
+      "targetWord": "schließen",
+      "englishWord": "to close"
+    },
+    {
+      "rank": 335,
+      "targetWord": "der Mitarbeiter",
+      "englishWord": "employee"
+    },
+    {
+      "rank": 336,
+      "targetWord": "weiterhin",
+      "englishWord": "furthermore, still"
+    },
+    {
+      "rank": 337,
+      "targetWord": "die Form",
+      "englishWord": "shape, form"
+    },
+    {
+      "rank": 338,
+      "targetWord": "der Raum",
+      "englishWord": "space, room"
+    },
+    {
+      "rank": 339,
+      "targetWord": "sowohl",
+      "englishWord": "both (… and)"
+    },
+    {
+      "rank": 340,
+      "targetWord": "die Information",
+      "englishWord": "information"
+    },
+    {
+      "rank": 341,
+      "targetWord": "insbesondere",
+      "englishWord": "in particular"
+    },
+    {
+      "rank": 342,
+      "targetWord": "das Datum",
+      "englishWord": "date"
+    },
+    {
+      "rank": 343,
+      "targetWord": "schließlich",
+      "englishWord": "finally"
+    },
+    {
+      "rank": 344,
+      "targetWord": "der Preis",
+      "englishWord": "price, prize"
+    },
+    {
+      "rank": 345,
+      "targetWord": "gesamt",
+      "englishWord": "total, overall"
+    },
+    {
+      "rank": 346,
+      "targetWord": "wohl",
+      "englishWord": "probably"
+    },
+    {
+      "rank": 347,
+      "targetWord": "die Minute",
+      "englishWord": "minute"
+    },
+    {
+      "rank": 348,
+      "targetWord": "das Gebäude",
+      "englishWord": "building"
+    },
+    {
+      "rank": 349,
+      "targetWord": "der Februar",
+      "englishWord": "February"
+    },
+    {
+      "rank": 350,
+      "targetWord": "übernehmen",
+      "englishWord": "to take over"
+    },
+    {
+      "rank": 351,
+      "targetWord": "der Betrieb",
+      "englishWord": "operation, business"
+    },
+    {
+      "rank": 352,
+      "targetWord": "innerhalb",
+      "englishWord": "within"
+    },
+    {
+      "rank": 353,
+      "targetWord": "eigentlich",
+      "englishWord": "actually"
+    },
+    {
+      "rank": 354,
+      "targetWord": "hinter",
+      "englishWord": "behind"
+    },
+    {
+      "rank": 355,
+      "targetWord": "der Erfolg",
+      "englishWord": "success"
+    },
+    {
+      "rank": 356,
+      "targetWord": "einzeln",
+      "englishWord": "individual"
+    },
+    {
+      "rank": 357,
+      "targetWord": "der Schüler",
+      "englishWord": "pupil"
+    },
+    {
+      "rank": 358,
+      "targetWord": "entsprechen",
+      "englishWord": "to correspond to"
+    },
+    {
+      "rank": 359,
+      "targetWord": "die Aufgabe",
+      "englishWord": "task"
+    },
+    {
+      "rank": 360,
+      "targetWord": "die Kirche",
+      "englishWord": "church"
+    },
+    {
+      "rank": 361,
+      "targetWord": "ehemalig",
+      "englishWord": "former"
+    },
+    {
+      "rank": 362,
+      "targetWord": "fahren",
+      "englishWord": "to drive"
+    },
+    {
+      "rank": 363,
+      "targetWord": "offen",
+      "englishWord": "open"
+    },
+    {
+      "rank": 364,
+      "targetWord": "die Angabe",
+      "englishWord": "statement, detail"
+    },
+    {
+      "rank": 365,
+      "targetWord": "sicher",
+      "englishWord": "safe, certain"
+    },
+    {
+      "rank": 366,
+      "targetWord": "das Angebot",
+      "englishWord": "offer"
+    },
+    {
+      "rank": 367,
+      "targetWord": "das Wasser",
+      "englishWord": "water"
+    },
+    {
+      "rank": 368,
+      "targetWord": "jeweils",
+      "englishWord": "in each case"
+    },
+    {
+      "rank": 369,
+      "targetWord": "das Buch",
+      "englishWord": "book"
+    },
+    {
+      "rank": 370,
+      "targetWord": "die Höhe",
+      "englishWord": "height"
+    },
+    {
+      "rank": 371,
+      "targetWord": "helfen",
+      "englishWord": "to help"
+    },
+    {
+      "rank": 372,
+      "targetWord": "berichten",
+      "englishWord": "to report"
+    },
+    {
+      "rank": 373,
+      "targetWord": "hinaus",
+      "englishWord": "out, beyond"
+    },
+    {
+      "rank": 374,
+      "targetWord": "anders",
+      "englishWord": "differently"
+    },
+    {
+      "rank": 375,
+      "targetWord": "die Richtung",
+      "englishWord": "direction"
+    },
+    {
+      "rank": 376,
+      "targetWord": "richtig",
+      "englishWord": "correct"
+    },
+    {
+      "rank": 377,
+      "targetWord": "die Polizei",
+      "englishWord": "police"
+    },
+    {
+      "rank": 378,
+      "targetWord": "das Geld",
+      "englishWord": "money"
+    },
+    {
+      "rank": 379,
+      "targetWord": "die Mitte",
+      "englishWord": "middle"
+    },
+    {
+      "rank": 380,
+      "targetWord": "anschließend",
+      "englishWord": "afterwards"
+    },
+    {
+      "rank": 381,
+      "targetWord": "starten",
+      "englishWord": "to start"
+    },
+    {
+      "rank": 382,
+      "targetWord": "erstmals",
+      "englishWord": "for the first time"
+    },
+    {
+      "rank": 383,
+      "targetWord": "einigen",
+      "englishWord": "to agree on"
+    },
+    {
+      "rank": 384,
+      "targetWord": "entscheiden",
+      "englishWord": "to decide"
+    },
+    {
+      "rank": 385,
+      "targetWord": "der Wert",
       "englishWord": "value"
     },
     {
-      "rank": 744,
-      "targetWord": "Kampf",
-      "englishWord": "fight"
+      "rank": 386,
+      "targetWord": "die Verfügung",
+      "englishWord": "disposal (availability)"
     },
     {
-      "rank": 745,
-      "targetWord": "Lüge",
-      "englishWord": "lie"
+      "rank": 387,
+      "targetWord": "einsetzen",
+      "englishWord": "to deploy, to insert"
     },
     {
-      "rank": 746,
-      "targetWord": "schlagen",
-      "englishWord": "beat"
+      "rank": 388,
+      "targetWord": "gehören",
+      "englishWord": "to belong to"
     },
     {
-      "rank": 747,
-      "targetWord": "begeistern",
-      "englishWord": "excite"
+      "rank": 389,
+      "targetWord": "das Fahrzeug",
+      "englishWord": "vehicle"
     },
     {
-      "rank": 748,
-      "targetWord": "natürlich",
-      "englishWord": "natural"
+      "rank": 390,
+      "targetWord": "aktiv",
+      "englishWord": "active"
     },
     {
-      "rank": 749,
-      "targetWord": "Blick",
-      "englishWord": "view"
+      "rank": 391,
+      "targetWord": "ermöglichen",
+      "englishWord": "to make possible"
     },
     {
-      "rank": 750,
-      "targetWord": "Sinn",
-      "englishWord": "sense"
+      "rank": 392,
+      "targetWord": "zählen",
+      "englishWord": "to count"
     },
     {
-      "rank": 751,
-      "targetWord": "Hauptstadt",
-      "englishWord": "capital"
+      "rank": 393,
+      "targetWord": "kaum",
+      "englishWord": "hardly, barely"
     },
     {
-      "rank": 752,
-      "targetWord": "wird nicht",
-      "englishWord": "won’t"
+      "rank": 394,
+      "targetWord": "beispielsweise",
+      "englishWord": "for example"
     },
     {
-      "rank": 753,
-      "targetWord": "Stuhl",
-      "englishWord": "chair"
+      "rank": 395,
+      "targetWord": "sogenannt",
+      "englishWord": "so-called"
     },
     {
-      "rank": 754,
-      "targetWord": "Achtung",
-      "englishWord": "danger"
+      "rank": 396,
+      "targetWord": "die Gesellschaft",
+      "englishWord": "society"
     },
     {
-      "rank": 755,
-      "targetWord": "Obst",
-      "englishWord": "fruit"
+      "rank": 397,
+      "targetWord": "die Regel",
+      "englishWord": "rule"
     },
     {
-      "rank": 756,
-      "targetWord": "reich",
-      "englishWord": "rich"
+      "rank": 398,
+      "targetWord": "die Saison",
+      "englishWord": "season"
     },
     {
-      "rank": 757,
-      "targetWord": "dick",
-      "englishWord": "thick"
+      "rank": 399,
+      "targetWord": "bilden",
+      "englishWord": "to form"
     },
     {
-      "rank": 758,
-      "targetWord": "Soldat",
-      "englishWord": "soldier"
+      "rank": 400,
+      "targetWord": "damals",
+      "englishWord": "back then"
     },
     {
-      "rank": 759,
-      "targetWord": "Prozess",
-      "englishWord": "process"
+      "rank": 401,
+      "targetWord": "dadurch",
+      "englishWord": "thereby"
     },
     {
-      "rank": 760,
-      "targetWord": "betreiben",
-      "englishWord": "operate"
+      "rank": 402,
+      "targetWord": "die Wahl",
+      "englishWord": "choice, election"
     },
     {
-      "rank": 761,
-      "targetWord": "Praxis",
-      "englishWord": "practice"
+      "rank": 403,
+      "targetWord": "der Vater",
+      "englishWord": "father"
     },
     {
-      "rank": 762,
-      "targetWord": "trennen",
-      "englishWord": "separate"
+      "rank": 404,
+      "targetWord": "sozial",
+      "englishWord": "social"
     },
     {
-      "rank": 763,
-      "targetWord": "schwierig",
-      "englishWord": "difficult"
+      "rank": 405,
+      "targetWord": "trotz",
+      "englishWord": "in spite of"
     },
     {
-      "rank": 764,
-      "targetWord": "Arzt",
-      "englishWord": "doctor"
+      "rank": 406,
+      "targetWord": "die Leistung",
+      "englishWord": "performance, achievement"
     },
     {
-      "rank": 765,
-      "targetWord": "Bitte",
-      "englishWord": "please"
+      "rank": 407,
+      "targetWord": "planen",
+      "englishWord": "to plan"
     },
     {
-      "rank": 766,
-      "targetWord": "schützen",
-      "englishWord": "protect"
+      "rank": 408,
+      "targetWord": "die Eltern",
+      "englishWord": "parents"
     },
     {
-      "rank": 767,
-      "targetWord": "Mittag",
-      "englishWord": "noon"
+      "rank": 409,
+      "targetWord": "ebenso",
+      "englishWord": "equally, just as"
     },
     {
-      "rank": 768,
-      "targetWord": "Ernte",
-      "englishWord": "crop"
+      "rank": 410,
+      "targetWord": "europäisch",
+      "englishWord": "European"
     },
     {
-      "rank": 769,
-      "targetWord": "modernen",
-      "englishWord": "modern"
+      "rank": 411,
+      "targetWord": "die Hand",
+      "englishWord": "hand"
     },
     {
-      "rank": 770,
-      "targetWord": "Elementes",
-      "englishWord": "element"
+      "rank": 412,
+      "targetWord": "das Programm",
+      "englishWord": "program"
     },
     {
-      "rank": 771,
-      "targetWord": "treffen",
-      "englishWord": "hit"
+      "rank": 413,
+      "targetWord": "der Staat",
+      "englishWord": "state (country)"
     },
     {
-      "rank": 772,
-      "targetWord": "Schüler",
-      "englishWord": "student"
+      "rank": 414,
+      "targetWord": "klar",
+      "englishWord": "clear, obvious"
     },
     {
-      "rank": 773,
-      "targetWord": "Ecke",
-      "englishWord": "corner"
+      "rank": 415,
+      "targetWord": "gleichzeitig",
+      "englishWord": "at the same time"
     },
     {
-      "rank": 774,
-      "targetWord": "Partei",
-      "englishWord": "party"
-    },
-    {
-      "rank": 775,
-      "targetWord": "Versorgung",
-      "englishWord": "supply"
-    },
-    {
-      "rank": 776,
-      "targetWord": "deren",
-      "englishWord": "whose"
-    },
-    {
-      "rank": 777,
-      "targetWord": "lokalisieren",
-      "englishWord": "locate"
-    },
-    {
-      "rank": 778,
-      "targetWord": "Rings",
-      "englishWord": "ring"
-    },
-    {
-      "rank": 779,
-      "targetWord": "Charakter",
-      "englishWord": "character"
-    },
-    {
-      "rank": 780,
-      "targetWord": "insekt",
-      "englishWord": "insect"
-    },
-    {
-      "rank": 781,
-      "targetWord": "gefangen",
-      "englishWord": "caught"
-    },
-    {
-      "rank": 782,
-      "targetWord": "Zeit",
-      "englishWord": "period"
-    },
-    {
-      "rank": 783,
-      "targetWord": "zeigen",
-      "englishWord": "indicate"
-    },
-    {
-      "rank": 784,
-      "targetWord": "Funk",
-      "englishWord": "radio"
-    },
-    {
-      "rank": 785,
-      "targetWord": "Speiche",
-      "englishWord": "spoke"
-    },
-    {
-      "rank": 786,
-      "targetWord": "Atom",
-      "englishWord": "atom"
-    },
-    {
-      "rank": 787,
-      "targetWord": "Mensch",
-      "englishWord": "human"
-    },
-    {
-      "rank": 788,
-      "targetWord": "Geschichte",
-      "englishWord": "history"
-    },
-    {
-      "rank": 789,
-      "targetWord": "Wirkung",
-      "englishWord": "effect"
-    },
-    {
-      "rank": 790,
-      "targetWord": "elektrisch",
-      "englishWord": "electric"
-    },
-    {
-      "rank": 791,
-      "targetWord": "erwarten",
-      "englishWord": "expect"
-    },
-    {
-      "rank": 792,
-      "targetWord": "Knochen",
-      "englishWord": "bone"
-    },
-    {
-      "rank": 793,
-      "targetWord": "Schiene",
-      "englishWord": "rail"
-    },
-    {
-      "rank": 794,
-      "targetWord": "vorstellen",
-      "englishWord": "imagine"
-    },
-    {
-      "rank": 795,
-      "targetWord": "bieten",
-      "englishWord": "provide"
-    },
-    {
-      "rank": 796,
-      "targetWord": "zustimmen",
-      "englishWord": "agree"
-    },
-    {
-      "rank": 797,
-      "targetWord": "so",
+      "rank": 416,
+      "targetWord": "somit",
       "englishWord": "thus"
     },
     {
-      "rank": 798,
-      "targetWord": "sanft",
-      "englishWord": "gentle"
-    },
-    {
-      "rank": 799,
-      "targetWord": "Frau",
-      "englishWord": "woman"
-    },
-    {
-      "rank": 800,
-      "targetWord": "Kapitän",
-      "englishWord": "captain"
-    },
-    {
-      "rank": 801,
-      "targetWord": "erraten",
-      "englishWord": "guess"
-    },
-    {
-      "rank": 802,
-      "targetWord": "erforderlich",
-      "englishWord": "necessary"
-    },
-    {
-      "rank": 803,
-      "targetWord": "scharf",
-      "englishWord": "sharp"
-    },
-    {
-      "rank": 804,
-      "targetWord": "Flügel",
-      "englishWord": "wing"
-    },
-    {
-      "rank": 805,
-      "targetWord": "schaffen",
-      "englishWord": "create"
-    },
-    {
-      "rank": 806,
-      "targetWord": "Nachbar",
-      "englishWord": "neighbor"
-    },
-    {
-      "rank": 807,
-      "targetWord": "Wasch",
-      "englishWord": "wash"
-    },
-    {
-      "rank": 808,
-      "targetWord": "Fledermaus",
-      "englishWord": "bat"
-    },
-    {
-      "rank": 809,
+      "rank": 417,
       "targetWord": "eher",
       "englishWord": "rather"
     },
     {
-      "rank": 810,
-      "targetWord": "Menge",
-      "englishWord": "crowd"
+      "rank": 418,
+      "targetWord": "derzeit",
+      "englishWord": "currently"
     },
     {
-      "rank": 811,
-      "targetWord": "mais",
-      "englishWord": "corn"
+      "rank": 419,
+      "targetWord": "die Partei",
+      "englishWord": "political party"
     },
     {
-      "rank": 812,
-      "targetWord": "vergleichen",
-      "englishWord": "compare"
+      "rank": 420,
+      "targetWord": "erscheinen",
+      "englishWord": "to appear"
     },
     {
-      "rank": 813,
-      "targetWord": "Gedicht",
-      "englishWord": "poem"
+      "rank": 421,
+      "targetWord": "das Alter",
+      "englishWord": "age"
     },
     {
-      "rank": 814,
-      "targetWord": "Schnur",
-      "englishWord": "string"
+      "rank": 422,
+      "targetWord": "knapp",
+      "englishWord": "scarce, narrow"
     },
     {
-      "rank": 815,
-      "targetWord": "Glocke",
-      "englishWord": "bell"
+      "rank": 423,
+      "targetWord": "lernen",
+      "englishWord": "to learn"
     },
     {
-      "rank": 816,
-      "targetWord": "abhängen",
-      "englishWord": "depend"
+      "rank": 424,
+      "targetWord": "bedeuten",
+      "englishWord": "to mean"
     },
     {
-      "rank": 817,
-      "targetWord": "Fleisch",
-      "englishWord": "meat"
+      "rank": 425,
+      "targetWord": "zuvor",
+      "englishWord": "previously"
     },
     {
-      "rank": 818,
-      "targetWord": "einreiben",
-      "englishWord": "rub"
+      "rank": 426,
+      "targetWord": "die Mutter",
+      "englishWord": "mother"
     },
     {
-      "rank": 819,
-      "targetWord": "Rohr",
-      "englishWord": "tube"
+      "rank": 427,
+      "targetWord": "erfahren",
+      "englishWord": "to find out, to experience"
     },
     {
-      "rank": 820,
-      "targetWord": "berühmt",
-      "englishWord": "famous"
+      "rank": 428,
+      "targetWord": "nie",
+      "englishWord": "never"
     },
     {
-      "rank": 921,
-      "targetWord": "Dollar",
-      "englishWord": "dollar"
+      "rank": 429,
+      "targetWord": "das Werk",
+      "englishWord": "work (creation)"
     },
     {
-      "rank": 822,
-      "targetWord": "Strom",
-      "englishWord": "stream"
+      "rank": 430,
+      "targetWord": "meinen",
+      "englishWord": "to think, to be of the opinion"
     },
     {
-      "rank": 823,
-      "targetWord": "Angst",
-      "englishWord": "fear"
+      "rank": 431,
+      "targetWord": "das System",
+      "englishWord": "system"
     },
     {
-      "rank": 284,
-      "targetWord": "Blick",
-      "englishWord": "sight"
+      "rank": 432,
+      "targetWord": "die Hilfe",
+      "englishWord": "help"
     },
     {
-      "rank": 825,
-      "targetWord": "dünn",
-      "englishWord": "thin"
+      "rank": 433,
+      "targetWord": "das Wort",
+      "englishWord": "word"
     },
     {
-      "rank": 826,
-      "targetWord": "Dreieck",
-      "englishWord": "triangle"
+      "rank": 434,
+      "targetWord": "das Tier",
+      "englishWord": "animal"
     },
     {
-      "rank": 827,
-      "targetWord": "Erde",
-      "englishWord": "planet"
+      "rank": 435,
+      "targetWord": "der Beginn",
+      "englishWord": "start"
     },
     {
-      "rank": 828,
-      "targetWord": "Eile",
-      "englishWord": "hurry"
+      "rank": 436,
+      "targetWord": "der Titel",
+      "englishWord": "title"
     },
     {
-      "rank": 829,
-      "targetWord": "Chef",
-      "englishWord": "chief"
+      "rank": 437,
+      "targetWord": "persönlich",
+      "englishWord": "personal"
     },
     {
-      "rank": 830,
-      "targetWord": "Kolonie",
-      "englishWord": "colony"
+      "rank": 438,
+      "targetWord": "regelmäßig",
+      "englishWord": "regular"
     },
     {
-      "rank": 831,
-      "targetWord": "Uhr",
-      "englishWord": "clock"
+      "rank": 439,
+      "targetWord": "erhöhen",
+      "englishWord": "to increase"
     },
     {
-      "rank": 832,
-      "targetWord": "Mine",
-      "englishWord": "mine"
+      "rank": 440,
+      "targetWord": "die Universität",
+      "englishWord": "university"
     },
     {
-      "rank": 833,
-      "targetWord": "Krawatte",
-      "englishWord": "tie"
+      "rank": 441,
+      "targetWord": "die Lage",
+      "englishWord": "situation, location"
     },
     {
-      "rank": 834,
-      "targetWord": "eingeben",
-      "englishWord": "enter"
+      "rank": 442,
+      "targetWord": "bezeichnen",
+      "englishWord": "to designate"
     },
     {
-      "rank": 835,
-      "targetWord": "Dur",
-      "englishWord": "major"
+      "rank": 443,
+      "targetWord": "der Sohn",
+      "englishWord": "son"
     },
     {
-      "rank": 836,
-      "targetWord": "frisch",
-      "englishWord": "fresh"
-    },
-    {
-      "rank": 837,
-      "targetWord": "Suche",
-      "englishWord": "search"
-    },
-    {
-      "rank": 838,
-      "targetWord": "senden",
-      "englishWord": "send"
-    },
-    {
-      "rank": 839,
-      "targetWord": "gelb",
-      "englishWord": "yellow"
-    },
-    {
-      "rank": 840,
-      "targetWord": "Pistole",
-      "englishWord": "gun"
-    },
-    {
-      "rank": 841,
-      "targetWord": "erlauben",
-      "englishWord": "allow"
-    },
-    {
-      "rank": 842,
-      "targetWord": "Druck",
-      "englishWord": "print"
-    },
-    {
-      "rank": 843,
-      "targetWord": "tot",
-      "englishWord": "dead"
-    },
-    {
-      "rank": 844,
-      "targetWord": "Stelle",
-      "englishWord": "spot"
-    },
-    {
-      "rank": 845,
-      "targetWord": "Wüste",
-      "englishWord": "desert"
-    },
-    {
-      "rank": 846,
-      "targetWord": "Anzug",
-      "englishWord": "suit"
-    },
-    {
-      "rank": 847,
-      "targetWord": "Strom",
-      "englishWord": "current"
-    },
-    {
-      "rank": 848,
-      "targetWord": "Aufzug",
-      "englishWord": "lift"
-    },
-    {
-      "rank": 840,
-      "targetWord": "stiegen",
-      "englishWord": "rose"
-    },
-    {
-      "rank": 850,
-      "targetWord": "ankommen",
-      "englishWord": "arrive"
-    },
-    {
-      "rank": 851,
-      "targetWord": "Stamm",
-      "englishWord": "master"
-    },
-    {
-      "rank": 852,
-      "targetWord": "Spur",
-      "englishWord": "track"
-    },
-    {
-      "rank": 853,
-      "targetWord": "Elternteil",
-      "englishWord": "parent"
-    },
-    {
-      "rank": 854,
-      "targetWord": "Ufer",
-      "englishWord": "shore"
-    },
-    {
-      "rank": 855,
-      "targetWord": "Teilung",
-      "englishWord": "division"
-    },
-    {
-      "rank": 856,
-      "targetWord": "Blatt",
-      "englishWord": "sheet"
-    },
-    {
-      "rank": 857,
-      "targetWord": "Substanz",
-      "englishWord": "substance"
-    },
-    {
-      "rank": 858,
-      "targetWord": "begünstigen",
-      "englishWord": "favor"
-    },
-    {
-      "rank": 859,
-      "targetWord": "verbinden",
-      "englishWord": "connect"
-    },
-    {
-      "rank": 860,
-      "targetWord": "nach",
-      "englishWord": "post"
-    },
-    {
-      "rank": 861,
-      "targetWord": "verbringen",
-      "englishWord": "spend"
-    },
-    {
-      "rank": 862,
-      "targetWord": "Akkord",
-      "englishWord": "chord"
-    },
-    {
-      "rank": 863,
-      "targetWord": "Fett",
-      "englishWord": "fat"
-    },
-    {
-      "rank": 864,
-      "targetWord": "froh",
-      "englishWord": "glad"
-    },
-    {
-      "rank": 865,
-      "targetWord": "Original",
-      "englishWord": "original"
-    },
-    {
-      "rank": 866,
-      "targetWord": "Aktie",
-      "englishWord": "share"
-    },
-    {
-      "rank": 867,
-      "targetWord": "Station",
-      "englishWord": "station"
-    },
-    {
-      "rank": 868,
-      "targetWord": "Papa",
-      "englishWord": "dad"
-    },
-    {
-      "rank": 869,
-      "targetWord": "Brot",
-      "englishWord": "bread"
-    },
-    {
-      "rank": 870,
-      "targetWord": "aufladen",
-      "englishWord": "charge"
-    },
-    {
-      "rank": 871,
-      "targetWord": "richtig",
-      "englishWord": "proper"
-    },
-    {
-      "rank": 872,
-      "targetWord": "Leiste",
-      "englishWord": "bar"
-    },
-    {
-      "rank": 873,
-      "targetWord": "Angebot",
-      "englishWord": "offer"
-    },
-    {
-      "rank": 874,
-      "targetWord": "Segment",
-      "englishWord": "segment"
-    },
-    {
-      "rank": 875,
-      "targetWord": "Sklave",
-      "englishWord": "slave"
-    },
-    {
-      "rank": 876,
-      "targetWord": "ente",
-      "englishWord": "duck"
-    },
-    {
-      "rank": 877,
-      "targetWord": "Augenblick",
-      "englishWord": "instant"
-    },
-    {
-      "rank": 878,
-      "targetWord": "Markt",
-      "englishWord": "market"
-    },
-    {
-      "rank": 879,
-      "targetWord": "Grad",
-      "englishWord": "degree"
-    },
-    {
-      "rank": 880,
-      "targetWord": "besiedeln",
-      "englishWord": "populate"
-    },
-    {
-      "rank": 881,
-      "targetWord": "küken",
-      "englishWord": "chick"
-    },
-    {
-      "rank": 882,
-      "targetWord": "liebe",
-      "englishWord": "dear"
-    },
-    {
-      "rank": 883,
-      "targetWord": "Feind",
-      "englishWord": "enemy"
-    },
-    {
-      "rank": 884,
-      "targetWord": "antworten",
-      "englishWord": "reply"
-    },
-    {
-      "rank": 885,
-      "targetWord": "Getränk",
-      "englishWord": "drink"
-    },
-    {
-      "rank": 886,
-      "targetWord": "auftreten",
-      "englishWord": "occur"
-    },
-    {
-      "rank": 887,
-      "targetWord": "Unterstützung",
+      "rank": 444,
+      "targetWord": "die Unterstützung",
       "englishWord": "support"
     },
     {
-      "rank": 888,
-      "targetWord": "Rede",
-      "englishWord": "speech"
+      "rank": 445,
+      "targetWord": "sterben",
+      "englishWord": "to die"
     },
     {
-      "rank": 889,
-      "targetWord": "Natur",
-      "englishWord": "nature"
+      "rank": 446,
+      "targetWord": "das Gebiet",
+      "englishWord": "area, territory"
     },
     {
-      "rank": 890,
-      "targetWord": "Angebot",
-      "englishWord": "range"
-    },
-    {
-      "rank": 891,
-      "targetWord": "Dampf",
-      "englishWord": "steam"
-    },
-    {
-      "rank": 892,
-      "targetWord": "Bewegung",
-      "englishWord": "motion"
-    },
-    {
-      "rank": 893,
-      "targetWord": "Weg",
-      "englishWord": "path"
-    },
-    {
-      "rank": 894,
-      "targetWord": "Flüssigkeit",
-      "englishWord": "liquid"
-    },
-    {
-      "rank": 895,
-      "targetWord": "protokollieren",
-      "englishWord": "log"
-    },
-    {
-      "rank": 896,
-      "targetWord": "gemeint",
-      "englishWord": "meant"
-    },
-    {
-      "rank": 897,
-      "targetWord": "Quotient",
-      "englishWord": "quotient"
-    },
-    {
-      "rank": 898,
-      "targetWord": "Gebiss",
-      "englishWord": "teeth"
-    },
-    {
-      "rank": 899,
-      "targetWord": "Schale",
-      "englishWord": "shell"
-    },
-    {
-      "rank": 900,
-      "targetWord": "Hals",
-      "englishWord": "neck"
-    },
-    {
-      "rank": 901,
-      "targetWord": "Sauerstoff",
-      "englishWord": "oxygen"
-    },
-    {
-      "rank": 902,
-      "targetWord": "Zucker",
-      "englishWord": "sugar"
-    },
-    {
-      "rank": 903,
-      "targetWord": "Tod",
+      "rank": 447,
+      "targetWord": "der Tod",
       "englishWord": "death"
     },
     {
-      "rank": 904,
-      "targetWord": "ziemlich",
-      "englishWord": "pretty"
+      "rank": 448,
+      "targetWord": "kennen",
+      "englishWord": "to know (be acquainted with)"
     },
     {
-      "rank": 905,
-      "targetWord": "Geschicklichkeit",
-      "englishWord": "skill"
+      "rank": 449,
+      "targetWord": "enthalten",
+      "englishWord": "to contain"
     },
     {
-      "rank": 906,
-      "targetWord": "Frauen",
-      "englishWord": "women"
+      "rank": 450,
+      "targetWord": "gering",
+      "englishWord": "slight, low"
     },
     {
-      "rank": 907,
-      "targetWord": "Saison",
-      "englishWord": "season"
+      "rank": 451,
+      "targetWord": "der Sommer",
+      "englishWord": "summer"
     },
     {
-      "rank": 908,
-      "targetWord": "Lösung",
-      "englishWord": "solution"
+      "rank": 452,
+      "targetWord": "schön",
+      "englishWord": "beautiful"
     },
     {
-      "rank": 909,
-      "targetWord": "Magnet",
-      "englishWord": "magnet"
+      "rank": 453,
+      "targetWord": "voll",
+      "englishWord": "full"
     },
     {
-      "rank": 910,
-      "targetWord": "Silber",
-      "englishWord": "silver"
+      "rank": 454,
+      "targetWord": "dienen",
+      "englishWord": "to serve"
     },
     {
-      "rank": 911,
-      "targetWord": "danken",
-      "englishWord": "thank"
+      "rank": 455,
+      "targetWord": "erwarten",
+      "englishWord": "to expect"
     },
     {
-      "rank": 912,
-      "targetWord": "Zweig",
-      "englishWord": "branch"
+      "rank": 456,
+      "targetWord": "die Entscheidung",
+      "englishWord": "decision"
     },
     {
-      "rank": 913,
-      "targetWord": "Spiel",
-      "englishWord": "match"
+      "rank": 457,
+      "targetWord": "fallen",
+      "englishWord": "to fall"
     },
     {
-      "rank": 914,
-      "targetWord": "Suffix",
-      "englishWord": "suffix"
+      "rank": 458,
+      "targetWord": "die Mannschaft",
+      "englishWord": "team (sports)"
     },
     {
-      "rank": 915,
-      "targetWord": "insbesondere",
-      "englishWord": "especially"
-    },
-    {
-      "rank": 916,
-      "targetWord": "Feige",
-      "englishWord": "fig"
-    },
-    {
-      "rank": 917,
-      "targetWord": "ängstlich",
-      "englishWord": "afraid"
-    },
-    {
-      "rank": 918,
-      "targetWord": "riesig",
-      "englishWord": "huge"
-    },
-    {
-      "rank": 919,
-      "targetWord": "Schwester",
-      "englishWord": "sister"
-    },
-    {
-      "rank": 920,
-      "targetWord": "Stahl",
-      "englishWord": "steel"
-    },
-    {
-      "rank": 921,
-      "targetWord": "diskutieren",
-      "englishWord": "discuss"
-    },
-    {
-      "rank": 922,
-      "targetWord": "vorwärts",
-      "englishWord": "forward"
-    },
-    {
-      "rank": 923,
+      "rank": 459,
       "targetWord": "ähnlich",
       "englishWord": "similar"
     },
     {
-      "rank": 924,
-      "targetWord": "führen",
-      "englishWord": "guide"
+      "rank": 460,
+      "targetWord": "verlassen",
+      "englishWord": "to leave"
     },
     {
-      "rank": 925,
-      "targetWord": "Erfahrung",
-      "englishWord": "experience"
+      "rank": 461,
+      "targetWord": "wirken",
+      "englishWord": "to have an effect"
     },
     {
-      "rank": 926,
-      "targetWord": "Partitur",
-      "englishWord": "score"
+      "rank": 462,
+      "targetWord": "paar",
+      "englishWord": "a few"
     },
     {
-      "rank": 927,
-      "targetWord": "apfel",
-      "englishWord": "apple"
+      "rank": 463,
+      "targetWord": "mindestens",
+      "englishWord": "at least"
     },
     {
-      "rank": 928,
-      "targetWord": "gekauft",
-      "englishWord": "bought"
+      "rank": 464,
+      "targetWord": "betragen",
+      "englishWord": "to amount to"
     },
     {
-      "rank": 929,
-      "targetWord": "geführt",
-      "englishWord": "led"
+      "rank": 465,
+      "targetWord": "der Spieler",
+      "englishWord": "player"
     },
     {
-      "rank": 930,
-      "targetWord": "Tonhöhe",
-      "englishWord": "pitch"
+      "rank": 466,
+      "targetWord": "das Auto",
+      "englishWord": "car"
     },
     {
-      "rank": 931,
-      "targetWord": "Mantel",
-      "englishWord": "coat"
+      "rank": 467,
+      "targetWord": "der Freund",
+      "englishWord": "friend"
     },
     {
-      "rank": 932,
-      "targetWord": "Masse",
-      "englishWord": "mass"
+      "rank": 468,
+      "targetWord": "die Zukunft",
+      "englishWord": "future"
     },
     {
-      "rank": 933,
-      "targetWord": "Karte",
-      "englishWord": "card"
-    },
-    {
-      "rank": 934,
-      "targetWord": "Band",
-      "englishWord": "band"
-    },
-    {
-      "rank": 935,
-      "targetWord": "Seil",
-      "englishWord": "rope"
-    },
-    {
-      "rank": 936,
-      "targetWord": "Rutsch",
-      "englishWord": "slip"
-    },
-    {
-      "rank": 937,
-      "targetWord": "gewinnen",
-      "englishWord": "win"
-    },
-    {
-      "rank": 938,
-      "targetWord": "träumen",
-      "englishWord": "dream"
-    },
-    {
-      "rank": 939,
-      "targetWord": "Abend",
-      "englishWord": "evening"
-    },
-    {
-      "rank": 940,
-      "targetWord": "Zustand",
-      "englishWord": "condition"
-    },
-    {
-      "rank": 941,
-      "targetWord": "Futtermittel",
-      "englishWord": "feed"
-    },
-    {
-      "rank": 942,
-      "targetWord": "Werkzeug",
-      "englishWord": "tool"
-    },
-    {
-      "rank": 943,
-      "targetWord": "gesamt",
-      "englishWord": "total"
-    },
-    {
-      "rank": 944,
-      "targetWord": "Basis",
-      "englishWord": "basic"
-    },
-    {
-      "rank": 945,
-      "targetWord": "Geruch",
-      "englishWord": "smell"
-    },
-    {
-      "rank": 946,
-      "targetWord": "Tal",
-      "englishWord": "valley"
-    },
-    {
-      "rank": 947,
-      "targetWord": "noch",
-      "englishWord": "nor"
-    },
-    {
-      "rank": 948,
-      "targetWord": "doppelt",
-      "englishWord": "double"
-    },
-    {
-      "rank": 949,
-      "targetWord": "Sitz",
-      "englishWord": "seat"
-    },
-    {
-      "rank": 950,
-      "targetWord": "fortsetzen",
-      "englishWord": "continue"
-    },
-    {
-      "rank": 951,
-      "targetWord": "Block",
-      "englishWord": "block"
-    },
-    {
-      "rank": 952,
-      "targetWord": "Tabelle",
-      "englishWord": "chart"
-    },
-    {
-      "rank": 953,
-      "targetWord": "Hut",
-      "englishWord": "hat"
-    },
-    {
-      "rank": 954,
-      "targetWord": "verkaufen",
-      "englishWord": "sell"
-    },
-    {
-      "rank": 955,
-      "targetWord": "Erfolg",
-      "englishWord": "success"
-    },
-    {
-      "rank": 956,
-      "targetWord": "Firma",
-      "englishWord": "company"
-    },
-    {
-      "rank": 957,
-      "targetWord": "subtrahieren",
-      "englishWord": "subtract"
-    },
-    {
-      "rank": 958,
-      "targetWord": "Veranstaltung",
+      "rank": 469,
+      "targetWord": "die Veranstaltung",
       "englishWord": "event"
     },
     {
-      "rank": 959,
-      "targetWord": "besondere",
-      "englishWord": "particular"
+      "rank": 470,
+      "targetWord": "dennoch",
+      "englishWord": "nevertheless"
     },
     {
-      "rank": 960,
-      "targetWord": "viel",
-      "englishWord": "deal"
+      "rank": 471,
+      "targetWord": "tatsächlich",
+      "englishWord": "in fact, really"
     },
     {
-      "rank": 961,
-      "targetWord": "schwimmen",
-      "englishWord": "swim"
+      "rank": 472,
+      "targetWord": "der Kunde",
+      "englishWord": "customer"
     },
     {
-      "rank": 962,
-      "targetWord": "Begriff",
-      "englishWord": "term"
+      "rank": 473,
+      "targetWord": "die Regierung",
+      "englishWord": "government"
     },
     {
-      "rank": 963,
-      "targetWord": "Gegenteil",
-      "englishWord": "opposite"
+      "rank": 474,
+      "targetWord": "erkennen",
+      "englishWord": "to recognize"
     },
     {
-      "rank": 964,
-      "targetWord": "Frau",
-      "englishWord": "wife"
+      "rank": 475,
+      "targetWord": "wählen",
+      "englishWord": "to choose, to elect"
     },
     {
-      "rank": 965,
-      "targetWord": "Schuh",
-      "englishWord": "shoe"
+      "rank": 476,
+      "targetWord": "acht",
+      "englishWord": "eight"
     },
     {
-      "rank": 966,
-      "targetWord": "Schulter",
-      "englishWord": "shoulder"
+      "rank": 477,
+      "targetWord": "dritte",
+      "englishWord": "third"
     },
     {
-      "rank": 967,
-      "targetWord": "Verbreitung",
-      "englishWord": "spread"
+      "rank": 478,
+      "targetWord": "das Produkt",
+      "englishWord": "product"
     },
     {
-      "rank": 968,
-      "targetWord": "arrangieren",
-      "englishWord": "arrange"
+      "rank": 479,
+      "targetWord": "das Interesse",
+      "englishWord": "interest"
     },
     {
-      "rank": 969,
-      "targetWord": "Lager",
-      "englishWord": "camp"
+      "rank": 480,
+      "targetWord": "brauchen",
+      "englishWord": "to need"
     },
     {
-      "rank": 970,
-      "targetWord": "erfinden",
-      "englishWord": "invent"
+      "rank": 481,
+      "targetWord": "die Idee",
+      "englishWord": "idea"
     },
     {
-      "rank": 971,
-      "targetWord": "Baumwolle",
-      "englishWord": "cotton"
+      "rank": 482,
+      "targetWord": "die Band",
+      "englishWord": "band (music group)"
     },
     {
-      "rank": 972,
+      "rank": 483,
+      "targetWord": "der Markt",
+      "englishWord": "market"
+    },
+    {
+      "rank": 484,
+      "targetWord": "rot",
+      "englishWord": "red"
+    },
+    {
+      "rank": 485,
+      "targetWord": "die Bedeutung",
+      "englishWord": "meaning, significance"
+    },
+    {
+      "rank": 486,
+      "targetWord": "entsprechend",
+      "englishWord": "corresponding"
+    },
+    {
+      "rank": 487,
+      "targetWord": "die Musik",
+      "englishWord": "music"
+    },
+    {
+      "rank": 488,
+      "targetWord": "aufnehmen",
+      "englishWord": "to take in, to record"
+    },
+    {
+      "rank": 489,
+      "targetWord": "zuletzt",
+      "englishWord": "most recently, lastly"
+    },
+    {
+      "rank": 490,
+      "targetWord": "die Weise",
+      "englishWord": "way, manner"
+    },
+    {
+      "rank": 491,
+      "targetWord": "gar",
+      "englishWord": "at all"
+    },
+    {
+      "rank": 492,
+      "targetWord": "technisch",
+      "englishWord": "technical"
+    },
+    {
+      "rank": 493,
+      "targetWord": "der Zug",
+      "englishWord": "train"
+    },
+    {
+      "rank": 494,
+      "targetWord": "verkaufen",
+      "englishWord": "to sell"
+    },
+    {
+      "rank": 495,
+      "targetWord": "besuchen",
+      "englishWord": "to visit"
+    },
+    {
+      "rank": 496,
+      "targetWord": "ja",
+      "englishWord": "yes"
+    },
+    {
+      "rank": 497,
+      "targetWord": "der Blick",
+      "englishWord": "look, glance"
+    },
+    {
+      "rank": 498,
+      "targetWord": "offiziell",
+      "englishWord": "official"
+    },
+    {
+      "rank": 499,
+      "targetWord": "weltweit",
+      "englishWord": "worldwide"
+    },
+    {
+      "rank": 500,
+      "targetWord": "gründen",
+      "englishWord": "to found"
+    },
+    {
+      "rank": 501,
+      "targetWord": "entfernen",
+      "englishWord": "to remove"
+    },
+    {
+      "rank": 502,
+      "targetWord": "modern",
+      "englishWord": "modern"
+    },
+    {
+      "rank": 503,
+      "targetWord": "historisch",
+      "englishWord": "historical"
+    },
+    {
+      "rank": 504,
+      "targetWord": "vergangen",
+      "englishWord": "past, bygone"
+    },
+    {
+      "rank": 505,
+      "targetWord": "gegeben",
+      "englishWord": "given"
+    },
+    {
+      "rank": 506,
+      "targetWord": "beteiligen",
+      "englishWord": "to involve, to participate"
+    },
+    {
+      "rank": 507,
+      "targetWord": "tief",
+      "englishWord": "deep"
+    },
+    {
+      "rank": 508,
+      "targetWord": "positiv",
+      "englishWord": "positive"
+    },
+    {
+      "rank": 509,
+      "targetWord": "die Studie",
+      "englishWord": "study"
+    },
+    {
+      "rank": 510,
+      "targetWord": "per",
+      "englishWord": "by, via"
+    },
+    {
+      "rank": 511,
+      "targetWord": "inzwischen",
+      "englishWord": "by now, meanwhile"
+    },
+    {
+      "rank": 512,
+      "targetWord": "sieben",
+      "englishWord": "seven"
+    },
+    {
+      "rank": 513,
+      "targetWord": "zentral",
+      "englishWord": "central"
+    },
+    {
+      "rank": 514,
+      "targetWord": "der Krieg",
+      "englishWord": "war"
+    },
+    {
+      "rank": 515,
+      "targetWord": "glauben",
+      "englishWord": "to believe"
+    },
+    {
+      "rank": 516,
+      "targetWord": "der Vergleich",
+      "englishWord": "comparison"
+    },
+    {
+      "rank": 517,
+      "targetWord": "der Beitrag",
+      "englishWord": "contribution"
+    },
+    {
+      "rank": 518,
+      "targetWord": "eröffnen",
+      "englishWord": "to open (officially)"
+    },
+    {
+      "rank": 519,
+      "targetWord": "obwohl",
+      "englishWord": "although"
+    },
+    {
+      "rank": 520,
+      "targetWord": "scheinen",
+      "englishWord": "to seem"
+    },
+    {
+      "rank": 521,
+      "targetWord": "verfügen",
+      "englishWord": "to have at one's disposal"
+    },
+    {
+      "rank": 522,
+      "targetWord": "allein",
+      "englishWord": "alone"
+    },
+    {
+      "rank": 523,
+      "targetWord": "das Amt",
+      "englishWord": "office (public authority)"
+    },
+    {
+      "rank": 524,
+      "targetWord": "die Maßnahme",
+      "englishWord": "measure"
+    },
+    {
+      "rank": 525,
+      "targetWord": "der Präsident",
+      "englishWord": "president"
+    },
+    {
+      "rank": 526,
+      "targetWord": "der Besucher",
+      "englishWord": "visitor"
+    },
+    {
+      "rank": 527,
+      "targetWord": "die Situation",
+      "englishWord": "situation"
+    },
+    {
+      "rank": 528,
+      "targetWord": "fordern",
+      "englishWord": "to demand"
+    },
+    {
+      "rank": 529,
+      "targetWord": "daran",
+      "englishWord": "at it, on it"
+    },
+    {
+      "rank": 530,
+      "targetWord": "die Firma",
+      "englishWord": "firm, business"
+    },
+    {
+      "rank": 531,
+      "targetWord": "verstehen",
+      "englishWord": "to understand"
+    },
+    {
+      "rank": 532,
+      "targetWord": "der Kilometer",
+      "englishWord": "kilometre"
+    },
+    {
+      "rank": 533,
+      "targetWord": "die Erfahrung",
+      "englishWord": "experience"
+    },
+    {
+      "rank": 534,
+      "targetWord": "der Gast",
+      "englishWord": "guest"
+    },
+    {
+      "rank": 535,
+      "targetWord": "teilweise",
+      "englishWord": "partially"
+    },
+    {
+      "rank": 536,
+      "targetWord": "der Schritt",
+      "englishWord": "step"
+    },
+    {
+      "rank": 537,
+      "targetWord": "das Modell",
+      "englishWord": "model"
+    },
+    {
+      "rank": 538,
+      "targetWord": "wirklich",
+      "englishWord": "really"
+    },
+    {
+      "rank": 539,
+      "targetWord": "benötigen",
+      "englishWord": "to require"
+    },
+    {
+      "rank": 540,
+      "targetWord": "notwendig",
+      "englishWord": "necessary"
+    },
+    {
+      "rank": 541,
+      "targetWord": "erleben",
+      "englishWord": "to experience, to live through"
+    },
+    {
+      "rank": 542,
+      "targetWord": "der Stand",
+      "englishWord": "status, standing"
+    },
+    {
+      "rank": 543,
+      "targetWord": "selten",
+      "englishWord": "rare"
+    },
+    {
+      "rank": 544,
+      "targetWord": "die Wohnung",
+      "englishWord": "flat, apartment"
+    },
+    {
+      "rank": 545,
+      "targetWord": "heutig",
+      "englishWord": "today's"
+    },
+    {
+      "rank": 546,
+      "targetWord": "bald",
+      "englishWord": "soon"
+    },
+    {
+      "rank": 547,
+      "targetWord": "die Politik",
+      "englishWord": "politics"
+    },
+    {
+      "rank": 548,
+      "targetWord": "die Kraft",
+      "englishWord": "force, strength"
+    },
+    {
+      "rank": 549,
+      "targetWord": "mittlerweile",
+      "englishWord": "in the meantime"
+    },
+    {
+      "rank": 550,
+      "targetWord": "das Gespräch",
+      "englishWord": "conversation"
+    },
+    {
+      "rank": 551,
+      "targetWord": "lediglich",
+      "englishWord": "merely"
+    },
+    {
+      "rank": 552,
+      "targetWord": "die Grenze",
+      "englishWord": "border, limit"
+    },
+    {
+      "rank": 553,
+      "targetWord": "gelingen",
+      "englishWord": "to succeed"
+    },
+    {
+      "rank": 554,
+      "targetWord": "darin",
+      "englishWord": "in it"
+    },
+    {
+      "rank": 555,
+      "targetWord": "tätig",
+      "englishWord": "working, employed"
+    },
+    {
+      "rank": 556,
+      "targetWord": "bevor",
+      "englishWord": "before (conjunction)"
+    },
+    {
+      "rank": 557,
+      "targetWord": "erzielen",
+      "englishWord": "to attain, to score"
+    },
+    {
+      "rank": 558,
+      "targetWord": "darunter",
+      "englishWord": "among them"
+    },
+    {
+      "rank": 559,
+      "targetWord": "fehlen",
+      "englishWord": "to be missing"
+    },
+    {
+      "rank": 560,
+      "targetWord": "digital",
+      "englishWord": "digital"
+    },
+    {
+      "rank": 561,
+      "targetWord": "verlieren",
+      "englishWord": "to lose"
+    },
+    {
+      "rank": 562,
+      "targetWord": "dagegen",
+      "englishWord": "against it"
+    },
+    {
+      "rank": 563,
+      "targetWord": "umfassen",
+      "englishWord": "to comprise"
+    },
+    {
+      "rank": 564,
+      "targetWord": "privat",
+      "englishWord": "private"
+    },
+    {
+      "rank": 565,
+      "targetWord": "öffnen",
+      "englishWord": "to open"
+    },
+    {
+      "rank": 566,
+      "targetWord": "schwarz",
+      "englishWord": "black"
+    },
+    {
+      "rank": 567,
+      "targetWord": "erzählen",
+      "englishWord": "to tell, to narrate"
+    },
+    {
+      "rank": 568,
+      "targetWord": "wachsen",
+      "englishWord": "to grow"
+    },
+    {
+      "rank": 569,
+      "targetWord": "entdecken",
+      "englishWord": "to discover"
+    },
+    {
+      "rank": 570,
+      "targetWord": "ursprünglich",
+      "englishWord": "original"
+    },
+    {
+      "rank": 571,
+      "targetWord": "verbessern",
+      "englishWord": "to improve"
+    },
+    {
+      "rank": 572,
+      "targetWord": "ergeben",
+      "englishWord": "to result in"
+    },
+    {
+      "rank": 573,
+      "targetWord": "präsentieren",
+      "englishWord": "to present"
+    },
+    {
+      "rank": 574,
+      "targetWord": "die Bevölkerung",
+      "englishWord": "population"
+    },
+    {
+      "rank": 575,
+      "targetWord": "die Zusammenarbeit",
+      "englishWord": "cooperation"
+    },
+    {
+      "rank": 576,
+      "targetWord": "stammen",
+      "englishWord": "to originate from"
+    },
+    {
+      "rank": 577,
+      "targetWord": "das Tor",
+      "englishWord": "gate; goal (in football)"
+    },
+    {
+      "rank": 578,
+      "targetWord": "die Stimme",
+      "englishWord": "voice, vote"
+    },
+    {
+      "rank": 579,
+      "targetWord": "die Funktion",
+      "englishWord": "function"
+    },
+    {
+      "rank": 580,
+      "targetWord": "komplett",
+      "englishWord": "complete"
+    },
+    {
+      "rank": 581,
+      "targetWord": "die Lösung",
+      "englishWord": "solution"
+    },
+    {
+      "rank": 582,
+      "targetWord": "die Reihe",
+      "englishWord": "row, series"
+    },
+    {
+      "rank": 583,
+      "targetWord": "bestätigen",
+      "englishWord": "to confirm"
+    },
+    {
+      "rank": 584,
+      "targetWord": "sofort",
+      "englishWord": "immediately"
+    },
+    {
+      "rank": 585,
+      "targetWord": "speziell",
+      "englishWord": "special"
+    },
+    {
+      "rank": 586,
+      "targetWord": "der Landkreis",
+      "englishWord": "district (rural)"
+    },
+    {
+      "rank": 587,
+      "targetWord": "beschäftigen",
+      "englishWord": "to employ, to occupy"
+    },
+    {
+      "rank": 588,
+      "targetWord": "schlagen",
+      "englishWord": "to hit, to beat"
+    },
+    {
+      "rank": 589,
+      "targetWord": "die Klasse",
+      "englishWord": "class"
+    },
+    {
+      "rank": 590,
+      "targetWord": "die Verbindung",
+      "englishWord": "connection"
+    },
+    {
+      "rank": 591,
+      "targetWord": "finanziell",
+      "englishWord": "financial"
+    },
+    {
+      "rank": 592,
+      "targetWord": "wobei",
+      "englishWord": "whereby"
+    },
+    {
+      "rank": 593,
+      "targetWord": "die GmbH",
+      "englishWord": "limited liability company"
+    },
+    {
+      "rank": 594,
+      "targetWord": "das Stück",
+      "englishWord": "piece"
+    },
+    {
+      "rank": 595,
+      "targetWord": "oben",
+      "englishWord": "above, at the top"
+    },
+    {
+      "rank": 596,
+      "targetWord": "die Sprache",
+      "englishWord": "language"
+    },
+    {
+      "rank": 597,
+      "targetWord": "folgend",
+      "englishWord": "following"
+    },
+    {
+      "rank": 598,
+      "targetWord": "verbunden",
+      "englishWord": "connected"
+    },
+    {
+      "rank": 599,
+      "targetWord": "besitzen",
+      "englishWord": "to own"
+    },
+    {
+      "rank": 600,
+      "targetWord": "der Herr",
+      "englishWord": "gentleman, Mr"
+    },
+    {
+      "rank": 601,
+      "targetWord": "der Prozess",
+      "englishWord": "process, trial"
+    },
+    {
+      "rank": 602,
+      "targetWord": "feiern",
+      "englishWord": "to celebrate"
+    },
+    {
+      "rank": 603,
+      "targetWord": "jährlich",
+      "englishWord": "annual"
+    },
+    {
+      "rank": 604,
+      "targetWord": "teilen",
+      "englishWord": "to share, to divide"
+    },
+    {
+      "rank": 605,
+      "targetWord": "breit",
+      "englishWord": "broad, wide"
+    },
+    {
+      "rank": 606,
+      "targetWord": "der Kreis",
+      "englishWord": "circle"
+    },
+    {
+      "rank": 607,
+      "targetWord": "die Nacht",
+      "englishWord": "night"
+    },
+    {
+      "rank": 608,
+      "targetWord": "die Nähe",
+      "englishWord": "vicinity, closeness"
+    },
+    {
+      "rank": 609,
+      "targetWord": "warum",
+      "englishWord": "why"
+    },
+    {
+      "rank": 610,
+      "targetWord": "der Standort",
+      "englishWord": "location, site"
+    },
+    {
+      "rank": 611,
+      "targetWord": "die Tochter",
+      "englishWord": "daughter"
+    },
+    {
+      "rank": 612,
+      "targetWord": "sichern",
+      "englishWord": "to secure"
+    },
+    {
+      "rank": 613,
+      "targetWord": "die Ausbildung",
+      "englishWord": "training"
+    },
+    {
+      "rank": 614,
+      "targetWord": "liefern",
+      "englishWord": "to deliver, to supply"
+    },
+    {
+      "rank": 615,
+      "targetWord": "der Text",
+      "englishWord": "text"
+    },
+    {
+      "rank": 616,
+      "targetWord": "kaufen",
+      "englishWord": "to buy"
+    },
+    {
+      "rank": 617,
+      "targetWord": "der Bau",
+      "englishWord": "construction"
+    },
+    {
+      "rank": 618,
+      "targetWord": "die Organisation",
+      "englishWord": "organisation"
+    },
+    {
+      "rank": 619,
+      "targetWord": "die Fläche",
+      "englishWord": "surface, area"
+    },
+    {
+      "rank": 620,
+      "targetWord": "der Plan",
+      "englishWord": "plan"
+    },
+    {
+      "rank": 621,
+      "targetWord": "der Bürger",
+      "englishWord": "citizen"
+    },
+    {
+      "rank": 622,
+      "targetWord": "das Auge",
+      "englishWord": "eye"
+    },
+    {
+      "rank": 623,
+      "targetWord": "die Anlage",
+      "englishWord": "installation, plant"
+    },
+    {
+      "rank": 624,
+      "targetWord": "das Museum",
+      "englishWord": "museum"
+    },
+    {
+      "rank": 625,
+      "targetWord": "die Wirtschaft",
+      "englishWord": "economy"
+    },
+    {
+      "rank": 626,
+      "targetWord": "wirtschaftlich",
+      "englishWord": "economic"
+    },
+    {
+      "rank": 627,
+      "targetWord": "verhindern",
+      "englishWord": "to prevent"
+    },
+    {
+      "rank": 628,
+      "targetWord": "schlecht",
+      "englishWord": "bad"
+    },
+    {
+      "rank": 629,
+      "targetWord": "dauern",
+      "englishWord": "to last"
+    },
+    {
+      "rank": 630,
+      "targetWord": "vorhanden",
+      "englishWord": "available, existing"
+    },
+    {
+      "rank": 631,
+      "targetWord": "erste",
+      "englishWord": "first (ordinal)"
+    },
+    {
+      "rank": 632,
+      "targetWord": "die Einrichtung",
+      "englishWord": "facility, institution"
+    },
+    {
+      "rank": 633,
+      "targetWord": "das Gesetz",
+      "englishWord": "law"
+    },
+    {
+      "rank": 634,
+      "targetWord": "lesen",
+      "englishWord": "to read"
+    },
+    {
+      "rank": 635,
+      "targetWord": "betroffen",
+      "englishWord": "affected"
+    },
+    {
+      "rank": 636,
+      "targetWord": "die Chance",
+      "englishWord": "chance"
+    },
+    {
+      "rank": 637,
+      "targetWord": "leisten",
+      "englishWord": "to accomplish, to afford"
+    },
+    {
+      "rank": 638,
+      "targetWord": "französisch",
+      "englishWord": "French"
+    },
+    {
+      "rank": 639,
+      "targetWord": "das Gerät",
+      "englishWord": "device"
+    },
+    {
+      "rank": 640,
+      "targetWord": "die Hälfte",
+      "englishWord": "half"
+    },
+    {
+      "rank": 641,
+      "targetWord": "früher",
+      "englishWord": "earlier, formerly"
+    },
+    {
+      "rank": 642,
+      "targetWord": "verändern",
+      "englishWord": "to change"
+    },
+    {
+      "rank": 643,
+      "targetWord": "links",
+      "englishWord": "left"
+    },
+    {
+      "rank": 644,
+      "targetWord": "zuständig",
+      "englishWord": "responsible, in charge"
+    },
+    {
+      "rank": 645,
+      "targetWord": "bauen",
+      "englishWord": "to build"
+    },
+    {
+      "rank": 646,
+      "targetWord": "vielleicht",
+      "englishWord": "perhaps"
+    },
+    {
+      "rank": 647,
+      "targetWord": "die Linie",
+      "englishWord": "line"
+    },
+    {
+      "rank": 648,
+      "targetWord": "laden",
+      "englishWord": "to load"
+    },
+    {
+      "rank": 649,
+      "targetWord": "der Vertrag",
+      "englishWord": "contract"
+    },
+    {
+      "rank": 650,
+      "targetWord": "vollständig",
+      "englishWord": "completely, in full"
+    },
+    {
+      "rank": 651,
+      "targetWord": "informieren",
+      "englishWord": "to inform"
+    },
+    {
+      "rank": 652,
+      "targetWord": "der Zeitpunkt",
+      "englishWord": "point in time"
+    },
+    {
+      "rank": 653,
+      "targetWord": "der Kontakt",
+      "englishWord": "contact"
+    },
+    {
+      "rank": 654,
+      "targetWord": "reichen",
+      "englishWord": "to suffice, to hand"
+    },
+    {
+      "rank": 655,
+      "targetWord": "der Sinn",
+      "englishWord": "sense, point"
+    },
+    {
+      "rank": 656,
+      "targetWord": "jeweilig",
+      "englishWord": "respective"
+    },
+    {
+      "rank": 657,
+      "targetWord": "verletzen",
+      "englishWord": "to injure"
+    },
+    {
+      "rank": 658,
+      "targetWord": "der Schaden",
+      "englishWord": "damage"
+    },
+    {
+      "rank": 659,
+      "targetWord": "reich",
+      "englishWord": "rich"
+    },
+    {
+      "rank": 660,
+      "targetWord": "erweitern",
+      "englishWord": "to expand"
+    },
+    {
+      "rank": 661,
+      "targetWord": "eng",
+      "englishWord": "narrow, close"
+    },
+    {
+      "rank": 662,
+      "targetWord": "richten",
+      "englishWord": "to direct"
+    },
+    {
+      "rank": 663,
+      "targetWord": "der Patient",
+      "englishWord": "patient"
+    },
+    {
+      "rank": 664,
+      "targetWord": "enden",
+      "englishWord": "to end"
+    },
+    {
+      "rank": 665,
+      "targetWord": "das Verfahren",
+      "englishWord": "procedure"
+    },
+    {
+      "rank": 666,
+      "targetWord": "national",
+      "englishWord": "national"
+    },
+    {
+      "rank": 667,
+      "targetWord": "das Bad",
+      "englishWord": "bath, bathroom"
+    },
+    {
+      "rank": 668,
+      "targetWord": "der Teilnehmer",
+      "englishWord": "participant"
+    },
+    {
+      "rank": 669,
+      "targetWord": "der Sieg",
+      "englishWord": "victory"
+    },
+    {
+      "rank": 670,
+      "targetWord": "die Ausstellung",
+      "englishWord": "exhibition"
+    },
+    {
+      "rank": 671,
+      "targetWord": "lösen",
+      "englishWord": "to solve"
+    },
+    {
+      "rank": 672,
+      "targetWord": "der Bericht",
+      "englishWord": "report"
+    },
+    {
+      "rank": 673,
+      "targetWord": "erinnern",
+      "englishWord": "to remind; to remember"
+    },
+    {
+      "rank": 674,
+      "targetWord": "schützen",
+      "englishWord": "to protect"
+    },
+    {
+      "rank": 675,
+      "targetWord": "bitten",
+      "englishWord": "to ask for, to request"
+    },
+    {
+      "rank": 676,
+      "targetWord": "bislang",
+      "englishWord": "up to now"
+    },
+    {
+      "rank": 677,
+      "targetWord": "der Zusammenhang",
+      "englishWord": "context, correlation"
+    },
+    {
+      "rank": 678,
+      "targetWord": "trotzdem",
+      "englishWord": "even so, despite that"
+    },
+    {
+      "rank": 679,
+      "targetWord": "die Sicherheit",
+      "englishWord": "safety, security"
+    },
+    {
+      "rank": 680,
+      "targetWord": "der Dienst",
+      "englishWord": "service"
+    },
+    {
+      "rank": 681,
+      "targetWord": "ändern",
+      "englishWord": "to alter"
+    },
+    {
+      "rank": 682,
+      "targetWord": "das Gericht",
+      "englishWord": "court (of law)"
+    },
+    {
+      "rank": 683,
+      "targetWord": "der Artikel",
+      "englishWord": "article"
+    },
+    {
+      "rank": 684,
+      "targetWord": "das Essen",
+      "englishWord": "food, meal"
+    },
+    {
+      "rank": 685,
+      "targetWord": "wechseln",
+      "englishWord": "to switch"
+    },
+    {
+      "rank": 686,
+      "targetWord": "sitzen",
+      "englishWord": "to sit"
+    },
+    {
+      "rank": 687,
+      "targetWord": "leiten",
+      "englishWord": "to manage, to head"
+    },
+    {
+      "rank": 688,
+      "targetWord": "der Wald",
+      "englishWord": "forest"
+    },
+    {
+      "rank": 689,
+      "targetWord": "organisieren",
+      "englishWord": "to organise"
+    },
+    {
+      "rank": 690,
+      "targetWord": "der Kopf",
+      "englishWord": "head"
+    },
+    {
+      "rank": 691,
+      "targetWord": "der Boden",
+      "englishWord": "ground, soil"
+    },
+    {
+      "rank": 692,
+      "targetWord": "die Bank",
+      "englishWord": "bank (financial institution)"
+    },
+    {
+      "rank": 693,
+      "targetWord": "schwierig",
+      "englishWord": "difficult, tricky"
+    },
+    {
+      "rank": 694,
+      "targetWord": "der Inhalt",
+      "englishWord": "content"
+    },
+    {
+      "rank": 695,
+      "targetWord": "die Kunst",
+      "englishWord": "art"
+    },
+    {
+      "rank": 696,
+      "targetWord": "das Zentrum",
+      "englishWord": "centre"
+    },
+    {
+      "rank": 697,
+      "targetWord": "der Anteil",
+      "englishWord": "share, proportion"
+    },
+    {
+      "rank": 698,
+      "targetWord": "der Abend",
+      "englishWord": "evening"
+    },
+    {
+      "rank": 699,
+      "targetWord": "die Milliarde",
+      "englishWord": "billion"
+    },
+    {
+      "rank": 700,
+      "targetWord": "der Arzt",
+      "englishWord": "doctor"
+    },
+    {
+      "rank": 701,
+      "targetWord": "allgemein",
+      "englishWord": "general"
+    },
+    {
+      "rank": 702,
+      "targetWord": "die Reise",
+      "englishWord": "journey"
+    },
+    {
+      "rank": 703,
+      "targetWord": "melden",
+      "englishWord": "to notify"
+    },
+    {
+      "rank": 704,
+      "targetWord": "beenden",
+      "englishWord": "to finish"
+    },
+    {
+      "rank": 705,
+      "targetWord": "die Runde",
+      "englishWord": "round (of a contest)"
+    },
+    {
+      "rank": 706,
+      "targetWord": "dein",
+      "englishWord": "your (singular)"
+    },
+    {
+      "rank": 707,
+      "targetWord": "der Bürgermeister",
+      "englishWord": "mayor"
+    },
+    {
+      "rank": 708,
+      "targetWord": "vertreten",
+      "englishWord": "to represent"
+    },
+    {
+      "rank": 709,
+      "targetWord": "die Serie",
+      "englishWord": "series (of episodes)"
+    },
+    {
+      "rank": 710,
+      "targetWord": "darstellen",
+      "englishWord": "to depict, to portray"
+    },
+    {
+      "rank": 711,
+      "targetWord": "lokal",
+      "englishWord": "local"
+    },
+    {
+      "rank": 712,
+      "targetWord": "der Kampf",
+      "englishWord": "fight, struggle"
+    },
+    {
+      "rank": 713,
+      "targetWord": "vorstellen",
+      "englishWord": "to introduce, to imagine"
+    },
+    {
+      "rank": 714,
+      "targetWord": "der Besuch",
+      "englishWord": "visit"
+    },
+    {
+      "rank": 715,
+      "targetWord": "der Hinweis",
+      "englishWord": "hint, clue"
+    },
+    {
+      "rank": 716,
+      "targetWord": "die Untersuchung",
+      "englishWord": "examination, investigation"
+    },
+    {
+      "rank": 717,
+      "targetWord": "das Krankenhaus",
+      "englishWord": "hospital"
+    },
+    {
+      "rank": 718,
+      "targetWord": "unabhängig",
+      "englishWord": "independent"
+    },
+    {
+      "rank": 719,
+      "targetWord": "der Lauf",
+      "englishWord": "course, run"
+    },
+    {
+      "rank": 720,
+      "targetWord": "wesentlich",
+      "englishWord": "essential"
+    },
+    {
+      "rank": 721,
+      "targetWord": "hingegen",
+      "englishWord": "on the other hand"
+    },
+    {
+      "rank": 722,
       "targetWord": "geboren",
       "englishWord": "born"
     },
     {
-      "rank": 973,
-      "targetWord": "bestimmen",
-      "englishWord": "determine"
+      "rank": 723,
+      "targetWord": "begleiten",
+      "englishWord": "to accompany"
     },
     {
-      "rank": 974,
-      "targetWord": "Quart",
-      "englishWord": "quart"
+      "rank": 724,
+      "targetWord": "das Hotel",
+      "englishWord": "hotel"
     },
     {
-      "rank": 975,
+      "rank": 725,
+      "targetWord": "die Strecke",
+      "englishWord": "route, distance"
+    },
+    {
+      "rank": 726,
+      "targetWord": "die Kultur",
+      "englishWord": "culture"
+    },
+    {
+      "rank": 727,
+      "targetWord": "einstellen",
+      "englishWord": "to hire"
+    },
+    {
+      "rank": 728,
+      "targetWord": "kommend",
+      "englishWord": "coming, next"
+    },
+    {
+      "rank": 729,
+      "targetWord": "überzeugen",
+      "englishWord": "to convince"
+    },
+    {
+      "rank": 730,
+      "targetWord": "täglich",
+      "englishWord": "daily"
+    },
+    {
+      "rank": 731,
+      "targetWord": "die Gefahr",
+      "englishWord": "danger"
+    },
+    {
+      "rank": 732,
+      "targetWord": "das Konzept",
+      "englishWord": "concept"
+    },
+    {
+      "rank": 733,
+      "targetWord": "warten",
+      "englishWord": "to wait"
+    },
+    {
+      "rank": 734,
+      "targetWord": "das Mittel",
+      "englishWord": "means"
+    },
+    {
+      "rank": 735,
+      "targetWord": "russisch",
+      "englishWord": "Russian"
+    },
+    {
+      "rank": 736,
+      "targetWord": "bestehend",
+      "englishWord": "existing"
+    },
+    {
+      "rank": 737,
+      "targetWord": "heraus",
+      "englishWord": "out"
+    },
+    {
+      "rank": 738,
+      "targetWord": "die Behörde",
+      "englishWord": "authority (agency)"
+    },
+    {
+      "rank": 739,
+      "targetWord": "holen",
+      "englishWord": "to fetch"
+    },
+    {
+      "rank": 740,
+      "targetWord": "überhaupt",
+      "englishWord": "in general, anyway"
+    },
+    {
+      "rank": 741,
+      "targetWord": "der Schutz",
+      "englishWord": "protection"
+    },
+    {
+      "rank": 742,
+      "targetWord": "weisen",
+      "englishWord": "to point"
+    },
+    {
+      "rank": 743,
+      "targetWord": "der Partner",
+      "englishWord": "partner"
+    },
+    {
+      "rank": 744,
+      "targetWord": "wissenschaftlich",
+      "englishWord": "scientific"
+    },
+    {
+      "rank": 745,
+      "targetWord": "der Einwohner",
+      "englishWord": "inhabitant"
+    },
+    {
+      "rank": 746,
+      "targetWord": "errichten",
+      "englishWord": "to erect"
+    },
+    {
+      "rank": 747,
+      "targetWord": "das Video",
+      "englishWord": "video"
+    },
+    {
+      "rank": 748,
+      "targetWord": "englisch",
+      "englishWord": "English"
+    },
+    {
+      "rank": 749,
+      "targetWord": "indem",
+      "englishWord": "by (means of)"
+    },
+    {
+      "rank": 750,
+      "targetWord": "weiß",
+      "englishWord": "white"
+    },
+    {
+      "rank": 751,
+      "targetWord": "die Beziehung",
+      "englishWord": "relationship"
+    },
+    {
+      "rank": 752,
+      "targetWord": "belegen",
+      "englishWord": "to occupy, to prove"
+    },
+    {
+      "rank": 753,
+      "targetWord": "gerne",
+      "englishWord": "gladly"
+    },
+    {
+      "rank": 754,
+      "targetWord": "der Abschluss",
+      "englishWord": "conclusion, degree"
+    },
+    {
+      "rank": 755,
+      "targetWord": "das Dorf",
+      "englishWord": "village"
+    },
+    {
+      "rank": 756,
+      "targetWord": "die Führung",
+      "englishWord": "leadership, lead"
+    },
+    {
+      "rank": 757,
+      "targetWord": "äußern",
+      "englishWord": "to express"
+    },
+    {
+      "rank": 758,
+      "targetWord": "die Produktion",
+      "englishWord": "production"
+    },
+    {
+      "rank": 759,
+      "targetWord": "der Hintergrund",
+      "englishWord": "background"
+    },
+    {
+      "rank": 760,
+      "targetWord": "der Start",
+      "englishWord": "start, launch"
+    },
+    {
+      "rank": 761,
+      "targetWord": "die Energie",
+      "englishWord": "energy"
+    },
+    {
+      "rank": 762,
+      "targetWord": "das Institut",
+      "englishWord": "institute"
+    },
+    {
+      "rank": 763,
+      "targetWord": "die Position",
+      "englishWord": "position"
+    },
+    {
+      "rank": 764,
+      "targetWord": "konkret",
+      "englishWord": "concrete, specific"
+    },
+    {
+      "rank": 765,
+      "targetWord": "abschließen",
+      "englishWord": "to complete, to conclude"
+    },
+    {
+      "rank": 766,
+      "targetWord": "grün",
+      "englishWord": "green"
+    },
+    {
+      "rank": 767,
+      "targetWord": "zumindest",
+      "englishWord": "at any rate"
+    },
+    {
+      "rank": 768,
+      "targetWord": "interessieren",
+      "englishWord": "to interest"
+    },
+    {
+      "rank": 769,
+      "targetWord": "die Grundlage",
+      "englishWord": "basis, foundation"
+    },
+    {
+      "rank": 770,
+      "targetWord": "die Insel",
+      "englishWord": "island"
+    },
+    {
+      "rank": 771,
+      "targetWord": "die Menge",
+      "englishWord": "quantity, crowd"
+    },
+    {
+      "rank": 772,
+      "targetWord": "der Angriff",
+      "englishWord": "attack"
+    },
+    {
+      "rank": 773,
+      "targetWord": "produzieren",
+      "englishWord": "to produce"
+    },
+    {
+      "rank": 774,
+      "targetWord": "der Sonntag",
+      "englishWord": "Sunday"
+    },
+    {
+      "rank": 775,
+      "targetWord": "das Foto",
+      "englishWord": "photo"
+    },
+    {
+      "rank": 776,
+      "targetWord": "die Zeitung",
+      "englishWord": "newspaper"
+    },
+    {
+      "rank": 777,
+      "targetWord": "niedrig",
+      "englishWord": "low"
+    },
+    {
+      "rank": 778,
+      "targetWord": "fühlen",
+      "englishWord": "to feel"
+    },
+    {
+      "rank": 779,
+      "targetWord": "der Körper",
+      "englishWord": "body"
+    },
+    {
+      "rank": 780,
       "targetWord": "neun",
       "englishWord": "nine"
     },
     {
+      "rank": 781,
+      "targetWord": "die Leute",
+      "englishWord": "people"
+    },
+    {
+      "rank": 782,
+      "targetWord": "die Anzahl",
+      "englishWord": "number (count of items)"
+    },
+    {
+      "rank": 783,
+      "targetWord": "das Mädchen",
+      "englishWord": "girl"
+    },
+    {
+      "rank": 784,
+      "targetWord": "grundsätzlich",
+      "englishWord": "in principle"
+    },
+    {
+      "rank": 785,
+      "targetWord": "die Karte",
+      "englishWord": "card, map"
+    },
+    {
+      "rank": 786,
+      "targetWord": "sammeln",
+      "englishWord": "to collect"
+    },
+    {
+      "rank": 787,
+      "targetWord": "die Ausgabe",
+      "englishWord": "edition, issue"
+    },
+    {
+      "rank": 788,
+      "targetWord": "künftig",
+      "englishWord": "future (upcoming)"
+    },
+    {
+      "rank": 789,
+      "targetWord": "der Druck",
+      "englishWord": "pressure"
+    },
+    {
+      "rank": 790,
+      "targetWord": "die Version",
+      "englishWord": "version"
+    },
+    {
+      "rank": 791,
+      "targetWord": "wohnen",
+      "englishWord": "to live, to reside"
+    },
+    {
+      "rank": 792,
+      "targetWord": "sodass",
+      "englishWord": "with the result that"
+    },
+    {
+      "rank": 793,
+      "targetWord": "der Anspruch",
+      "englishWord": "claim, entitlement"
+    },
+    {
+      "rank": 794,
+      "targetWord": "die Nutzung",
+      "englishWord": "usage"
+    },
+    {
+      "rank": 795,
+      "targetWord": "der Baum",
+      "englishWord": "tree"
+    },
+    {
+      "rank": 796,
+      "targetWord": "bewegen",
+      "englishWord": "to move"
+    },
+    {
+      "rank": 797,
+      "targetWord": "erfüllen",
+      "englishWord": "to fulfil"
+    },
+    {
+      "rank": 798,
+      "targetWord": "erlauben",
+      "englishWord": "to allow"
+    },
+    {
+      "rank": 799,
+      "targetWord": "die Natur",
+      "englishWord": "nature"
+    },
+    {
+      "rank": 800,
+      "targetWord": "rufen",
+      "englishWord": "to call"
+    },
+    {
+      "rank": 801,
+      "targetWord": "völlig",
+      "englishWord": "utterly"
+    },
+    {
+      "rank": 802,
+      "targetWord": "das Material",
+      "englishWord": "material"
+    },
+    {
+      "rank": 803,
+      "targetWord": "der Künstler",
+      "englishWord": "artist"
+    },
+    {
+      "rank": 804,
+      "targetWord": "bereit",
+      "englishWord": "ready"
+    },
+    {
+      "rank": 805,
+      "targetWord": "bisherig",
+      "englishWord": "previous"
+    },
+    {
+      "rank": 806,
+      "targetWord": "das Opfer",
+      "englishWord": "victim"
+    },
+    {
+      "rank": 807,
+      "targetWord": "die Sache",
+      "englishWord": "thing, matter"
+    },
+    {
+      "rank": 808,
+      "targetWord": "die Kritik",
+      "englishWord": "criticism"
+    },
+    {
+      "rank": 809,
+      "targetWord": "der Begriff",
+      "englishWord": "term, notion"
+    },
+    {
+      "rank": 810,
+      "targetWord": "die Bildung",
+      "englishWord": "education"
+    },
+    {
+      "rank": 811,
+      "targetWord": "klassisch",
+      "englishWord": "classical"
+    },
+    {
+      "rank": 812,
+      "targetWord": "der Hersteller",
+      "englishWord": "manufacturer"
+    },
+    {
+      "rank": 813,
+      "targetWord": "zugleich",
+      "englishWord": "at once, simultaneously"
+    },
+    {
+      "rank": 814,
+      "targetWord": "ersetzen",
+      "englishWord": "to replace"
+    },
+    {
+      "rank": 815,
+      "targetWord": "praktisch",
+      "englishWord": "practical"
+    },
+    {
+      "rank": 816,
+      "targetWord": "erheblich",
+      "englishWord": "considerable"
+    },
+    {
+      "rank": 817,
+      "targetWord": "die Suche",
+      "englishWord": "search"
+    },
+    {
+      "rank": 818,
+      "targetWord": "günstig",
+      "englishWord": "favourable, cheap"
+    },
+    {
+      "rank": 819,
+      "targetWord": "traditionell",
+      "englishWord": "traditional"
+    },
+    {
+      "rank": 820,
+      "targetWord": "der Auftrag",
+      "englishWord": "order, assignment"
+    },
+    {
+      "rank": 821,
+      "targetWord": "die Änderung",
+      "englishWord": "change, modification"
+    },
+    {
+      "rank": 822,
+      "targetWord": "die Aktion",
+      "englishWord": "campaign, action"
+    },
+    {
+      "rank": 823,
+      "targetWord": "regional",
+      "englishWord": "regional"
+    },
+    {
+      "rank": 824,
+      "targetWord": "der Einfluss",
+      "englishWord": "influence"
+    },
+    {
+      "rank": 825,
+      "targetWord": "zwölf",
+      "englishWord": "twelve"
+    },
+    {
+      "rank": 826,
+      "targetWord": "der Trainer",
+      "englishWord": "coach"
+    },
+    {
+      "rank": 827,
+      "targetWord": "der Jugendliche",
+      "englishWord": "teenager"
+    },
+    {
+      "rank": 828,
+      "targetWord": "das Verhalten",
+      "englishWord": "behaviour"
+    },
+    {
+      "rank": 829,
+      "targetWord": "der Bund",
+      "englishWord": "federation"
+    },
+    {
+      "rank": 830,
+      "targetWord": "zunehmen",
+      "englishWord": "to grow in number"
+    },
+    {
+      "rank": 831,
+      "targetWord": "verfolgen",
+      "englishWord": "to pursue"
+    },
+    {
+      "rank": 832,
+      "targetWord": "der Sitz",
+      "englishWord": "seat"
+    },
+    {
+      "rank": 833,
+      "targetWord": "die Sicht",
+      "englishWord": "view, perspective"
+    },
+    {
+      "rank": 834,
+      "targetWord": "vierte",
+      "englishWord": "fourth"
+    },
+    {
+      "rank": 835,
+      "targetWord": "zahlen",
+      "englishWord": "to pay"
+    },
+    {
+      "rank": 836,
+      "targetWord": "daraufhin",
+      "englishWord": "thereupon"
+    },
+    {
+      "rank": 837,
+      "targetWord": "individuell",
+      "englishWord": "personalised, individual"
+    },
+    {
+      "rank": 838,
+      "targetWord": "einzig",
+      "englishWord": "sole, only"
+    },
+    {
+      "rank": 839,
+      "targetWord": "erforderlich",
+      "englishWord": "required"
+    },
+    {
+      "rank": 840,
+      "targetWord": "passieren",
+      "englishWord": "to happen"
+    },
+    {
+      "rank": 841,
+      "targetWord": "falsch",
+      "englishWord": "wrong, false"
+    },
+    {
+      "rank": 842,
+      "targetWord": "manchmal",
+      "englishWord": "sometimes"
+    },
+    {
+      "rank": 843,
+      "targetWord": "das Geschäft",
+      "englishWord": "shop, business"
+    },
+    {
+      "rank": 844,
+      "targetWord": "ausschließlich",
+      "englishWord": "exclusively"
+    },
+    {
+      "rank": 845,
+      "targetWord": "der Antrag",
+      "englishWord": "application, motion"
+    },
+    {
+      "rank": 846,
+      "targetWord": "fördern",
+      "englishWord": "to promote, to fund"
+    },
+    {
+      "rank": 847,
+      "targetWord": "hinzu",
+      "englishWord": "additionally, on top"
+    },
+    {
+      "rank": 848,
+      "targetWord": "der Vorteil",
+      "englishWord": "advantage"
+    },
+    {
+      "rank": 849,
+      "targetWord": "maximal",
+      "englishWord": "maximum"
+    },
+    {
+      "rank": 850,
+      "targetWord": "hängen",
+      "englishWord": "to hang"
+    },
+    {
+      "rank": 851,
+      "targetWord": "echt",
+      "englishWord": "genuine"
+    },
+    {
+      "rank": 852,
+      "targetWord": "umsetzen",
+      "englishWord": "to implement"
+    },
+    {
+      "rank": 853,
+      "targetWord": "der Zugang",
+      "englishWord": "access"
+    },
+    {
+      "rank": 854,
+      "targetWord": "der Rücken",
+      "englishWord": "back (body part)"
+    },
+    {
+      "rank": 855,
+      "targetWord": "der Wagen",
+      "englishWord": "car, carriage"
+    },
+    {
+      "rank": 856,
+      "targetWord": "das Ding",
+      "englishWord": "thing (object)"
+    },
+    {
+      "rank": 857,
+      "targetWord": "das Jahrzehnt",
+      "englishWord": "decade"
+    },
+    {
+      "rank": 858,
+      "targetWord": "beobachten",
+      "englishWord": "to observe"
+    },
+    {
+      "rank": 859,
+      "targetWord": "die Nachricht",
+      "englishWord": "news, message"
+    },
+    {
+      "rank": 860,
+      "targetWord": "das Internet",
+      "englishWord": "internet"
+    },
+    {
+      "rank": 861,
+      "targetWord": "unmittelbar",
+      "englishWord": "immediate"
+    },
+    {
+      "rank": 862,
+      "targetWord": "die Forschung",
+      "englishWord": "research"
+    },
+    {
+      "rank": 863,
+      "targetWord": "staatlich",
+      "englishWord": "state-run"
+    },
+    {
+      "rank": 864,
+      "targetWord": "prägen",
+      "englishWord": "to shape, to coin"
+    },
+    {
+      "rank": 865,
+      "targetWord": "die Generation",
+      "englishWord": "generation"
+    },
+    {
+      "rank": 866,
+      "targetWord": "die Förderung",
+      "englishWord": "funding, promotion"
+    },
+    {
+      "rank": 867,
+      "targetWord": "die Herausforderung",
+      "englishWord": "challenge"
+    },
+    {
+      "rank": 868,
+      "targetWord": "die Größe",
+      "englishWord": "size"
+    },
+    {
+      "rank": 869,
+      "targetWord": "die Qualität",
+      "englishWord": "quality"
+    },
+    {
+      "rank": 870,
+      "targetWord": "der Vertreter",
+      "englishWord": "representative"
+    },
+    {
+      "rank": 871,
+      "targetWord": "ermitteln",
+      "englishWord": "to ascertain, to investigate"
+    },
+    {
+      "rank": 872,
+      "targetWord": "der Verband",
+      "englishWord": "association (umbrella body)"
+    },
+    {
+      "rank": 873,
+      "targetWord": "der Autor",
+      "englishWord": "author"
+    },
+    {
+      "rank": 874,
+      "targetWord": "darum",
+      "englishWord": "for that reason"
+    },
+    {
+      "rank": 875,
+      "targetWord": "engagieren",
+      "englishWord": "to get involved"
+    },
+    {
+      "rank": 876,
+      "targetWord": "der Bruder",
+      "englishWord": "brother"
+    },
+    {
+      "rank": 877,
+      "targetWord": "die Farbe",
+      "englishWord": "colour"
+    },
+    {
+      "rank": 878,
+      "targetWord": "reduzieren",
+      "englishWord": "to reduce"
+    },
+    {
+      "rank": 879,
+      "targetWord": "stets",
+      "englishWord": "constantly, at all times"
+    },
+    {
+      "rank": 880,
+      "targetWord": "der Wettbewerb",
+      "englishWord": "competition"
+    },
+    {
+      "rank": 881,
+      "targetWord": "das Schloss",
+      "englishWord": "castle; lock"
+    },
+    {
+      "rank": 882,
+      "targetWord": "erstellen",
+      "englishWord": "to create"
+    },
+    {
+      "rank": 883,
+      "targetWord": "verantwortlich",
+      "englishWord": "responsible, accountable"
+    },
+    {
+      "rank": 884,
+      "targetWord": "britisch",
+      "englishWord": "British"
+    },
+    {
+      "rank": 885,
+      "targetWord": "die Bewegung",
+      "englishWord": "movement"
+    },
+    {
+      "rank": 886,
+      "targetWord": "teilnehmen",
+      "englishWord": "to participate"
+    },
+    {
+      "rank": 887,
+      "targetWord": "die Karriere",
+      "englishWord": "career"
+    },
+    {
+      "rank": 888,
+      "targetWord": "der Haushalt",
+      "englishWord": "household, budget"
+    },
+    {
+      "rank": 889,
+      "targetWord": "rein",
+      "englishWord": "pure"
+    },
+    {
+      "rank": 890,
+      "targetWord": "stattfinden",
+      "englishWord": "to be held"
+    },
+    {
+      "rank": 891,
+      "targetWord": "rechts",
+      "englishWord": "on the right"
+    },
+    {
+      "rank": 892,
+      "targetWord": "der Unfall",
+      "englishWord": "accident"
+    },
+    {
+      "rank": 893,
+      "targetWord": "die Praxis",
+      "englishWord": "practice"
+    },
+    {
+      "rank": 894,
+      "targetWord": "die Basis",
+      "englishWord": "base"
+    },
+    {
+      "rank": 895,
+      "targetWord": "die Verwaltung",
+      "englishWord": "administration"
+    },
+    {
+      "rank": 896,
+      "targetWord": "das Studium",
+      "englishWord": "studies (at university)"
+    },
+    {
+      "rank": 897,
+      "targetWord": "die Liebe",
+      "englishWord": "love"
+    },
+    {
+      "rank": 898,
+      "targetWord": "werfen",
+      "englishWord": "to throw"
+    },
+    {
+      "rank": 899,
+      "targetWord": "greifen",
+      "englishWord": "to grab"
+    },
+    {
+      "rank": 900,
+      "targetWord": "die Umgebung",
+      "englishWord": "surroundings"
+    },
+    {
+      "rank": 901,
+      "targetWord": "sonst",
+      "englishWord": "otherwise"
+    },
+    {
+      "rank": 902,
+      "targetWord": "behandeln",
+      "englishWord": "to treat"
+    },
+    {
+      "rank": 903,
+      "targetWord": "untersuchen",
+      "englishWord": "to examine"
+    },
+    {
+      "rank": 904,
+      "targetWord": "geeignet",
+      "englishWord": "suitable"
+    },
+    {
+      "rank": 905,
+      "targetWord": "intensiv",
+      "englishWord": "intense"
+    },
+    {
+      "rank": 906,
+      "targetWord": "der König",
+      "englishWord": "king"
+    },
+    {
+      "rank": 907,
+      "targetWord": "die Technik",
+      "englishWord": "technology"
+    },
+    {
+      "rank": 908,
+      "targetWord": "der See",
+      "englishWord": "lake"
+    },
+    {
+      "rank": 909,
+      "targetWord": "der Anschluss",
+      "englishWord": "connection (link-up)"
+    },
+    {
+      "rank": 910,
+      "targetWord": "annehmen",
+      "englishWord": "to assume, to accept"
+    },
+    {
+      "rank": 911,
+      "targetWord": "passen",
+      "englishWord": "to fit"
+    },
+    {
+      "rank": 912,
+      "targetWord": "ergänzen",
+      "englishWord": "to supplement"
+    },
+    {
+      "rank": 913,
+      "targetWord": "der Herbst",
+      "englishWord": "autumn"
+    },
+    {
+      "rank": 914,
+      "targetWord": "möglichst",
+      "englishWord": "as much as possible"
+    },
+    {
+      "rank": 915,
+      "targetWord": "geschehen",
+      "englishWord": "to occur"
+    },
+    {
+      "rank": 916,
+      "targetWord": "miteinander",
+      "englishWord": "with each other"
+    },
+    {
+      "rank": 917,
+      "targetWord": "außerhalb",
+      "englishWord": "outside of"
+    },
+    {
+      "rank": 918,
+      "targetWord": "relativ",
+      "englishWord": "relative"
+    },
+    {
+      "rank": 919,
+      "targetWord": "die Antwort",
+      "englishWord": "answer"
+    },
+    {
+      "rank": 920,
+      "targetWord": "das Risiko",
+      "englishWord": "risk"
+    },
+    {
+      "rank": 921,
+      "targetWord": "die Veränderung",
+      "englishWord": "change, transformation"
+    },
+    {
+      "rank": 922,
+      "targetWord": "der Samstag",
+      "englishWord": "Saturday"
+    },
+    {
+      "rank": 923,
+      "targetWord": "die Liste",
+      "englishWord": "list"
+    },
+    {
+      "rank": 924,
+      "targetWord": "wiederum",
+      "englishWord": "in turn"
+    },
+    {
+      "rank": 925,
+      "targetWord": "rechnen",
+      "englishWord": "to calculate"
+    },
+    {
+      "rank": 926,
+      "targetWord": "gestalten",
+      "englishWord": "to design, to shape"
+    },
+    {
+      "rank": 927,
+      "targetWord": "verzichten",
+      "englishWord": "to do without"
+    },
+    {
+      "rank": 928,
+      "targetWord": "verstärken",
+      "englishWord": "to reinforce"
+    },
+    {
+      "rank": 929,
+      "targetWord": "gelangen",
+      "englishWord": "to get to"
+    },
+    {
+      "rank": 930,
+      "targetWord": "integrieren",
+      "englishWord": "to integrate"
+    },
+    {
+      "rank": 931,
+      "targetWord": "das Konzert",
+      "englishWord": "concert"
+    },
+    {
+      "rank": 932,
+      "targetWord": "das Schiff",
+      "englishWord": "ship"
+    },
+    {
+      "rank": 933,
+      "targetWord": "mancher",
+      "englishWord": "many a, some"
+    },
+    {
+      "rank": 934,
+      "targetWord": "die Initiative",
+      "englishWord": "initiative"
+    },
+    {
+      "rank": 935,
+      "targetWord": "die Aussage",
+      "englishWord": "statement, testimony"
+    },
+    {
+      "rank": 936,
+      "targetWord": "unterwegs",
+      "englishWord": "on the way"
+    },
+    {
+      "rank": 937,
+      "targetWord": "das Feld",
+      "englishWord": "field"
+    },
+    {
+      "rank": 938,
+      "targetWord": "der Winter",
+      "englishWord": "winter"
+    },
+    {
+      "rank": 939,
+      "targetWord": "der Unterschied",
+      "englishWord": "difference"
+    },
+    {
+      "rank": 940,
+      "targetWord": "die Hochschule",
+      "englishWord": "college"
+    },
+    {
+      "rank": 941,
+      "targetWord": "vermutlich",
+      "englishWord": "presumably"
+    },
+    {
+      "rank": 942,
+      "targetWord": "reagieren",
+      "englishWord": "to react"
+    },
+    {
+      "rank": 943,
+      "targetWord": "die Tätigkeit",
+      "englishWord": "activity"
+    },
+    {
+      "rank": 944,
+      "targetWord": "absolvieren",
+      "englishWord": "to complete (a course)"
+    },
+    {
+      "rank": 945,
+      "targetWord": "der Fuß",
+      "englishWord": "foot"
+    },
+    {
+      "rank": 946,
+      "targetWord": "normal",
+      "englishWord": "normal"
+    },
+    {
+      "rank": 947,
+      "targetWord": "stimmen",
+      "englishWord": "to be correct; to vote"
+    },
+    {
+      "rank": 948,
+      "targetWord": "kämpfen",
+      "englishWord": "to fight"
+    },
+    {
+      "rank": 949,
+      "targetWord": "die Stiftung",
+      "englishWord": "foundation (trust)"
+    },
+    {
+      "rank": 950,
+      "targetWord": "die Aufnahme",
+      "englishWord": "recording; admission"
+    },
+    {
+      "rank": 951,
+      "targetWord": "sinken",
+      "englishWord": "to sink, to decline"
+    },
+    {
+      "rank": 952,
+      "targetWord": "das Engagement",
+      "englishWord": "commitment"
+    },
+    {
+      "rank": 953,
+      "targetWord": "der Montag",
+      "englishWord": "Monday"
+    },
+    {
+      "rank": 954,
+      "targetWord": "umfangreich",
+      "englishWord": "extensive"
+    },
+    {
+      "rank": 955,
+      "targetWord": "nachhaltig",
+      "englishWord": "sustainable"
+    },
+    {
+      "rank": 956,
+      "targetWord": "wenden",
+      "englishWord": "to turn"
+    },
+    {
+      "rank": 957,
+      "targetWord": "die Anwendung",
+      "englishWord": "application (use)"
+    },
+    {
+      "rank": 958,
+      "targetWord": "das Interview",
+      "englishWord": "interview"
+    },
+    {
+      "rank": 959,
+      "targetWord": "der Satz",
+      "englishWord": "sentence"
+    },
+    {
+      "rank": 960,
+      "targetWord": "der Bewohner",
+      "englishWord": "resident"
+    },
+    {
+      "rank": 961,
+      "targetWord": "feststellen",
+      "englishWord": "to notice, to state"
+    },
+    {
+      "rank": 962,
+      "targetWord": "diskutieren",
+      "englishWord": "to discuss"
+    },
+    {
+      "rank": 963,
+      "targetWord": "teuer",
+      "englishWord": "expensive"
+    },
+    {
+      "rank": 964,
+      "targetWord": "die Kontrolle",
+      "englishWord": "control"
+    },
+    {
+      "rank": 965,
+      "targetWord": "das Publikum",
+      "englishWord": "audience"
+    },
+    {
+      "rank": 966,
+      "targetWord": "demnach",
+      "englishWord": "accordingly"
+    },
+    {
+      "rank": 967,
+      "targetWord": "her",
+      "englishWord": "here (towards the speaker)"
+    },
+    {
+      "rank": 968,
+      "targetWord": "das Verhältnis",
+      "englishWord": "ratio, proportion"
+    },
+    {
+      "rank": 969,
+      "targetWord": "der Nutzer",
+      "englishWord": "user"
+    },
+    {
+      "rank": 970,
+      "targetWord": "der Bahnhof",
+      "englishWord": "railway station"
+    },
+    {
+      "rank": 971,
+      "targetWord": "die Bühne",
+      "englishWord": "stage"
+    },
+    {
+      "rank": 972,
+      "targetWord": "der Rat",
+      "englishWord": "advice; council"
+    },
+    {
+      "rank": 973,
+      "targetWord": "der Kollege",
+      "englishWord": "colleague"
+    },
+    {
+      "rank": 974,
+      "targetWord": "verbreiten",
+      "englishWord": "to spread"
+    },
+    {
+      "rank": 975,
+      "targetWord": "zerstören",
+      "englishWord": "to destroy"
+    },
+    {
       "rank": 976,
-      "targetWord": "Lastwagen",
-      "englishWord": "truck"
+      "targetWord": "offenbar",
+      "englishWord": "apparently"
     },
     {
       "rank": 977,
-      "targetWord": "Lärm",
-      "englishWord": "noise"
+      "targetWord": "der Freitag",
+      "englishWord": "Friday"
     },
     {
       "rank": 978,
-      "targetWord": "Ebene",
-      "englishWord": "level"
+      "targetWord": "der Dienstag",
+      "englishWord": "Tuesday"
     },
     {
       "rank": 979,
-      "targetWord": "Chance",
-      "englishWord": "chance"
+      "targetWord": "der Mittwoch",
+      "englishWord": "Wednesday"
     },
     {
       "rank": 980,
-      "targetWord": "sammeln",
-      "englishWord": "gather"
+      "targetWord": "der Donnerstag",
+      "englishWord": "Thursday"
     },
     {
       "rank": 981,
-      "targetWord": "Geschäft",
-      "englishWord": "shop"
+      "targetWord": "der Zuschauer",
+      "englishWord": "spectator"
     },
     {
       "rank": 982,
-      "targetWord": "Stretch",
-      "englishWord": "stretch"
+      "targetWord": "medizinisch",
+      "englishWord": "medical"
     },
     {
       "rank": 983,
-      "targetWord": "werfen",
-      "englishWord": "throw"
+      "targetWord": "der Leiter",
+      "englishWord": "head (of an organisation)"
     },
     {
       "rank": 984,
-      "targetWord": "Glanz",
-      "englishWord": "shine"
+      "targetWord": "hierbei",
+      "englishWord": "in this context"
     },
     {
       "rank": 985,
-      "targetWord": "Immobilien",
-      "englishWord": "property"
+      "targetWord": "der Gott",
+      "englishWord": "god"
     },
     {
       "rank": 986,
-      "targetWord": "Spalte",
-      "englishWord": "column"
+      "targetWord": "der Soldat",
+      "englishWord": "soldier"
     },
     {
       "rank": 987,
-      "targetWord": "Molekül",
-      "englishWord": "molecule"
+      "targetWord": "das Herz",
+      "englishWord": "heart"
     },
     {
       "rank": 988,
-      "targetWord": "wählen",
-      "englishWord": "select"
+      "targetWord": "der Experte",
+      "englishWord": "expert"
     },
     {
       "rank": 989,
-      "targetWord": "falsch",
-      "englishWord": "wrong"
+      "targetWord": "der Garten",
+      "englishWord": "garden"
     },
     {
       "rank": 990,
-      "targetWord": "grau",
-      "englishWord": "gray"
+      "targetWord": "übrig",
+      "englishWord": "remaining"
     },
     {
       "rank": 991,
-      "targetWord": "Wiederholung",
-      "englishWord": "repeat"
+      "targetWord": "halb",
+      "englishWord": "half (adjective)"
     },
     {
       "rank": 992,
-      "targetWord": "erfordern",
-      "englishWord": "require"
+      "targetWord": "die Bahn",
+      "englishWord": "railway"
     },
     {
       "rank": 993,
-      "targetWord": "breit",
-      "englishWord": "broad"
+      "targetWord": "der Lehrer",
+      "englishWord": "teacher"
     },
     {
       "rank": 994,
-      "targetWord": "vorbereiten",
-      "englishWord": "prepare"
+      "targetWord": "kostenlos",
+      "englishWord": "free of charge"
     },
     {
       "rank": 995,
-      "targetWord": "Salz",
-      "englishWord": "salt"
+      "targetWord": "online",
+      "englishWord": "online"
     },
     {
       "rank": 996,
-      "targetWord": "Nase",
-      "englishWord": "nose"
+      "targetWord": "wahrscheinlich",
+      "englishWord": "likely, probable"
     },
     {
       "rank": 997,
-      "targetWord": "mehreren",
-      "englishWord": "plural"
+      "targetWord": "der Grad",
+      "englishWord": "degree"
     },
     {
       "rank": 998,
-      "targetWord": "Zorn",
-      "englishWord": "anger"
+      "targetWord": "hart",
+      "englishWord": "hard"
     },
     {
       "rank": 999,
-      "targetWord": "Anspruch",
-      "englishWord": "claim"
+      "targetWord": "der Park",
+      "englishWord": "park"
     },
     {
       "rank": 1000,
-      "targetWord": "Kontinent",
-      "englishWord": "continent"
+      "targetWord": "genug",
+      "englishWord": "enough"
     }
   ]
 }
