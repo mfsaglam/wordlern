@@ -1,0 +1,1001 @@
+# rank	targetWord	englishWord — step 05 editorial output, one sense per word.
+1	der	the
+2	und	and
+3	ein	a, an
+4	sein	to be
+5	in	in
+6	werden	to become
+7	er	he
+8	von	of, from
+9	mit	with
+10	im	in the
+11	zu	to
+12	für	for
+13	auf	on
+14	haben	to have
+15	sie	she; they
+16	auch	also
+17	es	it
+18	als	when, as
+19	dies	this
+20	an	at, on
+21	nicht	not
+22	können	can, to be able to
+23	ihr	her (possessive)
+24	bei	at, near
+25	nach	after
+26	am	at the
+27	aus	out of
+28	das Jahr	year
+29	dass	that (conjunction)
+30	um	around
+31	zum	to the (masculine/neuter)
+32	wie	how
+33	über	over, about
+34	oder	or
+35	bis	until
+36	vor	before, in front of
+37	noch	still
+38	zur	to the (feminine)
+39	durch	through
+40	aber	but
+41	nur	only
+42	so	so
+43	geben	to give
+44	alle	all
+45	neu	new
+46	sollen	should
+47	erst	first, only then
+48	müssen	must
+49	groß	big
+50	mehr	more
+51	man	one (impersonal)
+52	viel	much
+53	andere	other
+54	unter	under
+55	gut	good
+56	kommen	to come
+57	kein	no, not any
+58	ich	I
+59	vom	from the
+60	wir	we
+61	weit	far
+62	gehen	to go
+63	wieder	again
+64	zwei	two
+65	seit	since
+66	stehen	to stand
+67	wenn	if
+68	ab	as of, from
+69	dann	then
+70	machen	to make
+71	finden	to find
+72	was	what
+73	dabei	in doing so
+74	beim	at the (masculine/neuter)
+75	da	there
+76	gegen	against
+77	sowie	as well as
+78	hier	here
+79	bereits	already (formal)
+80	damit	so that
+81	die Zeit	time
+82	zwischen	between
+83	wollen	to want
+84	lassen	to let
+85	immer	always
+86	sehr	very
+87	schon	already
+88	liegen	to lie, to be located
+89	hoch	high
+90	der Mensch	human being
+91	drei	three
+92	sehen	to see
+93	die Stadt	city
+94	das Kind	child
+95	doch	but, after all
+96	stellen	to place
+97	wenig	little, few
+99	das Leben	life
+100	zeigen	to show
+101	jedoch	however
+102	etwa	approximately
+103	ganz	whole, entire
+104	nun	now, well then
+105	der Tag	day
+106	dort	over there
+107	beide	both
+108	klein	small
+109	nehmen	to take
+110	erhalten	to receive
+111	heute	today
+112	während	during, while
+113	der Teil	part
+114	bleiben	to stay
+115	selbst	oneself
+116	das Ende	end
+117	deutsch	German
+118	alt	old
+119	das Land	country
+120	rund	round
+121	führen	to lead
+122	die Frau	woman
+123	wichtig	important
+124	ohne	without
+125	dazu	in addition
+126	das Unternehmen	company
+127	eigen	own
+128	spät	late
+129	der Euro	euro
+130	stark	strong
+131	sagen	to say
+132	das Prozent	percent
+133	sondern	but rather
+134	lang	long
+135	einige	some, a few
+136	allerdings	admittedly, though
+137	weiter	further
+138	das Mal	time (occurrence)
+139	gelten	to be valid
+140	dürfen	to be allowed to
+141	jeder	each, every
+142	spielen	to play
+143	zweite	second
+144	kurz	short
+145	setzen	to set, to seat
+146	mehrere	several
+147	möglich	possible
+148	vier	four
+149	neben	next to
+150	verschieden	different
+151	halten	to hold
+152	ins	into the
+153	welcher	which
+154	der Weg	way, path
+155	der Fall	case
+156	unser	our
+157	ob	whether
+158	der Mann	man
+159	die Arbeit	work
+160	der Ort	place
+161	nutzen	to use
+162	zudem	moreover
+163	erreichen	to reach
+164	bekannt	known
+165	das Haus	house
+166	jung	young
+167	wo	where
+168	etwas	something
+169	gemeinsam	joint, together
+170	du	you (singular)
+171	dafür	for it
+172	das Spiel	game
+173	besonders	especially
+174	bestehen	to consist, to exist
+175	denn	for, since
+176	statt	instead of
+177	der Bereich	area, field
+178	der Platz	square, spot
+179	die Uhr	clock, o'clock
+180	meist	mostly
+181	also	so, therefore
+182	der Deutsche	German (person)
+183	jetzt	now
+184	weil	because
+185	bringen	to bring
+186	einfach	simple, easy
+187	die Familie	family
+188	ebenfalls	likewise
+189	letzte	last
+190	die Seite	side, page
+191	das Thema	topic
+192	zurück	back
+193	außerdem	besides
+194	insgesamt	in total
+195	befinden	to be situated
+196	die Million	million
+197	arbeiten	to work
+198	deutlich	clear
+199	die Person	person
+200	die Frage	question
+201	treffen	to meet
+202	aktuell	current
+203	wissen	to know (a fact)
+204	beginnen	to begin
+205	oft	often
+206	schnell	fast
+207	die Woche	week
+208	zusammen	together
+209	die Geschichte	history, story
+210	der Monat	month
+211	davon	from it
+212	darauf	on it
+213	der Grund	reason
+215	das Ziel	goal, target
+216	fünf	five
+217	entstehen	to arise
+219	hören	to hear
+220	nah	near
+221	direkt	direct
+222	handeln	to act
+223	der Name	name
+224	zahlreich	numerous
+225	die Schule	school
+226	bieten	to offer
+227	bekommen	to get
+228	daher	hence
+229	die Art	kind, type
+230	ziehen	to pull
+231	der September	September
+232	das Projekt	project
+233	gleich	same, equal
+234	fast	almost
+235	erklären	to explain
+236	das Beispiel	example
+237	lange	for a long time
+238	international	international
+239	entwickeln	to develop
+240	einmal	once
+241	laut	loud
+242	zunächst	at first
+243	sprechen	to speak
+244	die Gemeinde	municipality
+245	die Welt	world
+246	schwer	heavy, difficult
+247	das Mitglied	member
+248	wegen	because of
+249	wer	who
+250	der Oktober	October
+251	der Mai	May
+252	der Einsatz	deployment, use
+253	der Juni	June
+254	schaffen	to manage, to achieve
+255	genau	exact
+256	darüber	about it
+257	tragen	to carry, to wear
+258	zwar	indeed, it is true
+259	das Team	team
+260	die Straße	street
+261	recht	right, quite
+262	unterstützen	to support
+263	aufgrund	due to
+264	öffentlich	public
+265	erfolgen	to take place
+266	das Bild	picture, image
+267	die Entwicklung	development
+268	sogar	even
+269	das Problem	problem
+270	zusätzlich	additional
+271	schreiben	to write
+272	mögen	to like
+273	der Anfang	beginning
+274	politisch	political
+275	die Möglichkeit	possibility
+276	früh	early
+277	die Gruppe	group
+278	je	ever; each
+280	heißen	to be called
+281	bestimmen	to determine
+282	pro	per
+283	der Januar	January
+284	nennen	to name
+285	der Verein	club, association
+286	der Film	film, movie
+287	verwenden	to employ, to apply
+288	der November	November
+289	die Folge	consequence, episode
+290	der März	March
+291	leicht	light, easy
+292	gerade	just now
+293	der Meter	meter
+294	deshalb	that is why
+295	treten	to step
+296	der April	April
+297	gewinnen	to win
+298	erfolgreich	successful
+299	folgen	to follow
+300	laufen	to run
+301	der Punkt	point
+302	sechs	six
+303	der Juli	July
+304	mein	my
+305	legen	to lay, to put down
+306	das Ergebnis	result
+307	der Rahmen	frame, framework
+308	unterschiedlich	varying, differing
+309	der August	August
+310	fest	firm, fixed
+311	der Dezember	December
+312	gegenüber	opposite
+313	das Jahrhundert	century
+314	die Region	region
+315	die Kosten	costs
+316	häufig	frequent
+317	steigen	to rise
+318	natürlich	natural; of course
+319	nachdem	after (that)
+320	nichts	nothing
+321	zehn	ten
+322	die Zahl	number
+323	die Rolle	role
+324	danach	after that
+325	versuchen	to try
+326	die Stunde	hour
+327	frei	free
+328	die Stelle	spot, position
+329	hin	there (towards)
+330	bisher	so far
+331	tun	to do
+332	veröffentlichen	to publish
+333	solcher	such
+334	suchen	to search for
+335	sorgen	to take care of
+337	erneut	anew, once again
+338	schließen	to close
+339	der Mitarbeiter	employee
+340	weiterhin	furthermore, still
+341	die Form	shape, form
+342	der Raum	space, room
+343	sowohl	both (… and)
+344	die Information	information
+345	insbesondere	in particular
+346	das Datum	date
+347	schließlich	finally
+348	der Preis	price, prize
+349	gesamt	total, overall
+350	wohl	probably
+351	die Minute	minute
+352	das Gebäude	building
+353	der Februar	February
+354	übernehmen	to take over
+355	der Betrieb	operation, business
+356	innerhalb	within
+357	eigentlich	actually
+358	hinter	behind
+359	der Erfolg	success
+360	einzeln	individual
+361	der Schüler	pupil
+362	entsprechen	to correspond to
+363	die Aufgabe	task
+365	die Kirche	church
+366	ehemalig	former
+367	fahren	to drive
+368	offen	open
+369	die Angabe	statement, detail
+370	sicher	safe, certain
+371	das Angebot	offer
+372	das Wasser	water
+373	jeweils	in each case
+374	das Buch	book
+375	die Höhe	height
+376	helfen	to help
+377	berichten	to report
+378	hinaus	out, beyond
+379	anders	differently
+381	die Richtung	direction
+382	richtig	correct
+383	die Polizei	police
+384	das Geld	money
+385	die Mitte	middle
+386	anschließend	afterwards
+387	starten	to start
+388	erstmals	for the first time
+391	einigen	to agree on
+392	entscheiden	to decide
+393	der Wert	value
+394	die Verfügung	disposal (availability)
+395	einsetzen	to deploy, to insert
+396	gehören	to belong to
+397	das Fahrzeug	vehicle
+398	aktiv	active
+399	ermöglichen	to make possible
+400	zählen	to count
+401	kaum	hardly, barely
+402	beispielsweise	for example
+403	sogenannt	so-called
+404	die Gesellschaft	society
+405	die Regel	rule
+406	die Saison	season
+407	bilden	to form
+408	damals	back then
+409	dadurch	thereby
+410	die Wahl	choice, election
+411	der Vater	father
+413	sozial	social
+414	trotz	in spite of
+415	die Leistung	performance, achievement
+416	planen	to plan
+417	die Eltern	parents
+418	ebenso	equally, just as
+419	europäisch	European
+421	die Hand	hand
+422	das Programm	program
+423	der Staat	state (country)
+424	klar	clear, obvious
+425	gleichzeitig	at the same time
+426	somit	thus
+427	eher	rather
+428	derzeit	currently
+429	die Partei	political party
+430	erscheinen	to appear
+431	das Alter	age
+432	knapp	scarce, narrow
+433	lernen	to learn
+435	bedeuten	to mean
+436	zuvor	previously
+437	die Mutter	mother
+438	erfahren	to find out, to experience
+439	nie	never
+440	das Werk	work (creation)
+441	meinen	to think, to be of the opinion
+442	das System	system
+443	die Hilfe	help
+444	das Wort	word
+445	das Tier	animal
+446	der Beginn	start
+448	der Titel	title
+449	persönlich	personal
+450	regelmäßig	regular
+451	erhöhen	to increase
+452	die Universität	university
+453	die Lage	situation, location
+454	bezeichnen	to designate
+455	der Sohn	son
+456	die Unterstützung	support
+457	sterben	to die
+458	das Gebiet	area, territory
+459	der Tod	death
+460	kennen	to know (be acquainted with)
+461	enthalten	to contain
+462	gering	slight, low
+463	der Sommer	summer
+464	schön	beautiful
+465	voll	full
+466	dienen	to serve
+467	erwarten	to expect
+468	die Entscheidung	decision
+469	fallen	to fall
+470	die Mannschaft	team (sports)
+471	ähnlich	similar
+472	verlassen	to leave
+473	wirken	to have an effect
+474	paar	a few
+475	mindestens	at least
+476	betragen	to amount to
+477	der Spieler	player
+478	das Auto	car
+479	der Freund	friend
+480	die Zukunft	future
+481	die Veranstaltung	event
+482	dennoch	nevertheless
+483	tatsächlich	in fact, really
+484	der Kunde	customer
+485	die Regierung	government
+486	erkennen	to recognize
+487	wählen	to choose, to elect
+488	acht	eight
+489	dritte	third
+490	das Produkt	product
+491	das Interesse	interest
+492	brauchen	to need
+493	die Idee	idea
+494	die Band	band (music group)
+495	der Markt	market
+496	rot	red
+497	die Bedeutung	meaning, significance
+498	entsprechend	corresponding
+499	die Musik	music
+500	aufnehmen	to take in, to record
+501	zuletzt	most recently, lastly
+502	die Weise	way, manner
+503	gar	at all
+504	technisch	technical
+505	der Zug	train
+506	verkaufen	to sell
+507	besuchen	to visit
+508	ja	yes
+509	der Blick	look, glance
+510	offiziell	official
+511	weltweit	worldwide
+512	gründen	to found
+513	entfernen	to remove
+515	modern	modern
+516	historisch	historical
+517	vergangen	past, bygone
+518	gegeben	given
+519	beteiligen	to involve, to participate
+520	tief	deep
+521	positiv	positive
+522	die Studie	study
+523	per	by, via
+524	inzwischen	by now, meanwhile
+525	sieben	seven
+526	zentral	central
+527	der Krieg	war
+528	glauben	to believe
+529	der Vergleich	comparison
+530	der Beitrag	contribution
+531	eröffnen	to open (officially)
+532	obwohl	although
+533	scheinen	to seem
+534	verfügen	to have at one's disposal
+535	allein	alone
+536	das Amt	office (public authority)
+537	die Maßnahme	measure
+538	der Präsident	president
+539	der Besucher	visitor
+540	die Situation	situation
+541	fordern	to demand
+542	daran	at it, on it
+543	die Firma	firm, business
+544	verstehen	to understand
+545	der Kilometer	kilometre
+546	die Erfahrung	experience
+547	der Gast	guest
+550	teilweise	partially
+551	der Schritt	step
+552	das Modell	model
+553	wirklich	really
+554	benötigen	to require
+555	notwendig	necessary
+556	erleben	to experience, to live through
+557	der Stand	status, standing
+558	selten	rare
+559	die Wohnung	flat, apartment
+560	heutig	today's
+561	bald	soon
+562	die Politik	politics
+563	die Kraft	force, strength
+564	mittlerweile	in the meantime
+565	das Gespräch	conversation
+566	lediglich	merely
+567	die Grenze	border, limit
+568	gelingen	to succeed
+569	darin	in it
+570	tätig	working, employed
+571	bevor	before (conjunction)
+573	erzielen	to attain, to score
+574	darunter	among them
+575	fehlen	to be missing
+576	digital	digital
+577	verlieren	to lose
+578	dagegen	against it
+579	umfassen	to comprise
+580	privat	private
+581	öffnen	to open
+582	schwarz	black
+583	erzählen	to tell, to narrate
+584	wachsen	to grow
+585	entdecken	to discover
+586	ursprünglich	original
+587	verbessern	to improve
+588	ergeben	to result in
+589	präsentieren	to present
+590	die Bevölkerung	population
+591	die Zusammenarbeit	cooperation
+593	stammen	to originate from
+594	das Tor	gate; goal (in football)
+595	die Stimme	voice, vote
+596	die Funktion	function
+597	komplett	complete
+598	die Lösung	solution
+599	die Reihe	row, series
+600	bestätigen	to confirm
+601	sofort	immediately
+602	speziell	special
+603	der Landkreis	district (rural)
+604	beschäftigen	to employ, to occupy
+605	schlagen	to hit, to beat
+606	die Klasse	class
+607	die Verbindung	connection
+608	finanziell	financial
+609	wobei	whereby
+610	die GmbH	limited liability company
+611	das Stück	piece
+612	oben	above, at the top
+613	die Sprache	language
+615	folgend	following
+616	verbunden	connected
+617	besitzen	to own
+618	der Herr	gentleman, Mr
+619	der Prozess	process, trial
+620	feiern	to celebrate
+621	jährlich	annual
+622	teilen	to share, to divide
+623	breit	broad, wide
+624	der Kreis	circle
+625	die Nacht	night
+626	die Nähe	vicinity, closeness
+627	warum	why
+629	der Standort	location, site
+630	die Tochter	daughter
+631	sichern	to secure
+632	die Ausbildung	training
+633	liefern	to deliver, to supply
+634	der Text	text
+635	kaufen	to buy
+636	der Bau	construction
+637	die Organisation	organisation
+638	die Fläche	surface, area
+639	der Plan	plan
+640	der Bürger	citizen
+641	das Auge	eye
+642	die Anlage	installation, plant
+644	das Museum	museum
+645	die Wirtschaft	economy
+646	wirtschaftlich	economic
+647	verhindern	to prevent
+648	schlecht	bad
+649	dauern	to last
+650	vorhanden	available, existing
+651	erste	first (ordinal)
+652	die Einrichtung	facility, institution
+653	das Gesetz	law
+654	lesen	to read
+655	betroffen	affected
+656	die Chance	chance
+657	leisten	to accomplish, to afford
+658	französisch	French
+659	das Gerät	device
+660	die Hälfte	half
+661	früher	earlier, formerly
+662	verändern	to change
+663	links	left
+664	zuständig	responsible, in charge
+665	bauen	to build
+666	vielleicht	perhaps
+668	die Linie	line
+669	laden	to load
+670	der Vertrag	contract
+672	vollständig	completely, in full
+673	informieren	to inform
+674	der Zeitpunkt	point in time
+675	der Kontakt	contact
+676	reichen	to suffice, to hand
+678	der Sinn	sense, point
+679	jeweilig	respective
+680	verletzen	to injure
+681	der Schaden	damage
+682	reich	rich
+683	erweitern	to expand
+684	eng	narrow, close
+685	richten	to direct
+686	der Patient	patient
+687	enden	to end
+688	das Verfahren	procedure
+689	national	national
+690	das Bad	bath, bathroom
+691	der Teilnehmer	participant
+692	der Sieg	victory
+693	die Ausstellung	exhibition
+694	lösen	to solve
+695	der Bericht	report
+696	erinnern	to remind; to remember
+697	schützen	to protect
+699	bitten	to ask for, to request
+700	bislang	up to now
+701	der Zusammenhang	context, correlation
+702	trotzdem	even so, despite that
+703	die Sicherheit	safety, security
+704	der Dienst	service
+705	ändern	to alter
+706	das Gericht	court (of law)
+707	der Artikel	article
+708	das Essen	food, meal
+709	wechseln	to switch
+710	sitzen	to sit
+711	leiten	to manage, to head
+712	der Wald	forest
+713	organisieren	to organise
+714	der Kopf	head
+715	der Boden	ground, soil
+716	die Bank	bank (financial institution)
+717	schwierig	difficult, tricky
+718	der Inhalt	content
+719	die Kunst	art
+721	das Zentrum	centre
+722	der Anteil	share, proportion
+724	der Abend	evening
+725	die Milliarde	billion
+726	der Arzt	doctor
+727	allgemein	general
+728	die Reise	journey
+729	melden	to notify
+730	beenden	to finish
+731	die Runde	round (of a contest)
+732	dein	your (singular)
+733	der Bürgermeister	mayor
+734	vertreten	to represent
+737	die Serie	series (of episodes)
+738	darstellen	to depict, to portray
+739	lokal	local
+740	der Kampf	fight, struggle
+741	vorstellen	to introduce, to imagine
+742	der Besuch	visit
+743	der Hinweis	hint, clue
+744	die Untersuchung	examination, investigation
+745	das Krankenhaus	hospital
+746	unabhängig	independent
+747	der Lauf	course, run
+748	wesentlich	essential
+749	hingegen	on the other hand
+750	geboren	born
+751	begleiten	to accompany
+752	das Hotel	hotel
+754	die Strecke	route, distance
+755	die Kultur	culture
+757	einstellen	to hire
+758	kommend	coming, next
+759	überzeugen	to convince
+760	täglich	daily
+761	die Gefahr	danger
+763	das Konzept	concept
+764	warten	to wait
+766	das Mittel	means
+767	russisch	Russian
+768	bestehend	existing
+769	heraus	out
+770	die Behörde	authority (agency)
+771	holen	to fetch
+772	überhaupt	in general, anyway
+773	der Schutz	protection
+774	weisen	to point
+775	der Partner	partner
+776	wissenschaftlich	scientific
+777	der Einwohner	inhabitant
+778	errichten	to erect
+779	das Video	video
+780	englisch	English
+781	indem	by (means of)
+782	weiß	white
+785	die Beziehung	relationship
+786	belegen	to occupy, to prove
+787	gerne	gladly
+789	der Abschluss	conclusion, degree
+790	das Dorf	village
+792	die Führung	leadership, lead
+793	äußern	to express
+794	die Produktion	production
+796	der Hintergrund	background
+797	der Start	start, launch
+798	die Energie	energy
+799	das Institut	institute
+800	die Position	position
+803	konkret	concrete, specific
+804	abschließen	to complete, to conclude
+805	grün	green
+806	zumindest	at any rate
+808	interessieren	to interest
+809	die Grundlage	basis, foundation
+810	die Insel	island
+811	die Menge	quantity, crowd
+812	der Angriff	attack
+813	produzieren	to produce
+814	der Sonntag	Sunday
+815	das Foto	photo
+816	die Zeitung	newspaper
+817	niedrig	low
+818	fühlen	to feel
+819	der Körper	body
+820	neun	nine
+821	die Leute	people
+823	die Anzahl	number (count of items)
+824	das Mädchen	girl
+825	grundsätzlich	in principle
+826	die Karte	card, map
+827	sammeln	to collect
+829	die Ausgabe	edition, issue
+830	künftig	future (upcoming)
+831	der Druck	pressure
+832	die Version	version
+833	wohnen	to live, to reside
+834	sodass	with the result that
+835	der Anspruch	claim, entitlement
+836	die Nutzung	usage
+837	der Baum	tree
+838	bewegen	to move
+839	erfüllen	to fulfil
+840	erlauben	to allow
+841	die Natur	nature
+842	rufen	to call
+843	völlig	utterly
+844	das Material	material
+845	der Künstler	artist
+846	bereit	ready
+847	bisherig	previous
+848	das Opfer	victim
+849	die Sache	thing, matter
+850	die Kritik	criticism
+851	der Begriff	term, notion
+852	die Bildung	education
+853	klassisch	classical
+854	der Hersteller	manufacturer
+855	zugleich	at once, simultaneously
+856	ersetzen	to replace
+857	praktisch	practical
+858	erheblich	considerable
+860	die Suche	search
+861	günstig	favourable, cheap
+862	traditionell	traditional
+863	der Auftrag	order, assignment
+864	die Änderung	change, modification
+865	die Aktion	campaign, action
+866	regional	regional
+867	der Einfluss	influence
+868	zwölf	twelve
+869	der Trainer	coach
+870	der Jugendliche	teenager
+871	das Verhalten	behaviour
+872	der Bund	federation
+873	zunehmen	to grow in number
+874	verfolgen	to pursue
+875	der Sitz	seat
+880	die Sicht	view, perspective
+881	vierte	fourth
+882	zahlen	to pay
+883	daraufhin	thereupon
+884	individuell	personalised, individual
+885	einzig	sole, only
+886	erforderlich	required
+887	passieren	to happen
+888	falsch	wrong, false
+889	manchmal	sometimes
+890	das Geschäft	shop, business
+891	ausschließlich	exclusively
+894	der Antrag	application, motion
+895	fördern	to promote, to fund
+896	hinzu	additionally, on top
+898	der Vorteil	advantage
+899	maximal	maximum
+900	hängen	to hang
+901	echt	genuine
+902	umsetzen	to implement
+903	der Zugang	access
+904	der Rücken	back (body part)
+905	der Wagen	car, carriage
+906	das Ding	thing (object)
+907	das Jahrzehnt	decade
+908	beobachten	to observe
+909	die Nachricht	news, message
+910	das Internet	internet
+911	unmittelbar	immediate
+912	die Forschung	research
+913	staatlich	state-run
+914	prägen	to shape, to coin
+915	die Generation	generation
+916	die Förderung	funding, promotion
+918	die Herausforderung	challenge
+919	die Größe	size
+920	die Qualität	quality
+921	der Vertreter	representative
+922	ermitteln	to ascertain, to investigate
+923	der Verband	association (umbrella body)
+924	der Autor	author
+925	darum	for that reason
+926	engagieren	to get involved
+927	der Bruder	brother
+928	die Farbe	colour
+929	reduzieren	to reduce
+930	stets	constantly, at all times
+931	der Wettbewerb	competition
+932	das Schloss	castle; lock
+933	erstellen	to create
+934	verantwortlich	responsible, accountable
+935	britisch	British
+936	die Bewegung	movement
+937	teilnehmen	to participate
+938	die Karriere	career
+939	der Haushalt	household, budget
+940	rein	pure
+941	stattfinden	to be held
+942	rechts	on the right
+943	der Unfall	accident
+944	die Praxis	practice
+945	die Basis	base
+946	die Verwaltung	administration
+947	das Studium	studies (at university)
+948	die Liebe	love
+949	werfen	to throw
+950	greifen	to grab
+951	die Umgebung	surroundings
+952	sonst	otherwise
+953	behandeln	to treat
+955	untersuchen	to examine
+956	geeignet	suitable
+957	intensiv	intense
+958	der König	king
+959	die Technik	technology
+960	der See	lake
+961	der Anschluss	connection (link-up)
+962	annehmen	to assume, to accept
+963	passen	to fit
+964	ergänzen	to supplement
+965	der Herbst	autumn
+966	möglichst	as much as possible
+967	geschehen	to occur
+968	miteinander	with each other
+969	außerhalb	outside of
+970	relativ	relative
+971	die Antwort	answer
+972	das Risiko	risk
+973	die Veränderung	change, transformation
+974	der Samstag	Saturday
+975	die Liste	list
+976	wiederum	in turn
+977	rechnen	to calculate
+978	gestalten	to design, to shape
+980	verzichten	to do without
+981	verstärken	to reinforce
+982	gelangen	to get to
+983	integrieren	to integrate
+984	das Konzert	concert
+985	das Schiff	ship
+986	mancher	many a, some
+987	die Initiative	initiative
+988	die Aussage	statement, testimony
+989	unterwegs	on the way
+990	das Feld	field
+991	der Winter	winter
+992	der Unterschied	difference
+993	die Hochschule	college
+995	vermutlich	presumably
+996	reagieren	to react
+997	die Tätigkeit	activity
+998	absolvieren	to complete (a course)
+999	der Fuß	foot
+1000	normal	normal
+1001	stimmen	to be correct; to vote
+1002	kämpfen	to fight
+1003	die Stiftung	foundation (trust)
+1004	die Aufnahme	recording; admission
+1005	sinken	to sink, to decline
+1006	das Engagement	commitment
+1007	der Montag	Monday
+1008	umfangreich	extensive
+1009	nachhaltig	sustainable
+1011	wenden	to turn
+1012	die Anwendung	application (use)
+1013	das Interview	interview
+1014	der Satz	sentence
+1015	der Bewohner	resident
+1016	feststellen	to notice, to state
+1017	diskutieren	to discuss
+1018	teuer	expensive
+1019	die Kontrolle	control
+1020	das Publikum	audience
+1021	demnach	accordingly
+1022	her	here (towards the speaker)
+1023	das Verhältnis	ratio, proportion
+1024	der Nutzer	user
+1025	der Bahnhof	railway station
+1026	die Bühne	stage
+1027	der Rat	advice; council
+1028	der Kollege	colleague
+1029	verbreiten	to spread
+1030	zerstören	to destroy
+1031	offenbar	apparently
+1032	der Freitag	Friday
+1033	der Zuschauer	spectator
+1034	medizinisch	medical
+1035	der Leiter	head (of an organisation)
+1037	hierbei	in this context
+1039	der Gott	god
+15	Sie	you (formal)
+1032	der Dienstag	Tuesday
+1032	der Mittwoch	Wednesday
+1032	der Donnerstag	Thursday
+1041	der Soldat	soldier
+1042	das Herz	heart
+1043	der Experte	expert
+1044	der Garten	garden
+1045	übrig	remaining
+1046	halb	half (adjective)
+1047	die Bahn	railway
+1048	der Lehrer	teacher
+1050	kostenlos	free of charge
+1051	online	online
+1052	wahrscheinlich	likely, probable
+1053	der Grad	degree
+1054	hart	hard
+1055	der Park	park
+1057	genug	enough
