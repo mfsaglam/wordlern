@@ -7,14 +7,25 @@
 
 import SwiftUI
 import LeitnerSwift
+import SwiftData
 
 @main
 struct thousandApp: App {
+    private let container: ModelContainer
+
+    init() {
+        do {
+            container = try ModelContainer(for: StoredBox.self, StoredCard.self)
+        } catch {
+            fatalError("Could not create the SwiftData container: \(error)")
+        }
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView(
                 viewModel: WordViewModel(
-                    cardStore: RealmCardStore(),
+                    cardStore: SwiftDataCardStore(container: container),
                     leitnerSystem: setupLeitnerSystem()
                 )
             )
