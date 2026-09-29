@@ -183,6 +183,13 @@ answers, anything shorter springs back. While the finger is down the card carrie
 colour — a green or red border plus the matching ✓/✗ glyph, fading in with the distance. The
 ✓/✗ buttons are untouched.
 
+The card is keyed on the card's id, because the usual flow is flip-then-swipe: without the key
+the next card inherits the previous card's flipped view and animates back to its front. With it
+every card is built fresh, front up. Its arrival is a fade from 96% scale over a ~0.3s spring —
+enough to read as a new card, too small to be a choreography. The answered card leaves with no
+transition at all: it is already off screen, and a fading exit gave it time to snap its drag
+offset back to centre — the old card visibly flashing in before the new one faded up.
+
 Undo is one level deep and lives only inside a session. `LeitnerSystem` has no reverse of
 `updateCard`, so `WordViewModel` snapshots `allBoxes` plus the session index before each answer
 and restores it through `loadBoxes`. The control is a small muted arrow left of the box badge,

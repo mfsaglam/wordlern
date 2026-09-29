@@ -102,8 +102,11 @@ struct CardView: View {
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
             onSwipe(correct)
-            // The next card reuses this view, so snap back without animating —
-            // otherwise it would slide in from off screen.
+            // The next card arrives under a new `.id` and so starts clean; this
+            // only matters if the answer did not take and this same card stays,
+            // in which case it has to come back from off screen. It must not be
+            // animated, and the answered card must leave with no transition, or
+            // this snap-back is visible on the way out.
             var transaction = Transaction()
             transaction.disablesAnimations = true
             withTransaction(transaction) {

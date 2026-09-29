@@ -26,6 +26,7 @@ struct ContentView: View {
         Group {
             if let card = viewModel.currentCard {
                 CardScreen(
+                    cardID: card.id,
                     word: card.word,
                     boxNumber: viewModel.currentBoxNumber,
                     position: viewModel.sessionPosition,
