@@ -13,7 +13,7 @@ bigger model, mechanical steps are not.
 | 03 | `step/03-word-source` | Pick a real German frequency list | opus | done |
 | 04 | `step/04-dictionary-merge` | Merge frequency list with a dictionary | sonnet | done |
 | 05 | `step/05-word-list-editorial` | Editorial pass over the 1000 words | opus | done |
-| 06 | `step/06-sentence-pilot` | Example sentence pilot (50 words) | opus | todo |
+| 06 | `step/06-sentence-pilot` | Example sentence pilot (50 words) | opus | done |
 | 07 | `step/07-sentences` | Remaining example sentences | opus | todo |
 | 08 | `step/08-swiftdata` | Replace Realm with SwiftData | opus | done |
 | 09 | `step/09-swipe-undo` | Swipe gesture + undo | opus | todo |
@@ -120,6 +120,19 @@ a small core allow-list (~40 basic words needed to form any sentence at all).
 
 Then write sentences for the first 50 words and present them to the user before going further.
 German only, A1 level, no English translation.
+
+Done: `tools/validate_sentences.py` enforces the three rules, comparing lemmas with simplemma
+(`ist` counts as `sein`, `Kinder` as `Kind`), so the same `.venv` as the frequency list is
+needed. `tools/de_sentences.tsv` holds the first 50 sentences, all passing.
+
+The allow-list ended up at ~50 words rather than 40: rank 3 has two earlier words to build
+from, so the floor has to carry the pronouns, `sein/haben/werden`, ten everyday nouns and nine
+verbs. Two sentences are stilted because the natural wording is not unlocked yet — `an` gets
+"an dem Tisch" because `am` is rank 27, and `zur` gets "zur Stadt" because Arbeit and Schule
+are not in the list. `sie`/`Sie` are checked case-sensitively and must appear mid-sentence,
+where the capital still carries information.
+
+No app code: writing the sentences into `de.json` and bumping `contentVersion` is step 07.
 
 ## 07 — Remaining example sentences
 

@@ -17,3 +17,6 @@ xcuserdata/
 
 ## Scratch
 *.log
+
+## Build-time Python (tools/)
+.venv/
