@@ -307,4752 +307,5702 @@
     {
       "rank": 51,
       "targetWord": "mehr",
-      "englishWord": "more"
+      "englishWord": "more",
+      "exampleSentence": "Ich habe mehr Bücher."
     },
     {
       "rank": 52,
       "targetWord": "man",
-      "englishWord": "one (impersonal)"
+      "englishWord": "one (impersonal)",
+      "exampleSentence": "Hier kann man essen."
     },
     {
       "rank": 53,
       "targetWord": "viel",
-      "englishWord": "much"
+      "englishWord": "much",
+      "exampleSentence": "Er hat viel Wasser."
     },
     {
       "rank": 54,
       "targetWord": "andere",
-      "englishWord": "other"
+      "englishWord": "other",
+      "exampleSentence": "Das andere Buch ist gut."
     },
     {
       "rank": 55,
       "targetWord": "unter",
-      "englishWord": "under"
+      "englishWord": "under",
+      "exampleSentence": "Das ist unter dem Tisch."
     },
     {
       "rank": 56,
       "targetWord": "gut",
-      "englishWord": "good"
+      "englishWord": "good",
+      "exampleSentence": "Das Buch ist sehr gut."
     },
     {
       "rank": 57,
       "targetWord": "kommen",
-      "englishWord": "to come"
+      "englishWord": "to come",
+      "exampleSentence": "Ich komme aus der Stadt."
     },
     {
       "rank": 58,
       "targetWord": "kein",
-      "englishWord": "no, not any"
+      "englishWord": "no, not any",
+      "exampleSentence": "Ich habe kein Auto."
     },
     {
       "rank": 59,
       "targetWord": "ich",
-      "englishWord": "I"
+      "englishWord": "I",
+      "exampleSentence": "Heute bin ich hier."
     },
     {
       "rank": 60,
       "targetWord": "vom",
-      "englishWord": "from the"
+      "englishWord": "from the",
+      "exampleSentence": "Er kommt vom Haus."
     },
     {
       "rank": 61,
       "targetWord": "wir",
-      "englishWord": "we"
+      "englishWord": "we",
+      "exampleSentence": "Wir gehen nach Hause."
     },
     {
       "rank": 62,
       "targetWord": "weit",
-      "englishWord": "far"
+      "englishWord": "far",
+      "exampleSentence": "Die Stadt ist weit."
     },
     {
       "rank": 63,
       "targetWord": "gehen",
-      "englishWord": "to go"
+      "englishWord": "to go",
+      "exampleSentence": "Wir gehen in die Stadt."
     },
     {
       "rank": 64,
       "targetWord": "wieder",
-      "englishWord": "again"
+      "englishWord": "again",
+      "exampleSentence": "Er ist wieder hier."
     },
     {
       "rank": 65,
       "targetWord": "zwei",
-      "englishWord": "two"
+      "englishWord": "two",
+      "exampleSentence": "Ich habe zwei Kinder."
     },
     {
       "rank": 66,
       "targetWord": "seit",
-      "englishWord": "since"
+      "englishWord": "since",
+      "exampleSentence": "Ich bin seit heute hier."
     },
     {
       "rank": 67,
       "targetWord": "stehen",
-      "englishWord": "to stand"
+      "englishWord": "to stand",
+      "exampleSentence": "Das Auto steht hier."
     },
     {
       "rank": 68,
       "targetWord": "wenn",
-      "englishWord": "if"
+      "englishWord": "if",
+      "exampleSentence": "Komm, wenn du kannst."
     },
     {
       "rank": 69,
       "targetWord": "ab",
-      "englishWord": "as of, from"
+      "englishWord": "as of, from",
+      "exampleSentence": "Ab heute arbeite ich."
     },
     {
       "rank": 70,
       "targetWord": "dann",
-      "englishWord": "then"
+      "englishWord": "then",
+      "exampleSentence": "Dann gehen wir nach Hause."
     },
     {
       "rank": 71,
       "targetWord": "machen",
-      "englishWord": "to make"
+      "englishWord": "to make",
+      "exampleSentence": "Was machst du heute?"
     },
     {
       "rank": 72,
       "targetWord": "finden",
-      "englishWord": "to find"
+      "englishWord": "to find",
+      "exampleSentence": "Ich finde mein Buch nicht."
     },
     {
       "rank": 73,
       "targetWord": "was",
-      "englishWord": "what"
+      "englishWord": "what",
+      "exampleSentence": "Was machst du?"
     },
     {
       "rank": 74,
       "targetWord": "dabei",
-      "englishWord": "in doing so"
+      "englishWord": "in doing so",
+      "exampleSentence": "Mein Kind ist dabei."
     },
     {
       "rank": 75,
       "targetWord": "beim",
-      "englishWord": "at the (masculine/neuter)"
+      "englishWord": "at the (masculine/neuter)",
+      "exampleSentence": "Ich bin beim Essen."
     },
     {
       "rank": 76,
       "targetWord": "da",
-      "englishWord": "there"
+      "englishWord": "there",
+      "exampleSentence": "Mein Buch ist da."
     },
     {
       "rank": 77,
       "targetWord": "gegen",
-      "englishWord": "against"
+      "englishWord": "against",
+      "exampleSentence": "Er kommt gegen zwei."
     },
     {
       "rank": 78,
       "targetWord": "sowie",
-      "englishWord": "as well as"
+      "englishWord": "as well as",
+      "exampleSentence": "Der Mann sowie die Frau."
     },
     {
       "rank": 79,
       "targetWord": "hier",
-      "englishWord": "here"
+      "englishWord": "here",
+      "exampleSentence": "Hier ist mein Haus."
     },
     {
       "rank": 80,
       "targetWord": "bereits",
-      "englishWord": "already (formal)"
+      "englishWord": "already (formal)",
+      "exampleSentence": "Er ist bereits hier."
     },
     {
       "rank": 81,
       "targetWord": "damit",
-      "englishWord": "so that"
+      "englishWord": "so that",
+      "exampleSentence": "Ich komme, damit du gehst."
     },
     {
       "rank": 82,
       "targetWord": "die Zeit",
-      "englishWord": "time"
+      "englishWord": "time",
+      "exampleSentence": "Ich habe keine Zeit."
     },
     {
       "rank": 83,
       "targetWord": "zwischen",
-      "englishWord": "between"
+      "englishWord": "between",
+      "exampleSentence": "Ich bin zwischen zwei Kindern."
     },
     {
       "rank": 84,
       "targetWord": "wollen",
-      "englishWord": "to want"
+      "englishWord": "to want",
+      "exampleSentence": "Ich will nach Hause gehen."
     },
     {
       "rank": 85,
       "targetWord": "lassen",
-      "englishWord": "to let"
+      "englishWord": "to let",
+      "exampleSentence": "Lass mich das machen."
     },
     {
       "rank": 86,
       "targetWord": "immer",
-      "englishWord": "always"
+      "englishWord": "always",
+      "exampleSentence": "Er ist immer hier."
     },
     {
       "rank": 87,
       "targetWord": "sehr",
-      "englishWord": "very"
+      "englishWord": "very",
+      "exampleSentence": "Das Wasser ist sehr gut."
     },
     {
       "rank": 88,
       "targetWord": "schon",
-      "englishWord": "already"
+      "englishWord": "already",
+      "exampleSentence": "Ich bin schon da."
     },
     {
       "rank": 89,
       "targetWord": "liegen",
-      "englishWord": "to lie, to be located"
+      "englishWord": "to lie, to be located",
+      "exampleSentence": "Das Buch liegt hier."
     },
     {
       "rank": 90,
       "targetWord": "hoch",
-      "englishWord": "high"
+      "englishWord": "high",
+      "exampleSentence": "Das Haus ist sehr hoch."
     },
     {
       "rank": 91,
       "targetWord": "der Mensch",
-      "englishWord": "human being"
+      "englishWord": "human being",
+      "exampleSentence": "Der Mensch will immer mehr."
     },
     {
       "rank": 92,
       "targetWord": "drei",
-      "englishWord": "three"
+      "englishWord": "three",
+      "exampleSentence": "Wir haben drei Kinder."
     },
     {
       "rank": 93,
       "targetWord": "sehen",
-      "englishWord": "to see"
+      "englishWord": "to see",
+      "exampleSentence": "Ich sehe das Kind."
     },
     {
       "rank": 94,
       "targetWord": "die Stadt",
-      "englishWord": "city"
+      "englishWord": "city",
+      "exampleSentence": "Die Stadt ist sehr groß."
     },
     {
       "rank": 95,
       "targetWord": "das Kind",
-      "englishWord": "child"
+      "englishWord": "child",
+      "exampleSentence": "Das Kind ist noch klein."
     },
     {
       "rank": 96,
       "targetWord": "doch",
-      "englishWord": "but, after all"
+      "englishWord": "but, after all",
+      "exampleSentence": "Es ist doch gut."
     },
     {
       "rank": 97,
       "targetWord": "stellen",
-      "englishWord": "to place"
+      "englishWord": "to place",
+      "exampleSentence": "Stell das Auto hier."
     },
     {
       "rank": 98,
       "targetWord": "wenig",
-      "englishWord": "little, few"
+      "englishWord": "little, few",
+      "exampleSentence": "Ich habe wenig Zeit."
     },
     {
       "rank": 99,
       "targetWord": "das Leben",
-      "englishWord": "life"
+      "englishWord": "life",
+      "exampleSentence": "Das Leben ist schön."
     },
     {
       "rank": 100,
       "targetWord": "zeigen",
-      "englishWord": "to show"
+      "englishWord": "to show",
+      "exampleSentence": "Zeig mir dein Haus."
     },
     {
       "rank": 101,
       "targetWord": "jedoch",
-      "englishWord": "however"
+      "englishWord": "however",
+      "exampleSentence": "Er kommt, jedoch nicht heute."
     },
     {
       "rank": 102,
       "targetWord": "etwa",
-      "englishWord": "approximately"
+      "englishWord": "approximately",
+      "exampleSentence": "Er kommt etwa um zwei."
     },
     {
       "rank": 103,
       "targetWord": "ganz",
-      "englishWord": "whole, entire"
+      "englishWord": "whole, entire",
+      "exampleSentence": "Das ganze Haus ist neu."
     },
     {
       "rank": 104,
       "targetWord": "nun",
-      "englishWord": "now, well then"
+      "englishWord": "now, well then",
+      "exampleSentence": "Nun gehen wir nach Hause."
     },
     {
       "rank": 105,
       "targetWord": "der Tag",
-      "englishWord": "day"
+      "englishWord": "day",
+      "exampleSentence": "Der Tag ist sehr schön."
     },
     {
       "rank": 106,
       "targetWord": "dort",
-      "englishWord": "over there"
+      "englishWord": "over there",
+      "exampleSentence": "Mein Auto steht dort."
     },
     {
       "rank": 107,
       "targetWord": "beide",
-      "englishWord": "both"
+      "englishWord": "both",
+      "exampleSentence": "Beide Kinder sind hier."
     },
     {
       "rank": 108,
       "targetWord": "klein",
-      "englishWord": "small"
+      "englishWord": "small",
+      "exampleSentence": "Mein Haus ist sehr klein."
     },
     {
       "rank": 109,
       "targetWord": "nehmen",
-      "englishWord": "to take"
+      "englishWord": "to take",
+      "exampleSentence": "Ich nehme das Buch."
     },
     {
       "rank": 110,
       "targetWord": "erhalten",
-      "englishWord": "to receive"
+      "englishWord": "to receive",
+      "exampleSentence": "Ich erhalte ein Buch."
     },
     {
       "rank": 111,
       "targetWord": "heute",
-      "englishWord": "today"
+      "englishWord": "today",
+      "exampleSentence": "Heute arbeite ich nicht."
     },
     {
       "rank": 112,
       "targetWord": "während",
-      "englishWord": "during, while"
+      "englishWord": "during, while",
+      "exampleSentence": "Während des Tages arbeite ich."
     },
     {
       "rank": 113,
       "targetWord": "der Teil",
-      "englishWord": "part"
+      "englishWord": "part",
+      "exampleSentence": "Ein Teil ist schon da."
     },
     {
       "rank": 114,
       "targetWord": "bleiben",
-      "englishWord": "to stay"
+      "englishWord": "to stay",
+      "exampleSentence": "Ich bleibe heute zu Hause."
     },
     {
       "rank": 115,
       "targetWord": "selbst",
-      "englishWord": "oneself"
+      "englishWord": "oneself",
+      "exampleSentence": "Ich mache es selbst."
     },
     {
       "rank": 116,
       "targetWord": "das Ende",
-      "englishWord": "end"
+      "englishWord": "end",
+      "exampleSentence": "Das Ende ist gut."
     },
     {
       "rank": 117,
       "targetWord": "deutsch",
-      "englishWord": "German"
+      "englishWord": "German",
+      "exampleSentence": "Das deutsche Buch ist neu."
     },
     {
       "rank": 118,
       "targetWord": "alt",
-      "englishWord": "old"
+      "englishWord": "old",
+      "exampleSentence": "Mein Auto ist sehr alt."
     },
     {
       "rank": 119,
       "targetWord": "das Land",
-      "englishWord": "country"
+      "englishWord": "country",
+      "exampleSentence": "Das Land ist sehr groß."
     },
     {
       "rank": 120,
       "targetWord": "rund",
-      "englishWord": "round"
+      "englishWord": "round",
+      "exampleSentence": "Der Tisch ist rund."
     },
     {
       "rank": 121,
       "targetWord": "führen",
-      "englishWord": "to lead"
+      "englishWord": "to lead",
+      "exampleSentence": "Sie führt das Kind."
     },
     {
       "rank": 122,
       "targetWord": "die Frau",
-      "englishWord": "woman"
+      "englishWord": "woman",
+      "exampleSentence": "Die Frau arbeitet hier."
     },
     {
       "rank": 123,
       "targetWord": "wichtig",
-      "englishWord": "important"
+      "englishWord": "important",
+      "exampleSentence": "Das ist sehr wichtig."
     },
     {
       "rank": 124,
       "targetWord": "ohne",
-      "englishWord": "without"
+      "englishWord": "without",
+      "exampleSentence": "Ich komme ohne mein Kind."
     },
     {
       "rank": 125,
       "targetWord": "dazu",
-      "englishWord": "in addition"
+      "englishWord": "in addition",
+      "exampleSentence": "Ich sage ja dazu."
     },
     {
       "rank": 126,
       "targetWord": "das Unternehmen",
-      "englishWord": "company"
+      "englishWord": "company",
+      "exampleSentence": "Das Unternehmen ist sehr groß."
     },
     {
       "rank": 127,
       "targetWord": "eigen",
-      "englishWord": "own"
+      "englishWord": "own",
+      "exampleSentence": "Ich habe eigene Kinder."
     },
     {
       "rank": 128,
       "targetWord": "spät",
-      "englishWord": "late"
+      "englishWord": "late",
+      "exampleSentence": "Er kommt heute sehr spät."
     },
     {
       "rank": 129,
       "targetWord": "der Euro",
-      "englishWord": "euro"
+      "englishWord": "euro",
+      "exampleSentence": "Ich habe zwei Euro."
     },
     {
       "rank": 130,
       "targetWord": "stark",
-      "englishWord": "strong"
+      "englishWord": "strong",
+      "exampleSentence": "Der Mann ist sehr stark."
     },
     {
       "rank": 131,
       "targetWord": "sagen",
-      "englishWord": "to say"
+      "englishWord": "to say",
+      "exampleSentence": "Was sagst du dazu?"
     },
     {
       "rank": 132,
       "targetWord": "das Prozent",
-      "englishWord": "percent"
+      "englishWord": "percent",
+      "exampleSentence": "Zwei Prozent sind nicht viel."
     },
     {
       "rank": 133,
       "targetWord": "sondern",
-      "englishWord": "but rather"
+      "englishWord": "but rather",
+      "exampleSentence": "Nicht ich, sondern er."
     },
     {
       "rank": 134,
       "targetWord": "lang",
-      "englishWord": "long"
+      "englishWord": "long",
+      "exampleSentence": "Der Tag ist sehr lang."
     },
     {
       "rank": 135,
       "targetWord": "einige",
-      "englishWord": "some, a few"
+      "englishWord": "some, a few",
+      "exampleSentence": "Einige Kinder sind hier."
     },
     {
       "rank": 136,
       "targetWord": "allerdings",
-      "englishWord": "admittedly, though"
+      "englishWord": "admittedly, though",
+      "exampleSentence": "Er kommt, allerdings sehr spät."
     },
     {
       "rank": 137,
       "targetWord": "weiter",
-      "englishWord": "further"
+      "englishWord": "further",
+      "exampleSentence": "Wir gehen weiter."
     },
     {
       "rank": 138,
       "targetWord": "das Mal",
-      "englishWord": "time (occurrence)"
+      "englishWord": "time (occurrence)",
+      "exampleSentence": "Das ist das erste Mal."
     },
     {
       "rank": 139,
       "targetWord": "gelten",
-      "englishWord": "to be valid"
+      "englishWord": "to be valid",
+      "exampleSentence": "Das gilt für alle."
     },
     {
       "rank": 140,
       "targetWord": "dürfen",
-      "englishWord": "to be allowed to"
+      "englishWord": "to be allowed to",
+      "exampleSentence": "Du darfst jetzt gehen."
     },
     {
       "rank": 141,
       "targetWord": "jeder",
-      "englishWord": "each, every"
+      "englishWord": "each, every",
+      "exampleSentence": "Jedes Kind hat ein Buch."
     },
     {
       "rank": 142,
       "targetWord": "spielen",
-      "englishWord": "to play"
+      "englishWord": "to play",
+      "exampleSentence": "Die Kinder spielen hier."
     },
     {
       "rank": 143,
       "targetWord": "zweite",
-      "englishWord": "second"
+      "englishWord": "second",
+      "exampleSentence": "Das ist mein zweites Buch."
     },
     {
       "rank": 144,
       "targetWord": "kurz",
-      "englishWord": "short"
+      "englishWord": "short",
+      "exampleSentence": "Der Tag war sehr kurz."
     },
     {
       "rank": 145,
       "targetWord": "setzen",
-      "englishWord": "to set, to seat"
+      "englishWord": "to set, to seat",
+      "exampleSentence": "Ich setze mich hier."
     },
     {
       "rank": 146,
       "targetWord": "mehrere",
-      "englishWord": "several"
+      "englishWord": "several",
+      "exampleSentence": "Ich habe mehrere Bücher."
     },
     {
       "rank": 147,
       "targetWord": "möglich",
-      "englishWord": "possible"
+      "englishWord": "possible",
+      "exampleSentence": "Das ist nicht möglich."
     },
     {
       "rank": 148,
       "targetWord": "vier",
-      "englishWord": "four"
+      "englishWord": "four",
+      "exampleSentence": "Wir haben vier Kinder."
     },
     {
       "rank": 149,
       "targetWord": "neben",
-      "englishWord": "next to"
+      "englishWord": "next to",
+      "exampleSentence": "Er steht neben dem Auto."
     },
     {
       "rank": 150,
       "targetWord": "verschieden",
-      "englishWord": "different"
+      "englishWord": "different",
+      "exampleSentence": "Die Kinder sind verschieden."
     },
     {
       "rank": 151,
       "targetWord": "halten",
-      "englishWord": "to hold"
+      "englishWord": "to hold",
+      "exampleSentence": "Ich halte das Buch."
     },
     {
       "rank": 152,
       "targetWord": "ins",
-      "englishWord": "into the"
+      "englishWord": "into the",
+      "exampleSentence": "Wir gehen ins Haus."
     },
     {
       "rank": 153,
       "targetWord": "welcher",
-      "englishWord": "which"
+      "englishWord": "which",
+      "exampleSentence": "Welches Kind ist das?"
     },
     {
       "rank": 154,
       "targetWord": "der Weg",
-      "englishWord": "way, path"
+      "englishWord": "way, path",
+      "exampleSentence": "Der Weg ist sehr lang."
     },
     {
       "rank": 155,
       "targetWord": "der Fall",
-      "englishWord": "case"
+      "englishWord": "case",
+      "exampleSentence": "Das ist nicht der Fall."
     },
     {
       "rank": 156,
       "targetWord": "unser",
-      "englishWord": "our"
+      "englishWord": "our",
+      "exampleSentence": "Unser Haus ist sehr alt."
     },
     {
       "rank": 157,
       "targetWord": "ob",
-      "englishWord": "whether"
+      "englishWord": "whether",
+      "exampleSentence": "Wir sehen, ob es geht."
     },
     {
       "rank": 158,
       "targetWord": "der Mann",
-      "englishWord": "man"
+      "englishWord": "man",
+      "exampleSentence": "Der Mann arbeitet sehr viel."
     },
     {
       "rank": 159,
       "targetWord": "die Arbeit",
-      "englishWord": "work"
+      "englishWord": "work",
+      "exampleSentence": "Die Arbeit ist sehr wichtig."
     },
     {
       "rank": 160,
       "targetWord": "der Ort",
-      "englishWord": "place"
+      "englishWord": "place",
+      "exampleSentence": "Der Ort ist sehr klein."
     },
     {
       "rank": 161,
       "targetWord": "nutzen",
-      "englishWord": "to use"
+      "englishWord": "to use",
+      "exampleSentence": "Ich nutze mein Auto."
     },
     {
       "rank": 162,
       "targetWord": "zudem",
-      "englishWord": "moreover"
+      "englishWord": "moreover",
+      "exampleSentence": "Zudem ist es sehr spät."
     },
     {
       "rank": 163,
       "targetWord": "erreichen",
-      "englishWord": "to reach"
+      "englishWord": "to reach",
+      "exampleSentence": "Wir erreichen die Stadt."
     },
     {
       "rank": 164,
       "targetWord": "bekannt",
-      "englishWord": "known"
+      "englishWord": "known",
+      "exampleSentence": "Die Stadt ist sehr bekannt."
     },
     {
       "rank": 165,
       "targetWord": "das Haus",
-      "englishWord": "house"
+      "englishWord": "house",
+      "exampleSentence": "Unser Haus ist neu."
     },
     {
       "rank": 166,
       "targetWord": "jung",
-      "englishWord": "young"
+      "englishWord": "young",
+      "exampleSentence": "Die Frau ist noch jung."
     },
     {
       "rank": 167,
       "targetWord": "wo",
-      "englishWord": "where"
+      "englishWord": "where",
+      "exampleSentence": "Wo ist mein Buch?"
     },
     {
       "rank": 168,
       "targetWord": "etwas",
-      "englishWord": "something"
+      "englishWord": "something",
+      "exampleSentence": "Ich habe etwas für dich."
     },
     {
       "rank": 169,
       "targetWord": "gemeinsam",
-      "englishWord": "joint, together"
+      "englishWord": "joint, together",
+      "exampleSentence": "Wir arbeiten gemeinsam."
     },
     {
       "rank": 170,
       "targetWord": "du",
-      "englishWord": "you (singular)"
+      "englishWord": "you (singular)",
+      "exampleSentence": "Wo bist du jetzt?"
     },
     {
       "rank": 171,
       "targetWord": "dafür",
-      "englishWord": "for it"
+      "englishWord": "for it",
+      "exampleSentence": "Ich habe keine Zeit dafür."
     },
     {
       "rank": 172,
       "targetWord": "das Spiel",
-      "englishWord": "game"
+      "englishWord": "game",
+      "exampleSentence": "Das Spiel war sehr gut."
     },
     {
       "rank": 173,
       "targetWord": "besonders",
-      "englishWord": "especially"
+      "englishWord": "especially",
+      "exampleSentence": "Das Kind ist besonders klein."
     },
     {
       "rank": 174,
       "targetWord": "bestehen",
-      "englishWord": "to consist, to exist"
+      "englishWord": "to consist, to exist",
+      "exampleSentence": "Mein Leben besteht aus Arbeit."
     },
     {
       "rank": 175,
       "targetWord": "denn",
-      "englishWord": "for, since"
+      "englishWord": "for, since",
+      "exampleSentence": "Komm, denn es ist spät."
     },
     {
       "rank": 176,
       "targetWord": "statt",
-      "englishWord": "instead of"
+      "englishWord": "instead of",
+      "exampleSentence": "Ich arbeite statt zu gehen."
     },
     {
       "rank": 177,
       "targetWord": "der Bereich",
-      "englishWord": "area, field"
+      "englishWord": "area, field",
+      "exampleSentence": "Das ist mein Bereich."
     },
     {
       "rank": 178,
       "targetWord": "der Platz",
-      "englishWord": "square, spot"
+      "englishWord": "square, spot",
+      "exampleSentence": "Der Platz ist sehr groß."
     },
     {
       "rank": 179,
       "targetWord": "die Uhr",
-      "englishWord": "clock, o'clock"
+      "englishWord": "clock, o'clock",
+      "exampleSentence": "Es ist zwei Uhr."
     },
     {
       "rank": 180,
       "targetWord": "meist",
-      "englishWord": "mostly"
+      "englishWord": "mostly",
+      "exampleSentence": "Ich arbeite meist zu Hause."
     },
     {
       "rank": 181,
       "targetWord": "also",
-      "englishWord": "so, therefore"
+      "englishWord": "so, therefore",
+      "exampleSentence": "Also gehen wir jetzt."
     },
     {
       "rank": 182,
       "targetWord": "der Deutsche",
-      "englishWord": "German (person)"
+      "englishWord": "German (person)",
+      "exampleSentence": "Der Deutsche arbeitet viel."
     },
     {
       "rank": 183,
       "targetWord": "jetzt",
-      "englishWord": "now"
+      "englishWord": "now",
+      "exampleSentence": "Jetzt gehe ich nach Hause."
     },
     {
       "rank": 184,
       "targetWord": "weil",
-      "englishWord": "because"
+      "englishWord": "because",
+      "exampleSentence": "Ich bleibe, weil du kommst."
     },
     {
       "rank": 185,
       "targetWord": "bringen",
-      "englishWord": "to bring"
+      "englishWord": "to bring",
+      "exampleSentence": "Ich bringe dir ein Buch."
     },
     {
       "rank": 186,
       "targetWord": "einfach",
-      "englishWord": "simple, easy"
+      "englishWord": "simple, easy",
+      "exampleSentence": "Die Arbeit ist sehr einfach."
     },
     {
       "rank": 187,
       "targetWord": "die Familie",
-      "englishWord": "family"
+      "englishWord": "family",
+      "exampleSentence": "Meine Familie ist sehr groß."
     },
     {
       "rank": 188,
       "targetWord": "ebenfalls",
-      "englishWord": "likewise"
+      "englishWord": "likewise",
+      "exampleSentence": "Ich komme ebenfalls."
     },
     {
       "rank": 189,
       "targetWord": "letzte",
-      "englishWord": "last"
+      "englishWord": "last",
+      "exampleSentence": "Das letzte Kind kommt jetzt."
     },
     {
       "rank": 190,
       "targetWord": "die Seite",
-      "englishWord": "side, page"
+      "englishWord": "side, page",
+      "exampleSentence": "Die Seite ist sehr lang."
     },
     {
       "rank": 191,
       "targetWord": "das Thema",
-      "englishWord": "topic"
+      "englishWord": "topic",
+      "exampleSentence": "Das Thema ist sehr wichtig."
     },
     {
       "rank": 192,
       "targetWord": "zurück",
-      "englishWord": "back"
+      "englishWord": "back",
+      "exampleSentence": "Ich gehe jetzt zurück."
     },
     {
       "rank": 193,
       "targetWord": "außerdem",
-      "englishWord": "besides"
+      "englishWord": "besides",
+      "exampleSentence": "Außerdem ist es sehr spät."
     },
     {
       "rank": 194,
       "targetWord": "insgesamt",
-      "englishWord": "in total"
+      "englishWord": "in total",
+      "exampleSentence": "Insgesamt sind wir vier."
     },
     {
       "rank": 195,
       "targetWord": "befinden",
-      "englishWord": "to be situated"
+      "englishWord": "to be situated",
+      "exampleSentence": "Wir befinden uns hier."
     },
     {
       "rank": 196,
       "targetWord": "die Million",
-      "englishWord": "million"
+      "englishWord": "million",
+      "exampleSentence": "Vier Millionen Menschen wohnen hier."
     },
     {
       "rank": 197,
       "targetWord": "arbeiten",
-      "englishWord": "to work"
+      "englishWord": "to work",
+      "exampleSentence": "Ich arbeite sehr viel."
     },
     {
       "rank": 198,
       "targetWord": "deutlich",
-      "englishWord": "clear"
+      "englishWord": "clear",
+      "exampleSentence": "Das ist sehr deutlich."
     },
     {
       "rank": 199,
       "targetWord": "die Person",
-      "englishWord": "person"
+      "englishWord": "person",
+      "exampleSentence": "Die Person ist sehr jung."
     },
     {
       "rank": 200,
       "targetWord": "die Frage",
-      "englishWord": "question"
+      "englishWord": "question",
+      "exampleSentence": "Die Frage ist sehr einfach."
     },
     {
       "rank": 201,
       "targetWord": "treffen",
-      "englishWord": "to meet"
+      "englishWord": "to meet",
+      "exampleSentence": "Ich treffe mein Kind heute."
     },
     {
       "rank": 202,
       "targetWord": "aktuell",
-      "englishWord": "current"
+      "englishWord": "current",
+      "exampleSentence": "Das Thema ist sehr aktuell."
     },
     {
       "rank": 203,
       "targetWord": "wissen",
-      "englishWord": "to know (a fact)"
+      "englishWord": "to know (a fact)",
+      "exampleSentence": "Ich weiß es nicht."
     },
     {
       "rank": 204,
       "targetWord": "beginnen",
-      "englishWord": "to begin"
+      "englishWord": "to begin",
+      "exampleSentence": "Die Arbeit beginnt jetzt."
     },
     {
       "rank": 205,
       "targetWord": "oft",
-      "englishWord": "often"
+      "englishWord": "often",
+      "exampleSentence": "Er kommt oft zu spät."
     },
     {
       "rank": 206,
       "targetWord": "schnell",
-      "englishWord": "fast"
+      "englishWord": "fast",
+      "exampleSentence": "Das Auto ist sehr schnell."
     },
     {
       "rank": 207,
       "targetWord": "die Woche",
-      "englishWord": "week"
+      "englishWord": "week",
+      "exampleSentence": "Die Woche war sehr lang."
     },
     {
       "rank": 208,
       "targetWord": "zusammen",
-      "englishWord": "together"
+      "englishWord": "together",
+      "exampleSentence": "Wir arbeiten zusammen."
     },
     {
       "rank": 209,
       "targetWord": "die Geschichte",
-      "englishWord": "history, story"
+      "englishWord": "history, story",
+      "exampleSentence": "Die Geschichte ist sehr alt."
     },
     {
       "rank": 210,
       "targetWord": "der Monat",
-      "englishWord": "month"
+      "englishWord": "month",
+      "exampleSentence": "Der Monat war sehr gut."
     },
     {
       "rank": 211,
       "targetWord": "davon",
-      "englishWord": "from it"
+      "englishWord": "from it",
+      "exampleSentence": "Ich habe zwei davon."
     },
     {
       "rank": 212,
       "targetWord": "darauf",
-      "englishWord": "on it"
+      "englishWord": "on it",
+      "exampleSentence": "Das Buch liegt darauf."
     },
     {
       "rank": 213,
       "targetWord": "der Grund",
-      "englishWord": "reason"
+      "englishWord": "reason",
+      "exampleSentence": "Das ist kein guter Grund."
     },
     {
       "rank": 214,
       "targetWord": "das Ziel",
-      "englishWord": "goal, target"
+      "englishWord": "goal, target",
+      "exampleSentence": "Das Ziel ist sehr weit."
     },
     {
       "rank": 215,
       "targetWord": "fünf",
-      "englishWord": "five"
+      "englishWord": "five",
+      "exampleSentence": "Ich habe fünf Bücher."
     },
     {
       "rank": 216,
       "targetWord": "entstehen",
-      "englishWord": "to arise"
+      "englishWord": "to arise",
+      "exampleSentence": "So entsteht mein Buch."
     },
     {
       "rank": 217,
       "targetWord": "hören",
-      "englishWord": "to hear"
+      "englishWord": "to hear",
+      "exampleSentence": "Ich höre dich nicht."
     },
     {
       "rank": 218,
       "targetWord": "nah",
-      "englishWord": "near"
+      "englishWord": "near",
+      "exampleSentence": "Die Stadt ist sehr nah."
     },
     {
       "rank": 219,
       "targetWord": "direkt",
-      "englishWord": "direct"
+      "englishWord": "direct",
+      "exampleSentence": "Das Haus ist direkt hier."
     },
     {
       "rank": 220,
       "targetWord": "handeln",
-      "englishWord": "to act"
+      "englishWord": "to act",
+      "exampleSentence": "Wir müssen jetzt handeln."
     },
     {
       "rank": 221,
       "targetWord": "der Name",
-      "englishWord": "name"
+      "englishWord": "name",
+      "exampleSentence": "Wie ist dein Name?"
     },
     {
       "rank": 222,
       "targetWord": "zahlreich",
-      "englishWord": "numerous"
+      "englishWord": "numerous",
+      "exampleSentence": "Zahlreiche Menschen sind hier."
     },
     {
       "rank": 223,
       "targetWord": "die Schule",
-      "englishWord": "school"
+      "englishWord": "school",
+      "exampleSentence": "Die Kinder gehen zur Schule."
     },
     {
       "rank": 224,
       "targetWord": "bieten",
-      "englishWord": "to offer"
+      "englishWord": "to offer",
+      "exampleSentence": "Wir bieten viel Arbeit."
     },
     {
       "rank": 225,
       "targetWord": "bekommen",
-      "englishWord": "to get"
+      "englishWord": "to get",
+      "exampleSentence": "Ich bekomme ein Buch."
     },
     {
       "rank": 226,
       "targetWord": "daher",
-      "englishWord": "hence"
+      "englishWord": "hence",
+      "exampleSentence": "Daher gehe ich jetzt."
     },
     {
       "rank": 227,
       "targetWord": "die Art",
-      "englishWord": "kind, type"
+      "englishWord": "kind, type",
+      "exampleSentence": "Das ist eine neue Art."
     },
     {
       "rank": 228,
       "targetWord": "ziehen",
-      "englishWord": "to pull"
+      "englishWord": "to pull",
+      "exampleSentence": "Ich ziehe den Tisch."
     },
     {
       "rank": 229,
       "targetWord": "der September",
-      "englishWord": "September"
+      "englishWord": "September",
+      "exampleSentence": "Im September ist es schön."
     },
     {
       "rank": 230,
       "targetWord": "das Projekt",
-      "englishWord": "project"
+      "englishWord": "project",
+      "exampleSentence": "Das Projekt ist sehr wichtig."
     },
     {
       "rank": 231,
       "targetWord": "gleich",
-      "englishWord": "same, equal"
+      "englishWord": "same, equal",
+      "exampleSentence": "Ich komme gleich zurück."
     },
     {
       "rank": 232,
       "targetWord": "fast",
-      "englishWord": "almost"
+      "englishWord": "almost",
+      "exampleSentence": "Ich bin fast da."
     },
     {
       "rank": 233,
       "targetWord": "erklären",
-      "englishWord": "to explain"
+      "englishWord": "to explain",
+      "exampleSentence": "Ich erkläre es dir."
     },
     {
       "rank": 234,
       "targetWord": "das Beispiel",
-      "englishWord": "example"
+      "englishWord": "example",
+      "exampleSentence": "Das Beispiel ist sehr einfach."
     },
     {
       "rank": 235,
       "targetWord": "lange",
-      "englishWord": "for a long time"
+      "englishWord": "for a long time",
+      "exampleSentence": "Ich arbeite hier schon lange."
     },
     {
       "rank": 236,
       "targetWord": "international",
-      "englishWord": "international"
+      "englishWord": "international",
+      "exampleSentence": "Das Projekt ist international."
     },
     {
       "rank": 237,
       "targetWord": "entwickeln",
-      "englishWord": "to develop"
+      "englishWord": "to develop",
+      "exampleSentence": "Wir entwickeln ein Projekt."
     },
     {
       "rank": 238,
       "targetWord": "einmal",
-      "englishWord": "once"
+      "englishWord": "once",
+      "exampleSentence": "Ich war einmal dort."
     },
     {
       "rank": 239,
       "targetWord": "laut",
-      "englishWord": "loud"
+      "englishWord": "loud",
+      "exampleSentence": "Die Kinder sind sehr laut."
     },
     {
       "rank": 240,
       "targetWord": "zunächst",
-      "englishWord": "at first"
+      "englishWord": "at first",
+      "exampleSentence": "Zunächst gehen wir nach Hause."
     },
     {
       "rank": 241,
       "targetWord": "sprechen",
-      "englishWord": "to speak"
+      "englishWord": "to speak",
+      "exampleSentence": "Ich spreche mit dir."
     },
     {
       "rank": 242,
       "targetWord": "die Gemeinde",
-      "englishWord": "municipality"
+      "englishWord": "municipality",
+      "exampleSentence": "Die Gemeinde ist sehr klein."
     },
     {
       "rank": 243,
       "targetWord": "die Welt",
-      "englishWord": "world"
+      "englishWord": "world",
+      "exampleSentence": "Die Welt ist sehr groß."
     },
     {
       "rank": 244,
       "targetWord": "schwer",
-      "englishWord": "heavy, difficult"
+      "englishWord": "heavy, difficult",
+      "exampleSentence": "Die Arbeit ist sehr schwer."
     },
     {
       "rank": 245,
       "targetWord": "das Mitglied",
-      "englishWord": "member"
+      "englishWord": "member",
+      "exampleSentence": "Er ist Mitglied bei uns."
     },
     {
       "rank": 246,
       "targetWord": "wegen",
-      "englishWord": "because of"
+      "englishWord": "because of",
+      "exampleSentence": "Wegen der Arbeit bleibe ich."
     },
     {
       "rank": 247,
       "targetWord": "wer",
-      "englishWord": "who"
+      "englishWord": "who",
+      "exampleSentence": "Wer ist dort?"
     },
     {
       "rank": 248,
       "targetWord": "der Oktober",
-      "englishWord": "October"
+      "englishWord": "October",
+      "exampleSentence": "Im Oktober kommt er zurück."
     },
     {
       "rank": 249,
       "targetWord": "der Mai",
-      "englishWord": "May"
+      "englishWord": "May",
+      "exampleSentence": "Im Mai ist es schön."
     },
     {
       "rank": 250,
       "targetWord": "der Einsatz",
-      "englishWord": "deployment, use"
+      "englishWord": "deployment, use",
+      "exampleSentence": "Der Einsatz war sehr gut."
     },
     {
       "rank": 251,
       "targetWord": "der Juni",
-      "englishWord": "June"
+      "englishWord": "June",
+      "exampleSentence": "Im Juni beginnt die Arbeit."
     },
     {
       "rank": 252,
       "targetWord": "schaffen",
-      "englishWord": "to manage, to achieve"
+      "englishWord": "to manage, to achieve",
+      "exampleSentence": "Ich schaffe die Arbeit."
     },
     {
       "rank": 253,
       "targetWord": "genau",
-      "englishWord": "exact"
+      "englishWord": "exact",
+      "exampleSentence": "Es ist genau zwei Uhr."
     },
     {
       "rank": 254,
       "targetWord": "darüber",
-      "englishWord": "about it"
+      "englishWord": "about it",
+      "exampleSentence": "Wir sprechen darüber."
     },
     {
       "rank": 255,
       "targetWord": "tragen",
-      "englishWord": "to carry, to wear"
+      "englishWord": "to carry, to wear",
+      "exampleSentence": "Ich trage das Kind."
     },
     {
       "rank": 256,
       "targetWord": "zwar",
-      "englishWord": "indeed, it is true"
+      "englishWord": "indeed, it is true",
+      "exampleSentence": "Er kommt zwar, aber spät."
     },
     {
       "rank": 257,
       "targetWord": "das Team",
-      "englishWord": "team"
+      "englishWord": "team",
+      "exampleSentence": "Das Team arbeitet sehr gut."
     },
     {
       "rank": 258,
       "targetWord": "die Straße",
-      "englishWord": "street"
+      "englishWord": "street",
+      "exampleSentence": "Die Straße ist sehr lang."
     },
     {
       "rank": 259,
       "targetWord": "recht",
-      "englishWord": "right, quite"
+      "englishWord": "right, quite",
+      "exampleSentence": "Er hat recht."
     },
     {
       "rank": 260,
       "targetWord": "unterstützen",
-      "englishWord": "to support"
+      "englishWord": "to support",
+      "exampleSentence": "Wir unterstützen die Familie."
     },
     {
       "rank": 261,
       "targetWord": "aufgrund",
-      "englishWord": "due to"
+      "englishWord": "due to",
+      "exampleSentence": "Aufgrund der Arbeit bleibe ich."
     },
     {
       "rank": 262,
       "targetWord": "öffentlich",
-      "englishWord": "public"
+      "englishWord": "public",
+      "exampleSentence": "Der Platz ist öffentlich."
     },
     {
       "rank": 263,
       "targetWord": "erfolgen",
-      "englishWord": "to take place"
+      "englishWord": "to take place",
+      "exampleSentence": "Die Arbeit soll heute erfolgen."
     },
     {
       "rank": 264,
       "targetWord": "das Bild",
-      "englishWord": "picture, image"
+      "englishWord": "picture, image",
+      "exampleSentence": "Das Bild ist sehr schön."
     },
     {
       "rank": 265,
       "targetWord": "die Entwicklung",
-      "englishWord": "development"
+      "englishWord": "development",
+      "exampleSentence": "Die Entwicklung ist sehr gut."
     },
     {
       "rank": 266,
       "targetWord": "sogar",
-      "englishWord": "even"
+      "englishWord": "even",
+      "exampleSentence": "Er kommt sogar heute."
     },
     {
       "rank": 267,
       "targetWord": "das Problem",
-      "englishWord": "problem"
+      "englishWord": "problem",
+      "exampleSentence": "Das ist kein Problem."
     },
     {
       "rank": 268,
       "targetWord": "zusätzlich",
-      "englishWord": "additional"
+      "englishWord": "additional",
+      "exampleSentence": "Zusätzlich habe ich zwei Bücher."
     },
     {
       "rank": 269,
       "targetWord": "schreiben",
-      "englishWord": "to write"
+      "englishWord": "to write",
+      "exampleSentence": "Ich schreibe ein Buch."
     },
     {
       "rank": 270,
       "targetWord": "mögen",
-      "englishWord": "to like"
+      "englishWord": "to like",
+      "exampleSentence": "Ich mag mein Auto."
     },
     {
       "rank": 271,
       "targetWord": "der Anfang",
-      "englishWord": "beginning"
+      "englishWord": "beginning",
+      "exampleSentence": "Der Anfang war sehr schwer."
     },
     {
       "rank": 272,
       "targetWord": "politisch",
-      "englishWord": "political"
+      "englishWord": "political",
+      "exampleSentence": "Das Thema ist politisch."
     },
     {
       "rank": 273,
       "targetWord": "die Möglichkeit",
-      "englishWord": "possibility"
+      "englishWord": "possibility",
+      "exampleSentence": "Es gibt keine Möglichkeit."
     },
     {
       "rank": 274,
       "targetWord": "früh",
-      "englishWord": "early"
+      "englishWord": "early",
+      "exampleSentence": "Er kommt sehr früh."
     },
     {
       "rank": 275,
       "targetWord": "die Gruppe",
-      "englishWord": "group"
+      "englishWord": "group",
+      "exampleSentence": "Die Gruppe ist sehr groß."
     },
     {
       "rank": 276,
       "targetWord": "je",
-      "englishWord": "ever; each"
+      "englishWord": "ever; each",
+      "exampleSentence": "Zwei Euro je Person."
     },
     {
       "rank": 277,
       "targetWord": "heißen",
-      "englishWord": "to be called"
+      "englishWord": "to be called",
+      "exampleSentence": "Wie heißen Sie?"
     },
     {
       "rank": 278,
       "targetWord": "bestimmen",
-      "englishWord": "to determine"
+      "englishWord": "to determine",
+      "exampleSentence": "Ich bestimme, wer kommt."
     },
     {
       "rank": 279,
       "targetWord": "pro",
-      "englishWord": "per"
+      "englishWord": "per",
+      "exampleSentence": "Zwei Euro pro Buch."
     },
     {
       "rank": 280,
       "targetWord": "der Januar",
-      "englishWord": "January"
+      "englishWord": "January",
+      "exampleSentence": "Im Januar beginnt die Schule."
     },
     {
       "rank": 281,
       "targetWord": "nennen",
-      "englishWord": "to name"
+      "englishWord": "to name",
+      "exampleSentence": "Wir nennen es Arbeit."
     },
     {
       "rank": 282,
       "targetWord": "der Verein",
-      "englishWord": "club, association"
+      "englishWord": "club, association",
+      "exampleSentence": "Der Verein ist sehr alt."
     },
     {
       "rank": 283,
       "targetWord": "der Film",
-      "englishWord": "film, movie"
+      "englishWord": "film, movie",
+      "exampleSentence": "Der Film war sehr gut."
     },
     {
       "rank": 284,
       "targetWord": "verwenden",
-      "englishWord": "to employ, to apply"
+      "englishWord": "to employ, to apply",
+      "exampleSentence": "Ich verwende mein Auto."
     },
     {
       "rank": 285,
       "targetWord": "der November",
-      "englishWord": "November"
+      "englishWord": "November",
+      "exampleSentence": "Im November kommt der Film."
     },
     {
       "rank": 286,
       "targetWord": "die Folge",
-      "englishWord": "consequence, episode"
+      "englishWord": "consequence, episode",
+      "exampleSentence": "Das ist die Folge davon."
     },
     {
       "rank": 287,
       "targetWord": "der März",
-      "englishWord": "March"
+      "englishWord": "March",
+      "exampleSentence": "Im März beginnt die Arbeit."
     },
     {
       "rank": 288,
       "targetWord": "leicht",
-      "englishWord": "light, easy"
+      "englishWord": "light, easy",
+      "exampleSentence": "Die Arbeit ist sehr leicht."
     },
     {
       "rank": 289,
       "targetWord": "gerade",
-      "englishWord": "just now"
+      "englishWord": "just now",
+      "exampleSentence": "Ich arbeite gerade."
     },
     {
       "rank": 290,
       "targetWord": "der Meter",
-      "englishWord": "meter"
+      "englishWord": "meter",
+      "exampleSentence": "Der Tisch ist zwei Meter."
     },
     {
       "rank": 291,
       "targetWord": "deshalb",
-      "englishWord": "that is why"
+      "englishWord": "that is why",
+      "exampleSentence": "Deshalb gehe ich jetzt."
     },
     {
       "rank": 292,
       "targetWord": "treten",
-      "englishWord": "to step"
+      "englishWord": "to step",
+      "exampleSentence": "Ich trete gegen den Tisch."
     },
     {
       "rank": 293,
       "targetWord": "der April",
-      "englishWord": "April"
+      "englishWord": "April",
+      "exampleSentence": "Im April ist es schön."
     },
     {
       "rank": 294,
       "targetWord": "gewinnen",
-      "englishWord": "to win"
+      "englishWord": "to win",
+      "exampleSentence": "Wir gewinnen das Spiel."
     },
     {
       "rank": 295,
       "targetWord": "erfolgreich",
-      "englishWord": "successful"
+      "englishWord": "successful",
+      "exampleSentence": "Das Projekt ist sehr erfolgreich."
     },
     {
       "rank": 296,
       "targetWord": "folgen",
-      "englishWord": "to follow"
+      "englishWord": "to follow",
+      "exampleSentence": "Ich folge dir."
     },
     {
       "rank": 297,
       "targetWord": "laufen",
-      "englishWord": "to run"
+      "englishWord": "to run",
+      "exampleSentence": "Das Kind läuft sehr schnell."
     },
     {
       "rank": 298,
       "targetWord": "der Punkt",
-      "englishWord": "point"
+      "englishWord": "point",
+      "exampleSentence": "Das ist ein guter Punkt."
     },
     {
       "rank": 299,
       "targetWord": "sechs",
-      "englishWord": "six"
+      "englishWord": "six",
+      "exampleSentence": "Ich habe sechs Bücher."
     },
     {
       "rank": 300,
       "targetWord": "der Juli",
-      "englishWord": "July"
+      "englishWord": "July",
+      "exampleSentence": "Im Juli beginnt das Spiel."
     },
     {
       "rank": 301,
       "targetWord": "mein",
-      "englishWord": "my"
+      "englishWord": "my",
+      "exampleSentence": "Das ist mein Buch."
     },
     {
       "rank": 302,
       "targetWord": "legen",
-      "englishWord": "to lay, to put down"
+      "englishWord": "to lay, to put down",
+      "exampleSentence": "Ich lege das Buch dort."
     },
     {
       "rank": 303,
       "targetWord": "das Ergebnis",
-      "englishWord": "result"
+      "englishWord": "result",
+      "exampleSentence": "Das Ergebnis ist sehr gut."
     },
     {
       "rank": 304,
       "targetWord": "der Rahmen",
-      "englishWord": "frame, framework"
+      "englishWord": "frame, framework",
+      "exampleSentence": "Das Bild hat einen Rahmen."
     },
     {
       "rank": 305,
       "targetWord": "unterschiedlich",
-      "englishWord": "varying, differing"
+      "englishWord": "varying, differing",
+      "exampleSentence": "Die Bilder sind unterschiedlich."
     },
     {
       "rank": 306,
       "targetWord": "der August",
-      "englishWord": "August"
+      "englishWord": "August",
+      "exampleSentence": "Im August ist es schön."
     },
     {
       "rank": 307,
       "targetWord": "fest",
-      "englishWord": "firm, fixed"
+      "englishWord": "firm, fixed",
+      "exampleSentence": "Das Ziel ist fest."
     },
     {
       "rank": 308,
       "targetWord": "der Dezember",
-      "englishWord": "December"
+      "englishWord": "December",
+      "exampleSentence": "Im Dezember kommt der Film."
     },
     {
       "rank": 309,
       "targetWord": "gegenüber",
-      "englishWord": "opposite"
+      "englishWord": "opposite",
+      "exampleSentence": "Das Haus gegenüber ist neu."
     },
     {
       "rank": 310,
       "targetWord": "das Jahrhundert",
-      "englishWord": "century"
+      "englishWord": "century",
+      "exampleSentence": "Das Jahrhundert war sehr lang."
     },
     {
       "rank": 311,
       "targetWord": "die Region",
-      "englishWord": "region"
+      "englishWord": "region",
+      "exampleSentence": "Die Region ist sehr groß."
     },
     {
       "rank": 312,
       "targetWord": "die Kosten",
-      "englishWord": "costs"
+      "englishWord": "costs",
+      "exampleSentence": "Die Kosten sind zu hoch."
     },
     {
       "rank": 313,
       "targetWord": "häufig",
-      "englishWord": "frequent"
+      "englishWord": "frequent",
+      "exampleSentence": "Er kommt häufig zu spät."
     },
     {
       "rank": 314,
       "targetWord": "steigen",
-      "englishWord": "to rise"
+      "englishWord": "to rise",
+      "exampleSentence": "Die Kosten steigen."
     },
     {
       "rank": 315,
       "targetWord": "natürlich",
-      "englishWord": "natural; of course"
+      "englishWord": "natural; of course",
+      "exampleSentence": "Natürlich komme ich auch."
     },
     {
       "rank": 316,
       "targetWord": "nachdem",
-      "englishWord": "after (that)"
+      "englishWord": "after (that)",
+      "exampleSentence": "Nachdem er kam, ging ich."
     },
     {
       "rank": 317,
       "targetWord": "nichts",
-      "englishWord": "nothing"
+      "englishWord": "nothing",
+      "exampleSentence": "Ich sage nichts."
     },
     {
       "rank": 318,
       "targetWord": "zehn",
-      "englishWord": "ten"
+      "englishWord": "ten",
+      "exampleSentence": "Ich habe zehn Bücher."
     },
     {
       "rank": 319,
       "targetWord": "die Zahl",
-      "englishWord": "number"
+      "englishWord": "number",
+      "exampleSentence": "Die Zahl ist sehr hoch."
     },
     {
       "rank": 320,
       "targetWord": "die Rolle",
-      "englishWord": "role"
+      "englishWord": "role",
+      "exampleSentence": "Das spielt keine Rolle."
     },
     {
       "rank": 321,
       "targetWord": "danach",
-      "englishWord": "after that"
+      "englishWord": "after that",
+      "exampleSentence": "Danach gehe ich nach Hause."
     },
     {
       "rank": 322,
       "targetWord": "versuchen",
-      "englishWord": "to try"
+      "englishWord": "to try",
+      "exampleSentence": "Ich versuche es."
     },
     {
       "rank": 323,
       "targetWord": "die Stunde",
-      "englishWord": "hour"
+      "englishWord": "hour",
+      "exampleSentence": "Ich arbeite zwei Stunden."
     },
     {
       "rank": 324,
       "targetWord": "frei",
-      "englishWord": "free"
+      "englishWord": "free",
+      "exampleSentence": "Heute habe ich frei."
     },
     {
       "rank": 325,
       "targetWord": "die Stelle",
-      "englishWord": "spot, position"
+      "englishWord": "spot, position",
+      "exampleSentence": "Die Stelle ist sehr gut."
     },
     {
       "rank": 326,
       "targetWord": "hin",
-      "englishWord": "there (towards)"
+      "englishWord": "there (towards)",
+      "exampleSentence": "Ich gehe zum Haus hin."
     },
     {
       "rank": 327,
       "targetWord": "bisher",
-      "englishWord": "so far"
+      "englishWord": "so far",
+      "exampleSentence": "Bisher war alles gut."
     },
     {
       "rank": 328,
       "targetWord": "tun",
-      "englishWord": "to do"
+      "englishWord": "to do",
+      "exampleSentence": "Was kann ich tun?"
     },
     {
       "rank": 329,
       "targetWord": "veröffentlichen",
-      "englishWord": "to publish"
+      "englishWord": "to publish",
+      "exampleSentence": "Wir veröffentlichen das Buch."
     },
     {
       "rank": 330,
       "targetWord": "solcher",
-      "englishWord": "such"
+      "englishWord": "such",
+      "exampleSentence": "Solche Bücher sind sehr gut."
     },
     {
       "rank": 331,
       "targetWord": "suchen",
-      "englishWord": "to search for"
+      "englishWord": "to search for",
+      "exampleSentence": "Ich suche mein Buch."
     },
     {
       "rank": 332,
       "targetWord": "sorgen",
-      "englishWord": "to take care of"
+      "englishWord": "to take care of",
+      "exampleSentence": "Ich sorge für das Kind."
     },
     {
       "rank": 333,
       "targetWord": "erneut",
-      "englishWord": "anew, once again"
+      "englishWord": "anew, once again",
+      "exampleSentence": "Er kommt erneut zu spät."
     },
     {
       "rank": 334,
       "targetWord": "schließen",
-      "englishWord": "to close"
+      "englishWord": "to close",
+      "exampleSentence": "Wir schließen das Haus."
     },
     {
       "rank": 335,
       "targetWord": "der Mitarbeiter",
-      "englishWord": "employee"
+      "englishWord": "employee",
+      "exampleSentence": "Der Mitarbeiter arbeitet sehr gut."
     },
     {
       "rank": 336,
       "targetWord": "weiterhin",
-      "englishWord": "furthermore, still"
+      "englishWord": "furthermore, still",
+      "exampleSentence": "Ich arbeite weiterhin hier."
     },
     {
       "rank": 337,
       "targetWord": "die Form",
-      "englishWord": "shape, form"
+      "englishWord": "shape, form",
+      "exampleSentence": "Die Form ist sehr schön."
     },
     {
       "rank": 338,
       "targetWord": "der Raum",
-      "englishWord": "space, room"
+      "englishWord": "space, room",
+      "exampleSentence": "Der Raum ist sehr groß."
     },
     {
       "rank": 339,
       "targetWord": "sowohl",
-      "englishWord": "both (… and)"
+      "englishWord": "both (… and)",
+      "exampleSentence": "Sowohl er als auch sie."
     },
     {
       "rank": 340,
       "targetWord": "die Information",
-      "englishWord": "information"
+      "englishWord": "information",
+      "exampleSentence": "Die Information ist sehr wichtig."
     },
     {
       "rank": 341,
       "targetWord": "insbesondere",
-      "englishWord": "in particular"
+      "englishWord": "in particular",
+      "exampleSentence": "Insbesondere er arbeitet viel."
     },
     {
       "rank": 342,
       "targetWord": "das Datum",
-      "englishWord": "date"
+      "englishWord": "date",
+      "exampleSentence": "Das Datum ist sehr wichtig."
     },
     {
       "rank": 343,
       "targetWord": "schließlich",
-      "englishWord": "finally"
+      "englishWord": "finally",
+      "exampleSentence": "Schließlich gehe ich nach Hause."
     },
     {
       "rank": 344,
       "targetWord": "der Preis",
-      "englishWord": "price, prize"
+      "englishWord": "price, prize",
+      "exampleSentence": "Der Preis ist zu hoch."
     },
     {
       "rank": 345,
       "targetWord": "gesamt",
-      "englishWord": "total, overall"
+      "englishWord": "total, overall",
+      "exampleSentence": "Die gesamte Stadt ist schön."
     },
     {
       "rank": 346,
       "targetWord": "wohl",
-      "englishWord": "probably"
+      "englishWord": "probably",
+      "exampleSentence": "Er kommt wohl heute nicht."
     },
     {
       "rank": 347,
       "targetWord": "die Minute",
-      "englishWord": "minute"
+      "englishWord": "minute",
+      "exampleSentence": "Ich komme in zwei Minuten."
     },
     {
       "rank": 348,
       "targetWord": "das Gebäude",
-      "englishWord": "building"
+      "englishWord": "building",
+      "exampleSentence": "Das Gebäude ist sehr hoch."
     },
     {
       "rank": 349,
       "targetWord": "der Februar",
-      "englishWord": "February"
+      "englishWord": "February",
+      "exampleSentence": "Im Februar beginnt die Schule."
     },
     {
       "rank": 350,
       "targetWord": "übernehmen",
-      "englishWord": "to take over"
+      "englishWord": "to take over",
+      "exampleSentence": "Ich übernehme die Arbeit."
     },
     {
       "rank": 351,
       "targetWord": "der Betrieb",
-      "englishWord": "operation, business"
+      "englishWord": "operation, business",
+      "exampleSentence": "Der Betrieb ist sehr groß."
     },
     {
       "rank": 352,
       "targetWord": "innerhalb",
-      "englishWord": "within"
+      "englishWord": "within",
+      "exampleSentence": "Innerhalb der Stadt wohnen wir."
     },
     {
       "rank": 353,
       "targetWord": "eigentlich",
-      "englishWord": "actually"
+      "englishWord": "actually",
+      "exampleSentence": "Eigentlich komme ich heute nicht."
     },
     {
       "rank": 354,
       "targetWord": "hinter",
-      "englishWord": "behind"
+      "englishWord": "behind",
+      "exampleSentence": "Er steht hinter dem Haus."
     },
     {
       "rank": 355,
       "targetWord": "der Erfolg",
-      "englishWord": "success"
+      "englishWord": "success",
+      "exampleSentence": "Das Projekt war ein Erfolg."
     },
     {
       "rank": 356,
       "targetWord": "einzeln",
-      "englishWord": "individual"
+      "englishWord": "individual",
+      "exampleSentence": "Jedes Kind kommt einzeln."
     },
     {
       "rank": 357,
       "targetWord": "der Schüler",
-      "englishWord": "pupil"
+      "englishWord": "pupil",
+      "exampleSentence": "Die Schüler gehen zur Schule."
     },
     {
       "rank": 358,
       "targetWord": "entsprechen",
-      "englishWord": "to correspond to"
+      "englishWord": "to correspond to",
+      "exampleSentence": "Das Ergebnis entspricht dem Ziel."
     },
     {
       "rank": 359,
       "targetWord": "die Aufgabe",
-      "englishWord": "task"
+      "englishWord": "task",
+      "exampleSentence": "Die Aufgabe ist sehr schwer."
     },
     {
       "rank": 360,
       "targetWord": "die Kirche",
-      "englishWord": "church"
+      "englishWord": "church",
+      "exampleSentence": "Die Kirche ist sehr alt."
     },
     {
       "rank": 361,
       "targetWord": "ehemalig",
-      "englishWord": "former"
+      "englishWord": "former",
+      "exampleSentence": "Der ehemalige Mitarbeiter kommt."
     },
     {
       "rank": 362,
       "targetWord": "fahren",
-      "englishWord": "to drive"
+      "englishWord": "to drive",
+      "exampleSentence": "Ich fahre mit dem Auto."
     },
     {
       "rank": 363,
       "targetWord": "offen",
-      "englishWord": "open"
+      "englishWord": "open",
+      "exampleSentence": "Das Haus ist offen."
     },
     {
       "rank": 364,
       "targetWord": "die Angabe",
-      "englishWord": "statement, detail"
+      "englishWord": "statement, detail",
+      "exampleSentence": "Die Angabe ist sehr wichtig."
     },
     {
       "rank": 365,
       "targetWord": "sicher",
-      "englishWord": "safe, certain"
+      "englishWord": "safe, certain",
+      "exampleSentence": "Der Weg ist sicher."
     },
     {
       "rank": 366,
       "targetWord": "das Angebot",
-      "englishWord": "offer"
+      "englishWord": "offer",
+      "exampleSentence": "Das Angebot ist sehr gut."
     },
     {
       "rank": 367,
       "targetWord": "das Wasser",
-      "englishWord": "water"
+      "englishWord": "water",
+      "exampleSentence": "Das Wasser ist hier gut."
     },
     {
       "rank": 368,
       "targetWord": "jeweils",
-      "englishWord": "in each case"
+      "englishWord": "in each case",
+      "exampleSentence": "Jeweils zwei Kinder kommen."
     },
     {
       "rank": 369,
       "targetWord": "das Buch",
-      "englishWord": "book"
+      "englishWord": "book",
+      "exampleSentence": "Das Buch ist sehr alt."
     },
     {
       "rank": 370,
       "targetWord": "die Höhe",
-      "englishWord": "height"
+      "englishWord": "height",
+      "exampleSentence": "Die Höhe ist zehn Meter."
     },
     {
       "rank": 371,
       "targetWord": "helfen",
-      "englishWord": "to help"
+      "englishWord": "to help",
+      "exampleSentence": "Ich helfe dir."
     },
     {
       "rank": 372,
       "targetWord": "berichten",
-      "englishWord": "to report"
+      "englishWord": "to report",
+      "exampleSentence": "Wir berichten über das Spiel."
     },
     {
       "rank": 373,
       "targetWord": "hinaus",
-      "englishWord": "out, beyond"
+      "englishWord": "out, beyond",
+      "exampleSentence": "Wir gehen zum Haus hinaus."
     },
     {
       "rank": 374,
       "targetWord": "anders",
-      "englishWord": "differently"
+      "englishWord": "differently",
+      "exampleSentence": "Das Kind ist anders."
     },
     {
       "rank": 375,
       "targetWord": "die Richtung",
-      "englishWord": "direction"
+      "englishWord": "direction",
+      "exampleSentence": "Wir gehen in diese Richtung."
     },
     {
       "rank": 376,
       "targetWord": "richtig",
-      "englishWord": "correct"
+      "englishWord": "correct",
+      "exampleSentence": "Die Zahl ist richtig."
     },
     {
       "rank": 377,
       "targetWord": "die Polizei",
-      "englishWord": "police"
+      "englishWord": "police",
+      "exampleSentence": "Die Polizei ist schon hier."
     },
     {
       "rank": 378,
       "targetWord": "das Geld",
-      "englishWord": "money"
+      "englishWord": "money",
+      "exampleSentence": "Ich habe kein Geld."
     },
     {
       "rank": 379,
       "targetWord": "die Mitte",
-      "englishWord": "middle"
+      "englishWord": "middle",
+      "exampleSentence": "Er steht in der Mitte."
     },
     {
       "rank": 380,
       "targetWord": "anschließend",
-      "englishWord": "afterwards"
+      "englishWord": "afterwards",
+      "exampleSentence": "Anschließend gehen wir nach Hause."
     },
     {
       "rank": 381,
       "targetWord": "starten",
-      "englishWord": "to start"
+      "englishWord": "to start",
+      "exampleSentence": "Wir starten das Projekt."
     },
     {
       "rank": 382,
       "targetWord": "erstmals",
-      "englishWord": "for the first time"
+      "englishWord": "for the first time",
+      "exampleSentence": "Er kommt erstmals nach Hause."
     },
     {
       "rank": 383,
       "targetWord": "einigen",
-      "englishWord": "to agree on"
+      "englishWord": "to agree on",
+      "exampleSentence": "Wir einigen uns darauf."
     },
     {
       "rank": 384,
       "targetWord": "entscheiden",
-      "englishWord": "to decide"
+      "englishWord": "to decide",
+      "exampleSentence": "Ich entscheide es selbst."
     },
     {
       "rank": 385,
       "targetWord": "der Wert",
-      "englishWord": "value"
+      "englishWord": "value",
+      "exampleSentence": "Der Wert ist sehr hoch."
     },
     {
       "rank": 386,
       "targetWord": "die Verfügung",
-      "englishWord": "disposal (availability)"
+      "englishWord": "disposal (availability)",
+      "exampleSentence": "Das Auto steht zur Verfügung."
     },
     {
       "rank": 387,
       "targetWord": "einsetzen",
-      "englishWord": "to deploy, to insert"
+      "englishWord": "to deploy, to insert",
+      "exampleSentence": "Wir müssen das Auto einsetzen."
     },
     {
       "rank": 388,
       "targetWord": "gehören",
-      "englishWord": "to belong to"
+      "englishWord": "to belong to",
+      "exampleSentence": "Die Bücher gehören mir."
     },
     {
       "rank": 389,
       "targetWord": "das Fahrzeug",
-      "englishWord": "vehicle"
+      "englishWord": "vehicle",
+      "exampleSentence": "Das Fahrzeug ist sehr neu."
     },
     {
       "rank": 390,
       "targetWord": "aktiv",
-      "englishWord": "active"
+      "englishWord": "active",
+      "exampleSentence": "Der Mitarbeiter ist sehr aktiv."
     },
     {
       "rank": 391,
       "targetWord": "ermöglichen",
-      "englishWord": "to make possible"
+      "englishWord": "to make possible",
+      "exampleSentence": "Wir wollen es ermöglichen."
     },
     {
       "rank": 392,
       "targetWord": "zählen",
-      "englishWord": "to count"
+      "englishWord": "to count",
+      "exampleSentence": "Ich zähle bis zehn."
     },
     {
       "rank": 393,
       "targetWord": "kaum",
-      "englishWord": "hardly, barely"
+      "englishWord": "hardly, barely",
+      "exampleSentence": "Ich habe kaum Zeit."
     },
     {
       "rank": 394,
       "targetWord": "beispielsweise",
-      "englishWord": "for example"
+      "englishWord": "for example",
+      "exampleSentence": "Er kommt beispielsweise heute nicht."
     },
     {
       "rank": 395,
       "targetWord": "sogenannt",
-      "englishWord": "so-called"
+      "englishWord": "so-called",
+      "exampleSentence": "Das ist ein sogenanntes Problem."
     },
     {
       "rank": 396,
       "targetWord": "die Gesellschaft",
-      "englishWord": "society"
+      "englishWord": "society",
+      "exampleSentence": "Die Gesellschaft ist sehr groß."
     },
     {
       "rank": 397,
       "targetWord": "die Regel",
-      "englishWord": "rule"
+      "englishWord": "rule",
+      "exampleSentence": "Die Regel ist sehr einfach."
     },
     {
       "rank": 398,
       "targetWord": "die Saison",
-      "englishWord": "season"
+      "englishWord": "season",
+      "exampleSentence": "Die Saison beginnt im Mai."
     },
     {
       "rank": 399,
       "targetWord": "bilden",
-      "englishWord": "to form"
+      "englishWord": "to form",
+      "exampleSentence": "Wir bilden eine Gruppe."
     },
     {
       "rank": 400,
       "targetWord": "damals",
-      "englishWord": "back then"
+      "englishWord": "back then",
+      "exampleSentence": "Damals war alles anders."
     },
     {
       "rank": 401,
       "targetWord": "dadurch",
-      "englishWord": "thereby"
+      "englishWord": "thereby",
+      "exampleSentence": "Dadurch wird alles einfach."
     },
     {
       "rank": 402,
       "targetWord": "die Wahl",
-      "englishWord": "choice, election"
+      "englishWord": "choice, election",
+      "exampleSentence": "Die Wahl war sehr schwer."
     },
     {
       "rank": 403,
       "targetWord": "der Vater",
-      "englishWord": "father"
+      "englishWord": "father",
+      "exampleSentence": "Mein Vater arbeitet viel."
     },
     {
       "rank": 404,
       "targetWord": "sozial",
-      "englishWord": "social"
+      "englishWord": "social",
+      "exampleSentence": "Das Problem ist sozial."
     },
     {
       "rank": 405,
       "targetWord": "trotz",
-      "englishWord": "in spite of"
+      "englishWord": "in spite of",
+      "exampleSentence": "Trotz der Arbeit komme ich."
     },
     {
       "rank": 406,
       "targetWord": "die Leistung",
-      "englishWord": "performance, achievement"
+      "englishWord": "performance, achievement",
+      "exampleSentence": "Die Leistung war sehr gut."
     },
     {
       "rank": 407,
       "targetWord": "planen",
-      "englishWord": "to plan"
+      "englishWord": "to plan",
+      "exampleSentence": "Wir planen das Projekt."
     },
     {
       "rank": 408,
       "targetWord": "die Eltern",
-      "englishWord": "parents"
+      "englishWord": "parents",
+      "exampleSentence": "Meine Eltern wohnen hier."
     },
     {
       "rank": 409,
       "targetWord": "ebenso",
-      "englishWord": "equally, just as"
+      "englishWord": "equally, just as",
+      "exampleSentence": "Ich komme ebenso."
     },
     {
       "rank": 410,
       "targetWord": "europäisch",
-      "englishWord": "European"
+      "englishWord": "European",
+      "exampleSentence": "Die Gesellschaft ist europäisch."
     },
     {
       "rank": 411,
       "targetWord": "die Hand",
-      "englishWord": "hand"
+      "englishWord": "hand",
+      "exampleSentence": "Die Hand ist sehr klein."
     },
     {
       "rank": 412,
       "targetWord": "das Programm",
-      "englishWord": "program"
+      "englishWord": "program",
+      "exampleSentence": "Das Programm ist sehr gut."
     },
     {
       "rank": 413,
       "targetWord": "der Staat",
-      "englishWord": "state (country)"
+      "englishWord": "state (country)",
+      "exampleSentence": "Der Staat ist sehr groß."
     },
     {
       "rank": 414,
       "targetWord": "klar",
-      "englishWord": "clear, obvious"
+      "englishWord": "clear, obvious",
+      "exampleSentence": "Das ist mir klar."
     },
     {
       "rank": 415,
       "targetWord": "gleichzeitig",
-      "englishWord": "at the same time"
+      "englishWord": "at the same time",
+      "exampleSentence": "Wir arbeiten gleichzeitig."
     },
     {
       "rank": 416,
       "targetWord": "somit",
-      "englishWord": "thus"
+      "englishWord": "thus",
+      "exampleSentence": "Somit ist alles klar."
     },
     {
       "rank": 417,
       "targetWord": "eher",
-      "englishWord": "rather"
+      "englishWord": "rather",
+      "exampleSentence": "Ich komme eher spät."
     },
     {
       "rank": 418,
       "targetWord": "derzeit",
-      "englishWord": "currently"
+      "englishWord": "currently",
+      "exampleSentence": "Derzeit arbeite ich hier."
     },
     {
       "rank": 419,
       "targetWord": "die Partei",
-      "englishWord": "political party"
+      "englishWord": "political party",
+      "exampleSentence": "Die Partei ist sehr groß."
     },
     {
       "rank": 420,
       "targetWord": "erscheinen",
-      "englishWord": "to appear"
+      "englishWord": "to appear",
+      "exampleSentence": "Das Buch erscheint im Mai."
     },
     {
       "rank": 421,
       "targetWord": "das Alter",
-      "englishWord": "age"
+      "englishWord": "age",
+      "exampleSentence": "Das Alter ist kein Problem."
     },
     {
       "rank": 422,
       "targetWord": "knapp",
-      "englishWord": "scarce, narrow"
+      "englishWord": "scarce, narrow",
+      "exampleSentence": "Die Zeit ist knapp."
     },
     {
       "rank": 423,
       "targetWord": "lernen",
-      "englishWord": "to learn"
+      "englishWord": "to learn",
+      "exampleSentence": "Ich lerne sehr viel."
     },
     {
       "rank": 424,
       "targetWord": "bedeuten",
-      "englishWord": "to mean"
+      "englishWord": "to mean",
+      "exampleSentence": "Was soll das bedeuten?"
     },
     {
       "rank": 425,
       "targetWord": "zuvor",
-      "englishWord": "previously"
+      "englishWord": "previously",
+      "exampleSentence": "Zuvor war alles anders."
     },
     {
       "rank": 426,
       "targetWord": "die Mutter",
-      "englishWord": "mother"
+      "englishWord": "mother",
+      "exampleSentence": "Meine Mutter arbeitet hier."
     },
     {
       "rank": 427,
       "targetWord": "erfahren",
-      "englishWord": "to find out, to experience"
+      "englishWord": "to find out, to experience",
+      "exampleSentence": "Ich will mehr erfahren."
     },
     {
       "rank": 428,
       "targetWord": "nie",
-      "englishWord": "never"
+      "englishWord": "never",
+      "exampleSentence": "Ich war nie dort."
     },
     {
       "rank": 429,
       "targetWord": "das Werk",
-      "englishWord": "work (creation)"
+      "englishWord": "work (creation)",
+      "exampleSentence": "Das Werk ist sehr bekannt."
     },
     {
       "rank": 430,
       "targetWord": "meinen",
-      "englishWord": "to think, to be of the opinion"
+      "englishWord": "to think, to be of the opinion",
+      "exampleSentence": "Was meinen Sie?"
     },
     {
       "rank": 431,
       "targetWord": "das System",
-      "englishWord": "system"
+      "englishWord": "system",
+      "exampleSentence": "Das System ist sehr gut."
     },
     {
       "rank": 432,
       "targetWord": "die Hilfe",
-      "englishWord": "help"
+      "englishWord": "help",
+      "exampleSentence": "Die Hilfe kommt sehr spät."
     },
     {
       "rank": 433,
       "targetWord": "das Wort",
-      "englishWord": "word"
+      "englishWord": "word",
+      "exampleSentence": "Das Wort ist sehr kurz."
     },
     {
       "rank": 434,
       "targetWord": "das Tier",
-      "englishWord": "animal"
+      "englishWord": "animal",
+      "exampleSentence": "Das Tier ist sehr klein."
     },
     {
       "rank": 435,
       "targetWord": "der Beginn",
-      "englishWord": "start"
+      "englishWord": "start",
+      "exampleSentence": "Der Beginn war sehr gut."
     },
     {
       "rank": 436,
       "targetWord": "der Titel",
-      "englishWord": "title"
+      "englishWord": "title",
+      "exampleSentence": "Der Titel ist sehr lang."
     },
     {
       "rank": 437,
       "targetWord": "persönlich",
-      "englishWord": "personal"
+      "englishWord": "personal",
+      "exampleSentence": "Das ist sehr persönlich."
     },
     {
       "rank": 438,
       "targetWord": "regelmäßig",
-      "englishWord": "regular"
+      "englishWord": "regular",
+      "exampleSentence": "Ich arbeite hier regelmäßig."
     },
     {
       "rank": 439,
       "targetWord": "erhöhen",
-      "englishWord": "to increase"
+      "englishWord": "to increase",
+      "exampleSentence": "Wir erhöhen die Kosten."
     },
     {
       "rank": 440,
       "targetWord": "die Universität",
-      "englishWord": "university"
+      "englishWord": "university",
+      "exampleSentence": "Die Universität ist sehr alt."
     },
     {
       "rank": 441,
       "targetWord": "die Lage",
-      "englishWord": "situation, location"
+      "englishWord": "situation, location",
+      "exampleSentence": "Die Lage ist sehr gut."
     },
     {
       "rank": 442,
       "targetWord": "bezeichnen",
-      "englishWord": "to designate"
+      "englishWord": "to designate",
+      "exampleSentence": "Wir bezeichnen es so."
     },
     {
       "rank": 443,
       "targetWord": "der Sohn",
-      "englishWord": "son"
+      "englishWord": "son",
+      "exampleSentence": "Mein Sohn geht zur Schule."
     },
     {
       "rank": 444,
       "targetWord": "die Unterstützung",
-      "englishWord": "support"
+      "englishWord": "support",
+      "exampleSentence": "Die Unterstützung war sehr gut."
     },
     {
       "rank": 445,
       "targetWord": "sterben",
-      "englishWord": "to die"
+      "englishWord": "to die",
+      "exampleSentence": "Das Tier wird sterben."
     },
     {
       "rank": 446,
       "targetWord": "das Gebiet",
-      "englishWord": "area, territory"
+      "englishWord": "area, territory",
+      "exampleSentence": "Das Gebiet ist sehr groß."
     },
     {
       "rank": 447,
       "targetWord": "der Tod",
-      "englishWord": "death"
+      "englishWord": "death",
+      "exampleSentence": "Der Tod kommt immer."
     },
     {
       "rank": 448,
       "targetWord": "kennen",
-      "englishWord": "to know (be acquainted with)"
+      "englishWord": "to know (be acquainted with)",
+      "exampleSentence": "Ich kenne dich nicht."
     },
     {
       "rank": 449,
       "targetWord": "enthalten",
-      "englishWord": "to contain"
+      "englishWord": "to contain",
+      "exampleSentence": "Das Buch soll alles enthalten."
     },
     {
       "rank": 450,
       "targetWord": "gering",
-      "englishWord": "slight, low"
+      "englishWord": "slight, low",
+      "exampleSentence": "Die Kosten sind sehr gering."
     },
     {
       "rank": 451,
       "targetWord": "der Sommer",
-      "englishWord": "summer"
+      "englishWord": "summer",
+      "exampleSentence": "Im Sommer ist es schön."
     },
     {
       "rank": 452,
       "targetWord": "schön",
-      "englishWord": "beautiful"
+      "englishWord": "beautiful",
+      "exampleSentence": "Das Bild ist sehr schön."
     },
     {
       "rank": 453,
       "targetWord": "voll",
-      "englishWord": "full"
+      "englishWord": "full",
+      "exampleSentence": "Das Haus ist voll."
     },
     {
       "rank": 454,
       "targetWord": "dienen",
-      "englishWord": "to serve"
+      "englishWord": "to serve",
+      "exampleSentence": "Wir dienen dem Staat."
     },
     {
       "rank": 455,
       "targetWord": "erwarten",
-      "englishWord": "to expect"
+      "englishWord": "to expect",
+      "exampleSentence": "Ich erwarte dich heute."
     },
     {
       "rank": 456,
       "targetWord": "die Entscheidung",
-      "englishWord": "decision"
+      "englishWord": "decision",
+      "exampleSentence": "Die Entscheidung war sehr schwer."
     },
     {
       "rank": 457,
       "targetWord": "fallen",
-      "englishWord": "to fall"
+      "englishWord": "to fall",
+      "exampleSentence": "Die Preise fallen."
     },
     {
       "rank": 458,
       "targetWord": "die Mannschaft",
-      "englishWord": "team (sports)"
+      "englishWord": "team (sports)",
+      "exampleSentence": "Die Mannschaft ist sehr gut."
     },
     {
       "rank": 459,
       "targetWord": "ähnlich",
-      "englishWord": "similar"
+      "englishWord": "similar",
+      "exampleSentence": "Die Bilder sind sehr ähnlich."
     },
     {
       "rank": 460,
       "targetWord": "verlassen",
-      "englishWord": "to leave"
+      "englishWord": "to leave",
+      "exampleSentence": "Ich verlasse das Haus."
     },
     {
       "rank": 461,
       "targetWord": "wirken",
-      "englishWord": "to have an effect"
+      "englishWord": "to have an effect",
+      "exampleSentence": "Die Hilfe soll wirken."
     },
     {
       "rank": 462,
       "targetWord": "paar",
-      "englishWord": "a few"
+      "englishWord": "a few",
+      "exampleSentence": "Ich habe ein paar Bücher."
     },
     {
       "rank": 463,
       "targetWord": "mindestens",
-      "englishWord": "at least"
+      "englishWord": "at least",
+      "exampleSentence": "Ich bleibe mindestens zwei Stunden."
     },
     {
       "rank": 464,
       "targetWord": "betragen",
-      "englishWord": "to amount to"
+      "englishWord": "to amount to",
+      "exampleSentence": "Die Kosten betragen zehn Euro."
     },
     {
       "rank": 465,
       "targetWord": "der Spieler",
-      "englishWord": "player"
+      "englishWord": "player",
+      "exampleSentence": "Der Spieler ist sehr gut."
     },
     {
       "rank": 466,
       "targetWord": "das Auto",
-      "englishWord": "car"
+      "englishWord": "car",
+      "exampleSentence": "Mein Auto ist sehr schnell."
     },
     {
       "rank": 467,
       "targetWord": "der Freund",
-      "englishWord": "friend"
+      "englishWord": "friend",
+      "exampleSentence": "Mein Freund kommt heute."
     },
     {
       "rank": 468,
       "targetWord": "die Zukunft",
-      "englishWord": "future"
+      "englishWord": "future",
+      "exampleSentence": "Die Zukunft ist offen."
     },
     {
       "rank": 469,
       "targetWord": "die Veranstaltung",
-      "englishWord": "event"
+      "englishWord": "event",
+      "exampleSentence": "Die Veranstaltung beginnt sehr früh."
     },
     {
       "rank": 470,
       "targetWord": "dennoch",
-      "englishWord": "nevertheless"
+      "englishWord": "nevertheless",
+      "exampleSentence": "Dennoch komme ich heute."
     },
     {
       "rank": 471,
       "targetWord": "tatsächlich",
-      "englishWord": "in fact, really"
+      "englishWord": "in fact, really",
+      "exampleSentence": "Er kommt tatsächlich nicht."
     },
     {
       "rank": 472,
       "targetWord": "der Kunde",
-      "englishWord": "customer"
+      "englishWord": "customer",
+      "exampleSentence": "Der Kunde ist sehr wichtig."
     },
     {
       "rank": 473,
       "targetWord": "die Regierung",
-      "englishWord": "government"
+      "englishWord": "government",
+      "exampleSentence": "Die Regierung ist neu."
     },
     {
       "rank": 474,
       "targetWord": "erkennen",
-      "englishWord": "to recognize"
+      "englishWord": "to recognize",
+      "exampleSentence": "Ich erkenne dich nicht."
     },
     {
       "rank": 475,
       "targetWord": "wählen",
-      "englishWord": "to choose, to elect"
+      "englishWord": "to choose, to elect",
+      "exampleSentence": "Wir wählen die Partei."
     },
     {
       "rank": 476,
       "targetWord": "acht",
-      "englishWord": "eight"
+      "englishWord": "eight",
+      "exampleSentence": "Ich komme um acht."
     },
     {
       "rank": 477,
       "targetWord": "dritte",
-      "englishWord": "third"
+      "englishWord": "third",
+      "exampleSentence": "Die dritte Frau kommt."
     },
     {
       "rank": 478,
       "targetWord": "das Produkt",
-      "englishWord": "product"
+      "englishWord": "product",
+      "exampleSentence": "Das Produkt ist sehr gut."
     },
     {
       "rank": 479,
       "targetWord": "das Interesse",
-      "englishWord": "interest"
+      "englishWord": "interest",
+      "exampleSentence": "Mein Interesse ist sehr groß."
     },
     {
       "rank": 480,
       "targetWord": "brauchen",
-      "englishWord": "to need"
+      "englishWord": "to need",
+      "exampleSentence": "Ich brauche mehr Zeit."
     },
     {
       "rank": 481,
       "targetWord": "die Idee",
-      "englishWord": "idea"
+      "englishWord": "idea",
+      "exampleSentence": "Das ist eine gute Idee."
     },
     {
       "rank": 482,
       "targetWord": "die Band",
-      "englishWord": "band (music group)"
+      "englishWord": "band (music group)",
+      "exampleSentence": "Die Band ist sehr bekannt."
     },
     {
       "rank": 483,
       "targetWord": "der Markt",
-      "englishWord": "market"
+      "englishWord": "market",
+      "exampleSentence": "Der Markt ist sehr groß."
     },
     {
       "rank": 484,
       "targetWord": "rot",
-      "englishWord": "red"
+      "englishWord": "red",
+      "exampleSentence": "Mein Auto ist rot."
     },
     {
       "rank": 485,
       "targetWord": "die Bedeutung",
-      "englishWord": "meaning, significance"
+      "englishWord": "meaning, significance",
+      "exampleSentence": "Die Bedeutung ist sehr klar."
     },
     {
       "rank": 486,
       "targetWord": "entsprechend",
-      "englishWord": "corresponding"
+      "englishWord": "corresponding",
+      "exampleSentence": "Wir arbeiten entsprechend der Regel."
     },
     {
       "rank": 487,
       "targetWord": "die Musik",
-      "englishWord": "music"
+      "englishWord": "music",
+      "exampleSentence": "Die Musik ist sehr laut."
     },
     {
       "rank": 488,
       "targetWord": "aufnehmen",
-      "englishWord": "to take in, to record"
+      "englishWord": "to take in, to record",
+      "exampleSentence": "Wir wollen die Musik aufnehmen."
     },
     {
       "rank": 489,
       "targetWord": "zuletzt",
-      "englishWord": "most recently, lastly"
+      "englishWord": "most recently, lastly",
+      "exampleSentence": "Zuletzt kommt das Kind."
     },
     {
       "rank": 490,
       "targetWord": "die Weise",
-      "englishWord": "way, manner"
+      "englishWord": "way, manner",
+      "exampleSentence": "Auf diese Weise geht es."
     },
     {
       "rank": 491,
       "targetWord": "gar",
-      "englishWord": "at all"
+      "englishWord": "at all",
+      "exampleSentence": "Ich habe gar keine Zeit."
     },
     {
       "rank": 492,
       "targetWord": "technisch",
-      "englishWord": "technical"
+      "englishWord": "technical",
+      "exampleSentence": "Das Problem ist technisch."
     },
     {
       "rank": 493,
       "targetWord": "der Zug",
-      "englishWord": "train"
+      "englishWord": "train",
+      "exampleSentence": "Der Zug kommt sehr spät."
     },
     {
       "rank": 494,
       "targetWord": "verkaufen",
-      "englishWord": "to sell"
+      "englishWord": "to sell",
+      "exampleSentence": "Ich verkaufe mein Auto."
     },
     {
       "rank": 495,
       "targetWord": "besuchen",
-      "englishWord": "to visit"
+      "englishWord": "to visit",
+      "exampleSentence": "Ich besuche meinen Vater."
     },
     {
       "rank": 496,
       "targetWord": "ja",
-      "englishWord": "yes"
+      "englishWord": "yes",
+      "exampleSentence": "Ja, ich komme heute."
     },
     {
       "rank": 497,
       "targetWord": "der Blick",
-      "englishWord": "look, glance"
+      "englishWord": "look, glance",
+      "exampleSentence": "Der Blick ist sehr schön."
     },
     {
       "rank": 498,
       "targetWord": "offiziell",
-      "englishWord": "official"
+      "englishWord": "official",
+      "exampleSentence": "Das Ergebnis ist offiziell."
     },
     {
       "rank": 499,
       "targetWord": "weltweit",
-      "englishWord": "worldwide"
+      "englishWord": "worldwide",
+      "exampleSentence": "Das Produkt ist weltweit bekannt."
     },
     {
       "rank": 500,
       "targetWord": "gründen",
-      "englishWord": "to found"
+      "englishWord": "to found",
+      "exampleSentence": "Wir gründen einen Verein."
     },
     {
       "rank": 501,
       "targetWord": "entfernen",
-      "englishWord": "to remove"
+      "englishWord": "to remove",
+      "exampleSentence": "Wir entfernen das Bild."
     },
     {
       "rank": 502,
       "targetWord": "modern",
-      "englishWord": "modern"
+      "englishWord": "modern",
+      "exampleSentence": "Das Gebäude ist sehr modern."
     },
     {
       "rank": 503,
       "targetWord": "historisch",
-      "englishWord": "historical"
+      "englishWord": "historical",
+      "exampleSentence": "Das Gebäude ist historisch."
     },
     {
       "rank": 504,
       "targetWord": "vergangen",
-      "englishWord": "past, bygone"
+      "englishWord": "past, bygone",
+      "exampleSentence": "Das vergangene Jahr war gut."
     },
     {
       "rank": 505,
       "targetWord": "gegeben",
-      "englishWord": "given"
+      "englishWord": "given",
+      "exampleSentence": "Das Wort ist gegeben."
     },
     {
       "rank": 506,
       "targetWord": "beteiligen",
-      "englishWord": "to involve, to participate"
+      "englishWord": "to involve, to participate",
+      "exampleSentence": "Wir beteiligen uns."
     },
     {
       "rank": 507,
       "targetWord": "tief",
-      "englishWord": "deep"
+      "englishWord": "deep",
+      "exampleSentence": "Das Wasser ist sehr tief."
     },
     {
       "rank": 508,
       "targetWord": "positiv",
-      "englishWord": "positive"
+      "englishWord": "positive",
+      "exampleSentence": "Das Ergebnis ist positiv."
     },
     {
       "rank": 509,
       "targetWord": "die Studie",
-      "englishWord": "study"
+      "englishWord": "study",
+      "exampleSentence": "Die Studie ist sehr neu."
     },
     {
       "rank": 510,
       "targetWord": "per",
-      "englishWord": "by, via"
+      "englishWord": "by, via",
+      "exampleSentence": "Wir fahren per Auto."
     },
     {
       "rank": 511,
       "targetWord": "inzwischen",
-      "englishWord": "by now, meanwhile"
+      "englishWord": "by now, meanwhile",
+      "exampleSentence": "Inzwischen arbeite ich hier."
     },
     {
       "rank": 512,
       "targetWord": "sieben",
-      "englishWord": "seven"
+      "englishWord": "seven",
+      "exampleSentence": "Ich habe sieben Bücher."
     },
     {
       "rank": 513,
       "targetWord": "zentral",
-      "englishWord": "central"
+      "englishWord": "central",
+      "exampleSentence": "Der Platz ist zentral."
     },
     {
       "rank": 514,
       "targetWord": "der Krieg",
-      "englishWord": "war"
+      "englishWord": "war",
+      "exampleSentence": "Der Krieg ist zu Ende."
     },
     {
       "rank": 515,
       "targetWord": "glauben",
-      "englishWord": "to believe"
+      "englishWord": "to believe",
+      "exampleSentence": "Ich glaube dir nicht."
     },
     {
       "rank": 516,
       "targetWord": "der Vergleich",
-      "englishWord": "comparison"
+      "englishWord": "comparison",
+      "exampleSentence": "Der Vergleich ist sehr gut."
     },
     {
       "rank": 517,
       "targetWord": "der Beitrag",
-      "englishWord": "contribution"
+      "englishWord": "contribution",
+      "exampleSentence": "Der Beitrag ist sehr wichtig."
     },
     {
       "rank": 518,
       "targetWord": "eröffnen",
-      "englishWord": "to open (officially)"
+      "englishWord": "to open (officially)",
+      "exampleSentence": "Wir eröffnen das Gebäude."
     },
     {
       "rank": 519,
       "targetWord": "obwohl",
-      "englishWord": "although"
+      "englishWord": "although",
+      "exampleSentence": "Ich gehe, obwohl du bleibst."
     },
     {
       "rank": 520,
       "targetWord": "scheinen",
-      "englishWord": "to seem"
+      "englishWord": "to seem",
+      "exampleSentence": "Es scheint sehr einfach."
     },
     {
       "rank": 521,
       "targetWord": "verfügen",
-      "englishWord": "to have at one's disposal"
+      "englishWord": "to have at one's disposal",
+      "exampleSentence": "Wir verfügen über das Geld."
     },
     {
       "rank": 522,
       "targetWord": "allein",
-      "englishWord": "alone"
+      "englishWord": "alone",
+      "exampleSentence": "Ich arbeite hier allein."
     },
     {
       "rank": 523,
       "targetWord": "das Amt",
-      "englishWord": "office (public authority)"
+      "englishWord": "office (public authority)",
+      "exampleSentence": "Das Amt ist heute offen."
     },
     {
       "rank": 524,
       "targetWord": "die Maßnahme",
-      "englishWord": "measure"
+      "englishWord": "measure",
+      "exampleSentence": "Die Maßnahme ist sehr wichtig."
     },
     {
       "rank": 525,
       "targetWord": "der Präsident",
-      "englishWord": "president"
+      "englishWord": "president",
+      "exampleSentence": "Der Präsident kommt heute."
     },
     {
       "rank": 526,
       "targetWord": "der Besucher",
-      "englishWord": "visitor"
+      "englishWord": "visitor",
+      "exampleSentence": "Die Besucher sind schon da."
     },
     {
       "rank": 527,
       "targetWord": "die Situation",
-      "englishWord": "situation"
+      "englishWord": "situation",
+      "exampleSentence": "Die Situation ist sehr schwer."
     },
     {
       "rank": 528,
       "targetWord": "fordern",
-      "englishWord": "to demand"
+      "englishWord": "to demand",
+      "exampleSentence": "Wir fordern mehr Geld."
     },
     {
       "rank": 529,
       "targetWord": "daran",
-      "englishWord": "at it, on it"
+      "englishWord": "at it, on it",
+      "exampleSentence": "Ich glaube nicht daran."
     },
     {
       "rank": 530,
       "targetWord": "die Firma",
-      "englishWord": "firm, business"
+      "englishWord": "firm, business",
+      "exampleSentence": "Die Firma ist sehr groß."
     },
     {
       "rank": 531,
       "targetWord": "verstehen",
-      "englishWord": "to understand"
+      "englishWord": "to understand",
+      "exampleSentence": "Ich verstehe dich nicht."
     },
     {
       "rank": 532,
       "targetWord": "der Kilometer",
-      "englishWord": "kilometre"
+      "englishWord": "kilometre",
+      "exampleSentence": "Es sind zehn Kilometer."
     },
     {
       "rank": 533,
       "targetWord": "die Erfahrung",
-      "englishWord": "experience"
+      "englishWord": "experience",
+      "exampleSentence": "Die Erfahrung ist sehr wichtig."
     },
     {
       "rank": 534,
       "targetWord": "der Gast",
-      "englishWord": "guest"
+      "englishWord": "guest",
+      "exampleSentence": "Der Gast kommt sehr spät."
     },
     {
       "rank": 535,
       "targetWord": "teilweise",
-      "englishWord": "partially"
+      "englishWord": "partially",
+      "exampleSentence": "Das ist teilweise richtig."
     },
     {
       "rank": 536,
       "targetWord": "der Schritt",
-      "englishWord": "step"
+      "englishWord": "step",
+      "exampleSentence": "Der erste Schritt ist schwer."
     },
     {
       "rank": 537,
       "targetWord": "das Modell",
-      "englishWord": "model"
+      "englishWord": "model",
+      "exampleSentence": "Das Modell ist sehr neu."
     },
     {
       "rank": 538,
       "targetWord": "wirklich",
-      "englishWord": "really"
+      "englishWord": "really",
+      "exampleSentence": "Das ist wirklich gut."
     },
     {
       "rank": 539,
       "targetWord": "benötigen",
-      "englishWord": "to require"
+      "englishWord": "to require",
+      "exampleSentence": "Wir benötigen mehr Zeit."
     },
     {
       "rank": 540,
       "targetWord": "notwendig",
-      "englishWord": "necessary"
+      "englishWord": "necessary",
+      "exampleSentence": "Das ist nicht notwendig."
     },
     {
       "rank": 541,
       "targetWord": "erleben",
-      "englishWord": "to experience, to live through"
+      "englishWord": "to experience, to live through",
+      "exampleSentence": "Wir erleben viel zusammen."
     },
     {
       "rank": 542,
       "targetWord": "der Stand",
-      "englishWord": "status, standing"
+      "englishWord": "status, standing",
+      "exampleSentence": "Der Stand ist sehr gut."
     },
     {
       "rank": 543,
       "targetWord": "selten",
-      "englishWord": "rare"
+      "englishWord": "rare",
+      "exampleSentence": "Er kommt sehr selten."
     },
     {
       "rank": 544,
       "targetWord": "die Wohnung",
-      "englishWord": "flat, apartment"
+      "englishWord": "flat, apartment",
+      "exampleSentence": "Die Wohnung ist sehr klein."
     },
     {
       "rank": 545,
       "targetWord": "heutig",
-      "englishWord": "today's"
+      "englishWord": "today's",
+      "exampleSentence": "Das heutige Spiel war gut."
     },
     {
       "rank": 546,
       "targetWord": "bald",
-      "englishWord": "soon"
+      "englishWord": "soon",
+      "exampleSentence": "Ich komme bald zurück."
     },
     {
       "rank": 547,
       "targetWord": "die Politik",
-      "englishWord": "politics"
+      "englishWord": "politics",
+      "exampleSentence": "Die Politik ist sehr wichtig."
     },
     {
       "rank": 548,
       "targetWord": "die Kraft",
-      "englishWord": "force, strength"
+      "englishWord": "force, strength",
+      "exampleSentence": "Ich habe keine Kraft mehr."
     },
     {
       "rank": 549,
       "targetWord": "mittlerweile",
-      "englishWord": "in the meantime"
+      "englishWord": "in the meantime",
+      "exampleSentence": "Mittlerweile arbeite ich hier."
     },
     {
       "rank": 550,
       "targetWord": "das Gespräch",
-      "englishWord": "conversation"
+      "englishWord": "conversation",
+      "exampleSentence": "Das Gespräch war sehr gut."
     },
     {
       "rank": 551,
       "targetWord": "lediglich",
-      "englishWord": "merely"
+      "englishWord": "merely",
+      "exampleSentence": "Ich habe lediglich ein Buch."
     },
     {
       "rank": 552,
       "targetWord": "die Grenze",
-      "englishWord": "border, limit"
+      "englishWord": "border, limit",
+      "exampleSentence": "Die Grenze ist sehr weit."
     },
     {
       "rank": 553,
       "targetWord": "gelingen",
-      "englishWord": "to succeed"
+      "englishWord": "to succeed",
+      "exampleSentence": "Die Arbeit wird gelingen."
     },
     {
       "rank": 554,
       "targetWord": "darin",
-      "englishWord": "in it"
+      "englishWord": "in it",
+      "exampleSentence": "Es steht alles darin."
     },
     {
       "rank": 555,
       "targetWord": "tätig",
-      "englishWord": "working, employed"
+      "englishWord": "working, employed",
+      "exampleSentence": "Ich bin hier tätig."
     },
     {
       "rank": 556,
       "targetWord": "bevor",
-      "englishWord": "before (conjunction)"
+      "englishWord": "before (conjunction)",
+      "exampleSentence": "Ich komme, bevor du gehst."
     },
     {
       "rank": 557,
       "targetWord": "erzielen",
-      "englishWord": "to attain, to score"
+      "englishWord": "to attain, to score",
+      "exampleSentence": "Wir erzielen ein gutes Ergebnis."
     },
     {
       "rank": 558,
       "targetWord": "darunter",
-      "englishWord": "among them"
+      "englishWord": "among them",
+      "exampleSentence": "Viele Kinder, darunter mein Sohn."
     },
     {
       "rank": 559,
       "targetWord": "fehlen",
-      "englishWord": "to be missing"
+      "englishWord": "to be missing",
+      "exampleSentence": "Hier soll nichts fehlen."
     },
     {
       "rank": 560,
       "targetWord": "digital",
-      "englishWord": "digital"
+      "englishWord": "digital",
+      "exampleSentence": "Das Modell ist digital."
     },
     {
       "rank": 561,
       "targetWord": "verlieren",
-      "englishWord": "to lose"
+      "englishWord": "to lose",
+      "exampleSentence": "Ich will nicht verlieren."
     },
     {
       "rank": 562,
       "targetWord": "dagegen",
-      "englishWord": "against it"
+      "englishWord": "against it",
+      "exampleSentence": "Ich bin dagegen."
     },
     {
       "rank": 563,
       "targetWord": "umfassen",
-      "englishWord": "to comprise"
+      "englishWord": "to comprise",
+      "exampleSentence": "Das Buch soll alles umfassen."
     },
     {
       "rank": 564,
       "targetWord": "privat",
-      "englishWord": "private"
+      "englishWord": "private",
+      "exampleSentence": "Das Gespräch ist privat."
     },
     {
       "rank": 565,
       "targetWord": "öffnen",
-      "englishWord": "to open"
+      "englishWord": "to open",
+      "exampleSentence": "Kannst du das Buch öffnen?"
     },
     {
       "rank": 566,
       "targetWord": "schwarz",
-      "englishWord": "black"
+      "englishWord": "black",
+      "exampleSentence": "Mein Auto ist schwarz."
     },
     {
       "rank": 567,
       "targetWord": "erzählen",
-      "englishWord": "to tell, to narrate"
+      "englishWord": "to tell, to narrate",
+      "exampleSentence": "Ich erzähle dir alles."
     },
     {
       "rank": 568,
       "targetWord": "wachsen",
-      "englishWord": "to grow"
+      "englishWord": "to grow",
+      "exampleSentence": "Die Kinder wachsen sehr schnell."
     },
     {
       "rank": 569,
       "targetWord": "entdecken",
-      "englishWord": "to discover"
+      "englishWord": "to discover",
+      "exampleSentence": "Wir entdecken eine neue Stadt."
     },
     {
       "rank": 570,
       "targetWord": "ursprünglich",
-      "englishWord": "original"
+      "englishWord": "original",
+      "exampleSentence": "Das Haus war ursprünglich klein."
     },
     {
       "rank": 571,
       "targetWord": "verbessern",
-      "englishWord": "to improve"
+      "englishWord": "to improve",
+      "exampleSentence": "Wir verbessern das Produkt."
     },
     {
       "rank": 572,
       "targetWord": "ergeben",
-      "englishWord": "to result in"
+      "englishWord": "to result in",
+      "exampleSentence": "Die Studie soll etwas ergeben."
     },
     {
       "rank": 573,
       "targetWord": "präsentieren",
-      "englishWord": "to present"
+      "englishWord": "to present",
+      "exampleSentence": "Wir präsentieren das neue Modell."
     },
     {
       "rank": 574,
       "targetWord": "die Bevölkerung",
-      "englishWord": "population"
+      "englishWord": "population",
+      "exampleSentence": "Die Bevölkerung ist sehr jung."
     },
     {
       "rank": 575,
       "targetWord": "die Zusammenarbeit",
-      "englishWord": "cooperation"
+      "englishWord": "cooperation",
+      "exampleSentence": "Die Zusammenarbeit war sehr gut."
     },
     {
       "rank": 576,
       "targetWord": "stammen",
-      "englishWord": "to originate from"
+      "englishWord": "to originate from",
+      "exampleSentence": "Wir stammen aus der Stadt."
     },
     {
       "rank": 577,
       "targetWord": "das Tor",
-      "englishWord": "gate; goal (in football)"
+      "englishWord": "gate; goal (in football)",
+      "exampleSentence": "Das Tor ist sehr groß."
     },
     {
       "rank": 578,
       "targetWord": "die Stimme",
-      "englishWord": "voice, vote"
+      "englishWord": "voice, vote",
+      "exampleSentence": "Die Stimme ist sehr laut."
     },
     {
       "rank": 579,
       "targetWord": "die Funktion",
-      "englishWord": "function"
+      "englishWord": "function",
+      "exampleSentence": "Die Funktion ist sehr wichtig."
     },
     {
       "rank": 580,
       "targetWord": "komplett",
-      "englishWord": "complete"
+      "englishWord": "complete",
+      "exampleSentence": "Das Buch ist komplett."
     },
     {
       "rank": 581,
       "targetWord": "die Lösung",
-      "englishWord": "solution"
+      "englishWord": "solution",
+      "exampleSentence": "Die Lösung ist sehr einfach."
     },
     {
       "rank": 582,
       "targetWord": "die Reihe",
-      "englishWord": "row, series"
+      "englishWord": "row, series",
+      "exampleSentence": "Die Reihe ist sehr lang."
     },
     {
       "rank": 583,
       "targetWord": "bestätigen",
-      "englishWord": "to confirm"
+      "englishWord": "to confirm",
+      "exampleSentence": "Wir bestätigen das Datum."
     },
     {
       "rank": 584,
       "targetWord": "sofort",
-      "englishWord": "immediately"
+      "englishWord": "immediately",
+      "exampleSentence": "Ich komme sofort."
     },
     {
       "rank": 585,
       "targetWord": "speziell",
-      "englishWord": "special"
+      "englishWord": "special",
+      "exampleSentence": "Das Modell ist sehr speziell."
     },
     {
       "rank": 586,
       "targetWord": "der Landkreis",
-      "englishWord": "district (rural)"
+      "englishWord": "district (rural)",
+      "exampleSentence": "Der Landkreis ist sehr groß."
     },
     {
       "rank": 587,
       "targetWord": "beschäftigen",
-      "englishWord": "to employ, to occupy"
+      "englishWord": "to employ, to occupy",
+      "exampleSentence": "Wir beschäftigen zehn Menschen."
     },
     {
       "rank": 588,
       "targetWord": "schlagen",
-      "englishWord": "to hit, to beat"
+      "englishWord": "to hit, to beat",
+      "exampleSentence": "Er will mich schlagen."
     },
     {
       "rank": 589,
       "targetWord": "die Klasse",
-      "englishWord": "class"
+      "englishWord": "class",
+      "exampleSentence": "Die Klasse ist sehr groß."
     },
     {
       "rank": 590,
       "targetWord": "die Verbindung",
-      "englishWord": "connection"
+      "englishWord": "connection",
+      "exampleSentence": "Die Verbindung ist sehr gut."
     },
     {
       "rank": 591,
       "targetWord": "finanziell",
-      "englishWord": "financial"
+      "englishWord": "financial",
+      "exampleSentence": "Die Hilfe ist finanziell."
     },
     {
       "rank": 592,
       "targetWord": "wobei",
-      "englishWord": "whereby"
+      "englishWord": "whereby",
+      "exampleSentence": "Er kommt, wobei ich bleibe."
     },
     {
       "rank": 593,
       "targetWord": "die GmbH",
-      "englishWord": "limited liability company"
+      "englishWord": "limited liability company",
+      "exampleSentence": "Die GmbH ist sehr klein."
     },
     {
       "rank": 594,
       "targetWord": "das Stück",
-      "englishWord": "piece"
+      "englishWord": "piece",
+      "exampleSentence": "Das Stück ist sehr klein."
     },
     {
       "rank": 595,
       "targetWord": "oben",
-      "englishWord": "above, at the top"
+      "englishWord": "above, at the top",
+      "exampleSentence": "Das Buch liegt oben."
     },
     {
       "rank": 596,
       "targetWord": "die Sprache",
-      "englishWord": "language"
+      "englishWord": "language",
+      "exampleSentence": "Die Sprache ist sehr schwer."
     },
     {
       "rank": 597,
       "targetWord": "folgend",
-      "englishWord": "following"
+      "englishWord": "following",
+      "exampleSentence": "Der folgende Tag war schön."
     },
     {
       "rank": 598,
       "targetWord": "verbunden",
-      "englishWord": "connected"
+      "englishWord": "connected",
+      "exampleSentence": "Wir sind alle verbunden."
     },
     {
       "rank": 599,
       "targetWord": "besitzen",
-      "englishWord": "to own"
+      "englishWord": "to own",
+      "exampleSentence": "Ich besitze kein Auto."
     },
     {
       "rank": 600,
       "targetWord": "der Herr",
-      "englishWord": "gentleman, Mr"
+      "englishWord": "gentleman, Mr",
+      "exampleSentence": "Der Herr ist schon da."
     },
     {
       "rank": 601,
       "targetWord": "der Prozess",
-      "englishWord": "process, trial"
+      "englishWord": "process, trial",
+      "exampleSentence": "Der Prozess ist sehr lang."
     },
     {
       "rank": 602,
       "targetWord": "feiern",
-      "englishWord": "to celebrate"
+      "englishWord": "to celebrate",
+      "exampleSentence": "Wir feiern heute zusammen."
     },
     {
       "rank": 603,
       "targetWord": "jährlich",
-      "englishWord": "annual"
+      "englishWord": "annual",
+      "exampleSentence": "Die Kosten steigen jährlich."
     },
     {
       "rank": 604,
       "targetWord": "teilen",
-      "englishWord": "to share, to divide"
+      "englishWord": "to share, to divide",
+      "exampleSentence": "Wir teilen das Essen."
     },
     {
       "rank": 605,
       "targetWord": "breit",
-      "englishWord": "broad, wide"
+      "englishWord": "broad, wide",
+      "exampleSentence": "Die Straße ist sehr breit."
     },
     {
       "rank": 606,
       "targetWord": "der Kreis",
-      "englishWord": "circle"
+      "englishWord": "circle",
+      "exampleSentence": "Der Kreis ist sehr klein."
     },
     {
       "rank": 607,
       "targetWord": "die Nacht",
-      "englishWord": "night"
+      "englishWord": "night",
+      "exampleSentence": "Die Nacht war sehr lang."
     },
     {
       "rank": 608,
       "targetWord": "die Nähe",
-      "englishWord": "vicinity, closeness"
+      "englishWord": "vicinity, closeness",
+      "exampleSentence": "Er wohnt in der Nähe."
     },
     {
       "rank": 609,
       "targetWord": "warum",
-      "englishWord": "why"
+      "englishWord": "why",
+      "exampleSentence": "Warum ist das so?"
     },
     {
       "rank": 610,
       "targetWord": "der Standort",
-      "englishWord": "location, site"
+      "englishWord": "location, site",
+      "exampleSentence": "Der Standort ist sehr gut."
     },
     {
       "rank": 611,
       "targetWord": "die Tochter",
-      "englishWord": "daughter"
+      "englishWord": "daughter",
+      "exampleSentence": "Meine Tochter geht zur Schule."
     },
     {
       "rank": 612,
       "targetWord": "sichern",
-      "englishWord": "to secure"
+      "englishWord": "to secure",
+      "exampleSentence": "Wir sichern das Gebäude."
     },
     {
       "rank": 613,
       "targetWord": "die Ausbildung",
-      "englishWord": "training"
+      "englishWord": "training",
+      "exampleSentence": "Die Ausbildung ist sehr gut."
     },
     {
       "rank": 614,
       "targetWord": "liefern",
-      "englishWord": "to deliver, to supply"
+      "englishWord": "to deliver, to supply",
+      "exampleSentence": "Wir liefern das Produkt."
     },
     {
       "rank": 615,
       "targetWord": "der Text",
-      "englishWord": "text"
+      "englishWord": "text",
+      "exampleSentence": "Der Text ist sehr lang."
     },
     {
       "rank": 616,
       "targetWord": "kaufen",
-      "englishWord": "to buy"
+      "englishWord": "to buy",
+      "exampleSentence": "Ich kaufe ein neues Auto."
     },
     {
       "rank": 617,
       "targetWord": "der Bau",
-      "englishWord": "construction"
+      "englishWord": "construction",
+      "exampleSentence": "Der Bau beginnt im Mai."
     },
     {
       "rank": 618,
       "targetWord": "die Organisation",
-      "englishWord": "organisation"
+      "englishWord": "organisation",
+      "exampleSentence": "Die Organisation ist sehr groß."
     },
     {
       "rank": 619,
       "targetWord": "die Fläche",
-      "englishWord": "surface, area"
+      "englishWord": "surface, area",
+      "exampleSentence": "Die Fläche ist sehr groß."
     },
     {
       "rank": 620,
       "targetWord": "der Plan",
-      "englishWord": "plan"
+      "englishWord": "plan",
+      "exampleSentence": "Der Plan ist sehr gut."
     },
     {
       "rank": 621,
       "targetWord": "der Bürger",
-      "englishWord": "citizen"
+      "englishWord": "citizen",
+      "exampleSentence": "Die Bürger sind hier."
     },
     {
       "rank": 622,
       "targetWord": "das Auge",
-      "englishWord": "eye"
+      "englishWord": "eye",
+      "exampleSentence": "Das Auge ist sehr klein."
     },
     {
       "rank": 623,
       "targetWord": "die Anlage",
-      "englishWord": "installation, plant"
+      "englishWord": "installation, plant",
+      "exampleSentence": "Die Anlage ist sehr neu."
     },
     {
       "rank": 624,
       "targetWord": "das Museum",
-      "englishWord": "museum"
+      "englishWord": "museum",
+      "exampleSentence": "Das Museum ist heute offen."
     },
     {
       "rank": 625,
       "targetWord": "die Wirtschaft",
-      "englishWord": "economy"
+      "englishWord": "economy",
+      "exampleSentence": "Die Wirtschaft ist sehr stark."
     },
     {
       "rank": 626,
       "targetWord": "wirtschaftlich",
-      "englishWord": "economic"
+      "englishWord": "economic",
+      "exampleSentence": "Das Problem ist wirtschaftlich."
     },
     {
       "rank": 627,
       "targetWord": "verhindern",
-      "englishWord": "to prevent"
+      "englishWord": "to prevent",
+      "exampleSentence": "Wir wollen das verhindern."
     },
     {
       "rank": 628,
       "targetWord": "schlecht",
-      "englishWord": "bad"
+      "englishWord": "bad",
+      "exampleSentence": "Das Ergebnis ist sehr schlecht."
     },
     {
       "rank": 629,
       "targetWord": "dauern",
-      "englishWord": "to last"
+      "englishWord": "to last",
+      "exampleSentence": "Es wird lange dauern."
     },
     {
       "rank": 630,
       "targetWord": "vorhanden",
-      "englishWord": "available, existing"
+      "englishWord": "available, existing",
+      "exampleSentence": "Das Geld ist vorhanden."
     },
     {
       "rank": 631,
       "targetWord": "erste",
-      "englishWord": "first (ordinal)"
+      "englishWord": "first (ordinal)",
+      "exampleSentence": "Der erste Tag war schön."
     },
     {
       "rank": 632,
       "targetWord": "die Einrichtung",
-      "englishWord": "facility, institution"
+      "englishWord": "facility, institution",
+      "exampleSentence": "Die Einrichtung ist sehr neu."
     },
     {
       "rank": 633,
       "targetWord": "das Gesetz",
-      "englishWord": "law"
+      "englishWord": "law",
+      "exampleSentence": "Das Gesetz ist sehr alt."
     },
     {
       "rank": 634,
       "targetWord": "lesen",
-      "englishWord": "to read"
+      "englishWord": "to read",
+      "exampleSentence": "Ich lese ein Buch."
     },
     {
       "rank": 635,
       "targetWord": "betroffen",
-      "englishWord": "affected"
+      "englishWord": "affected",
+      "exampleSentence": "Wir sind alle betroffen."
     },
     {
       "rank": 636,
       "targetWord": "die Chance",
-      "englishWord": "chance"
+      "englishWord": "chance",
+      "exampleSentence": "Die Chance ist sehr gering."
     },
     {
       "rank": 637,
       "targetWord": "leisten",
-      "englishWord": "to accomplish, to afford"
+      "englishWord": "to accomplish, to afford",
+      "exampleSentence": "Ich kann es mir leisten."
     },
     {
       "rank": 638,
       "targetWord": "französisch",
-      "englishWord": "French"
+      "englishWord": "French",
+      "exampleSentence": "Der Text ist französisch."
     },
     {
       "rank": 639,
       "targetWord": "das Gerät",
-      "englishWord": "device"
+      "englishWord": "device",
+      "exampleSentence": "Das Gerät ist sehr neu."
     },
     {
       "rank": 640,
       "targetWord": "die Hälfte",
-      "englishWord": "half"
+      "englishWord": "half",
+      "exampleSentence": "Die Hälfte ist schon da."
     },
     {
       "rank": 641,
       "targetWord": "früher",
-      "englishWord": "earlier, formerly"
+      "englishWord": "earlier, formerly",
+      "exampleSentence": "Früher war alles anders."
     },
     {
       "rank": 642,
       "targetWord": "verändern",
-      "englishWord": "to change"
+      "englishWord": "to change",
+      "exampleSentence": "Wir verändern das System."
     },
     {
       "rank": 643,
       "targetWord": "links",
-      "englishWord": "left"
+      "englishWord": "left",
+      "exampleSentence": "Das Haus steht links."
     },
     {
       "rank": 644,
       "targetWord": "zuständig",
-      "englishWord": "responsible, in charge"
+      "englishWord": "responsible, in charge",
+      "exampleSentence": "Ich bin dafür zuständig."
     },
     {
       "rank": 645,
       "targetWord": "bauen",
-      "englishWord": "to build"
+      "englishWord": "to build",
+      "exampleSentence": "Wir bauen ein neues Haus."
     },
     {
       "rank": 646,
       "targetWord": "vielleicht",
-      "englishWord": "perhaps"
+      "englishWord": "perhaps",
+      "exampleSentence": "Vielleicht komme ich heute."
     },
     {
       "rank": 647,
       "targetWord": "die Linie",
-      "englishWord": "line"
+      "englishWord": "line",
+      "exampleSentence": "Die Linie ist sehr lang."
     },
     {
       "rank": 648,
       "targetWord": "laden",
-      "englishWord": "to load"
+      "englishWord": "to load",
+      "exampleSentence": "Wir laden das Auto."
     },
     {
       "rank": 649,
       "targetWord": "der Vertrag",
-      "englishWord": "contract"
+      "englishWord": "contract",
+      "exampleSentence": "Der Vertrag ist sehr lang."
     },
     {
       "rank": 650,
       "targetWord": "vollständig",
-      "englishWord": "completely, in full"
+      "englishWord": "completely, in full",
+      "exampleSentence": "Der Text ist vollständig."
     },
     {
       "rank": 651,
       "targetWord": "informieren",
-      "englishWord": "to inform"
+      "englishWord": "to inform",
+      "exampleSentence": "Wir informieren die Bürger."
     },
     {
       "rank": 652,
       "targetWord": "der Zeitpunkt",
-      "englishWord": "point in time"
+      "englishWord": "point in time",
+      "exampleSentence": "Der Zeitpunkt ist sehr gut."
     },
     {
       "rank": 653,
       "targetWord": "der Kontakt",
-      "englishWord": "contact"
+      "englishWord": "contact",
+      "exampleSentence": "Der Kontakt ist sehr wichtig."
     },
     {
       "rank": 654,
       "targetWord": "reichen",
-      "englishWord": "to suffice, to hand"
+      "englishWord": "to suffice, to hand",
+      "exampleSentence": "Das Geld wird reichen."
     },
     {
       "rank": 655,
       "targetWord": "der Sinn",
-      "englishWord": "sense, point"
+      "englishWord": "sense, point",
+      "exampleSentence": "Das hat keinen Sinn."
     },
     {
       "rank": 656,
       "targetWord": "jeweilig",
-      "englishWord": "respective"
+      "englishWord": "respective",
+      "exampleSentence": "Der jeweilige Preis ist hoch."
     },
     {
       "rank": 657,
       "targetWord": "verletzen",
-      "englishWord": "to injure"
+      "englishWord": "to injure",
+      "exampleSentence": "Er will dich verletzen."
     },
     {
       "rank": 658,
       "targetWord": "der Schaden",
-      "englishWord": "damage"
+      "englishWord": "damage",
+      "exampleSentence": "Der Schaden ist sehr groß."
     },
     {
       "rank": 659,
       "targetWord": "reich",
-      "englishWord": "rich"
+      "englishWord": "rich",
+      "exampleSentence": "Der Mann ist sehr reich."
     },
     {
       "rank": 660,
       "targetWord": "erweitern",
-      "englishWord": "to expand"
+      "englishWord": "to expand",
+      "exampleSentence": "Wir erweitern das Gebäude."
     },
     {
       "rank": 661,
       "targetWord": "eng",
-      "englishWord": "narrow, close"
+      "englishWord": "narrow, close",
+      "exampleSentence": "Die Straße ist sehr eng."
     },
     {
       "rank": 662,
       "targetWord": "richten",
-      "englishWord": "to direct"
+      "englishWord": "to direct",
+      "exampleSentence": "Wir richten alles für dich."
     },
     {
       "rank": 663,
       "targetWord": "der Patient",
-      "englishWord": "patient"
+      "englishWord": "patient",
+      "exampleSentence": "Der Patient ist sehr alt."
     },
     {
       "rank": 664,
       "targetWord": "enden",
-      "englishWord": "to end"
+      "englishWord": "to end",
+      "exampleSentence": "Das Spiel wird bald enden."
     },
     {
       "rank": 665,
       "targetWord": "das Verfahren",
-      "englishWord": "procedure"
+      "englishWord": "procedure",
+      "exampleSentence": "Das Verfahren ist sehr lang."
     },
     {
       "rank": 666,
       "targetWord": "national",
-      "englishWord": "national"
+      "englishWord": "national",
+      "exampleSentence": "Das Gesetz ist national."
     },
     {
       "rank": 667,
       "targetWord": "das Bad",
-      "englishWord": "bath, bathroom"
+      "englishWord": "bath, bathroom",
+      "exampleSentence": "Das Bad ist sehr klein."
     },
     {
       "rank": 668,
       "targetWord": "der Teilnehmer",
-      "englishWord": "participant"
+      "englishWord": "participant",
+      "exampleSentence": "Die Teilnehmer sind schon da."
     },
     {
       "rank": 669,
       "targetWord": "der Sieg",
-      "englishWord": "victory"
+      "englishWord": "victory",
+      "exampleSentence": "Der Sieg war sehr wichtig."
     },
     {
       "rank": 670,
       "targetWord": "die Ausstellung",
-      "englishWord": "exhibition"
+      "englishWord": "exhibition",
+      "exampleSentence": "Die Ausstellung ist sehr schön."
     },
     {
       "rank": 671,
       "targetWord": "lösen",
-      "englishWord": "to solve"
+      "englishWord": "to solve",
+      "exampleSentence": "Wir lösen das Problem."
     },
     {
       "rank": 672,
       "targetWord": "der Bericht",
-      "englishWord": "report"
+      "englishWord": "report",
+      "exampleSentence": "Der Bericht ist sehr lang."
     },
     {
       "rank": 673,
       "targetWord": "erinnern",
-      "englishWord": "to remind; to remember"
+      "englishWord": "to remind; to remember",
+      "exampleSentence": "Ich erinnere mich daran."
     },
     {
       "rank": 674,
       "targetWord": "schützen",
-      "englishWord": "to protect"
+      "englishWord": "to protect",
+      "exampleSentence": "Wir schützen die Kinder."
     },
     {
       "rank": 675,
       "targetWord": "bitten",
-      "englishWord": "to ask for, to request"
+      "englishWord": "to ask for, to request",
+      "exampleSentence": "Ich bitte um Hilfe."
     },
     {
       "rank": 676,
       "targetWord": "bislang",
-      "englishWord": "up to now"
+      "englishWord": "up to now",
+      "exampleSentence": "Bislang war alles gut."
     },
     {
       "rank": 677,
       "targetWord": "der Zusammenhang",
-      "englishWord": "context, correlation"
+      "englishWord": "context, correlation",
+      "exampleSentence": "Der Zusammenhang ist sehr klar."
     },
     {
       "rank": 678,
       "targetWord": "trotzdem",
-      "englishWord": "even so, despite that"
+      "englishWord": "even so, despite that",
+      "exampleSentence": "Trotzdem komme ich heute."
     },
     {
       "rank": 679,
       "targetWord": "die Sicherheit",
-      "englishWord": "safety, security"
+      "englishWord": "safety, security",
+      "exampleSentence": "Die Sicherheit ist sehr wichtig."
     },
     {
       "rank": 680,
       "targetWord": "der Dienst",
-      "englishWord": "service"
+      "englishWord": "service",
+      "exampleSentence": "Der Dienst beginnt sehr früh."
     },
     {
       "rank": 681,
       "targetWord": "ändern",
-      "englishWord": "to alter"
+      "englishWord": "to alter",
+      "exampleSentence": "Wir ändern den Plan."
     },
     {
       "rank": 682,
       "targetWord": "das Gericht",
-      "englishWord": "court (of law)"
+      "englishWord": "court (of law)",
+      "exampleSentence": "Wir gehen zum Gericht."
     },
     {
       "rank": 683,
       "targetWord": "der Artikel",
-      "englishWord": "article"
+      "englishWord": "article",
+      "exampleSentence": "Der Artikel ist sehr lang."
     },
     {
       "rank": 684,
       "targetWord": "das Essen",
-      "englishWord": "food, meal"
+      "englishWord": "food, meal",
+      "exampleSentence": "Das Essen ist sehr gut."
     },
     {
       "rank": 685,
       "targetWord": "wechseln",
-      "englishWord": "to switch"
+      "englishWord": "to switch",
+      "exampleSentence": "Wir wollen das Auto wechseln."
     },
     {
       "rank": 686,
       "targetWord": "sitzen",
-      "englishWord": "to sit"
+      "englishWord": "to sit",
+      "exampleSentence": "Wir sitzen am Tisch."
     },
     {
       "rank": 687,
       "targetWord": "leiten",
-      "englishWord": "to manage, to head"
+      "englishWord": "to manage, to head",
+      "exampleSentence": "Er soll die Firma leiten."
     },
     {
       "rank": 688,
       "targetWord": "der Wald",
-      "englishWord": "forest"
+      "englishWord": "forest",
+      "exampleSentence": "Der Wald ist sehr groß."
     },
     {
       "rank": 689,
       "targetWord": "organisieren",
-      "englishWord": "to organise"
+      "englishWord": "to organise",
+      "exampleSentence": "Wir organisieren die Veranstaltung."
     },
     {
       "rank": 690,
       "targetWord": "der Kopf",
-      "englishWord": "head"
+      "englishWord": "head",
+      "exampleSentence": "Der Kopf ist sehr groß."
     },
     {
       "rank": 691,
       "targetWord": "der Boden",
-      "englishWord": "ground, soil"
+      "englishWord": "ground, soil",
+      "exampleSentence": "Das Buch liegt am Boden."
     },
     {
       "rank": 692,
       "targetWord": "die Bank",
-      "englishWord": "bank (financial institution)"
+      "englishWord": "bank (financial institution)",
+      "exampleSentence": "Die Bank ist heute offen."
     },
     {
       "rank": 693,
       "targetWord": "schwierig",
-      "englishWord": "difficult, tricky"
+      "englishWord": "difficult, tricky",
+      "exampleSentence": "Die Aufgabe ist sehr schwierig."
     },
     {
       "rank": 694,
       "targetWord": "der Inhalt",
-      "englishWord": "content"
+      "englishWord": "content",
+      "exampleSentence": "Der Inhalt ist sehr wichtig."
     },
     {
       "rank": 695,
       "targetWord": "die Kunst",
-      "englishWord": "art"
+      "englishWord": "art",
+      "exampleSentence": "Die Kunst ist sehr schön."
     },
     {
       "rank": 696,
       "targetWord": "das Zentrum",
-      "englishWord": "centre"
+      "englishWord": "centre",
+      "exampleSentence": "Das Zentrum ist sehr groß."
     },
     {
       "rank": 697,
       "targetWord": "der Anteil",
-      "englishWord": "share, proportion"
+      "englishWord": "share, proportion",
+      "exampleSentence": "Der Anteil ist sehr gering."
     },
     {
       "rank": 698,
       "targetWord": "der Abend",
-      "englishWord": "evening"
+      "englishWord": "evening",
+      "exampleSentence": "Der Abend war sehr schön."
     },
     {
       "rank": 699,
       "targetWord": "die Milliarde",
-      "englishWord": "billion"
+      "englishWord": "billion",
+      "exampleSentence": "Die Kosten sind zwei Milliarden."
     },
     {
       "rank": 700,
       "targetWord": "der Arzt",
-      "englishWord": "doctor"
+      "englishWord": "doctor",
+      "exampleSentence": "Der Arzt kommt sehr bald."
     },
     {
       "rank": 701,
       "targetWord": "allgemein",
-      "englishWord": "general"
+      "englishWord": "general",
+      "exampleSentence": "Das Problem ist allgemein bekannt."
     },
     {
       "rank": 702,
       "targetWord": "die Reise",
-      "englishWord": "journey"
+      "englishWord": "journey",
+      "exampleSentence": "Die Reise war sehr lang."
     },
     {
       "rank": 703,
       "targetWord": "melden",
-      "englishWord": "to notify"
+      "englishWord": "to notify",
+      "exampleSentence": "Wir melden das Ergebnis."
     },
     {
       "rank": 704,
       "targetWord": "beenden",
-      "englishWord": "to finish"
+      "englishWord": "to finish",
+      "exampleSentence": "Wir beenden die Arbeit heute."
     },
     {
       "rank": 705,
       "targetWord": "die Runde",
-      "englishWord": "round (of a contest)"
+      "englishWord": "round (of a contest)",
+      "exampleSentence": "Die erste Runde beginnt jetzt."
     },
     {
       "rank": 706,
       "targetWord": "dein",
-      "englishWord": "your (singular)"
+      "englishWord": "your (singular)",
+      "exampleSentence": "Ist das dein Buch?"
     },
     {
       "rank": 707,
       "targetWord": "der Bürgermeister",
-      "englishWord": "mayor"
+      "englishWord": "mayor",
+      "exampleSentence": "Der Bürgermeister kommt heute."
     },
     {
       "rank": 708,
       "targetWord": "vertreten",
-      "englishWord": "to represent"
+      "englishWord": "to represent",
+      "exampleSentence": "Wir vertreten die Bürger."
     },
     {
       "rank": 709,
       "targetWord": "die Serie",
-      "englishWord": "series (of episodes)"
+      "englishWord": "series (of episodes)",
+      "exampleSentence": "Die Serie ist sehr gut."
     },
     {
       "rank": 710,
       "targetWord": "darstellen",
-      "englishWord": "to depict, to portray"
+      "englishWord": "to depict, to portray",
+      "exampleSentence": "Das Bild soll etwas darstellen."
     },
     {
       "rank": 711,
       "targetWord": "lokal",
-      "englishWord": "local"
+      "englishWord": "local",
+      "exampleSentence": "Der Markt ist lokal."
     },
     {
       "rank": 712,
       "targetWord": "der Kampf",
-      "englishWord": "fight, struggle"
+      "englishWord": "fight, struggle",
+      "exampleSentence": "Der Kampf war sehr schwer."
     },
     {
       "rank": 713,
       "targetWord": "vorstellen",
-      "englishWord": "to introduce, to imagine"
+      "englishWord": "to introduce, to imagine",
+      "exampleSentence": "Ich will mich vorstellen."
     },
     {
       "rank": 714,
       "targetWord": "der Besuch",
-      "englishWord": "visit"
+      "englishWord": "visit",
+      "exampleSentence": "Der Besuch war sehr schön."
     },
     {
       "rank": 715,
       "targetWord": "der Hinweis",
-      "englishWord": "hint, clue"
+      "englishWord": "hint, clue",
+      "exampleSentence": "Der Hinweis war sehr wichtig."
     },
     {
       "rank": 716,
       "targetWord": "die Untersuchung",
-      "englishWord": "examination, investigation"
+      "englishWord": "examination, investigation",
+      "exampleSentence": "Die Untersuchung beginnt heute."
     },
     {
       "rank": 717,
       "targetWord": "das Krankenhaus",
-      "englishWord": "hospital"
+      "englishWord": "hospital",
+      "exampleSentence": "Das Krankenhaus ist sehr groß."
     },
     {
       "rank": 718,
       "targetWord": "unabhängig",
-      "englishWord": "independent"
+      "englishWord": "independent",
+      "exampleSentence": "Das Gericht ist unabhängig."
     },
     {
       "rank": 719,
       "targetWord": "der Lauf",
-      "englishWord": "course, run"
+      "englishWord": "course, run",
+      "exampleSentence": "Der Lauf war sehr lang."
     },
     {
       "rank": 720,
       "targetWord": "wesentlich",
-      "englishWord": "essential"
+      "englishWord": "essential",
+      "exampleSentence": "Der Punkt ist wesentlich."
     },
     {
       "rank": 721,
       "targetWord": "hingegen",
-      "englishWord": "on the other hand"
+      "englishWord": "on the other hand",
+      "exampleSentence": "Er kommt, ich hingegen bleibe."
     },
     {
       "rank": 722,
       "targetWord": "geboren",
-      "englishWord": "born"
+      "englishWord": "born",
+      "exampleSentence": "Mein Sohn ist hier geboren."
     },
     {
       "rank": 723,
       "targetWord": "begleiten",
-      "englishWord": "to accompany"
+      "englishWord": "to accompany",
+      "exampleSentence": "Ich begleite dich nach Hause."
     },
     {
       "rank": 724,
       "targetWord": "das Hotel",
-      "englishWord": "hotel"
+      "englishWord": "hotel",
+      "exampleSentence": "Das Hotel ist sehr groß."
     },
     {
       "rank": 725,
       "targetWord": "die Strecke",
-      "englishWord": "route, distance"
+      "englishWord": "route, distance",
+      "exampleSentence": "Die Strecke ist sehr lang."
     },
     {
       "rank": 726,
       "targetWord": "die Kultur",
-      "englishWord": "culture"
+      "englishWord": "culture",
+      "exampleSentence": "Die Kultur ist sehr alt."
     },
     {
       "rank": 727,
       "targetWord": "einstellen",
-      "englishWord": "to hire"
+      "englishWord": "to hire",
+      "exampleSentence": "Wir wollen dich einstellen."
     },
     {
       "rank": 728,
       "targetWord": "kommend",
-      "englishWord": "coming, next"
+      "englishWord": "coming, next",
+      "exampleSentence": "Die kommende Woche ist frei."
     },
     {
       "rank": 729,
       "targetWord": "überzeugen",
-      "englishWord": "to convince"
+      "englishWord": "to convince",
+      "exampleSentence": "Du kannst mich überzeugen."
     },
     {
       "rank": 730,
       "targetWord": "täglich",
-      "englishWord": "daily"
+      "englishWord": "daily",
+      "exampleSentence": "Ich arbeite täglich hier."
     },
     {
       "rank": 731,
       "targetWord": "die Gefahr",
-      "englishWord": "danger"
+      "englishWord": "danger",
+      "exampleSentence": "Die Gefahr ist sehr groß."
     },
     {
       "rank": 732,
       "targetWord": "das Konzept",
-      "englishWord": "concept"
+      "englishWord": "concept",
+      "exampleSentence": "Das Konzept ist sehr gut."
     },
     {
       "rank": 733,
       "targetWord": "warten",
-      "englishWord": "to wait"
+      "englishWord": "to wait",
+      "exampleSentence": "Ich warte auf dich."
     },
     {
       "rank": 734,
       "targetWord": "das Mittel",
-      "englishWord": "means"
+      "englishWord": "means",
+      "exampleSentence": "Das Mittel ist sehr gut."
     },
     {
       "rank": 735,
       "targetWord": "russisch",
-      "englishWord": "Russian"
+      "englishWord": "Russian",
+      "exampleSentence": "Der Text ist russisch."
     },
     {
       "rank": 736,
       "targetWord": "bestehend",
-      "englishWord": "existing"
+      "englishWord": "existing",
+      "exampleSentence": "Das bestehende Haus ist alt."
     },
     {
       "rank": 737,
       "targetWord": "heraus",
-      "englishWord": "out"
+      "englishWord": "out",
+      "exampleSentence": "Komm bitte heraus."
     },
     {
       "rank": 738,
       "targetWord": "die Behörde",
-      "englishWord": "authority (agency)"
+      "englishWord": "authority (agency)",
+      "exampleSentence": "Die Behörde ist heute offen."
     },
     {
       "rank": 739,
       "targetWord": "holen",
-      "englishWord": "to fetch"
+      "englishWord": "to fetch",
+      "exampleSentence": "Ich hole das Buch."
     },
     {
       "rank": 740,
       "targetWord": "überhaupt",
-      "englishWord": "in general, anyway"
+      "englishWord": "in general, anyway",
+      "exampleSentence": "Ich habe überhaupt keine Zeit."
     },
     {
       "rank": 741,
       "targetWord": "der Schutz",
-      "englishWord": "protection"
+      "englishWord": "protection",
+      "exampleSentence": "Der Schutz ist sehr wichtig."
     },
     {
       "rank": 742,
       "targetWord": "weisen",
-      "englishWord": "to point"
+      "englishWord": "to point",
+      "exampleSentence": "Wir weisen den Weg."
     },
     {
       "rank": 743,
       "targetWord": "der Partner",
-      "englishWord": "partner"
+      "englishWord": "partner",
+      "exampleSentence": "Mein Partner arbeitet hier."
     },
     {
       "rank": 744,
       "targetWord": "wissenschaftlich",
-      "englishWord": "scientific"
+      "englishWord": "scientific",
+      "exampleSentence": "Die Studie ist wissenschaftlich."
     },
     {
       "rank": 745,
       "targetWord": "der Einwohner",
-      "englishWord": "inhabitant"
+      "englishWord": "inhabitant",
+      "exampleSentence": "Die Einwohner sind sehr jung."
     },
     {
       "rank": 746,
       "targetWord": "errichten",
-      "englishWord": "to erect"
+      "englishWord": "to erect",
+      "exampleSentence": "Wir errichten ein neues Gebäude."
     },
     {
       "rank": 747,
       "targetWord": "das Video",
-      "englishWord": "video"
+      "englishWord": "video",
+      "exampleSentence": "Das Video ist sehr kurz."
     },
     {
       "rank": 748,
       "targetWord": "englisch",
-      "englishWord": "English"
+      "englishWord": "English",
+      "exampleSentence": "Der Text ist englisch."
     },
     {
       "rank": 749,
       "targetWord": "indem",
-      "englishWord": "by (means of)"
+      "englishWord": "by (means of)",
+      "exampleSentence": "Wir lernen, indem wir lesen."
     },
     {
       "rank": 750,
       "targetWord": "weiß",
-      "englishWord": "white"
+      "englishWord": "white",
+      "exampleSentence": "Mein Auto ist weiß."
     },
     {
       "rank": 751,
       "targetWord": "die Beziehung",
-      "englishWord": "relationship"
+      "englishWord": "relationship",
+      "exampleSentence": "Die Beziehung ist sehr gut."
     },
     {
       "rank": 752,
       "targetWord": "belegen",
-      "englishWord": "to occupy, to prove"
+      "englishWord": "to occupy, to prove",
+      "exampleSentence": "Wir belegen den ersten Platz."
     },
     {
       "rank": 753,
       "targetWord": "gerne",
-      "englishWord": "gladly"
+      "englishWord": "gladly",
+      "exampleSentence": "Ich komme sehr gerne."
     },
     {
       "rank": 754,
       "targetWord": "der Abschluss",
-      "englishWord": "conclusion, degree"
+      "englishWord": "conclusion, degree",
+      "exampleSentence": "Der Abschluss war sehr gut."
     },
     {
       "rank": 755,
       "targetWord": "das Dorf",
-      "englishWord": "village"
+      "englishWord": "village",
+      "exampleSentence": "Das Dorf ist sehr klein."
     },
     {
       "rank": 756,
       "targetWord": "die Führung",
-      "englishWord": "leadership, lead"
+      "englishWord": "leadership, lead",
+      "exampleSentence": "Die Führung ist sehr gut."
     },
     {
       "rank": 757,
       "targetWord": "äußern",
-      "englishWord": "to express"
+      "englishWord": "to express",
+      "exampleSentence": "Ich will mich äußern."
     },
     {
       "rank": 758,
       "targetWord": "die Produktion",
-      "englishWord": "production"
+      "englishWord": "production",
+      "exampleSentence": "Die Produktion beginnt heute."
     },
     {
       "rank": 759,
       "targetWord": "der Hintergrund",
-      "englishWord": "background"
+      "englishWord": "background",
+      "exampleSentence": "Der Hintergrund ist sehr wichtig."
     },
     {
       "rank": 760,
       "targetWord": "der Start",
-      "englishWord": "start, launch"
+      "englishWord": "start, launch",
+      "exampleSentence": "Der Start war sehr gut."
     },
     {
       "rank": 761,
       "targetWord": "die Energie",
-      "englishWord": "energy"
+      "englishWord": "energy",
+      "exampleSentence": "Wir brauchen mehr Energie."
     },
     {
       "rank": 762,
       "targetWord": "das Institut",
-      "englishWord": "institute"
+      "englishWord": "institute",
+      "exampleSentence": "Das Institut ist sehr bekannt."
     },
     {
       "rank": 763,
       "targetWord": "die Position",
-      "englishWord": "position"
+      "englishWord": "position",
+      "exampleSentence": "Die Position ist sehr gut."
     },
     {
       "rank": 764,
       "targetWord": "konkret",
-      "englishWord": "concrete, specific"
+      "englishWord": "concrete, specific",
+      "exampleSentence": "Der Plan ist sehr konkret."
     },
     {
       "rank": 765,
       "targetWord": "abschließen",
-      "englishWord": "to complete, to conclude"
+      "englishWord": "to complete, to conclude",
+      "exampleSentence": "Wir wollen das Projekt abschließen."
     },
     {
       "rank": 766,
       "targetWord": "grün",
-      "englishWord": "green"
+      "englishWord": "green",
+      "exampleSentence": "Mein Auto ist grün."
     },
     {
       "rank": 767,
       "targetWord": "zumindest",
-      "englishWord": "at any rate"
+      "englishWord": "at any rate",
+      "exampleSentence": "Ich komme zumindest heute."
     },
     {
       "rank": 768,
       "targetWord": "interessieren",
-      "englishWord": "to interest"
+      "englishWord": "to interest",
+      "exampleSentence": "Das Thema soll dich interessieren."
     },
     {
       "rank": 769,
       "targetWord": "die Grundlage",
-      "englishWord": "basis, foundation"
+      "englishWord": "basis, foundation",
+      "exampleSentence": "Die Grundlage ist sehr gut."
     },
     {
       "rank": 770,
       "targetWord": "die Insel",
-      "englishWord": "island"
+      "englishWord": "island",
+      "exampleSentence": "Die Insel ist sehr klein."
     },
     {
       "rank": 771,
       "targetWord": "die Menge",
-      "englishWord": "quantity, crowd"
+      "englishWord": "quantity, crowd",
+      "exampleSentence": "Die Menge ist sehr groß."
     },
     {
       "rank": 772,
       "targetWord": "der Angriff",
-      "englishWord": "attack"
+      "englishWord": "attack",
+      "exampleSentence": "Der Angriff war sehr stark."
     },
     {
       "rank": 773,
       "targetWord": "produzieren",
-      "englishWord": "to produce"
+      "englishWord": "to produce",
+      "exampleSentence": "Wir produzieren das Produkt."
     },
     {
       "rank": 774,
       "targetWord": "der Sonntag",
-      "englishWord": "Sunday"
+      "englishWord": "Sunday",
+      "exampleSentence": "Am Sonntag arbeite ich nicht."
     },
     {
       "rank": 775,
       "targetWord": "das Foto",
-      "englishWord": "photo"
+      "englishWord": "photo",
+      "exampleSentence": "Das Foto ist sehr schön."
     },
     {
       "rank": 776,
       "targetWord": "die Zeitung",
-      "englishWord": "newspaper"
+      "englishWord": "newspaper",
+      "exampleSentence": "Die Zeitung ist sehr alt."
     },
     {
       "rank": 777,
       "targetWord": "niedrig",
-      "englishWord": "low"
+      "englishWord": "low",
+      "exampleSentence": "Der Preis ist sehr niedrig."
     },
     {
       "rank": 778,
       "targetWord": "fühlen",
-      "englishWord": "to feel"
+      "englishWord": "to feel",
+      "exampleSentence": "Ich fühle mich gut."
     },
     {
       "rank": 779,
       "targetWord": "der Körper",
-      "englishWord": "body"
+      "englishWord": "body",
+      "exampleSentence": "Der Körper ist sehr stark."
     },
     {
       "rank": 780,
       "targetWord": "neun",
-      "englishWord": "nine"
+      "englishWord": "nine",
+      "exampleSentence": "Ich komme um neun."
     },
     {
       "rank": 781,
       "targetWord": "die Leute",
-      "englishWord": "people"
+      "englishWord": "people",
+      "exampleSentence": "Die Leute sind schon da."
     },
     {
       "rank": 782,
       "targetWord": "die Anzahl",
-      "englishWord": "number (count of items)"
+      "englishWord": "number (count of items)",
+      "exampleSentence": "Die Anzahl ist sehr hoch."
     },
     {
       "rank": 783,
       "targetWord": "das Mädchen",
-      "englishWord": "girl"
+      "englishWord": "girl",
+      "exampleSentence": "Das Mädchen ist sehr jung."
     },
     {
       "rank": 784,
       "targetWord": "grundsätzlich",
-      "englishWord": "in principle"
+      "englishWord": "in principle",
+      "exampleSentence": "Das ist grundsätzlich richtig."
     },
     {
       "rank": 785,
       "targetWord": "die Karte",
-      "englishWord": "card, map"
+      "englishWord": "card, map",
+      "exampleSentence": "Die Karte ist sehr alt."
     },
     {
       "rank": 786,
       "targetWord": "sammeln",
-      "englishWord": "to collect"
+      "englishWord": "to collect",
+      "exampleSentence": "Wir sammeln Geld für dich."
     },
     {
       "rank": 787,
       "targetWord": "die Ausgabe",
-      "englishWord": "edition, issue"
+      "englishWord": "edition, issue",
+      "exampleSentence": "Die Ausgabe ist sehr neu."
     },
     {
       "rank": 788,
       "targetWord": "künftig",
-      "englishWord": "future (upcoming)"
+      "englishWord": "future (upcoming)",
+      "exampleSentence": "Künftig arbeite ich hier."
     },
     {
       "rank": 789,
       "targetWord": "der Druck",
-      "englishWord": "pressure"
+      "englishWord": "pressure",
+      "exampleSentence": "Der Druck ist sehr groß."
     },
     {
       "rank": 790,
       "targetWord": "die Version",
-      "englishWord": "version"
+      "englishWord": "version",
+      "exampleSentence": "Die Version ist sehr neu."
     },
     {
       "rank": 791,
       "targetWord": "wohnen",
-      "englishWord": "to live, to reside"
+      "englishWord": "to live, to reside",
+      "exampleSentence": "Ich wohne in der Stadt."
     },
     {
       "rank": 792,
       "targetWord": "sodass",
-      "englishWord": "with the result that"
+      "englishWord": "with the result that",
+      "exampleSentence": "Er kam, sodass wir gingen."
     },
     {
       "rank": 793,
       "targetWord": "der Anspruch",
-      "englishWord": "claim, entitlement"
+      "englishWord": "claim, entitlement",
+      "exampleSentence": "Der Anspruch ist sehr hoch."
     },
     {
       "rank": 794,
       "targetWord": "die Nutzung",
-      "englishWord": "usage"
+      "englishWord": "usage",
+      "exampleSentence": "Die Nutzung ist sehr einfach."
     },
     {
       "rank": 795,
       "targetWord": "der Baum",
-      "englishWord": "tree"
+      "englishWord": "tree",
+      "exampleSentence": "Der Baum ist sehr groß."
     },
     {
       "rank": 796,
       "targetWord": "bewegen",
-      "englishWord": "to move"
+      "englishWord": "to move",
+      "exampleSentence": "Wir bewegen den Tisch."
     },
     {
       "rank": 797,
       "targetWord": "erfüllen",
-      "englishWord": "to fulfil"
+      "englishWord": "to fulfil",
+      "exampleSentence": "Wir erfüllen die Aufgabe."
     },
     {
       "rank": 798,
       "targetWord": "erlauben",
-      "englishWord": "to allow"
+      "englishWord": "to allow",
+      "exampleSentence": "Wir erlauben es dir."
     },
     {
       "rank": 799,
       "targetWord": "die Natur",
-      "englishWord": "nature"
+      "englishWord": "nature",
+      "exampleSentence": "Die Natur ist sehr schön."
     },
     {
       "rank": 800,
       "targetWord": "rufen",
-      "englishWord": "to call"
+      "englishWord": "to call",
+      "exampleSentence": "Ich rufe den Arzt."
     },
     {
       "rank": 801,
       "targetWord": "völlig",
-      "englishWord": "utterly"
+      "englishWord": "utterly",
+      "exampleSentence": "Das ist völlig richtig."
     },
     {
       "rank": 802,
       "targetWord": "das Material",
-      "englishWord": "material"
+      "englishWord": "material",
+      "exampleSentence": "Das Material ist sehr gut."
     },
     {
       "rank": 803,
       "targetWord": "der Künstler",
-      "englishWord": "artist"
+      "englishWord": "artist",
+      "exampleSentence": "Der Künstler ist sehr bekannt."
     },
     {
       "rank": 804,
       "targetWord": "bereit",
-      "englishWord": "ready"
+      "englishWord": "ready",
+      "exampleSentence": "Ich bin bereit."
     },
     {
       "rank": 805,
       "targetWord": "bisherig",
-      "englishWord": "previous"
+      "englishWord": "previous",
+      "exampleSentence": "Der bisherige Plan war gut."
     },
     {
       "rank": 806,
       "targetWord": "das Opfer",
-      "englishWord": "victim"
+      "englishWord": "victim",
+      "exampleSentence": "Das Opfer ist sehr jung."
     },
     {
       "rank": 807,
       "targetWord": "die Sache",
-      "englishWord": "thing, matter"
+      "englishWord": "thing, matter",
+      "exampleSentence": "Die Sache ist sehr wichtig."
     },
     {
       "rank": 808,
       "targetWord": "die Kritik",
-      "englishWord": "criticism"
+      "englishWord": "criticism",
+      "exampleSentence": "Die Kritik war sehr stark."
     },
     {
       "rank": 809,
       "targetWord": "der Begriff",
-      "englishWord": "term, notion"
+      "englishWord": "term, notion",
+      "exampleSentence": "Der Begriff ist sehr neu."
     },
     {
       "rank": 810,
       "targetWord": "die Bildung",
-      "englishWord": "education"
+      "englishWord": "education",
+      "exampleSentence": "Die Bildung ist sehr wichtig."
     },
     {
       "rank": 811,
       "targetWord": "klassisch",
-      "englishWord": "classical"
+      "englishWord": "classical",
+      "exampleSentence": "Die Musik ist klassisch."
     },
     {
       "rank": 812,
       "targetWord": "der Hersteller",
-      "englishWord": "manufacturer"
+      "englishWord": "manufacturer",
+      "exampleSentence": "Der Hersteller ist sehr bekannt."
     },
     {
       "rank": 813,
       "targetWord": "zugleich",
-      "englishWord": "at once, simultaneously"
+      "englishWord": "at once, simultaneously",
+      "exampleSentence": "Er arbeitet und lernt zugleich."
     },
     {
       "rank": 814,
       "targetWord": "ersetzen",
-      "englishWord": "to replace"
+      "englishWord": "to replace",
+      "exampleSentence": "Wir ersetzen das Gerät."
     },
     {
       "rank": 815,
       "targetWord": "praktisch",
-      "englishWord": "practical"
+      "englishWord": "practical",
+      "exampleSentence": "Das Gerät ist sehr praktisch."
     },
     {
       "rank": 816,
       "targetWord": "erheblich",
-      "englishWord": "considerable"
+      "englishWord": "considerable",
+      "exampleSentence": "Die Kosten steigen erheblich."
     },
     {
       "rank": 817,
       "targetWord": "die Suche",
-      "englishWord": "search"
+      "englishWord": "search",
+      "exampleSentence": "Die Suche war sehr lang."
     },
     {
       "rank": 818,
       "targetWord": "günstig",
-      "englishWord": "favourable, cheap"
+      "englishWord": "favourable, cheap",
+      "exampleSentence": "Der Preis ist sehr günstig."
     },
     {
       "rank": 819,
       "targetWord": "traditionell",
-      "englishWord": "traditional"
+      "englishWord": "traditional",
+      "exampleSentence": "Das Essen ist traditionell."
     },
     {
       "rank": 820,
       "targetWord": "der Auftrag",
-      "englishWord": "order, assignment"
+      "englishWord": "order, assignment",
+      "exampleSentence": "Der Auftrag ist sehr groß."
     },
     {
       "rank": 821,
       "targetWord": "die Änderung",
-      "englishWord": "change, modification"
+      "englishWord": "change, modification",
+      "exampleSentence": "Die Änderung ist sehr klein."
     },
     {
       "rank": 822,
       "targetWord": "die Aktion",
-      "englishWord": "campaign, action"
+      "englishWord": "campaign, action",
+      "exampleSentence": "Die Aktion war sehr gut."
     },
     {
       "rank": 823,
       "targetWord": "regional",
-      "englishWord": "regional"
+      "englishWord": "regional",
+      "exampleSentence": "Das Produkt ist regional."
     },
     {
       "rank": 824,
       "targetWord": "der Einfluss",
-      "englishWord": "influence"
+      "englishWord": "influence",
+      "exampleSentence": "Der Einfluss ist sehr groß."
     },
     {
       "rank": 825,
       "targetWord": "zwölf",
-      "englishWord": "twelve"
+      "englishWord": "twelve",
+      "exampleSentence": "Ich komme um zwölf."
     },
     {
       "rank": 826,
       "targetWord": "der Trainer",
-      "englishWord": "coach"
+      "englishWord": "coach",
+      "exampleSentence": "Der Trainer ist sehr gut."
     },
     {
       "rank": 827,
       "targetWord": "der Jugendliche",
-      "englishWord": "teenager"
+      "englishWord": "teenager",
+      "exampleSentence": "Der Jugendliche ist hier."
     },
     {
       "rank": 828,
       "targetWord": "das Verhalten",
-      "englishWord": "behaviour"
+      "englishWord": "behaviour",
+      "exampleSentence": "Das Verhalten ist sehr schlecht."
     },
     {
       "rank": 829,
       "targetWord": "der Bund",
-      "englishWord": "federation"
+      "englishWord": "federation",
+      "exampleSentence": "Der Bund gibt mehr Geld."
     },
     {
       "rank": 830,
       "targetWord": "zunehmen",
-      "englishWord": "to grow in number"
+      "englishWord": "to grow in number",
+      "exampleSentence": "Die Zahl wird zunehmen."
     },
     {
       "rank": 831,
       "targetWord": "verfolgen",
-      "englishWord": "to pursue"
+      "englishWord": "to pursue",
+      "exampleSentence": "Wir verfolgen das Ziel."
     },
     {
       "rank": 832,
       "targetWord": "der Sitz",
-      "englishWord": "seat"
+      "englishWord": "seat",
+      "exampleSentence": "Der Sitz ist sehr klein."
     },
     {
       "rank": 833,
       "targetWord": "die Sicht",
-      "englishWord": "view, perspective"
+      "englishWord": "view, perspective",
+      "exampleSentence": "Die Sicht ist sehr gut."
     },
     {
       "rank": 834,
       "targetWord": "vierte",
-      "englishWord": "fourth"
+      "englishWord": "fourth",
+      "exampleSentence": "Der vierte Tag war schön."
     },
     {
       "rank": 835,
       "targetWord": "zahlen",
-      "englishWord": "to pay"
+      "englishWord": "to pay",
+      "exampleSentence": "Ich zahle das Essen."
     },
     {
       "rank": 836,
       "targetWord": "daraufhin",
-      "englishWord": "thereupon"
+      "englishWord": "thereupon",
+      "exampleSentence": "Daraufhin kam er zurück."
     },
     {
       "rank": 837,
       "targetWord": "individuell",
-      "englishWord": "personalised, individual"
+      "englishWord": "personalised, individual",
+      "exampleSentence": "Die Lösung ist individuell."
     },
     {
       "rank": 838,
       "targetWord": "einzig",
-      "englishWord": "sole, only"
+      "englishWord": "sole, only",
+      "exampleSentence": "Das ist mein einziges Buch."
     },
     {
       "rank": 839,
       "targetWord": "erforderlich",
-      "englishWord": "required"
+      "englishWord": "required",
+      "exampleSentence": "Das Gerät ist erforderlich."
     },
     {
       "rank": 840,
       "targetWord": "passieren",
-      "englishWord": "to happen"
+      "englishWord": "to happen",
+      "exampleSentence": "Das kann immer passieren."
     },
     {
       "rank": 841,
       "targetWord": "falsch",
-      "englishWord": "wrong, false"
+      "englishWord": "wrong, false",
+      "exampleSentence": "Die Zahl ist falsch."
     },
     {
       "rank": 842,
       "targetWord": "manchmal",
-      "englishWord": "sometimes"
+      "englishWord": "sometimes",
+      "exampleSentence": "Manchmal komme ich später."
     },
     {
       "rank": 843,
       "targetWord": "das Geschäft",
-      "englishWord": "shop, business"
+      "englishWord": "shop, business",
+      "exampleSentence": "Das Geschäft ist heute offen."
     },
     {
       "rank": 844,
       "targetWord": "ausschließlich",
-      "englishWord": "exclusively"
+      "englishWord": "exclusively",
+      "exampleSentence": "Ich arbeite ausschließlich hier."
     },
     {
       "rank": 845,
       "targetWord": "der Antrag",
-      "englishWord": "application, motion"
+      "englishWord": "application, motion",
+      "exampleSentence": "Der Antrag ist sehr lang."
     },
     {
       "rank": 846,
       "targetWord": "fördern",
-      "englishWord": "to promote, to fund"
+      "englishWord": "to promote, to fund",
+      "exampleSentence": "Wir fördern die Bildung."
     },
     {
       "rank": 847,
       "targetWord": "hinzu",
-      "englishWord": "additionally, on top"
+      "englishWord": "additionally, on top",
+      "exampleSentence": "Es kommt noch etwas hinzu."
     },
     {
       "rank": 848,
       "targetWord": "der Vorteil",
-      "englishWord": "advantage"
+      "englishWord": "advantage",
+      "exampleSentence": "Der Vorteil ist sehr groß."
     },
     {
       "rank": 849,
       "targetWord": "maximal",
-      "englishWord": "maximum"
+      "englishWord": "maximum",
+      "exampleSentence": "Wir bleiben maximal zwei Stunden."
     },
     {
       "rank": 850,
       "targetWord": "hängen",
-      "englishWord": "to hang"
+      "englishWord": "to hang",
+      "exampleSentence": "Das Bild soll hier hängen."
     },
     {
       "rank": 851,
       "targetWord": "echt",
-      "englishWord": "genuine"
+      "englishWord": "genuine",
+      "exampleSentence": "Das Bild ist echt."
     },
     {
       "rank": 852,
       "targetWord": "umsetzen",
-      "englishWord": "to implement"
+      "englishWord": "to implement",
+      "exampleSentence": "Wir wollen den Plan umsetzen."
     },
     {
       "rank": 853,
       "targetWord": "der Zugang",
-      "englishWord": "access"
+      "englishWord": "access",
+      "exampleSentence": "Der Zugang ist sehr einfach."
     },
     {
       "rank": 854,
       "targetWord": "der Rücken",
-      "englishWord": "back (body part)"
+      "englishWord": "back (body part)",
+      "exampleSentence": "Der Rücken ist sehr breit."
     },
     {
       "rank": 855,
       "targetWord": "der Wagen",
-      "englishWord": "car, carriage"
+      "englishWord": "car, carriage",
+      "exampleSentence": "Der Wagen ist sehr neu."
     },
     {
       "rank": 856,
       "targetWord": "das Ding",
-      "englishWord": "thing (object)"
+      "englishWord": "thing (object)",
+      "exampleSentence": "Das Ding ist sehr klein."
     },
     {
       "rank": 857,
       "targetWord": "das Jahrzehnt",
-      "englishWord": "decade"
+      "englishWord": "decade",
+      "exampleSentence": "Das Jahrzehnt war sehr lang."
     },
     {
       "rank": 858,
       "targetWord": "beobachten",
-      "englishWord": "to observe"
+      "englishWord": "to observe",
+      "exampleSentence": "Wir beobachten das Tier."
     },
     {
       "rank": 859,
       "targetWord": "die Nachricht",
-      "englishWord": "news, message"
+      "englishWord": "news, message",
+      "exampleSentence": "Die Nachricht war sehr gut."
     },
     {
       "rank": 860,
       "targetWord": "das Internet",
-      "englishWord": "internet"
+      "englishWord": "internet",
+      "exampleSentence": "Das Internet ist sehr schnell."
     },
     {
       "rank": 861,
       "targetWord": "unmittelbar",
-      "englishWord": "immediate"
+      "englishWord": "immediate",
+      "exampleSentence": "Er kommt unmittelbar nach mir."
     },
     {
       "rank": 862,
       "targetWord": "die Forschung",
-      "englishWord": "research"
+      "englishWord": "research",
+      "exampleSentence": "Die Forschung ist sehr wichtig."
     },
     {
       "rank": 863,
       "targetWord": "staatlich",
-      "englishWord": "state-run"
+      "englishWord": "state-run",
+      "exampleSentence": "Das Institut ist staatlich."
     },
     {
       "rank": 864,
       "targetWord": "prägen",
-      "englishWord": "to shape, to coin"
+      "englishWord": "to shape, to coin",
+      "exampleSentence": "Die Zeit soll uns prägen."
     },
     {
       "rank": 865,
       "targetWord": "die Generation",
-      "englishWord": "generation"
+      "englishWord": "generation",
+      "exampleSentence": "Die Generation ist sehr jung."
     },
     {
       "rank": 866,
       "targetWord": "die Förderung",
-      "englishWord": "funding, promotion"
+      "englishWord": "funding, promotion",
+      "exampleSentence": "Die Förderung ist sehr wichtig."
     },
     {
       "rank": 867,
       "targetWord": "die Herausforderung",
-      "englishWord": "challenge"
+      "englishWord": "challenge",
+      "exampleSentence": "Die Herausforderung ist sehr groß."
     },
     {
       "rank": 868,
       "targetWord": "die Größe",
-      "englishWord": "size"
+      "englishWord": "size",
+      "exampleSentence": "Die Größe ist sehr wichtig."
     },
     {
       "rank": 869,
       "targetWord": "die Qualität",
-      "englishWord": "quality"
+      "englishWord": "quality",
+      "exampleSentence": "Die Qualität ist sehr gut."
     },
     {
       "rank": 870,
       "targetWord": "der Vertreter",
-      "englishWord": "representative"
+      "englishWord": "representative",
+      "exampleSentence": "Der Vertreter kommt heute."
     },
     {
       "rank": 871,
       "targetWord": "ermitteln",
-      "englishWord": "to ascertain, to investigate"
+      "englishWord": "to ascertain, to investigate",
+      "exampleSentence": "Die Polizei will das ermitteln."
     },
     {
       "rank": 872,
       "targetWord": "der Verband",
-      "englishWord": "association (umbrella body)"
+      "englishWord": "association (umbrella body)",
+      "exampleSentence": "Der Verband ist sehr groß."
     },
     {
       "rank": 873,
       "targetWord": "der Autor",
-      "englishWord": "author"
+      "englishWord": "author",
+      "exampleSentence": "Der Autor ist sehr bekannt."
     },
     {
       "rank": 874,
       "targetWord": "darum",
-      "englishWord": "for that reason"
+      "englishWord": "for that reason",
+      "exampleSentence": "Darum komme ich heute."
     },
     {
       "rank": 875,
       "targetWord": "engagieren",
-      "englishWord": "to get involved"
+      "englishWord": "to get involved",
+      "exampleSentence": "Wir engagieren uns hier."
     },
     {
       "rank": 876,
       "targetWord": "der Bruder",
-      "englishWord": "brother"
+      "englishWord": "brother",
+      "exampleSentence": "Mein Bruder wohnt hier."
     },
     {
       "rank": 877,
       "targetWord": "die Farbe",
-      "englishWord": "colour"
+      "englishWord": "colour",
+      "exampleSentence": "Die Farbe ist sehr schön."
     },
     {
       "rank": 878,
       "targetWord": "reduzieren",
-      "englishWord": "to reduce"
+      "englishWord": "to reduce",
+      "exampleSentence": "Wir reduzieren die Kosten."
     },
     {
       "rank": 879,
       "targetWord": "stets",
-      "englishWord": "constantly, at all times"
+      "englishWord": "constantly, at all times",
+      "exampleSentence": "Er ist stets sehr gut."
     },
     {
       "rank": 880,
       "targetWord": "der Wettbewerb",
-      "englishWord": "competition"
+      "englishWord": "competition",
+      "exampleSentence": "Der Wettbewerb beginnt heute."
     },
     {
       "rank": 881,
       "targetWord": "das Schloss",
-      "englishWord": "castle; lock"
+      "englishWord": "castle; lock",
+      "exampleSentence": "Das Schloss ist sehr alt."
     },
     {
       "rank": 882,
       "targetWord": "erstellen",
-      "englishWord": "to create"
+      "englishWord": "to create",
+      "exampleSentence": "Wir erstellen einen Plan."
     },
     {
       "rank": 883,
       "targetWord": "verantwortlich",
-      "englishWord": "responsible, accountable"
+      "englishWord": "responsible, accountable",
+      "exampleSentence": "Ich bin dafür verantwortlich."
     },
     {
       "rank": 884,
       "targetWord": "britisch",
-      "englishWord": "British"
+      "englishWord": "British",
+      "exampleSentence": "Der Autor ist britisch."
     },
     {
       "rank": 885,
       "targetWord": "die Bewegung",
-      "englishWord": "movement"
+      "englishWord": "movement",
+      "exampleSentence": "Die Bewegung ist sehr gut."
     },
     {
       "rank": 886,
       "targetWord": "teilnehmen",
-      "englishWord": "to participate"
+      "englishWord": "to participate",
+      "exampleSentence": "Wir wollen daran teilnehmen."
     },
     {
       "rank": 887,
       "targetWord": "die Karriere",
-      "englishWord": "career"
+      "englishWord": "career",
+      "exampleSentence": "Die Karriere war sehr gut."
     },
     {
       "rank": 888,
       "targetWord": "der Haushalt",
-      "englishWord": "household, budget"
+      "englishWord": "household, budget",
+      "exampleSentence": "Der Haushalt ist sehr groß."
     },
     {
       "rank": 889,
       "targetWord": "rein",
-      "englishWord": "pure"
+      "englishWord": "pure",
+      "exampleSentence": "Das Wasser ist rein."
     },
     {
       "rank": 890,
       "targetWord": "stattfinden",
-      "englishWord": "to be held"
+      "englishWord": "to be held",
+      "exampleSentence": "Das Spiel soll heute stattfinden."
     },
     {
       "rank": 891,
       "targetWord": "rechts",
-      "englishWord": "on the right"
+      "englishWord": "on the right",
+      "exampleSentence": "Das Haus steht rechts."
     },
     {
       "rank": 892,
       "targetWord": "der Unfall",
-      "englishWord": "accident"
+      "englishWord": "accident",
+      "exampleSentence": "Der Unfall war sehr schwer."
     },
     {
       "rank": 893,
       "targetWord": "die Praxis",
-      "englishWord": "practice"
+      "englishWord": "practice",
+      "exampleSentence": "Die Praxis ist heute offen."
     },
     {
       "rank": 894,
       "targetWord": "die Basis",
-      "englishWord": "base"
+      "englishWord": "base",
+      "exampleSentence": "Die Basis ist sehr gut."
     },
     {
       "rank": 895,
       "targetWord": "die Verwaltung",
-      "englishWord": "administration"
+      "englishWord": "administration",
+      "exampleSentence": "Die Verwaltung ist sehr groß."
     },
     {
       "rank": 896,
       "targetWord": "das Studium",
-      "englishWord": "studies (at university)"
+      "englishWord": "studies (at university)",
+      "exampleSentence": "Das Studium ist sehr schwer."
     },
     {
       "rank": 897,
       "targetWord": "die Liebe",
-      "englishWord": "love"
+      "englishWord": "love",
+      "exampleSentence": "Die Liebe ist sehr schön."
     },
     {
       "rank": 898,
       "targetWord": "werfen",
-      "englishWord": "to throw"
+      "englishWord": "to throw",
+      "exampleSentence": "Er will das Buch werfen."
     },
     {
       "rank": 899,
       "targetWord": "greifen",
-      "englishWord": "to grab"
+      "englishWord": "to grab",
+      "exampleSentence": "Ich will nach dir greifen."
     },
     {
       "rank": 900,
       "targetWord": "die Umgebung",
-      "englishWord": "surroundings"
+      "englishWord": "surroundings",
+      "exampleSentence": "Die Umgebung ist sehr schön."
     },
     {
       "rank": 901,
       "targetWord": "sonst",
-      "englishWord": "otherwise"
+      "englishWord": "otherwise",
+      "exampleSentence": "Komm, sonst gehe ich."
     },
     {
       "rank": 902,
       "targetWord": "behandeln",
-      "englishWord": "to treat"
+      "englishWord": "to treat",
+      "exampleSentence": "Der Arzt soll mich behandeln."
     },
     {
       "rank": 903,
       "targetWord": "untersuchen",
-      "englishWord": "to examine"
+      "englishWord": "to examine",
+      "exampleSentence": "Der Arzt will mich untersuchen."
     },
     {
       "rank": 904,
       "targetWord": "geeignet",
-      "englishWord": "suitable"
+      "englishWord": "suitable",
+      "exampleSentence": "Das Gerät ist geeignet."
     },
     {
       "rank": 905,
       "targetWord": "intensiv",
-      "englishWord": "intense"
+      "englishWord": "intense",
+      "exampleSentence": "Die Arbeit ist sehr intensiv."
     },
     {
       "rank": 906,
       "targetWord": "der König",
-      "englishWord": "king"
+      "englishWord": "king",
+      "exampleSentence": "Der König ist sehr alt."
     },
     {
       "rank": 907,
       "targetWord": "die Technik",
-      "englishWord": "technology"
+      "englishWord": "technology",
+      "exampleSentence": "Die Technik ist sehr neu."
     },
     {
       "rank": 908,
       "targetWord": "der See",
-      "englishWord": "lake"
+      "englishWord": "lake",
+      "exampleSentence": "Der See ist sehr groß."
     },
     {
       "rank": 909,
       "targetWord": "der Anschluss",
-      "englishWord": "connection (link-up)"
+      "englishWord": "connection (link-up)",
+      "exampleSentence": "Der Anschluss ist sehr gut."
     },
     {
       "rank": 910,
       "targetWord": "annehmen",
-      "englishWord": "to assume, to accept"
+      "englishWord": "to assume, to accept",
+      "exampleSentence": "Wir wollen das annehmen."
     },
     {
       "rank": 911,
       "targetWord": "passen",
-      "englishWord": "to fit"
+      "englishWord": "to fit",
+      "exampleSentence": "Das Bild soll hier passen."
     },
     {
       "rank": 912,
       "targetWord": "ergänzen",
-      "englishWord": "to supplement"
+      "englishWord": "to supplement",
+      "exampleSentence": "Wir ergänzen den Text."
     },
     {
       "rank": 913,
       "targetWord": "der Herbst",
-      "englishWord": "autumn"
+      "englishWord": "autumn",
+      "exampleSentence": "Im Herbst ist es schön."
     },
     {
       "rank": 914,
       "targetWord": "möglichst",
-      "englishWord": "as much as possible"
+      "englishWord": "as much as possible",
+      "exampleSentence": "Komm möglichst früh."
     },
     {
       "rank": 915,
       "targetWord": "geschehen",
-      "englishWord": "to occur"
+      "englishWord": "to occur",
+      "exampleSentence": "Das kann immer geschehen."
     },
     {
       "rank": 916,
       "targetWord": "miteinander",
-      "englishWord": "with each other"
+      "englishWord": "with each other",
+      "exampleSentence": "Wir arbeiten gut miteinander."
     },
     {
       "rank": 917,
       "targetWord": "außerhalb",
-      "englishWord": "outside of"
+      "englishWord": "outside of",
+      "exampleSentence": "Wir wohnen außerhalb der Stadt."
     },
     {
       "rank": 918,
       "targetWord": "relativ",
-      "englishWord": "relative"
+      "englishWord": "relative",
+      "exampleSentence": "Das ist relativ einfach."
     },
     {
       "rank": 919,
       "targetWord": "die Antwort",
-      "englishWord": "answer"
+      "englishWord": "answer",
+      "exampleSentence": "Die Antwort ist sehr gut."
     },
     {
       "rank": 920,
       "targetWord": "das Risiko",
-      "englishWord": "risk"
+      "englishWord": "risk",
+      "exampleSentence": "Das Risiko ist sehr groß."
     },
     {
       "rank": 921,
       "targetWord": "die Veränderung",
-      "englishWord": "change, transformation"
+      "englishWord": "change, transformation",
+      "exampleSentence": "Die Veränderung ist sehr gut."
     },
     {
       "rank": 922,
       "targetWord": "der Samstag",
-      "englishWord": "Saturday"
+      "englishWord": "Saturday",
+      "exampleSentence": "Am Samstag arbeite ich nicht."
     },
     {
       "rank": 923,
       "targetWord": "die Liste",
-      "englishWord": "list"
+      "englishWord": "list",
+      "exampleSentence": "Die Liste ist sehr lang."
     },
     {
       "rank": 924,
       "targetWord": "wiederum",
-      "englishWord": "in turn"
+      "englishWord": "in turn",
+      "exampleSentence": "Er wiederum kommt nicht."
     },
     {
       "rank": 925,
       "targetWord": "rechnen",
-      "englishWord": "to calculate"
+      "englishWord": "to calculate",
+      "exampleSentence": "Wir rechnen mit dir."
     },
     {
       "rank": 926,
       "targetWord": "gestalten",
-      "englishWord": "to design, to shape"
+      "englishWord": "to design, to shape",
+      "exampleSentence": "Wir gestalten das Programm."
     },
     {
       "rank": 927,
       "targetWord": "verzichten",
-      "englishWord": "to do without"
+      "englishWord": "to do without",
+      "exampleSentence": "Ich will darauf verzichten."
     },
     {
       "rank": 928,
       "targetWord": "verstärken",
-      "englishWord": "to reinforce"
+      "englishWord": "to reinforce",
+      "exampleSentence": "Wir verstärken die Mannschaft."
     },
     {
       "rank": 929,
       "targetWord": "gelangen",
-      "englishWord": "to get to"
+      "englishWord": "to get to",
+      "exampleSentence": "Wir wollen zum Ziel gelangen."
     },
     {
       "rank": 930,
       "targetWord": "integrieren",
-      "englishWord": "to integrate"
+      "englishWord": "to integrate",
+      "exampleSentence": "Wir integrieren die Kinder."
     },
     {
       "rank": 931,
       "targetWord": "das Konzert",
-      "englishWord": "concert"
+      "englishWord": "concert",
+      "exampleSentence": "Das Konzert war sehr gut."
     },
     {
       "rank": 932,
       "targetWord": "das Schiff",
-      "englishWord": "ship"
+      "englishWord": "ship",
+      "exampleSentence": "Das Schiff ist sehr groß."
     },
     {
       "rank": 933,
       "targetWord": "mancher",
-      "englishWord": "many a, some"
+      "englishWord": "many a, some",
+      "exampleSentence": "Manche Leute kommen nicht."
     },
     {
       "rank": 934,
       "targetWord": "die Initiative",
-      "englishWord": "initiative"
+      "englishWord": "initiative",
+      "exampleSentence": "Die Initiative ist sehr gut."
     },
     {
       "rank": 935,
       "targetWord": "die Aussage",
-      "englishWord": "statement, testimony"
+      "englishWord": "statement, testimony",
+      "exampleSentence": "Die Aussage ist sehr klar."
     },
     {
       "rank": 936,
       "targetWord": "unterwegs",
-      "englishWord": "on the way"
+      "englishWord": "on the way",
+      "exampleSentence": "Ich bin gerade unterwegs."
     },
     {
       "rank": 937,
       "targetWord": "das Feld",
-      "englishWord": "field"
+      "englishWord": "field",
+      "exampleSentence": "Das Feld ist sehr groß."
     },
     {
       "rank": 938,
       "targetWord": "der Winter",
-      "englishWord": "winter"
+      "englishWord": "winter",
+      "exampleSentence": "Im Winter ist es schön."
     },
     {
       "rank": 939,
       "targetWord": "der Unterschied",
-      "englishWord": "difference"
+      "englishWord": "difference",
+      "exampleSentence": "Der Unterschied ist sehr klein."
     },
     {
       "rank": 940,
       "targetWord": "die Hochschule",
-      "englishWord": "college"
+      "englishWord": "college",
+      "exampleSentence": "Die Hochschule ist sehr groß."
     },
     {
       "rank": 941,
       "targetWord": "vermutlich",
-      "englishWord": "presumably"
+      "englishWord": "presumably",
+      "exampleSentence": "Er kommt vermutlich heute nicht."
     },
     {
       "rank": 942,
       "targetWord": "reagieren",
-      "englishWord": "to react"
+      "englishWord": "to react",
+      "exampleSentence": "Wir müssen schnell reagieren."
     },
     {
       "rank": 943,
       "targetWord": "die Tätigkeit",
-      "englishWord": "activity"
+      "englishWord": "activity",
+      "exampleSentence": "Die Tätigkeit ist sehr schwer."
     },
     {
       "rank": 944,
       "targetWord": "absolvieren",
-      "englishWord": "to complete (a course)"
+      "englishWord": "to complete (a course)",
+      "exampleSentence": "Ich will das Studium absolvieren."
     },
     {
       "rank": 945,
       "targetWord": "der Fuß",
-      "englishWord": "foot"
+      "englishWord": "foot",
+      "exampleSentence": "Der Fuß ist sehr klein."
     },
     {
       "rank": 946,
       "targetWord": "normal",
-      "englishWord": "normal"
+      "englishWord": "normal",
+      "exampleSentence": "Das ist ganz normal."
     },
     {
       "rank": 947,
       "targetWord": "stimmen",
-      "englishWord": "to be correct; to vote"
+      "englishWord": "to be correct; to vote",
+      "exampleSentence": "Die Zahl soll stimmen."
     },
     {
       "rank": 948,
       "targetWord": "kämpfen",
-      "englishWord": "to fight"
+      "englishWord": "to fight",
+      "exampleSentence": "Wir kämpfen für die Stadt."
     },
     {
       "rank": 949,
       "targetWord": "die Stiftung",
-      "englishWord": "foundation (trust)"
+      "englishWord": "foundation (trust)",
+      "exampleSentence": "Die Stiftung ist sehr alt."
     },
     {
       "rank": 950,
       "targetWord": "die Aufnahme",
-      "englishWord": "recording; admission"
+      "englishWord": "recording; admission",
+      "exampleSentence": "Die Aufnahme ist sehr gut."
     },
     {
       "rank": 951,
       "targetWord": "sinken",
-      "englishWord": "to sink, to decline"
+      "englishWord": "to sink, to decline",
+      "exampleSentence": "Die Preise sinken."
     },
     {
       "rank": 952,
       "targetWord": "das Engagement",
-      "englishWord": "commitment"
+      "englishWord": "commitment",
+      "exampleSentence": "Das Engagement ist sehr groß."
     },
     {
       "rank": 953,
       "targetWord": "der Montag",
-      "englishWord": "Monday"
+      "englishWord": "Monday",
+      "exampleSentence": "Am Montag arbeite ich."
     },
     {
       "rank": 954,
       "targetWord": "umfangreich",
-      "englishWord": "extensive"
+      "englishWord": "extensive",
+      "exampleSentence": "Der Bericht ist sehr umfangreich."
     },
     {
       "rank": 955,
       "targetWord": "nachhaltig",
-      "englishWord": "sustainable"
+      "englishWord": "sustainable",
+      "exampleSentence": "Das Konzept ist nachhaltig."
     },
     {
       "rank": 956,
       "targetWord": "wenden",
-      "englishWord": "to turn"
+      "englishWord": "to turn",
+      "exampleSentence": "Wir wenden den Wagen."
     },
     {
       "rank": 957,
       "targetWord": "die Anwendung",
-      "englishWord": "application (use)"
+      "englishWord": "application (use)",
+      "exampleSentence": "Die Anwendung ist sehr einfach."
     },
     {
       "rank": 958,
       "targetWord": "das Interview",
-      "englishWord": "interview"
+      "englishWord": "interview",
+      "exampleSentence": "Das Interview war sehr gut."
     },
     {
       "rank": 959,
       "targetWord": "der Satz",
-      "englishWord": "sentence"
+      "englishWord": "sentence",
+      "exampleSentence": "Der Satz ist sehr kurz."
     },
     {
       "rank": 960,
       "targetWord": "der Bewohner",
-      "englishWord": "resident"
+      "englishWord": "resident",
+      "exampleSentence": "Die Bewohner sind schon da."
     },
     {
       "rank": 961,
       "targetWord": "feststellen",
-      "englishWord": "to notice, to state"
+      "englishWord": "to notice, to state",
+      "exampleSentence": "Wir wollen das feststellen."
     },
     {
       "rank": 962,
       "targetWord": "diskutieren",
-      "englishWord": "to discuss"
+      "englishWord": "to discuss",
+      "exampleSentence": "Wir diskutieren das Thema."
     },
     {
       "rank": 963,
       "targetWord": "teuer",
-      "englishWord": "expensive"
+      "englishWord": "expensive",
+      "exampleSentence": "Das Auto ist sehr teuer."
     },
     {
       "rank": 964,
       "targetWord": "die Kontrolle",
-      "englishWord": "control"
+      "englishWord": "control",
+      "exampleSentence": "Die Kontrolle ist sehr wichtig."
     },
     {
       "rank": 965,
       "targetWord": "das Publikum",
-      "englishWord": "audience"
+      "englishWord": "audience",
+      "exampleSentence": "Das Publikum war sehr laut."
     },
     {
       "rank": 966,
       "targetWord": "demnach",
-      "englishWord": "accordingly"
+      "englishWord": "accordingly",
+      "exampleSentence": "Demnach kommt er nicht."
     },
     {
       "rank": 967,
       "targetWord": "her",
-      "englishWord": "here (towards the speaker)"
+      "englishWord": "here (towards the speaker)",
+      "exampleSentence": "Komm bitte her."
     },
     {
       "rank": 968,
       "targetWord": "das Verhältnis",
-      "englishWord": "ratio, proportion"
+      "englishWord": "ratio, proportion",
+      "exampleSentence": "Das Verhältnis ist sehr gut."
     },
     {
       "rank": 969,
       "targetWord": "der Nutzer",
-      "englishWord": "user"
+      "englishWord": "user",
+      "exampleSentence": "Die Nutzer sind sehr jung."
     },
     {
       "rank": 970,
       "targetWord": "der Bahnhof",
-      "englishWord": "railway station"
+      "englishWord": "railway station",
+      "exampleSentence": "Der Bahnhof ist sehr groß."
     },
     {
       "rank": 971,
       "targetWord": "die Bühne",
-      "englishWord": "stage"
+      "englishWord": "stage",
+      "exampleSentence": "Die Bühne ist sehr groß."
     },
     {
       "rank": 972,
       "targetWord": "der Rat",
-      "englishWord": "advice; council"
+      "englishWord": "advice; council",
+      "exampleSentence": "Der Rat war sehr gut."
     },
     {
       "rank": 973,
       "targetWord": "der Kollege",
-      "englishWord": "colleague"
+      "englishWord": "colleague",
+      "exampleSentence": "Mein Kollege arbeitet hier."
     },
     {
       "rank": 974,
       "targetWord": "verbreiten",
-      "englishWord": "to spread"
+      "englishWord": "to spread",
+      "exampleSentence": "Wir verbreiten die Nachricht."
     },
     {
       "rank": 975,
       "targetWord": "zerstören",
-      "englishWord": "to destroy"
+      "englishWord": "to destroy",
+      "exampleSentence": "Der Krieg kann alles zerstören."
     },
     {
       "rank": 976,
       "targetWord": "offenbar",
-      "englishWord": "apparently"
+      "englishWord": "apparently",
+      "exampleSentence": "Er kommt offenbar nicht."
     },
     {
       "rank": 977,
       "targetWord": "der Freitag",
-      "englishWord": "Friday"
+      "englishWord": "Friday",
+      "exampleSentence": "Am Freitag arbeite ich nicht."
     },
     {
       "rank": 978,
       "targetWord": "der Dienstag",
-      "englishWord": "Tuesday"
+      "englishWord": "Tuesday",
+      "exampleSentence": "Am Dienstag komme ich."
     },
     {
       "rank": 979,
       "targetWord": "der Mittwoch",
-      "englishWord": "Wednesday"
+      "englishWord": "Wednesday",
+      "exampleSentence": "Am Mittwoch bin ich hier."
     },
     {
       "rank": 980,
       "targetWord": "der Donnerstag",
-      "englishWord": "Thursday"
+      "englishWord": "Thursday",
+      "exampleSentence": "Am Donnerstag kommt mein Bruder."
     },
     {
       "rank": 981,
       "targetWord": "der Zuschauer",
-      "englishWord": "spectator"
+      "englishWord": "spectator",
+      "exampleSentence": "Die Zuschauer sind sehr laut."
     },
     {
       "rank": 982,
       "targetWord": "medizinisch",
-      "englishWord": "medical"
+      "englishWord": "medical",
+      "exampleSentence": "Die Hilfe ist medizinisch."
     },
     {
       "rank": 983,
       "targetWord": "der Leiter",
-      "englishWord": "head (of an organisation)"
+      "englishWord": "head (of an organisation)",
+      "exampleSentence": "Der Leiter ist sehr jung."
     },
     {
       "rank": 984,
       "targetWord": "hierbei",
-      "englishWord": "in this context"
+      "englishWord": "in this context",
+      "exampleSentence": "Hierbei ist alles klar."
     },
     {
       "rank": 985,
       "targetWord": "der Gott",
-      "englishWord": "god"
+      "englishWord": "god",
+      "exampleSentence": "Gott ist die Liebe."
     },
     {
       "rank": 986,
       "targetWord": "der Soldat",
-      "englishWord": "soldier"
+      "englishWord": "soldier",
+      "exampleSentence": "Der Soldat ist sehr jung."
     },
     {
       "rank": 987,
       "targetWord": "das Herz",
-      "englishWord": "heart"
+      "englishWord": "heart",
+      "exampleSentence": "Das Herz ist sehr stark."
     },
     {
       "rank": 988,
       "targetWord": "der Experte",
-      "englishWord": "expert"
+      "englishWord": "expert",
+      "exampleSentence": "Der Experte kommt heute."
     },
     {
       "rank": 989,
       "targetWord": "der Garten",
-      "englishWord": "garden"
+      "englishWord": "garden",
+      "exampleSentence": "Der Garten ist sehr schön."
     },
     {
       "rank": 990,
       "targetWord": "übrig",
-      "englishWord": "remaining"
+      "englishWord": "remaining",
+      "exampleSentence": "Es ist nichts übrig."
     },
     {
       "rank": 991,
       "targetWord": "halb",
-      "englishWord": "half (adjective)"
+      "englishWord": "half (adjective)",
+      "exampleSentence": "Das Buch ist halb gelesen."
     },
     {
       "rank": 992,
       "targetWord": "die Bahn",
-      "englishWord": "railway"
+      "englishWord": "railway",
+      "exampleSentence": "Die Bahn kommt sehr spät."
     },
     {
       "rank": 993,
       "targetWord": "der Lehrer",
-      "englishWord": "teacher"
+      "englishWord": "teacher",
+      "exampleSentence": "Der Lehrer ist sehr gut."
     },
     {
       "rank": 994,
       "targetWord": "kostenlos",
-      "englishWord": "free of charge"
+      "englishWord": "free of charge",
+      "exampleSentence": "Das Konzert ist kostenlos."
     },
     {
       "rank": 995,
       "targetWord": "online",
-      "englishWord": "online"
+      "englishWord": "online",
+      "exampleSentence": "Das Video ist online."
     },
     {
       "rank": 996,
       "targetWord": "wahrscheinlich",
-      "englishWord": "likely, probable"
+      "englishWord": "likely, probable",
+      "exampleSentence": "Er kommt wahrscheinlich heute nicht."
     },
     {
       "rank": 997,
       "targetWord": "der Grad",
-      "englishWord": "degree"
+      "englishWord": "degree",
+      "exampleSentence": "Es sind zehn Grad."
     },
     {
       "rank": 998,
       "targetWord": "hart",
-      "englishWord": "hard"
+      "englishWord": "hard",
+      "exampleSentence": "Die Arbeit ist sehr hart."
     },
     {
       "rank": 999,
       "targetWord": "der Park",
-      "englishWord": "park"
+      "englishWord": "park",
+      "exampleSentence": "Der Park ist sehr groß."
     },
     {
       "rank": 1000,
       "targetWord": "genug",
-      "englishWord": "enough"
+      "englishWord": "enough",
+      "exampleSentence": "Ich habe genug Zeit."
     }
   ]
 }
