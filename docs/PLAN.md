@@ -21,6 +21,10 @@ bigger model, mechanical steps are not.
 | 11 | `step/11-session-end` | Session end screen | opus | todo |
 | 12 | `step/12-cleanup` | Cleanup | sonnet | todo |
 | 13 | `step/13-attribution` | Attribution / About screen | sonnet | todo |
+| 14 | `step/14-file-layout` | Group the source files by screen | sonnet | done |
+
+Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
+sorted before 10 and 11 pour new screen files into it.
 
 ---
 
@@ -239,3 +243,21 @@ A plain About screen reachable from the summary screen. Content:
 - `LeitnerSwift` and any other package licences
 
 Keep it one scrollable `Text` stack with a `#Preview`. No web view, no bundled HTML.
+
+## 14 — Group the source files by screen
+
+Added after 09, done before 10: all 14 Swift files sat flat in `thousand/`, and steps 10 and 11
+were about to add a screen each.
+
+Grouped by screen rather than by layer — `App/`, `Card/`, `Progress/`, `Persistence/`, `Support/`
+— so everything one screen needs sits together, including its view model. A `Views/` folder holding
+seven files would flatten back out the moment the summary and session-end screens landed. Step 10
+gets `Summary/`, step 11 `SessionEnd/`.
+
+`Assets.xcassets`, `Preview Content`, `Localizable.xcstrings` and `de.json` stayed at the target
+root: the first two are where Xcode expects them and `Preview Content`'s path is baked into the
+`DEVELOPMENT_ASSET_PATHS` build setting.
+
+No code changed — folders carry no meaning in Swift, so no import needed touching. The moves were
+`git mv`, and `project.xcproj`'s flat file list became nested `group` nodes by hand, since this
+project format does not pick files up off disk.

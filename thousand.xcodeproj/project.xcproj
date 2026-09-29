@@ -36,8 +36,50 @@
       "kind": "group",
       "path": "thousand",
       "children": [
-        { "path": "thousandApp.swift", "target-membership": [ "thousand/compile-sources" ] },
-        { "path": "ContentView.swift", "target-membership": [ "thousand/compile-sources" ] },
+        {
+          "kind": "group",
+          "path": "App",
+          "children": [
+            { "path": "thousandApp.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "ContentView.swift", "target-membership": [ "thousand/compile-sources" ] },
+          ],
+        },
+        {
+          "kind": "group",
+          "path": "Card",
+          "children": [
+            { "path": "CardScreen.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "CardView.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "AnswerButtons.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "SentenceBox.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "SessionHeader.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "SpeakerButton.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "WordViewModel.swift", "target-membership": [ "thousand/compile-sources" ] },
+          ],
+        },
+        {
+          "kind": "group",
+          "path": "Progress",
+          "children": [
+            { "path": "BoxesOverview.swift", "target-membership": [ "thousand/compile-sources" ] },
+          ],
+        },
+        {
+          "kind": "group",
+          "path": "Persistence",
+          "children": [
+            { "path": "CardStore.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "SwiftDataCardStore.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "StoredModels.swift", "target-membership": [ "thousand/compile-sources" ] },
+          ],
+        },
+        {
+          "kind": "group",
+          "path": "Support",
+          "children": [
+            { "path": "Haptics.swift", "target-membership": [ "thousand/compile-sources" ] },
+          ],
+        },
         { "path": "Assets.xcassets", "target-membership": [ "thousand/resources" ] },
         {
           "kind": "group",
@@ -46,20 +88,8 @@
             { "path": "Preview Assets.xcassets", "target-membership": [ "thousand/resources" ] },
           ],
         },
-        { "path": "CardStore.swift", "target-membership": [ "thousand/compile-sources" ] },
-        { "path": "WordViewModel.swift", "target-membership": [ "thousand/compile-sources" ] },
         { "path": "Localizable.xcstrings", "target-membership": [ "thousand/resources" ] },
         { "path": "de.json", "target-membership": [ "thousand/resources" ] },
-        { "path": "BoxesOverview.swift", "target-membership": [ "thousand/compile-sources" ] },
-        { "path": "StoredModels.swift", "target-membership": [ "thousand/compile-sources" ] },
-        { "path": "SwiftDataCardStore.swift", "target-membership": [ "thousand/compile-sources" ] },
-        { "path": "SpeakerButton.swift", "target-membership": [ "thousand/compile-sources" ] },
-        { "path": "SessionHeader.swift", "target-membership": [ "thousand/compile-sources" ] },
-        { "path": "SentenceBox.swift", "target-membership": [ "thousand/compile-sources" ] },
-        { "path": "CardView.swift", "target-membership": [ "thousand/compile-sources" ] },
-        { "path": "AnswerButtons.swift", "target-membership": [ "thousand/compile-sources" ] },
-        { "path": "CardScreen.swift", "target-membership": [ "thousand/compile-sources" ] },
-        { "path": "Haptics.swift", "target-membership": [ "thousand/compile-sources" ] },
       ],
     }, {
       "kind": "group",
