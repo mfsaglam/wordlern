@@ -11,7 +11,7 @@ bigger model, mechanical steps are not.
 | 01 | `step/01-card-screen` | Card screen redesign | opus | done |
 | 02 | `step/02-content-version` | `contentVersion` counter | sonnet | done |
 | 03 | `step/03-word-source` | Pick a real German frequency list | opus | done |
-| 04 | `step/04-dictionary-merge` | Merge frequency list with a dictionary | sonnet | todo |
+| 04 | `step/04-dictionary-merge` | Merge frequency list with a dictionary | sonnet | done |
 | 05 | `step/05-word-list-editorial` | Editorial pass over the 1000 words | opus | todo |
 | 06 | `step/06-sentence-pilot` | Example sentence pilot (50 words) | opus | todo |
 | 07 | `step/07-sentences` | Remaining example sentences | opus | todo |
@@ -74,6 +74,13 @@ of Wiktionary. Credit Wiktionary in step 13 regardless; it is free to do and set
 question.
 
 Deliverable: `de_draft.json` plus a report of words that found no dictionary match.
+
+Done: `tools/build_dictionary_draft.py` streams the kaikki dump and joins it with
+`de_frequency_top2000.tsv`. `tools/de_draft.json` has candidate glosses, POS and (for nouns)
+the article for all 1000 words — 991 matched directly, 9 fell back to no candidates (frequency-
+list stems like `jed`, `besonder`, `beid`, `zuminde`, and non-German corpus noise: `of`, `The`,
+`de`, `New`, `Thoma`). `tools/de_draft_report.md` lists the 9 misses for step 05 to resolve by
+hand. The kaikki dump itself (1GB) is not committed.
 
 ## 05 — Editorial pass over the 1000 words
 
