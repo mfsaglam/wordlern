@@ -10,7 +10,7 @@ bigger model, mechanical steps are not.
 |---|--------|------|-------|--------|
 | 01 | `step/01-card-screen` | Card screen redesign | opus | done |
 | 02 | `step/02-content-version` | `contentVersion` counter | sonnet | done |
-| 03 | `step/03-word-source` | Pick a real German frequency list | opus | todo |
+| 03 | `step/03-word-source` | Pick a real German frequency list | opus | done |
 | 04 | `step/04-dictionary-merge` | Merge frequency list with a dictionary | sonnet | todo |
 | 05 | `step/05-word-list-editorial` | Editorial pass over the 1000 words | opus | todo |
 | 06 | `step/06-sentence-pilot` | Example sentence pilot (50 words) | opus | todo |
@@ -49,6 +49,11 @@ Record the licence and the attribution text the app will have to show.
 
 Deliverable: the raw list plus a short note on why this source was chosen.
 No app code changes in this step.
+
+Done: `tools/de_frequency_top2000.tsv`, built by `tools/build_frequency_list.py` from three
+Leipzig corpora (news / web / Wikipedia, ~13.3M tokens). `docs/WORDLIST.md` records the
+licence, the attribution the app has to show, why the alternatives were rejected, and the
+defect list that step 05 has to work through.
 
 ## 04 — Merge frequency list with a dictionary
 
