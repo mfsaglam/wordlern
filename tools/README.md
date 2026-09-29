@@ -73,6 +73,11 @@ gaps where a word was dropped and repeats where one was inserted (`Sie` next to 
 three missing weekdays next to `Freitag`). `build` sorts by that column and renumbers 1..1000,
 so the shipped rank is the position in the edited list.
 
+`build` also folds in `de_sentences.tsv` (steps 06–07), keyed by the *shipped* rank, and
+writes `contentVersion` 3. A word with no sentence yet ships without the field and draws
+without the sentence box. Rerun `build` after every sentence batch, then rerun
+`validate_sentences.py` — it reads the `de.json` that `build` wrote.
+
 `build` refuses to write if two rows share an English gloss — the gloss doubles as a lookup
 key in the app — or if two rows share a German word. `sie`/`Sie` are the one deliberate
 case-only pair, so the German side is compared case-sensitively.
@@ -91,6 +96,12 @@ in the `CORE` allow-list at the top of the script.
 
 Needs the same `.venv` with simplemma as the frequency list: rules 1 and 3 compare lemmas, so
 `ist` counts as `sein` and `Kinder` as `Kind`. Exits non-zero on the first batch that fails.
+
+`INFLECTIONS` at the top is the escape hatch for the four words simplemma lemmatises to
+something their own inflected forms never reach (`gesamt`, `vergangen`, `folgend`, `kommend`).
+The listed forms count as the target word and as allowed tokens, for that target word only.
+Add to it only when simplemma is wrong, never to smuggle in a word that has not been earned
+by rank.
 
 `de_sentences.tsv` is the hand-written half: `rank<TAB>targetWord<TAB>sentence`, the rank and
 the word matching `thousand/de.json`. Sentences are German only, no translation. `sie` and

@@ -49,6 +49,18 @@ kommen gehen machen sehen sagen essen trinken arbeiten wohnen
 ARTICLES = {"der", "die", "das"}
 TOKEN = re.compile(r"[^\W\d_]+", re.UNICODE)
 
+# simplemma lemmatises these four citation forms to something their own inflected forms never
+# reach — `gesamt` to `samen`, `vergangen` to `vergehen`, `folgend`/`kommend` to the verb. The
+# only token the lemma rules would accept is one that reads badly in an A1 sentence, so the
+# inflections are listed by hand instead. Each set counts as the target word and as an allowed
+# token, for that target word only.
+INFLECTIONS = {
+    "gesamt": {"gesamte", "gesamten", "gesamter", "gesamtes"},
+    "vergangen": {"vergangene", "vergangenen", "vergangener", "vergangenes"},
+    "folgend": {"folgende", "folgenden", "folgender", "folgendes"},
+    "kommend": {"kommende", "kommenden", "kommender", "kommendes"},
+}
+
 
 def lemma(word: str) -> str:
     return lemmatize(word, lang="de").lower()
@@ -94,20 +106,24 @@ def check(rank: int, target: str, sentence: str, by_rank: dict[int, str]) -> lis
     if len(tokens) > MAX_WORDS:
         errors.append(f"{len(tokens)} words, max is {MAX_WORDS}")
 
+    inflections = INFLECTIONS.get(target, set())
+
     # `sie` (she/they) and `Sie` (formal you) are two different cards, so the pilot sentence
     # has to show which one it is teaching — case-sensitively, and not at the start of the
     # sentence where the capital says nothing.
     if target in ("sie", "Sie"):
         if not any(t == target for t in tokens[1:]):
             errors.append(f'"{target}" must appear mid-sentence, spelled exactly that way')
-    elif not any(target_lemma(target) in lemmas(t) for t in tokens):
+    elif not any(
+        target_lemma(target) in lemmas(t) or t.lower() in inflections for t in tokens
+    ):
         errors.append(f'target word "{target}" does not appear')
 
     allowed = {lemma(w) for r, w in by_rank.items() if r < rank for w in w.split()}
     allowed |= {lemma(w) for w in CORE}
     allowed |= {target_lemma(target)}
     for token in tokens:
-        if not (lemmas(token) & allowed):
+        if not (lemmas(token) & allowed) and token.lower() not in inflections:
             errors.append(f'"{token}" is not allowed yet (rank {rank})')
     return errors
 
