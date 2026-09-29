@@ -34,58 +34,65 @@ struct thousandApp: App {
     
     func setupLeitnerSystem() -> LeitnerSystem {
         let system = LeitnerSystem()
-        
-        if !hasInitialCardsAdded() {
-            addAllGermanWords(to: system)
-            markInitialSetupComplete()
+        let languageData = loadLanguageData()
+
+        if let languageData, languageData.contentVersion > seededContentVersion() {
+            wipeStoredContent()
+            addAllGermanWords(to: system, from: languageData)
+            markSeeded(contentVersion: languageData.contentVersion)
         }
-        
+
         return system
     }
-    
-    func addAllGermanWords(to system: LeitnerSystem) {
-        let germanWords = loadGermanWords()
-        
-        germanWords.forEach { word, meaning in
-            let word = Word(word: word, languageCode: "", meaning: meaning, exampleSentence: nil)
+
+    func addAllGermanWords(to system: LeitnerSystem, from languageData: LanguageData) {
+        languageData.words.forEach { entry in
+            let meaning = NSLocalizedString(entry.englishWord, comment: "")
+            let word = Word(word: entry.targetWord, languageCode: "", meaning: meaning, exampleSentence: nil)
             let card = Card(id: UUID(), word: word)
             system.addCard(card)
         }
     }
-    
-    func hasInitialCardsAdded() -> Bool {
-        // Check persistent storage (e.g., UserDefaults) if setup is done
-        return UserDefaults.standard.bool(forKey: "InitialCardsAdded")
+
+    /// Deletes every stored box and card so the fresh seed from `addAllGermanWords`
+    /// is what the app loads next, with no leftover progress from the old content.
+    func wipeStoredContent() {
+        let context = container.mainContext
+        do {
+            try context.delete(model: StoredBox.self)
+            try context.delete(model: StoredCard.self)
+        } catch {
+            print("Error wiping stored content: \(error)")
+        }
     }
-    
-    func markInitialSetupComplete() {
-        // Mark initial setup as complete
-        UserDefaults.standard.set(true, forKey: "InitialCardsAdded")
+
+    func seededContentVersion() -> Int {
+        UserDefaults.standard.integer(forKey: "seededContentVersion")
     }
-    
-    func loadGermanWords() -> [(String, String)] {
+
+    func markSeeded(contentVersion: Int) {
+        UserDefaults.standard.set(contentVersion, forKey: "seededContentVersion")
+    }
+
+    func loadLanguageData() -> LanguageData? {
         guard let url = Bundle.main.url(forResource: "de", withExtension: "json") else {
             print("Error: JSON file not found.")
-            return []
+            return nil
         }
 
         do {
             let data = try Data(contentsOf: url)
-            
-            let languageData = try JSONDecoder().decode(LanguageData.self, from: data)
-            
-            let wordsArray = languageData.words.map { ($0.targetWord, NSLocalizedString($0.englishWord, comment: "")) }
-            return wordsArray
-            
+            return try JSONDecoder().decode(LanguageData.self, from: data)
         } catch {
             print("Error loading or parsing JSON: \(error)")
-            return []
+            return nil
         }
     }
 }
 
 struct LanguageData: Codable {
     let languageCode: String
+    let contentVersion: Int
     let languageName: String
     let languageNativeName: String
     let words: [WordToLearn]
