@@ -2,257 +2,307 @@
   "languageCode": "de",
   "languageName": "German",
   "languageNativeName": "Deutsch",
-  "contentVersion": 2,
+  "contentVersion": 3,
   "words": [
     {
       "rank": 1,
       "targetWord": "der",
-      "englishWord": "the"
+      "englishWord": "the",
+      "exampleSentence": "Der Mann ist hier."
     },
     {
       "rank": 2,
       "targetWord": "und",
-      "englishWord": "and"
+      "englishWord": "and",
+      "exampleSentence": "Der Mann und die Frau."
     },
     {
       "rank": 3,
       "targetWord": "ein",
-      "englishWord": "a, an"
+      "englishWord": "a, an",
+      "exampleSentence": "Ein Kind ist da."
     },
     {
       "rank": 4,
       "targetWord": "sein",
-      "englishWord": "to be"
+      "englishWord": "to be",
+      "exampleSentence": "Das Wasser ist gut."
     },
     {
       "rank": 5,
       "targetWord": "in",
-      "englishWord": "in"
+      "englishWord": "in",
+      "exampleSentence": "Wir sind in der Stadt."
     },
     {
       "rank": 6,
       "targetWord": "werden",
-      "englishWord": "to become"
+      "englishWord": "to become",
+      "exampleSentence": "Das Kind wird groß."
     },
     {
       "rank": 7,
       "targetWord": "er",
-      "englishWord": "he"
+      "englishWord": "he",
+      "exampleSentence": "Er ist sehr gut."
     },
     {
       "rank": 8,
       "targetWord": "von",
-      "englishWord": "of, from"
+      "englishWord": "of, from",
+      "exampleSentence": "Er kommt von hier."
     },
     {
       "rank": 9,
       "targetWord": "mit",
-      "englishWord": "with"
+      "englishWord": "with",
+      "exampleSentence": "Ich komme mit dem Kind."
     },
     {
       "rank": 10,
       "targetWord": "im",
-      "englishWord": "in the"
+      "englishWord": "in the",
+      "exampleSentence": "Wir sind im Haus."
     },
     {
       "rank": 11,
       "targetWord": "zu",
-      "englishWord": "to"
+      "englishWord": "to",
+      "exampleSentence": "Das ist zu groß."
     },
     {
       "rank": 12,
       "targetWord": "für",
-      "englishWord": "for"
+      "englishWord": "for",
+      "exampleSentence": "Das ist für das Kind."
     },
     {
       "rank": 13,
       "targetWord": "auf",
-      "englishWord": "on"
+      "englishWord": "on",
+      "exampleSentence": "Ein Buch auf dem Tisch."
     },
     {
       "rank": 14,
       "targetWord": "haben",
-      "englishWord": "to have"
+      "englishWord": "to have",
+      "exampleSentence": "Ich habe ein Auto."
     },
     {
       "rank": 15,
       "targetWord": "sie",
-      "englishWord": "she; they"
+      "englishWord": "she; they",
+      "exampleSentence": "Heute ist sie hier."
     },
     {
       "rank": 16,
       "targetWord": "Sie",
-      "englishWord": "you (formal)"
+      "englishWord": "you (formal)",
+      "exampleSentence": "Sind Sie heute da?"
     },
     {
       "rank": 17,
       "targetWord": "auch",
-      "englishWord": "also"
+      "englishWord": "also",
+      "exampleSentence": "Ich komme auch."
     },
     {
       "rank": 18,
       "targetWord": "es",
-      "englishWord": "it"
+      "englishWord": "it",
+      "exampleSentence": "Es ist sehr gut."
     },
     {
       "rank": 19,
       "targetWord": "als",
-      "englishWord": "when, as"
+      "englishWord": "when, as",
+      "exampleSentence": "Er ist größer als ich."
     },
     {
       "rank": 20,
       "targetWord": "dies",
-      "englishWord": "this"
+      "englishWord": "this",
+      "exampleSentence": "Dies ist mein Haus."
     },
     {
       "rank": 21,
       "targetWord": "an",
-      "englishWord": "at, on"
+      "englishWord": "at, on",
+      "exampleSentence": "Er ist an dem Tisch."
     },
     {
       "rank": 22,
       "targetWord": "nicht",
-      "englishWord": "not"
+      "englishWord": "not",
+      "exampleSentence": "Ich bin nicht hier."
     },
     {
       "rank": 23,
       "targetWord": "können",
-      "englishWord": "can, to be able to"
+      "englishWord": "can, to be able to",
+      "exampleSentence": "Ich kann es machen."
     },
     {
       "rank": 24,
       "targetWord": "ihr",
-      "englishWord": "her (possessive)"
+      "englishWord": "her (possessive)",
+      "exampleSentence": "Das ist ihr Buch."
     },
     {
       "rank": 25,
       "targetWord": "bei",
-      "englishWord": "at, near"
+      "englishWord": "at, near",
+      "exampleSentence": "Ich bin bei ihr."
     },
     {
       "rank": 26,
       "targetWord": "nach",
-      "englishWord": "after"
+      "englishWord": "after",
+      "exampleSentence": "Wir gehen nach Hause."
     },
     {
       "rank": 27,
       "targetWord": "am",
-      "englishWord": "at the"
+      "englishWord": "at the",
+      "exampleSentence": "Wir sind am Tisch."
     },
     {
       "rank": 28,
       "targetWord": "aus",
-      "englishWord": "out of"
+      "englishWord": "out of",
+      "exampleSentence": "Er kommt aus dem Haus."
     },
     {
       "rank": 29,
       "targetWord": "das Jahr",
-      "englishWord": "year"
+      "englishWord": "year",
+      "exampleSentence": "Das Jahr ist gut."
     },
     {
       "rank": 30,
       "targetWord": "dass",
-      "englishWord": "that (conjunction)"
+      "englishWord": "that (conjunction)",
+      "exampleSentence": "Sie sagt, dass es geht."
     },
     {
       "rank": 31,
       "targetWord": "um",
-      "englishWord": "around"
+      "englishWord": "around",
+      "exampleSentence": "Wir gehen um das Haus."
     },
     {
       "rank": 32,
       "targetWord": "zum",
-      "englishWord": "to the (masculine/neuter)"
+      "englishWord": "to the (masculine/neuter)",
+      "exampleSentence": "Ich gehe zum Auto."
     },
     {
       "rank": 33,
       "targetWord": "wie",
-      "englishWord": "how"
+      "englishWord": "how",
+      "exampleSentence": "Wie geht es dir?"
     },
     {
       "rank": 34,
       "targetWord": "über",
-      "englishWord": "over, about"
+      "englishWord": "over, about",
+      "exampleSentence": "Das ist über mir."
     },
     {
       "rank": 35,
       "targetWord": "oder",
-      "englishWord": "or"
+      "englishWord": "or",
+      "exampleSentence": "Das Buch oder das Auto?"
     },
     {
       "rank": 36,
       "targetWord": "bis",
-      "englishWord": "until"
+      "englishWord": "until",
+      "exampleSentence": "Ich bin bis heute hier."
     },
     {
       "rank": 37,
       "targetWord": "vor",
-      "englishWord": "before, in front of"
+      "englishWord": "before, in front of",
+      "exampleSentence": "Er ist vor dem Haus."
     },
     {
       "rank": 38,
       "targetWord": "noch",
-      "englishWord": "still"
+      "englishWord": "still",
+      "exampleSentence": "Ich bin noch hier."
     },
     {
       "rank": 39,
       "targetWord": "zur",
-      "englishWord": "to the (feminine)"
+      "englishWord": "to the (feminine)",
+      "exampleSentence": "Wir gehen zur Stadt."
     },
     {
       "rank": 40,
       "targetWord": "durch",
-      "englishWord": "through"
+      "englishWord": "through",
+      "exampleSentence": "Wir gehen durch das Haus."
     },
     {
       "rank": 41,
       "targetWord": "aber",
-      "englishWord": "but"
+      "englishWord": "but",
+      "exampleSentence": "Es ist gut, aber klein."
     },
     {
       "rank": 42,
       "targetWord": "nur",
-      "englishWord": "only"
+      "englishWord": "only",
+      "exampleSentence": "Ich habe nur ein Buch."
     },
     {
       "rank": 43,
       "targetWord": "so",
-      "englishWord": "so"
+      "englishWord": "so",
+      "exampleSentence": "Das ist so gut."
     },
     {
       "rank": 44,
       "targetWord": "geben",
-      "englishWord": "to give"
+      "englishWord": "to give",
+      "exampleSentence": "Ich gebe dir das Buch."
     },
     {
       "rank": 45,
       "targetWord": "alle",
-      "englishWord": "all"
+      "englishWord": "all",
+      "exampleSentence": "Alle Kinder sind hier."
     },
     {
       "rank": 46,
       "targetWord": "neu",
-      "englishWord": "new"
+      "englishWord": "new",
+      "exampleSentence": "Mein Auto ist neu."
     },
     {
       "rank": 47,
       "targetWord": "sollen",
-      "englishWord": "should"
+      "englishWord": "should",
+      "exampleSentence": "Du sollst nicht gehen."
     },
     {
       "rank": 48,
       "targetWord": "erst",
-      "englishWord": "first, only then"
+      "englishWord": "first, only then",
+      "exampleSentence": "Er kommt erst heute."
     },
     {
       "rank": 49,
       "targetWord": "müssen",
-      "englishWord": "must"
+      "englishWord": "must",
+      "exampleSentence": "Ich muss jetzt gehen."
     },
     {
       "rank": 50,
       "targetWord": "groß",
-      "englishWord": "big"
+      "englishWord": "big",
+      "exampleSentence": "Das Haus ist sehr groß."
     },
     {
       "rank": 51,

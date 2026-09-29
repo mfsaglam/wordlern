@@ -73,6 +73,11 @@ gaps where a word was dropped and repeats where one was inserted (`Sie` next to 
 three missing weekdays next to `Freitag`). `build` sorts by that column and renumbers 1..1000,
 so the shipped rank is the position in the edited list.
 
+`build` also folds in `de_sentences.tsv` (steps 06–07), keyed by the *shipped* rank, and
+writes `contentVersion` 3. A word with no sentence yet ships without the field and draws
+without the sentence box. Rerun `build` after every sentence batch, then rerun
+`validate_sentences.py` — it reads the `de.json` that `build` wrote.
+
 `build` refuses to write if two rows share an English gloss — the gloss doubles as a lookup
 key in the app — or if two rows share a German word. `sie`/`Sie` are the one deliberate
 case-only pair, so the German side is compared case-sensitively.

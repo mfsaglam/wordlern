@@ -48,7 +48,12 @@ struct thousandApp: App {
     func addAllGermanWords(to system: LeitnerSystem, from languageData: LanguageData) {
         languageData.words.forEach { entry in
             let meaning = NSLocalizedString(entry.englishWord, comment: "")
-            let word = Word(word: entry.targetWord, languageCode: "", meaning: meaning, exampleSentence: nil)
+            let word = Word(
+                word: entry.targetWord,
+                languageCode: "",
+                meaning: meaning,
+                exampleSentence: entry.exampleSentence
+            )
             let card = Card(id: UUID(), word: word)
             system.addCard(card)
         }
@@ -102,4 +107,7 @@ struct WordToLearn: Codable {
     let rank: Int
     let targetWord: String
     let englishWord: String
+    /// Absent for any word whose example sentence has not been written yet; the card
+    /// then draws without the sentence box.
+    let exampleSentence: String?
 }

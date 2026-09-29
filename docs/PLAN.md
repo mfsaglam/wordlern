@@ -14,7 +14,7 @@ bigger model, mechanical steps are not.
 | 04 | `step/04-dictionary-merge` | Merge frequency list with a dictionary | sonnet | done |
 | 05 | `step/05-word-list-editorial` | Editorial pass over the 1000 words | opus | done |
 | 06 | `step/06-sentence-pilot` | Example sentence pilot (50 words) | opus | done |
-| 07 | `step/07-sentences` | Remaining example sentences | opus | todo |
+| 07 | `step/07-sentences` | Remaining example sentences | opus | in progress |
 | 08 | `step/08-swiftdata` | Replace Realm with SwiftData | opus | done |
 | 09 | `step/09-swipe-undo` | Swipe gesture + undo | opus | todo |
 | 10 | `step/10-summary-screen` | Summary screen redesign | opus | todo |
@@ -138,6 +138,15 @@ No app code: writing the sentences into `de.json` and bumping `contentVersion` i
 
 Same rules as step 06, in batches of 50, each batch passing the validation script.
 Bump `contentVersion` so the new sentences actually appear on device.
+
+The pipeline half is done ahead of the sentences: `WordToLearn` carries an optional
+`exampleSentence`, seeding passes it through instead of the hardcoded `nil`, and
+`editorial.py build` folds `de_sentences.tsv` into `thousand/de.json` at `contentVersion` 3,
+keyed by the shipped rank and refusing to attach a sentence written for a different word.
+A word with no sentence yet ships without the field, so the card draws without the box.
+
+What is left is the writing: ranks 51–1000, 50 at a time, each batch rerun through
+`editorial.py build` and then `validate_sentences.py`.
 
 ## 08 — Replace Realm with SwiftData
 
