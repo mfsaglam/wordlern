@@ -20,6 +20,7 @@ bigger model, mechanical steps are not.
 | 10 | `step/10-summary-screen` | Summary screen redesign | opus | todo |
 | 11 | `step/11-session-end` | Session end screen | opus | todo |
 | 12 | `step/12-cleanup` | Cleanup | sonnet | todo |
+| 13 | `step/13-attribution` | Attribution / About screen | sonnet | todo |
 
 ---
 
@@ -60,6 +61,17 @@ defect list that step 05 has to work through.
 Write a script (Python, kept in `tools/`) that joins the frequency list with a Wiktionary-derived
 German→English dictionary. For each word, output the candidate English senses, the part of
 speech, and the article for nouns.
+
+Input is `tools/de_frequency_top2000.tsv` from step 03. The dictionary side is
+`https://kaikki.org/dictionary/German/kaikki.org-dictionary-German.jsonl` — the wiktextract
+dump of English Wiktionary's German entries, 1.0 GB, one JSON object per sense, carrying the
+English gloss, the POS and the noun gender. Stream it, do not load it; keep it out of the repo.
+
+Licence: Wiktionary is CC BY-SA, which is the share-alike this project dodged for the
+frequency list. The dump is therefore a *candidate generator only* — step 05 picks and writes
+the final one-sense gloss by hand, so what ships is the editorial choice rather than a copy
+of Wiktionary. Credit Wiktionary in step 13 regardless; it is free to do and settles the
+question.
 
 Deliverable: `de_draft.json` plus a report of words that found no dictionary match.
 
@@ -127,3 +139,17 @@ conflates three different moments.
 - The test files are entirely commented out; restore what still applies.
   (`SwiftDataCardStoreTests` from step 08 is live and should stay.)
 - `CardStore.fetchBox(byId:)`, `updateBox` and `deleteBox` have no callers. Drop them.
+
+## 13 — Attribution / About screen
+
+Not optional: CC BY is a licence *condition*, so the app may not ship the Leipzig-derived
+word list without carrying the notice. Step 03 established the debt, this pays it.
+
+A plain About screen reachable from the summary screen. Content:
+
+- the Leipzig copyright notice and CC BY line, verbatim from `docs/WORDLIST.md`
+- the Goldhahn/Eckart/Quasthoff citation Leipzig asks for
+- Wiktionary (CC BY-SA) as the source the meanings were drafted from, per step 04
+- `LeitnerSwift` and any other package licences
+
+Keep it one scrollable `Text` stack with a `#Preview`. No web view, no bundled HTML.
