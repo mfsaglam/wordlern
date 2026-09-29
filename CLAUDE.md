@@ -22,6 +22,14 @@ Reply to the user in Turkish.
 - Word content is copied into Realm at first seed, so edits to `de.json` are invisible on an installed app until the `contentVersion` counter from step 02 exists.
 - `LeitnerSwift` is the user's own package (github.com/mfsaglam/LeitnerSwift), pinned to a version. Changing it is a separate conversation — do not assume you can edit it.
 
+## Keep sessions cheap
+
+- Never read `thousand/de.json` in full — it is ~91KB / 1000 entries. Query it with `python3` or
+  `jq` and read only what you need.
+- Verify UI with SwiftUI previews. Do not boot the simulator and take screenshots unless asked.
+- Prefer a reusable script in `tools/` over doing repetitive data work token by token.
+- Paste only the failing lines of a build log, never the whole thing.
+
 ## Code style
 
 - SwiftUI, MVVM. Views hold no persistence or Leitner logic.

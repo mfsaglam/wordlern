@@ -3,20 +3,23 @@
 Target branch for all of this: `feature/gamify`. One step = one branch = one task.
 Status values: `todo`, `in progress`, `done`.
 
-| # | Branch | Step | Status |
-|---|--------|------|--------|
-| 01 | `step/01-card-screen` | Card screen redesign | todo |
-| 02 | `step/02-content-version` | `contentVersion` counter | todo |
-| 03 | `step/03-word-source` | Pick a real German frequency list | todo |
-| 04 | `step/04-dictionary-merge` | Merge frequency list with a dictionary | todo |
-| 05 | `step/05-word-list-editorial` | Editorial pass over the 1000 words | todo |
-| 06 | `step/06-sentence-pilot` | Example sentence pilot (50 words) | todo |
-| 07 | `step/07-sentences` | Remaining example sentences | todo |
-| 08 | `step/08-persistence` | Persistence performance | todo |
-| 09 | `step/09-swipe-undo` | Swipe gesture + undo | todo |
-| 10 | `step/10-summary-screen` | Summary screen redesign | todo |
-| 11 | `step/11-session-end` | Session end screen | todo |
-| 12 | `step/12-cleanup` | Cleanup | todo |
+`Model` is a suggestion, not a rule: steps needing design or language judgement are worth the
+bigger model, mechanical steps are not.
+
+| # | Branch | Step | Model | Status |
+|---|--------|------|-------|--------|
+| 01 | `step/01-card-screen` | Card screen redesign | opus | todo |
+| 02 | `step/02-content-version` | `contentVersion` counter | sonnet | todo |
+| 03 | `step/03-word-source` | Pick a real German frequency list | opus | todo |
+| 04 | `step/04-dictionary-merge` | Merge frequency list with a dictionary | sonnet | todo |
+| 05 | `step/05-word-list-editorial` | Editorial pass over the 1000 words | opus | todo |
+| 06 | `step/06-sentence-pilot` | Example sentence pilot (50 words) | opus | todo |
+| 07 | `step/07-sentences` | Remaining example sentences | opus | todo |
+| 08 | `step/08-persistence` | Persistence performance | sonnet | todo |
+| 09 | `step/09-swipe-undo` | Swipe gesture + undo | opus | todo |
+| 10 | `step/10-summary-screen` | Summary screen redesign | opus | todo |
+| 11 | `step/11-session-end` | Session end screen | opus | todo |
+| 12 | `step/12-cleanup` | Cleanup | sonnet | todo |
 
 ---
 
@@ -102,6 +105,8 @@ conflates three different moments.
 ## 12 — Cleanup
 
 - `Word.languageCode` is seeded as `""` in `thousandApp.swift`.
-- Meanings are looked up with `NSLocalizedString(englishWord)`, so duplicate English words
-  collide as translation keys.
+- Meanings are looked up with `NSLocalizedString(englishWord)`, but `Localizable.xcstrings`
+  only holds the eight UI strings — no word meanings. So the call is a no-op passthrough today,
+  and duplicate English words would collide as keys if it were ever populated. Decide whether
+  word meanings are localised at all, and drop the mechanism if not.
 - The test files are entirely commented out; restore what still applies.
