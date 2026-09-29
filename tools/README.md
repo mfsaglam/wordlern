@@ -76,3 +76,24 @@ so the shipped rank is the position in the edited list.
 `build` refuses to write if two rows share an English gloss — the gloss doubles as a lookup
 key in the app — or if two rows share a German word. `sie`/`Sie` are the one deliberate
 case-only pair, so the German side is compared case-sensitively.
+
+## `validate_sentences.py` — steps 06–07
+
+Checks the hand-written example sentences in `de_sentences.tsv` against the three rules of
+step 06: the target word appears, the sentence is at most 5 words, and every word is either
+an earlier-ranked word of `thousand/de.json`, the target word itself, or one of the ~50 words
+in the `CORE` allow-list at the top of the script.
+
+```sh
+./.venv/bin/python tools/validate_sentences.py          # everything
+./.venv/bin/python tools/validate_sentences.py 1 50     # one batch
+```
+
+Needs the same `.venv` with simplemma as the frequency list: rules 1 and 3 compare lemmas, so
+`ist` counts as `sein` and `Kinder` as `Kind`. Exits non-zero on the first batch that fails.
+
+`de_sentences.tsv` is the hand-written half: `rank<TAB>targetWord<TAB>sentence`, the rank and
+the word matching `thousand/de.json`. Sentences are German only, no translation. `sie` and
+`Sie` are checked case-sensitively and must appear mid-sentence, where the capital carries
+information.
+
