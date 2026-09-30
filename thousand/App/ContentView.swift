@@ -60,6 +60,7 @@ struct ContentView: View {
                 SummaryScreen(
                     boxLabels: boxLabels,
                     progress: viewModel.progress,
+                    retiredCount: viewModel.retiredCount,
                     buttonAction: { viewModel.fetchNextSet() },
                     onAbout: { sheet = .about },
                     onHowItWorks: { sheet = .howItWorks }

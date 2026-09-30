@@ -22,19 +22,20 @@ struct thousandApp: App {
     }
 
     var body: some Scene {
+        let languageData = loadLanguageData()
         WindowGroup {
             ContentView(
                 viewModel: WordViewModel(
                     cardStore: SwiftDataCardStore(container: container),
-                    leitnerSystem: setupLeitnerSystem()
+                    leitnerSystem: setupLeitnerSystem(with: languageData),
+                    totalWordCount: languageData?.words.count ?? 0
                 )
             )
         }
     }
-    
-    func setupLeitnerSystem() -> LeitnerSystem {
+
+    func setupLeitnerSystem(with languageData: LanguageData?) -> LeitnerSystem {
         let system = LeitnerSystem()
-        let languageData = loadLanguageData()
 
         if let languageData, languageData.contentVersion > seededContentVersion() {
             wipeStoredContent()
