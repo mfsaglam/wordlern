@@ -22,6 +22,9 @@ bigger model, mechanical steps are not.
 | 12 | `step/12-cleanup` | Cleanup | sonnet | done |
 | 13 | `step/13-attribution` | Attribution / About screen | sonnet | done |
 | 14 | `step/14-file-layout` | Group the source files by screen | sonnet | done |
+| 15 | `step/15-launch-on-summary` | Launch on the summary screen | sonnet | todo |
+| 16 | `step/16-how-it-works` | "How it works" screen | opus | todo |
+| 17 | `step/17-voice-quality` | Pick the best installed German voice | sonnet | todo |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
@@ -276,3 +279,50 @@ root: the first two are where Xcode expects them and `Preview Content`'s path is
 No code changed — folders carry no meaning in Swift, so no import needed touching. The moves were
 `git mv`, and `project.xcproj`'s flat file list became nested `group` nodes by hand, since this
 project format does not pick files up off disk.
+
+## 15 — Launch on the summary screen
+
+Today `ContentView.onAppear` calls through to `fetchNextSet()`, so opening the app drops the user
+straight into a review session. Opening the app should land on `SummaryScreen`; a session starts
+only when the user taps `start session`.
+
+Scope: `WordViewModel.onAppear` and `ContentView` only. Do not change how a session behaves once
+started, and do not touch the session-end flow — returning from `SessionEndScreen` already lands
+on the summary.
+
+Watch for: `onAppear` fires again when the About sheet is dismissed, so it must be idempotent and
+must not restart a session that is in progress.
+
+## 16 — "How it works" screen
+
+The app never explains the Leitner system. Users have no way to learn why a word came back, what
+`box 3` means, or that the `mastered` figure on the summary screen is boxes 3+4+5 combined.
+
+One screen, reachable from a quiet `questionmark.circle` button on `SummaryScreen`, presented as
+a sheet next to the existing About sheet. Sections:
+
+- What the five boxes are, and why the interval grows as a card moves up.
+- What a correct answer does (card moves up one box) and what a wrong answer does.
+- What `mastered` counts.
+- Pronunciation: the app uses the best German voice installed on the device, and a better one can
+  be downloaded in Settings. Ships with step 17's copy and button — write the section, leave the
+  button wiring to 17 if 17 is not done yet.
+
+Plain `Text` stack with a `#Preview`, same shape as `AboutScreen`. No onboarding flow, no
+multi-page tutorial, no illustrations. It may be shown automatically on first launch at most once.
+
+## 17 — Pick the best installed German voice
+
+`GermanSpeaker` in `Card/SpeakerButton.swift` asks for `siri_female_de-DE_compact`, which is
+Apple's lowest-quality variant, and falls back to any `de` voice. Instead, enumerate
+`AVSpeechSynthesisVoice.speechVoices()`, keep the German ones, and pick the highest
+`AVSpeechSynthesisVoiceQuality` available (premium > enhanced > default).
+
+Also add the button behind step 16's pronunciation section that sends the user to Settings so they
+can download a better voice.
+
+Caveat to respect: there is no public deep link to Settings → Accessibility → Spoken Content →
+Voices. `UIApplication.openSettingsURLString` only opens this app's own settings page, and
+`App-Prefs:` style URLs are private API and risk App Store rejection. So the section must spell the
+path out in words; the button is a convenience that opens Settings, not a shortcut to the exact
+pane. Do not ship a private URL scheme.
