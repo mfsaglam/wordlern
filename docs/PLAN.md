@@ -25,7 +25,7 @@ bigger model, mechanical steps are not.
 | 15 | `step/15-launch-on-summary` | Launch on the summary screen | sonnet | done |
 | 16 | `step/16-how-it-works` | "How it works" screen | opus | done |
 | 17 | `step/17-voice-quality` | Pick the best installed German voice | sonnet | done |
-| 18 | `step/18-retired-words` | Retired words must keep counting as mastered | sonnet | todo |
+| 18 | `step/18-retired-words` | Retired words must keep counting as mastered | sonnet | done |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
@@ -351,3 +351,12 @@ same problem.
 Scope: the app side only — `LeitnerSwift` is not to be edited (see `CLAUDE.md`). Options to weigh:
 count retired cards by subtracting the live total from the seeded word count, or track retirements
 in the store. Decide in the step, and keep the summary screen's five bars as they are.
+
+Done: went with subtracting the live total from the seeded word count — no new persistence, and it
+stays correct for free across undo (which just restores `allBoxes`). `thousandApp` reads
+`de.json`'s word count at every launch, re-seed or not, and hands it to `WordViewModel` as
+`totalWordCount`. `WordViewModel.retiredCount` is `totalWordCount` minus the live sum of
+`progress`; `masteredWordCount` is boxes 3–5 plus `retiredCount`, and both session-start and
+session-end figures use it instead of the bare `masteredCount(in:)`. `SummaryScreen` gets a
+`retiredCount` parameter it adds to its own headline; the five per-box bars are untouched, as
+asked. No change to `SessionEndScreen` — it already took its numbers from the view model.

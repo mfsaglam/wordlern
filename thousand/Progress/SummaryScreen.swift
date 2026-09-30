@@ -13,6 +13,10 @@ struct SummaryScreen: View {
     let boxLabels: [LocalizedStringKey]
     /// Card count per box, box 1 first.
     let progress: [Int]
+    /// Words that reached box 5 and were answered correctly there — retired
+    /// from the Leitner system outright, so `progress` no longer counts them.
+    /// Still mastered; see step 18 of `docs/PLAN.md`.
+    var retiredCount: Int = 0
     /// Size of the whole word list, the denominator of the headline metric.
     var wordCount: Int = 1000
     let buttonAction: () -> Void
@@ -20,7 +24,7 @@ struct SummaryScreen: View {
     var onHowItWorks: () -> Void = {}
 
     private var mastered: Int {
-        masteredCount(in: progress)
+        masteredCount(in: progress) + retiredCount
     }
 
     /// The longest bar defines the scale, so the screen keeps its shape as the
@@ -177,6 +181,15 @@ private struct BoxRow: View {
     SummaryScreen(
         boxLabels: ["box 1", "box 2", "box 3", "box 4", "box 5"],
         progress: [120, 180, 240, 260, 200],
+        buttonAction: { }
+    )
+}
+
+#Preview("with retired words") {
+    SummaryScreen(
+        boxLabels: ["box 1", "box 2", "box 3", "box 4", "box 5"],
+        progress: [60, 90, 120, 140, 90],
+        retiredCount: 400,
         buttonAction: { }
     )
 }

@@ -52,10 +52,16 @@ class WordViewModel: ObservableObject {
     private var movedUp: Int = 0
     private var masteredAtSessionStart: Int = 0
     private let cardStore: CardStore
+    /// Size of the whole word list, read from `de.json` at launch regardless of
+    /// whether a re-seed happened. The denominator `retiredCount` needs, since a
+    /// card that reaches box 5 on a correct answer is removed from the Leitner
+    /// system (and the store) outright rather than staying there.
+    private let totalWordCount: Int
 
-    init(cardStore: CardStore, leitnerSystem: LeitnerSystem) {
+    init(cardStore: CardStore, leitnerSystem: LeitnerSystem, totalWordCount: Int = 1000) {
         self.cardStore = cardStore
         self.leitnerSystem = leitnerSystem
+        self.totalWordCount = totalWordCount
         loadCachedProgress()
     }
 
@@ -76,6 +82,20 @@ class WordViewModel: ObservableObject {
     
     var progress: [Int] {
         leitnerSystem.cardCountsPerBox
+    }
+
+    /// `LeitnerSystem.updateCard` removes a card outright once it is answered
+    /// correctly in the last box — retired, not promoted — so it stops showing
+    /// up in `progress` at all. The word list only shrinks by a re-seed, never
+    /// by review, so whatever `progress` no longer accounts for has retired.
+    var retiredCount: Int {
+        max(0, totalWordCount - progress.reduce(0, +))
+    }
+
+    /// Boxes 3–5 plus every retired word — see `retiredCount`. The one number
+    /// both the summary and session-end screens must agree on.
+    var masteredWordCount: Int {
+        masteredCount(in: progress) + retiredCount
     }
 
     /// 1-based box the card on screen currently lives in, for the header badge.
@@ -106,7 +126,7 @@ class WordViewModel: ObservableObject {
             currentIndex = 0
             reviewed = 0
             movedUp = 0
-            masteredAtSessionStart = masteredCount(in: progress)
+            masteredAtSessionStart = masteredWordCount
             finishedSession = nil
             clearUndo()
             loadNextCard()
@@ -131,7 +151,7 @@ class WordViewModel: ObservableObject {
                     reviewed: reviewed,
                     movedUp: movedUp,
                     masteredBefore: masteredAtSessionStart,
-                    masteredAfter: masteredCount(in: progress)
+                    masteredAfter: masteredWordCount
                 )
             }
             return
