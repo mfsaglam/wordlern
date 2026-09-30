@@ -35,7 +35,7 @@ bigger model, mechanical steps are not.
 | 25 | `step/25-widget` | Summary widget | opus | done |
 | 26 | `step/26-lock-screen-widget` | Lock screen widgets | sonnet | done |
 | 27 | `step/27-widget-countdown-localization` | The widget's countdown string is not localized | sonnet | done |
-| 28 | `step/28-release-hygiene` | Release hygiene before any pipeline | sonnet | todo |
+| 28 | `step/28-release-hygiene` | Release hygiene before any pipeline | sonnet | done |
 | 29 | `step/29-fastlane-local` | Fastlane, proven from the laptop | opus | todo |
 | 30 | `step/30-testflight-pipeline` | GitHub Actions: main → TestFlight | opus | todo |
 | 31 | `step/31-pr-check` | Build + test check on pull requests | sonnet | todo |
@@ -729,6 +729,22 @@ CI in this step.
 - Check the App Store Connect record actually has the widget's bundle id
   (`com.mfsaglam.thousand.WordLernWidget`) and an App Group registered for both targets. A missing
   identifier surfaces as an opaque signing failure later.
+
+Done. `INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO` is now on the `thousand` target's build
+settings and, since the widget ships a literal `Info.plist` rather than a fully generated one, on
+both the `WordLernWidget` target's build settings and `WordLernWidget/Info.plist` directly.
+`MARKETING_VERSION` is `2.0` on both targets.
+
+Build number rule: `CURRENT_PROJECT_VERSION` is set at build time in the fastlane lane (step 29) to
+`latest_testflight_build_number + 1`, looked up via `app_store_connect_api_key` +
+`latest_testflight_build_number`. Not the CI run number — App Store Connect is the source of truth
+for what's already been uploaded, and a CI run number has no relationship to it if a build is ever
+uploaded by hand or a workflow is re-run. Do not bump `CURRENT_PROJECT_VERSION` by hand in the
+project file.
+
+The App Store Connect record check (widget bundle id `com.mfsaglam.thousand.WordLernWidget` and an
+App Group registered for both targets) is a console check outside this repo — the user needs to
+confirm it in App Store Connect / the Apple Developer portal before step 29.
 
 ## 29 — Fastlane, proven from the laptop
 
