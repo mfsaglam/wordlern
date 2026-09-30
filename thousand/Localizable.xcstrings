@@ -1,6 +1,7 @@
 {
   "sourceLanguage": "en",
   "strings": {
+    "%lld cards reviewed": {},
     "/ %lld words": {},
     "box %lld": {},
     "box 1": {},
@@ -10,9 +11,13 @@
     "box 5": {},
     "in a sentence": {},
     "mastered": {},
+    "moved up": {},
     "pronounce": {},
+    "see progress": {},
+    "session complete": {},
     "start session": {},
     "tap the card to flip": {},
+    "to review": {},
     "undo": {}
   },
   "version": "1.0"

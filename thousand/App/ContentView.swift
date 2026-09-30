@@ -37,6 +37,10 @@ struct ContentView: View {
                     canUndo: viewModel.canUndo,
                     onUndo: { viewModel.undoLastAnswer() }
                 )
+            } else if let finished = viewModel.finishedSession {
+                SessionEndScreen(summary: finished) {
+                    viewModel.dismissSessionEnd()
+                }
             } else {
                 SummaryScreen(
                     boxLabels: boxLabels,

@@ -13,19 +13,44 @@ class WordViewModel: ObservableObject {
     @Published var showMeaning: Bool = false  // Controls whether the word meaning is visible
     /// True while the last answer can still be taken back.
     @Published private(set) var canUndo: Bool = false
+    /// Set when a session runs out of cards, and held until the user leaves the
+    /// session end screen. Nil at every other moment.
+    @Published private(set) var finishedSession: SessionSummary?
+
+    /// What one finished session did, for screen 4 of `docs/DESIGN.md`.
+    struct SessionSummary: Equatable {
+        let reviewed: Int
+        /// Cards answered correctly. A correct answer is what moves a card up a
+        /// box; cards already in the last box stay there, but the answer still
+        /// counts as a win.
+        let movedUp: Int
+        let masteredBefore: Int
+        let masteredAfter: Int
+
+        var toReview: Int {
+            reviewed - movedUp
+        }
+    }
 
     /// Everything needed to put the session back the way it was before one answer.
     /// The whole box layout is kept rather than the single move, because
     /// `LeitnerSystem` exposes no reverse of `updateCard` — only `loadBoxes`.
+    /// The session counters ride along so undo does not leave the end screen
+    /// reporting an answer the user took back.
     private struct UndoState {
         let boxes: [Box]
         let index: Int
+        let reviewed: Int
+        let movedUp: Int
     }
 
     private var leitnerSystem: LeitnerSystem
     private(set) var cardSet: [Card] = []
     private var currentIndex: Int = 0
     private var undoState: UndoState?
+    private var reviewed: Int = 0
+    private var movedUp: Int = 0
+    private var masteredAtSessionStart: Int = 0
     private let cardStore: CardStore
 
     init(cardStore: CardStore, leitnerSystem: LeitnerSystem) {
@@ -35,6 +60,11 @@ class WordViewModel: ObservableObject {
     }
 
     func onAppear() {
+        // A finished session owns the screen until the user asks for progress,
+        // so a re-appearance must not start the next one over it.
+        if finishedSession != nil {
+            return
+        }
         if cardSet.isEmpty {
             fetchNextSet()
         } else {
@@ -72,6 +102,10 @@ class WordViewModel: ObservableObject {
             
             cardSet = dueCards
             currentIndex = 0
+            reviewed = 0
+            movedUp = 0
+            masteredAtSessionStart = masteredCount(in: progress)
+            finishedSession = nil
             clearUndo()
             loadNextCard()
         } catch {
@@ -87,6 +121,17 @@ class WordViewModel: ObservableObject {
             // The session is over and the card screen is gone, so there is
             // nothing left to undo onto.
             clearUndo()
+            // An empty due set is not a finished session — with nothing to
+            // review the user belongs on the summary screen, not on a
+            // `0 cards reviewed` celebration.
+            if reviewed > 0 {
+                finishedSession = SessionSummary(
+                    reviewed: reviewed,
+                    movedUp: movedUp,
+                    masteredBefore: masteredAtSessionStart,
+                    masteredAfter: masteredCount(in: progress)
+                )
+            }
             return
         }
         currentCard = cardSet[currentIndex]
@@ -101,11 +146,20 @@ class WordViewModel: ObservableObject {
     // Handles marking a card as correct or incorrect
     func markCard(correct: Bool) {
         guard let card = currentCard else { return }
-        let snapshot = UndoState(boxes: leitnerSystem.allBoxes, index: currentIndex)
+        let snapshot = UndoState(
+            boxes: leitnerSystem.allBoxes,
+            index: currentIndex,
+            reviewed: reviewed,
+            movedUp: movedUp
+        )
         do {
             try leitnerSystem.updateCard(card, correct: correct)
             saveProgress()
 
+            reviewed += 1
+            if correct {
+                movedUp += 1
+            }
             currentIndex += 1
             loadNextCard()
             // After the last card `loadNextCard` clears the undo state again.
@@ -124,9 +178,17 @@ class WordViewModel: ObservableObject {
         guard let undoState else { return }
         leitnerSystem.loadBoxes(boxes: undoState.boxes)
         currentIndex = undoState.index
+        reviewed = undoState.reviewed
+        movedUp = undoState.movedUp
         clearUndo()
         saveProgress()
         loadNextCard()
+    }
+
+    /// Leaves the session end screen for the summary. The next session starts
+    /// only when the user asks for it there.
+    func dismissSessionEnd() {
+        finishedSession = nil
     }
 
     private func clearUndo() {

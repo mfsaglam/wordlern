@@ -62,6 +62,14 @@
           "path": "Progress",
           "children": [
             { "path": "SummaryScreen.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "ProgressBars.swift", "target-membership": [ "thousand/compile-sources" ] },
+          ],
+        },
+        {
+          "kind": "group",
+          "path": "SessionEnd",
+          "children": [
+            { "path": "SessionEndScreen.swift", "target-membership": [ "thousand/compile-sources" ] },
           ],
         },
         {
