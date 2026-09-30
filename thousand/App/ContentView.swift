@@ -61,6 +61,8 @@ struct ContentView: View {
                     boxLabels: boxLabels,
                     progress: viewModel.progress,
                     retiredCount: viewModel.retiredCount,
+                    dueCount: viewModel.dueCount,
+                    nextReviewDate: viewModel.nextReviewDate,
                     buttonAction: { viewModel.fetchNextSet() },
                     onAbout: { sheet = .about },
                     onHowItWorks: { sheet = .howItWorks }

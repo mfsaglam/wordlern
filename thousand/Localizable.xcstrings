@@ -4,6 +4,9 @@
     "/ %lld words" : {
 
     },
+    "%lld cards due" : {
+
+    },
     "%lld cards reviewed" : {
 
     },
@@ -59,6 +62,9 @@
 
     },
     "moved up" : {
+
+    },
+    "next review %@" : {
 
     },
     "Open Settings" : {

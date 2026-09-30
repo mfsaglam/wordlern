@@ -98,6 +98,29 @@ class WordViewModel: ObservableObject {
         masteredCount(in: progress) + retiredCount
     }
 
+    /// How many cards are due for review right now, across every box. Mirrors
+    /// `LeitnerSystem.dueForReview`'s own due check, but counts instead of
+    /// throwing when there are none.
+    var dueCount: Int {
+        let today = Calendar.current.startOfDay(for: Date())
+        return leitnerSystem.allBoxes.reduce(0) { count, box in
+            Calendar.current.startOfDay(for: box.nextReviewDate) <= today
+                ? count + box.cards.count
+                : count
+        }
+    }
+
+    /// The earliest moment a card next becomes due, across every box that
+    /// still holds cards. Nil once `dueCount` is positive — there is nothing
+    /// to wait for — or if the word list is empty outright.
+    var nextReviewDate: Date? {
+        guard dueCount == 0 else { return nil }
+        return leitnerSystem.allBoxes
+            .filter { !$0.cards.isEmpty }
+            .map(\.nextReviewDate)
+            .min()
+    }
+
     /// 1-based box the card on screen currently lives in, for the header badge.
     var currentBoxNumber: Int? {
         guard let currentCard else { return nil }
@@ -120,8 +143,6 @@ class WordViewModel: ObservableObject {
     func fetchNextSet() {
         do {
             let dueCards = try leitnerSystem.dueForReview(limit: 10)
-            (print(dueCards.count))
-            
             cardSet = dueCards
             currentIndex = 0
             reviewed = 0
