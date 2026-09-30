@@ -69,6 +69,12 @@ struct CardScreen: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(uiColor: .systemGroupedBackground))
+        // Keyed on `cardID`, not `isFlipped`: flipping, undoing back to a card
+        // already seen, or returning from a sheet must not speak again, but
+        // undo stepping to a different card should — the user is seeing it fresh.
+        .task(id: cardID) {
+            GermanSpeaker.shared.speak(word.word)
+        }
     }
 }
 

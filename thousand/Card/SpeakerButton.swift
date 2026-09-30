@@ -33,6 +33,13 @@ final class GermanSpeaker {
     }
 
     func speak(_ text: String) {
+        // `.ambient` instead of the app-default `.soloAmbient`: both respect the
+        // ringer switch, but `.soloAmbient` stops whatever the user was already
+        // listening to. With auto-play (step 19) that would kill their music on
+        // every card; a manual button press should not do that either.
+        try? AVAudioSession.sharedInstance().setCategory(.ambient)
+        try? AVAudioSession.sharedInstance().setActive(true)
+
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = bestGermanVoice ?? AVSpeechSynthesisVoice(language: "de")
         utterance.rate = 0.4

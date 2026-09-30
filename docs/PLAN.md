@@ -26,7 +26,7 @@ bigger model, mechanical steps are not.
 | 16 | `step/16-how-it-works` | "How it works" screen | opus | done |
 | 17 | `step/17-voice-quality` | Pick the best installed German voice | sonnet | done |
 | 18 | `step/18-retired-words` | Retired words must keep counting as mastered | sonnet | done |
-| 19 | `step/19-autoplay-word` | Speak the word once when a card appears | sonnet | todo |
+| 19 | `step/19-autoplay-word` | Speak the word once when a card appears | sonnet | done |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
@@ -388,3 +388,12 @@ Open question, decide while building: there is no settings screen, so shipping t
 cannot turn it off. Ship it without a toggle first and see whether it is annoying in practice —
 adding a settings screen for one switch is worse than the problem it solves. If it does turn out to
 need one, that is its own step.
+
+Done: shipped without a toggle, per the open question above. `CardScreen` gets a
+`.task(id: cardID)` that calls `GermanSpeaker.shared.speak(word.word)` — keyed on the card's
+identity rather than its flip state, so flipping, undoing back to an already-seen card, or
+returning from a sheet does not replay it, but undo stepping to a genuinely different card does.
+`GermanSpeaker.speak(_:)` now sets the audio session category to `.ambient` (and activates it)
+before every utterance, manual or auto-played: `.ambient` respects the ringer switch like the
+app-default `.soloAmbient` did, but does not stop audio the user already had playing, which
+auto-play would otherwise do on every single card.
