@@ -29,7 +29,7 @@ bigger model, mechanical steps are not.
 | 19 | `step/19-autoplay-word` | Speak the word once when a card appears | sonnet | done |
 | 20 | `step/20-tap-to-copy` | Tap word / meaning / sentence to copy | sonnet | done |
 | 21 | `step/21-privacy-manifest` | Privacy manifest | sonnet | done |
-| 22 | `step/22-nothing-due` | Say so when nothing is due | sonnet | todo |
+| 22 | `step/22-nothing-due` | Say so when nothing is due | sonnet | done |
 | 23 | `step/23-daily-reminder` | Daily reminder notification | opus | todo |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
@@ -479,6 +479,14 @@ On `SummaryScreen`:
 Also in this step: delete the stray `print(dueCards.count)` at `WordViewModel.swift:123`.
 
 Out of scope: changing the session size, changing what `dueForReview` returns.
+
+Done: `WordViewModel.dueCount` counts cards across every box whose `nextReviewDate` has passed —
+the same check `LeitnerSystem.dueForReview` makes internally, but counting instead of throwing
+when there are none. `nextReviewDate` is nil once `dueCount` is positive, otherwise the earliest
+`nextReviewDate` among boxes that still hold cards. `SummaryScreen` shows "N cards due" under the
+box bars when `dueCount > 0`; at zero it disables `start session` (50% opacity) and shows "next
+review …" instead, formatted by `RelativeDateTimeFormatter` in the view, per the view model only
+exposing a date. The stray `print(dueCards.count)` in `fetchNextSet()` is gone.
 
 ## 23 — Daily reminder notification
 
