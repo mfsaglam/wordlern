@@ -598,6 +598,39 @@ not try to fit all five box labels into `systemSmall`.
 
 Add a widget section to `docs/DESIGN.md` describing what shipped.
 
+Done: `WordLernWidget`, an `app-extension` target written into `project.xcproj` by hand, embedded
+by an `Embed Foundation Extensions` copy phase on the app with
+`bundle-base-path: plugins-directory`. Three things about the JSON project format that cost time
+and are worth writing down.
+
+A build phase reference in `target-membership` is `<target>/<kind>`, and for kinds a target can
+hold more than one of — `copy` — a third component disambiguates by the phase's `name`:
+
+```
+"target-membership": [
+  { "build-phase": "thousand/copy/Embed Foundation Extensions", "code-sign-on-copy": true },
+]
+```
+
+Bare `thousand/copy` fails to load with "Could not uniquely resolve the build phase name",
+*even when the target has only one copy phase*, so the phase must be named. Object ids cannot be
+referenced at all. `code-sign-on-copy` only survives on that object form of a membership entry,
+not as a sibling of `path`.
+
+And `xcprojformatter` is not a trustworthy validator: it rejects the `copy/<name>` form that
+Xcode itself requires, silently drops keys it does not recognise, and `--update` deletes
+`project.xcworkspace/xcshareddata/swiftpm/Package.resolved`. Use
+`xcodebuild -list -project thousand.xcodeproj` instead — it loads the project and reports exactly
+the error Xcode would, without building anything.
+
+`ProgressSnapshot.swift` gained a `read()` and is compiled into both targets, as is
+`ProgressBars.swift`, so the widget's bars are literally the summary screen's `Bar` and
+`BoxPalette`. `Localizable.xcstrings` is a resource of both targets. The timeline is two entries
+at most — now, and `nextDue` — with policy `.never` when there is no future `nextDue`, since
+`WordViewModel.writeProgressSnapshot()` now calls `WidgetCenter.shared.reloadAllTimelines()` on
+every write. The entry at `nextDue` carries `dueSinceSnapshot` and shows `review ready` rather
+than a count: the snapshot records *when* the next card comes due, not how many will be waiting.
+
 ## 26 — Lock screen widgets
 
 `accessoryCircular` and `accessoryRectangular` variants of the same widget, reading the same
@@ -607,3 +640,28 @@ count on one line.
 Small step, worth doing only after 25 is proven. These render monochrome and are tiny — if the
 content does not survive at that size, say so and drop the step rather than shipping something
 unreadable.
+
+## 27 — The widget's countdown string is not localized
+
+Left behind by step 25, deliberately. The widget's `next review in 5 hours` line is
+`Text(LocalizedStringKey("next review in \(nextDue, style: .relative)"))` in
+`WordLernWidget/SummaryWidget.swift` — a `Text.DateStyle` interpolation, which is what keeps the
+countdown ticking without the widget being reloaded. Xcode does **not** extract that
+interpolation into `Localizable.xcstrings`: two builds, with both `Text("…")` and
+`Text(LocalizedStringKey("…"))`, produced no key. So this one line falls back to its English
+literal in all twelve languages while the widget's other five strings translate normally.
+
+The fix is presumably to add the key by hand to the catalog, but the runtime lookup key has to be
+confirmed first — a `Date` + `style` interpolation is *assumed* to render as `%@`, and an entry
+under the wrong key is worse than none, because it looks translated and silently never applies.
+So: confirm the key, then add it.
+
+How to confirm: build, then read the compiled `Localizable.strings` out of the built widget for a
+language that has a translation, or set one language's value by hand and run the widget in the
+simulator under that language. Do not guess.
+
+If the key turns out not to be addressable at all, the fallback is to drop the interpolation and
+pass the whole sentence as a pre-formatted string, accepting that the countdown then only updates
+when the timeline reloads — which for this line means at `nextDue`, i.e. it would read
+`next review in 5 hours` for five hours. Say so and let the user choose; do not make that
+trade quietly.

@@ -61,7 +61,13 @@
           "path": "Progress",
           "children": [
             { "path": "SummaryScreen.swift", "target-membership": [ "thousand/compile-sources" ] },
-            { "path": "ProgressBars.swift", "target-membership": [ "thousand/compile-sources" ] },
+            {
+              "path": "ProgressBars.swift",
+              "target-membership": [
+                "thousand/compile-sources",
+                "WordLernWidget/compile-sources",
+              ],
+            },
             { "path": "AboutScreen.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "HowItWorksScreen.swift", "target-membership": [ "thousand/compile-sources" ] },
           ],
@@ -85,7 +91,13 @@
           "children": [
             { "path": "Haptics.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "ReminderScheduler.swift", "target-membership": [ "thousand/compile-sources" ] },
-            { "path": "ProgressSnapshot.swift", "target-membership": [ "thousand/compile-sources" ] },
+            {
+              "path": "ProgressSnapshot.swift",
+              "target-membership": [
+                "thousand/compile-sources",
+                "WordLernWidget/compile-sources",
+              ],
+            },
           ],
         },
         { "path": "Assets.xcassets", "target-membership": [ "thousand/resources" ] },
@@ -95,10 +107,24 @@
           "children": [
             { "path": "Preview Assets.xcassets", "target-membership": [ "thousand/resources" ] },
           ],
+        }, {
+          "path": "Localizable.xcstrings",
+          "target-membership": [
+            "thousand/resources",
+            "WordLernWidget/resources",
+          ],
         },
-        { "path": "Localizable.xcstrings", "target-membership": [ "thousand/resources" ] },
         { "path": "de.json", "target-membership": [ "thousand/resources" ] },
         { "path": "PrivacyInfo.xcprivacy", "target-membership": [ "thousand/resources" ] },
+      ],
+    }, {
+      "kind": "group",
+      "path": "WordLernWidget",
+      "children": [
+        { "path": "WordLernWidget.entitlements" },
+        { "path": "Info.plist" },
+        { "path": "WordLernWidgetBundle.swift", "target-membership": [ "WordLernWidget/compile-sources" ] },
+        { "path": "SummaryWidget.swift", "target-membership": [ "WordLernWidget/compile-sources" ] },
       ],
     }, {
       "kind": "group",
@@ -121,6 +147,7 @@
         { "path": "<PRODUCTS>/thousand.app", "id": "127FAFE82C9CC7750015F742", "type": "wrapper.application", "index": false },
         { "path": "<PRODUCTS>/thousandTests.xctest", "id": "127FAFF82C9CC7770015F742", "type": "wrapper.cfbundle", "index": false },
         { "path": "<PRODUCTS>/thousandUITests.xctest", "id": "127FB0022C9CC7770015F742", "type": "wrapper.cfbundle", "index": false },
+        { "path": "<PRODUCTS>/WordLernWidget.appex", "id": "127FB0102C9CC7770015F742", "type": "wrapper.app-extension", "index": false, "target-membership": [ { "build-phase": "thousand/copy/Embed Foundation Extensions", "code-sign-on-copy": true } ] },
       ],
     },
     { "kind": "group", "name": "Frameworks" },
@@ -131,6 +158,9 @@
       "id": "127FAFE72C9CC7750015F742",
       "product": "Products/thousand.app",
       "product-type": "application",
+      "dependencies": [
+        "WordLernWidget",
+      ],
       "build-phases": [
         "compile-sources",
         "frameworks",
@@ -139,6 +169,11 @@
           "kind": "copy",
           "name": "Embed Frameworks",
           "bundle-base-path": "frameworks-directory",
+        },
+        {
+          "kind": "copy",
+          "name": "Embed Foundation Extensions",
+          "bundle-base-path": "plugins-directory",
         },
       ],
       "package-product-members": [
@@ -232,6 +267,39 @@
         "SWIFT_VERSION": "5.0",
         "TARGETED_DEVICE_FAMILY": "1,2",
         "TEST_TARGET_NAME": "thousand",
+      },
+    }, {
+      "name": "WordLernWidget",
+      "id": "127FB00F2C9CC7770015F742",
+      "product": "Products/WordLernWidget.appex",
+      "product-type": "app-extension",
+      "build-phases": [
+        "compile-sources",
+        "frameworks",
+        "resources",
+      ],
+      "build-settings": {
+        "CODE_SIGN_ENTITLEMENTS": "WordLernWidget/WordLernWidget.entitlements",
+        "CODE_SIGN_STYLE": "Automatic",
+        "CURRENT_PROJECT_VERSION": "1",
+        "DEVELOPMENT_TEAM": "RPQ3VF2JBZ",
+        "ENABLE_PREVIEWS": "YES",
+        "GENERATE_INFOPLIST_FILE": "YES",
+        "INFOPLIST_FILE": "WordLernWidget/Info.plist",
+        "INFOPLIST_KEY_CFBundleDisplayName": "WordLern",
+        "LD_RUNPATH_SEARCH_PATHS": [
+          "$(inherited)",
+          "@executable_path/Frameworks",
+          "@executable_path/../../Frameworks",
+        ],
+        "MARKETING_VERSION": "1.0",
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.mfsaglam.thousand.WordLernWidget",
+        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "REGISTER_APP_GROUPS": "YES",
+        "SKIP_INSTALL": "YES",
+        "SWIFT_EMIT_LOC_STRINGS": "YES",
+        "SWIFT_VERSION": "5.0",
+        "TARGETED_DEVICE_FAMILY": "1,2",
       },
     },
   ],
