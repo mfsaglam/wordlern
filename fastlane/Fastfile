@@ -10,6 +10,12 @@ SCHEME    = "thousand"
 APP_ID    = "com.mfsaglam.thousand"
 WIDGET_ID = "com.mfsaglam.thousand.WordLernWidget"
 
+# Locally the certificates repo is cloned over SSH. The GitHub runner has no SSH
+# key, so CI passes an HTTPS url in MATCH_GIT_URL and a token in
+# MATCH_GIT_BASIC_AUTHORIZATION. The url is handed to match explicitly rather
+# than left to the Matchfile, because a Matchfile value wins over the environment.
+MATCH_GIT_URL = ENV.fetch("MATCH_GIT_URL", "git@github.com:mfsaglam/ios-certificates.git")
+
 platform :ios do
   desc "Build the app and upload it to TestFlight"
   lane :beta do
@@ -40,6 +46,7 @@ platform :ios do
       type: "appstore",
       app_identifier: [APP_ID, WIDGET_ID],
       api_key: api_key,
+      git_url: MATCH_GIT_URL,
       readonly: is_ci
     )
 

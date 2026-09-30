@@ -867,6 +867,42 @@ Because the repository is public, never use `pull_request_target`, and never ech
 log. Secrets are not exposed to workflows triggered by pull requests from forks, which is the
 behaviour we want — keep it that way.
 
+Done (workflow committed; the first real run happens when this reaches `main`).
+`.github/workflows/testflight.yml` runs `bundle exec fastlane beta` on `push` to `main` and on
+`workflow_dispatch`, with `permissions: contents: read` and a `concurrency` group so two runs cannot
+claim the same build number.
+
+Runner image: **`xcode-27`**, not `macos-latest`. The check the step asked for came back negative —
+`macos-26` (which `macos-latest` points at) ships Xcode 26.0.1–26.6 only, none of which can read the
+JSON `project.xcproj` format. The `xcode-27` image carries 27.0 (default), 27.1 and 27.2 beta; the
+workflow pins `/Applications/Xcode_27.2_beta.app` via `sudo xcode-select`, which is the closest
+match to the laptop's 27.2 (27B5028f vs the image's 27B5019j). Two consequences worth remembering:
+- `xcode-27` is a **preview** image. If a run never starts, check the label still exists at
+  `actions/runner-images` before suspecting the lane.
+- The pinned path contains `_beta` and will change when 27.2 goes final. The "Pin Xcode" step fails
+  loudly with a listing of `/Applications/Xcode*.app` instead of silently falling back to 27.0.
+Not `xcode-27-xlarge`: larger runners are billed even on a public repository.
+
+A `xcodebuild -list -project thousand.xcodeproj` step runs before anything expensive, so an Xcode
+that cannot parse the project file fails in seconds rather than after a ten-minute archive.
+
+Ruby is `ruby/setup-ruby@v1` with `ruby-version: "3.2"` (cached on the image) and
+`bundler-cache: true`. The step 29 laptop workarounds do not cross over: the runner's Ruby is native
+arm64, so the `-arch x86_64` gem flags are unnecessary, and the `json ~> 2.7.0` pin in the `Gemfile`
+is kept because it is what 3.2 headers want anyway.
+
+Certificates access — the item step 29 left open. The runner has no SSH key and `match` clones in a
+subprocess that cannot be prompted, so CI uses HTTPS: `MATCH_GIT_URL` (https clone url) plus
+`MATCH_GIT_BASIC_AUTHORIZATION` (base64 of `<user>:<token>`, read-only). `readonly: is_ci` was
+already in the lane. The `Fastfile` now passes `git_url:` explicitly, defaulting to the SSH url, and
+the `Matchfile` keeps its SSH `git_url` for `fastlane match` on the command line — a Matchfile value
+wins over the environment, so the url cannot be overridden by `MATCH_GIT_URL` alone.
+
+Secrets the repository needs (all of them, nothing else): `ASC_KEY_ID`, `ASC_ISSUER_ID`,
+`ASC_KEY_CONTENT` (base64 of the `.p8`), `MATCH_GIT_URL`, `MATCH_GIT_BASIC_AUTHORIZATION`,
+`MATCH_PASSWORD`. The team id is not a secret — it is already committed in `fastlane/Appfile`.
+Nothing in the workflow echoes a secret; `xcodebuild -version` is the only thing it prints.
+
 ## 31 — Build + test check on pull requests
 
 A cheap guard so a broken branch cannot reach `main`: build the app and run `thousandTests` on
