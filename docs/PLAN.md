@@ -31,6 +31,9 @@ bigger model, mechanical steps are not.
 | 21 | `step/21-privacy-manifest` | Privacy manifest | sonnet | done |
 | 22 | `step/22-nothing-due` | Say so when nothing is due | sonnet | done |
 | 23 | `step/23-daily-reminder` | Daily reminder notification | opus | done |
+| 24 | `step/24-progress-snapshot` | App Group + progress snapshot | sonnet | todo |
+| 25 | `step/25-widget` | Summary widget | opus | todo |
+| 26 | `step/26-lock-screen-widget` | Lock screen widgets | sonnet | todo |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
@@ -518,3 +521,74 @@ and then schedule at once, and reschedules again on `scenePhase == .background`.
 declines to schedule when authorization is not granted, and a nil `nextReview` — cards already due,
 or an empty list — just clears the pending request: a user with cards waiting is not reminded of
 work they can do right now, and gets a reminder again as soon as they next finish a session.
+
+## 24 — App Group + progress snapshot
+
+Groundwork for the widget, app side only. Nothing visible changes; the step is done when the
+snapshot file exists on disk with the right numbers in it.
+
+A widget extension cannot read the app's private container, so the two need an App Group. The
+widget, however, only needs six numbers — it does not need the cards. So **do not move the
+SwiftData store into the group.** Leave `ModelContainer(for: StoredBox.self, StoredCard.self)` in
+`thousandApp.swift` exactly where it is, and instead write a small snapshot the widget can read:
+
+```
+struct ProgressSnapshot: Codable {
+    let boxCounts: [Int]      // five entries
+    let mastered: Int         // boxes 3+4+5, matching SummaryScreen
+    let total: Int            // 1000
+    let dueCount: Int
+    let nextDue: Date?
+    let updated: Date
+}
+```
+
+Written as JSON to the App Group container. Rewrite it whenever progress changes — after each
+answer and at the end of a session — from the same values `SummaryScreen` already shows, so the
+two can never disagree.
+
+Why not share the store: a widget extension gets a much smaller memory budget than the app, and
+standing up SwiftData inside it means the model types, the store code and every future schema
+change have to be shared with a second target. Six numbers in a JSON file cost nothing and cannot
+break the app if the widget is ever removed.
+
+Caveat worth checking first: an App Group identifier has to be registered on the Apple developer
+account and the provisioning profile regenerated. If that is not available, this step stalls — find
+out before writing code. Use `group.` + the app's bundle identifier.
+
+New file: `thousand/Support/ProgressSnapshot.swift`, plus an entitlements file for the app target
+(none exists today). `project.xcproj` is the JSON project format — the entitlements file has to be
+wired into the build settings by hand.
+
+## 25 — Summary widget
+
+A widget extension target with one widget: the summary screen, at a glance, on the home screen.
+The point is ambient presence — seeing the progress bar sitting there is the nudge to come back.
+
+- New target, `WordLernWidget`, embedded in the app. This is the fiddly part: in the JSON project
+  format the target, its build phases and the embed-extension step all have to be written by hand.
+  Do this first and get an empty widget rendering before designing anything.
+- The timeline provider reads the JSON from step 24. No SwiftData, no `LeitnerSwift` import.
+- `systemSmall`: the mastered count over 1000, a single progress bar, and the due count.
+- `systemMedium`: the same, plus the five box bars from `ProgressBars`.
+- Call `WidgetCenter.shared.reloadAllTimelines()` from the app wherever the snapshot is written.
+- Add one timeline entry at `nextDue` so the due count refreshes itself when cards come due, even
+  if the app is not opened.
+- Tapping the widget opens the app, which lands on the summary screen already (step 15). No
+  `widgetURL` and no deep-link routing needed.
+
+Constraints to design within: widgets do not animate, so the bars are static — the appear
+animation from step 10 does not apply. No audio, no interaction in this step. Text is small; do
+not try to fit all five box labels into `systemSmall`.
+
+Add a widget section to `docs/DESIGN.md` describing what shipped.
+
+## 26 — Lock screen widgets
+
+`accessoryCircular` and `accessoryRectangular` variants of the same widget, reading the same
+snapshot. Circular shows the mastered fraction as a gauge; rectangular shows mastered plus the due
+count on one line.
+
+Small step, worth doing only after 25 is proven. These render monochrome and are tiny — if the
+content does not survive at that size, say so and drop the step rather than shipping something
+unreadable.
