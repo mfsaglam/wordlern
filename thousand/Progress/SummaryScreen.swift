@@ -17,10 +17,8 @@ struct SummaryScreen: View {
     var wordCount: Int = 1000
     let buttonAction: () -> Void
 
-    /// Boxes 3, 4 and 5 combined — a word is mastered once it has survived
-    /// three rounds.
     private var mastered: Int {
-        progress.dropFirst(2).reduce(0, +)
+        masteredCount(in: progress)
     }
 
     /// The longest bar defines the scale, so the screen keeps its shape as the
@@ -143,46 +141,6 @@ private struct BoxRow: View {
                 .foregroundStyle(.secondary)
                 .frame(width: 36, alignment: .trailing)
         }
-    }
-}
-
-private struct Bar: View {
-    let fraction: Double
-    let height: CGFloat
-    let fill: Color
-    let filled: Bool
-    let delay: Double
-
-    var body: some View {
-        GeometryReader { geometry in
-            ZStack(alignment: .leading) {
-                Capsule()
-                    .fill(Color.primary.opacity(0.06))
-                Capsule()
-                    .fill(fill)
-                    .frame(width: geometry.size.width * (filled ? clamped : 0))
-            }
-        }
-        .frame(height: height)
-        .animation(.spring(response: 0.55, dampingFraction: 0.85).delay(delay), value: filled)
-    }
-
-    private var clamped: Double {
-        min(max(fraction, 0), 1)
-    }
-}
-
-private enum BoxPalette {
-    static let mastered = Color(red: 0.13, green: 0.45, blue: 0.29)
-
-    /// Neutral grey at box 1 through to a deep green at the last box.
-    static func fill(depth: Double) -> Color {
-        let t = min(max(depth, 0), 1)
-        return Color(
-            red: 0.62 - 0.49 * t,
-            green: 0.64 - 0.19 * t,
-            blue: 0.66 - 0.37 * t
-        )
     }
 }
 
