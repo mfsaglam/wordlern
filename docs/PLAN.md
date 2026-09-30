@@ -26,8 +26,11 @@ bigger model, mechanical steps are not.
 | 16 | `step/16-how-it-works` | "How it works" screen | opus | done |
 | 17 | `step/17-voice-quality` | Pick the best installed German voice | sonnet | done |
 | 18 | `step/18-retired-words` | Retired words must keep counting as mastered | sonnet | done |
-| 19 | `step/19-autoplay-word` | Speak the word once when a card appears | sonnet | todo |
+| 19 | `step/19-autoplay-word` | Speak the word once when a card appears | sonnet | done |
 | 20 | `step/20-tap-to-copy` | Tap word / meaning / sentence to copy | sonnet | done |
+| 21 | `step/21-privacy-manifest` | Privacy manifest | sonnet | todo |
+| 22 | `step/22-nothing-due` | Say so when nothing is due | sonnet | todo |
+| 23 | `step/23-daily-reminder` | Daily reminder notification | opus | todo |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
@@ -426,3 +429,62 @@ friendlier style) — `.textSelection(.enabled)` on the token `HStack` covers th
 a long-press drag select across tokens as one continuous span instead of one word at a time.
 `SentenceBox`'s call site in `CardView` gets the same `.id(isFlipped)` treatment as the two `Text`
 views, for the same reason.
+
+## 21 — Privacy manifest
+
+The app has no `PrivacyInfo.xcprivacy`, but it calls `UserDefaults` in `App/thousandApp.swift`
+(`seededContentVersion`) and `Card/WordViewModel.swift`. `UserDefaults` is on Apple's
+required-reason API list, so an App Store submission without a manifest declaring it is rejected.
+
+Add `thousand/PrivacyInfo.xcprivacy` and register it as a resource of the `thousand` target.
+Contents:
+
+- `NSPrivacyAccessedAPITypes`: `NSPrivacyAccessedAPICategoryUserDefaults` with reason `CA92.1`
+  (access to data stored by this app only).
+- `NSPrivacyCollectedDataTypes`: empty. The app collects nothing — no analytics, no crash
+  reporter, no network calls at all.
+- `NSPrivacyTracking`: `false`. No `NSPrivacyTrackingDomains`.
+
+Check `LeitnerSwift` while here: a dependency ships its own manifest, and if it does not use any
+required-reason API there is nothing to do, but confirm rather than assume.
+
+Remember `project.xcproj` is the JSON project format — a new file has to be added to the file
+list and the resources phase by hand, it is not picked up off disk.
+
+## 22 — Say so when nothing is due
+
+Tapping `start session` when no card is due does nothing visible. `fetchNextSet()` gets an empty
+list, `loadNextCard()` correctly declines to show a `0 cards reviewed` celebration, and the user is
+left on the summary screen with no feedback. This happens every day, by design of the Leitner
+system — it is the normal state, not an edge case.
+
+On `SummaryScreen`:
+
+- Show how many cards are due right now, next to or under the button.
+- When that count is zero, disable `start session` and say when the next card comes due —
+  "next review in about 5 hours". Derive it from the earliest `lastReviewedDate + reviewInterval`
+  across the boxes; expose it from `WordViewModel` as a date, and let the view do the formatting.
+- Keep it one quiet line. No illustration, no empty-state artwork.
+
+Also in this step: delete the stray `print(dueCards.count)` at `WordViewModel.swift:123`.
+
+Out of scope: changing the session size, changing what `dueForReview` returns.
+
+## 23 — Daily reminder notification
+
+Spaced repetition only works if the user comes back, and nothing in the app asks them to. Add a
+local notification — `UNUserNotificationCenter` only, no server, no push entitlement.
+
+- Ask for permission after the user finishes their first session, from `SessionEndScreen`. Never
+  at launch: a permission prompt before the app has shown its worth gets denied, and a denial is
+  permanent unless the user digs into Settings.
+- Schedule one notification for the moment the next card comes due — the same date step 22
+  computes. Reschedule it whenever the app goes to the background, so it always reflects the
+  current state.
+- Do not schedule a fixed daily repeat. A reminder that fires when nothing is due trains the user
+  to ignore it.
+- Cancel and reschedule rather than stacking requests; there should never be more than one pending.
+- No in-app toggle. iOS Settings is the off switch, and a settings screen for one boolean is not
+  worth it — same call as step 19.
+
+Copy should say what is waiting, not nag: "12 words are ready to review".
