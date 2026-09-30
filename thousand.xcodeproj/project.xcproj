@@ -100,6 +100,7 @@
         },
         { "path": "Localizable.xcstrings", "target-membership": [ "thousand/resources" ] },
         { "path": "de.json", "target-membership": [ "thousand/resources" ] },
+        { "path": "PrivacyInfo.xcprivacy", "target-membership": [ "thousand/resources" ] },
       ],
     }, {
       "kind": "group",

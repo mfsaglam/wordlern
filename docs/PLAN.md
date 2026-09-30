@@ -28,7 +28,7 @@ bigger model, mechanical steps are not.
 | 18 | `step/18-retired-words` | Retired words must keep counting as mastered | sonnet | done |
 | 19 | `step/19-autoplay-word` | Speak the word once when a card appears | sonnet | done |
 | 20 | `step/20-tap-to-copy` | Tap word / meaning / sentence to copy | sonnet | done |
-| 21 | `step/21-privacy-manifest` | Privacy manifest | sonnet | todo |
+| 21 | `step/21-privacy-manifest` | Privacy manifest | sonnet | done |
 | 22 | `step/22-nothing-due` | Say so when nothing is due | sonnet | todo |
 | 23 | `step/23-daily-reminder` | Daily reminder notification | opus | todo |
 
@@ -450,6 +450,16 @@ required-reason API there is nothing to do, but confirm rather than assume.
 
 Remember `project.xcproj` is the JSON project format — a new file has to be added to the file
 list and the resources phase by hand, it is not picked up off disk.
+
+Done: `thousand/PrivacyInfo.xcprivacy` declares `NSPrivacyAccessedAPICategoryUserDefaults` with
+reason `CA92.1`, empty `NSPrivacyCollectedDataTypes`, and `NSPrivacyTracking` false with no
+tracking domains. Registered as a `thousand/resources` entry in `project.xcproj`, alongside
+`Localizable.xcstrings` and `de.json`. `LeitnerSwift`'s checked-out source (under
+`SourcePackages/checkouts` in DerivedData) carries no privacy manifest of its own and uses none
+of the required-reason APIs (`UserDefaults`, `FileManager` timestamps, etc.), so there is
+nothing for it to declare. `WordViewModel.swift`'s `UserDefaults` mention that motivated this
+step is a stale comment, not a call — the only real usage is `thousandApp.swift`'s
+`seededContentVersion`.
 
 ## 22 — Say so when nothing is due
 
