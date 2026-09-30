@@ -161,24 +161,6 @@ final class SwiftDataCardStore: CardStore {
         }
     }
 
-    /// `id` is the box's position in the Leitner array — boxes have no other
-    /// identity. Unused today; see the cleanup step.
-    func fetchBox(byId id: String) -> Box? {
-        guard let index = Int(id) else { return nil }
-        let boxes = fetchBoxes()
-        guard boxes.indices.contains(index) else { return nil }
-        return boxes[index]
-    }
-
-    func updateBox(_ box: Box) throws {
-        // A Box carries no identity, so there is nothing to address it by.
-        // `saveBoxes` is the only write path the app uses.
-    }
-
-    func deleteBox(_ box: Box) throws {
-        // Same as `updateBox`.
-    }
-
 }
 
 private extension StoredCard {

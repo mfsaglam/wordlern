@@ -10,7 +10,4 @@ import LeitnerSwift
 protocol CardStore {
     func saveBoxes(_ box: [Box]) throws
     func fetchBoxes() -> [Box]
-    func fetchBox(byId id: String) -> Box?
-    func updateBox(_ box: Box) throws
-    func deleteBox(_ box: Box) throws
 }

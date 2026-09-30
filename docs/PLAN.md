@@ -19,7 +19,7 @@ bigger model, mechanical steps are not.
 | 09 | `step/09-swipe-undo` | Swipe gesture + undo | opus | done |
 | 10 | `step/10-summary-screen` | Summary screen redesign | opus | done |
 | 11 | `step/11-session-end` | Session end screen | opus | done |
-| 12 | `step/12-cleanup` | Cleanup | sonnet | todo |
+| 12 | `step/12-cleanup` | Cleanup | sonnet | done |
 | 13 | `step/13-attribution` | Attribution / About screen | sonnet | todo |
 | 14 | `step/14-file-layout` | Group the source files by screen | sonnet | done |
 
@@ -229,6 +229,15 @@ conflates three different moments.
 - The test files are entirely commented out; restore what still applies.
   (`SwiftDataCardStoreTests` from step 08 is live and should stay.)
 - `CardStore.fetchBox(byId:)`, `updateBox` and `deleteBox` have no callers. Drop them.
+
+Done: `languageCode` now comes from `languageData.languageCode` ("de") instead of `""`. Word
+meanings are not localized — `Localizable.xcstrings` never carried word-meaning keys, so the
+`NSLocalizedString` call was always a no-op passthrough to `entry.englishWord`; the call is
+gone and `meaning` is assigned directly. `thousandTests.swift`'s old test targeted a
+`CacheService`/`LeitnerSystemProtocol` pair that no longer exists; replaced with a test of the
+same intent (cached boxes load into the Leitner system on init) against the current `CardStore`
+interface. The three unused `CardStore` methods are dropped from the protocol and both
+conformances (`SwiftDataCardStore`, `AnyCardStore`).
 
 ## 13 — Attribution / About screen
 

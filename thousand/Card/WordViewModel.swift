@@ -222,11 +222,6 @@ class AnyCardStore: CardStore {
     func fetchBoxes() -> [Box] {
         [.forPreview()]
     }
-    func fetchBox(byId id: String) -> Box? {
-        .forPreview()
-    }
-    func updateBox(_ box: Box) throws {}
-    func deleteBox(_ box: Box) throws {}
 }
 
 extension Box {
