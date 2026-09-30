@@ -26,6 +26,7 @@ bigger model, mechanical steps are not.
 | 16 | `step/16-how-it-works` | "How it works" screen | opus | done |
 | 17 | `step/17-voice-quality` | Pick the best installed German voice | sonnet | done |
 | 18 | `step/18-retired-words` | Retired words must keep counting as mastered | sonnet | done |
+| 19 | `step/19-autoplay-word` | Speak the word once when a card appears | sonnet | done |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
@@ -360,3 +361,39 @@ stays correct for free across undo (which just restores `allBoxes`). `thousandAp
 session-end figures use it instead of the bare `masteredCount(in:)`. `SummaryScreen` gets a
 `retiredCount` parameter it adds to its own headline; the five per-box bars are untouched, as
 asked. No change to `SessionEndScreen` — it already took its numbers from the view model.
+
+## 19 — Speak the word once when a card appears
+
+Reaching for the speaker button on every card is friction. When a card's front appears, speak the
+word once by itself.
+
+Scope: `CardScreen` and `GermanSpeaker` in `Card/SpeakerButton.swift`. The speaker buttons stay —
+auto-play is in addition to them, not a replacement, and the sentence on the back is never spoken
+automatically.
+
+Rules:
+
+- Exactly once per card. `CardScreen` already keys its transition on `cardID`, so drive the
+  playback off that (`.task(id: cardID)`) — flipping the card, undoing and redrawing, or returning
+  from a sheet must not make it speak again.
+- Undo steps back to a different `cardID`, so that card speaks again. That is correct: the user is
+  seeing it fresh.
+- Never override the ringer switch. Do not set the audio session to `.playback`. Audio the user did
+  not ask for must stay silent when the phone is muted.
+- Set the audio session category to `.ambient` before speaking. The default `.soloAmbient` stops
+  whatever the user was already listening to; with auto-play that would kill their music on every
+  single card, which a manual button press never did.
+
+Open question, decide while building: there is no settings screen, so shipping this means the user
+cannot turn it off. Ship it without a toggle first and see whether it is annoying in practice —
+adding a settings screen for one switch is worse than the problem it solves. If it does turn out to
+need one, that is its own step.
+
+Done: shipped without a toggle, per the open question above. `CardScreen` gets a
+`.task(id: cardID)` that calls `GermanSpeaker.shared.speak(word.word)` — keyed on the card's
+identity rather than its flip state, so flipping, undoing back to an already-seen card, or
+returning from a sheet does not replay it, but undo stepping to a genuinely different card does.
+`GermanSpeaker.speak(_:)` now sets the audio session category to `.ambient` (and activates it)
+before every utterance, manual or auto-played: `.ambient` respects the ringer switch like the
+app-default `.soloAmbient` did, but does not stop audio the user already had playing, which
+auto-play would otherwise do on every single card.
