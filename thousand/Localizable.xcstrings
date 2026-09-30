@@ -1,24 +1,69 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "%lld cards reviewed": {},
-    "/ %lld words": {},
-    "box %lld": {},
-    "box 1": {},
-    "box 2": {},
-    "box 3": {},
-    "box 4": {},
-    "box 5": {},
-    "in a sentence": {},
-    "mastered": {},
-    "moved up": {},
-    "pronounce": {},
-    "see progress": {},
-    "session complete": {},
-    "start session": {},
-    "tap the card to flip": {},
-    "to review": {},
-    "undo": {}
+  "sourceLanguage" : "en",
+  "strings" : {
+    "/ %lld words" : {
+
+    },
+    "%lld cards reviewed" : {
+
+    },
+    "box %lld" : {
+
+    },
+    "box 1" : {
+
+    },
+    "box 2" : {
+
+    },
+    "box 3" : {
+
+    },
+    "box 4" : {
+
+    },
+    "box 5" : {
+
+    },
+    "in a sentence" : {
+
+    },
+    "mastered" : {
+
+    },
+    "moved up" : {
+
+    },
+    "pronounce" : {
+
+    },
+    "see progress" : {
+
+    },
+    "session complete" : {
+
+    },
+    "Software" : {
+
+    },
+    "start session" : {
+
+    },
+    "tap the card to flip" : {
+
+    },
+    "to review" : {
+
+    },
+    "undo" : {
+
+    },
+    "Word list" : {
+
+    },
+    "Word meanings" : {
+
+    }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }

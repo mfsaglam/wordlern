@@ -20,7 +20,7 @@ bigger model, mechanical steps are not.
 | 10 | `step/10-summary-screen` | Summary screen redesign | opus | done |
 | 11 | `step/11-session-end` | Session end screen | opus | done |
 | 12 | `step/12-cleanup` | Cleanup | sonnet | done |
-| 13 | `step/13-attribution` | Attribution / About screen | sonnet | todo |
+| 13 | `step/13-attribution` | Attribution / About screen | sonnet | done |
 | 14 | `step/14-file-layout` | Group the source files by screen | sonnet | done |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
@@ -252,6 +252,12 @@ A plain About screen reachable from the summary screen. Content:
 - `LeitnerSwift` and any other package licences
 
 Keep it one scrollable `Text` stack with a `#Preview`. No web view, no bundled HTML.
+
+Done: `AboutScreen.swift` in `Progress/` — three sections (word list, word meanings, software),
+all legal text as `Text(verbatim:)` so translation can never touch it. Reached from a quiet
+`info.circle` button in the top-trailing corner of `SummaryScreen`, opening as a sheet from
+`ContentView`. `LeitnerSwift` is the only third-party dependency the app ships (MIT, the user's
+own package); it is credited alongside Leipzig and Wiktionary.
 
 ## 14 — Group the source files by screen
 
