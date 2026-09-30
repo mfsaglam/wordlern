@@ -34,6 +34,7 @@ bigger model, mechanical steps are not.
 | 24 | `step/24-progress-snapshot` | App Group + progress snapshot | sonnet | done |
 | 25 | `step/25-widget` | Summary widget | opus | done |
 | 26 | `step/26-lock-screen-widget` | Lock screen widgets | sonnet | done |
+| 27 | `step/27-widget-countdown-localization` | The widget's countdown string is not localized | sonnet | done |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
@@ -683,3 +684,25 @@ pass the whole sentence as a pre-formatted string, accepting that the countdown 
 when the timeline reloads — which for this line means at `nextDue`, i.e. it would read
 `next review in 5 hours` for five hours. Say so and let the user choose; do not make that
 trade quietly.
+
+Done — and both of the premises above turned out to be wrong, so nothing was added to the catalog.
+
+The key **is** extracted, as `next review in %@`. It entered `Localizable.xcstrings` in `0f512b7`,
+the step 26 build; it was absent in step 25's commit. So a `Text.DateStyle` interpolation does
+extract, exactly as `%@`, and step 25's note that two builds produced no key described a build
+that had not settled rather than a limitation. No fallback needed: the interpolation stays and the
+countdown stays live.
+
+The second premise — "falls back to English while the widget's other five strings translate
+normally" — was wrong in the other direction. Nothing translates. All 45 keys in the catalog are
+untranslated (zero `localizations` blocks, zero `stringUnit`s), while the project declared twelve
+supported languages. The build proves it: `thousand.app` and `WordLernWidget.appex` contain no
+`.lproj` directory at all, because with no translations the compiler emits no
+`Localizable.strings`. That countdown line was never the odd one out.
+
+So there was no value to add by hand, and the real defect was the twelve-language claim. On the
+user's call, `localizations.supported` in `project.xcproj` is now `["en"]` alone — `Base` went
+with them, since the app has no xib or storyboard to base-localize. `LocalizedStringKey` and the
+catalog stay exactly as they are: the working agreement is that UI strings go through the catalog
+and the UI language is English, which is now what the project actually says. Re-adding a language
+is one entry in that list plus filling the catalog in, whenever that becomes a real step.
