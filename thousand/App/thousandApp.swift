@@ -47,11 +47,10 @@ struct thousandApp: App {
 
     func addAllGermanWords(to system: LeitnerSystem, from languageData: LanguageData) {
         languageData.words.forEach { entry in
-            let meaning = NSLocalizedString(entry.englishWord, comment: "")
             let word = Word(
                 word: entry.targetWord,
-                languageCode: "",
-                meaning: meaning,
+                languageCode: languageData.languageCode,
+                meaning: entry.englishWord,
                 exampleSentence: entry.exampleSentence
             )
             let card = Card(id: UUID(), word: word)
