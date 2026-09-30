@@ -7,19 +7,7 @@
   "localizations": {
     "development": "en",
     "supported": [
-      "Base",
-      "ar",
-      "cs",
-      "da",
-      "fr",
-      "hi",
-      "ja",
-      "ko",
-      "nl",
-      "pl",
-      "pt-BR",
-      "ru",
-      "tr",
+      "en",
     ],
   },
   "packages": [

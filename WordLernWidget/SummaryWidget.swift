@@ -235,9 +235,9 @@ private struct WidgetStatusLine: View {
                 // One key, whole sentence — a bare "next review in" fragment
                 // is not something a translator can place. The interpolated
                 // date style is what keeps the countdown live without the
-                // widget being reloaded. Note that Xcode does not extract a
-                // `\(date, style:)` interpolation into the string catalog, so
-                // this one line stays English until the key is added by hand.
+                // widget being reloaded. It extracts as `next review in %@`,
+                // same as any other interpolation — step 25's note that it
+                // does not was wrong; see step 27.
                 Text(LocalizedStringKey("next review in \(nextDue, style: .relative)"))
             } else {
                 Text(LocalizedStringKey("all caught up"))
