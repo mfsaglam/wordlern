@@ -7,6 +7,7 @@
 
 import LeitnerSwift
 import SwiftUI
+import UIKit
 
 /// The card itself. Tapping it flips between the word and its meaning; the
 /// card is the only control, there is no show/hide button. Dragging it
@@ -28,6 +29,13 @@ struct CardView: View {
     /// Whether the drag is currently far enough to answer, so the haptic fires
     /// on the crossing rather than on every frame beyond it.
     @State private var isArmed = false
+
+    /// Drives the "Copied" pill. A token rather than a cancellable timer: a
+    /// second copy while the first pill is still fading just bumps the token,
+    /// so the stale dismissal from the first tap no-ops instead of cutting the
+    /// second pill short.
+    @State private var showCopiedToast = false
+    @State private var copiedToastToken = 0
 
     /// 0 at rest, 1 once the drag is far enough to commit.
     private var swipeProgress: CGFloat {
@@ -53,6 +61,15 @@ struct CardView: View {
         .rotation3DEffect(.degrees(isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
         .animation(.spring(response: 0.5, dampingFraction: 0.82), value: isFlipped)
         .overlay(swipeHint)
+        // After the rotation, not before: attaching it here keeps the pill
+        // upright through the flip instead of mirroring with the card.
+        .overlay(alignment: .top) {
+            if showCopiedToast {
+                copiedToast
+                    .padding(.top, 12)
+                    .transition(.opacity.combined(with: .move(edge: .top)))
+            }
+        }
         .opacity(isLeaving ? 0 : 1)
         .offset(x: dragWidth)
         .rotationEffect(.degrees(Double(dragWidth) / 28), anchor: .bottom)
@@ -60,6 +77,41 @@ struct CardView: View {
         .onTapGesture(perform: onTap)
         .gesture(swipe)
         .accessibilityAddTraits(.isButton)
+    }
+
+    /// Tap-to-copy on the word and meaning texts (and, in `SentenceBox`, the
+    /// example sentence).
+    private func copy(_ text: String) {
+        UIPasteboard.general.string = text
+        Haptics.copied()
+        flashCopiedToast()
+    }
+
+    /// Shown for both this view's own copies and `SentenceBox`'s, via its
+    /// `onCopy` callback — one pill, regardless of which of the three texts
+    /// was tapped.
+    private func flashCopiedToast() {
+        copiedToastToken += 1
+        let token = copiedToastToken
+        withAnimation(.easeOut(duration: 0.15)) {
+            showCopiedToast = true
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
+            guard token == copiedToastToken else { return }
+            withAnimation(.easeIn(duration: 0.2)) {
+                showCopiedToast = false
+            }
+        }
+    }
+
+    private var copiedToast: some View {
+        Text(LocalizedStringKey("copied"))
+            .font(.footnote.weight(.semibold))
+            .padding(.horizontal, 14)
+            .padding(.vertical, 8)
+            .background(Capsule().fill(Color.primary.opacity(0.85)))
+            .foregroundStyle(Color(uiColor: .systemBackground))
+            .allowsHitTesting(false)
     }
 
     /// The card borrows the answer buttons' colours as it travels, so the
@@ -141,6 +193,15 @@ struct CardView: View {
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.6)
                 .textSelection(.enabled)
+                // Sits on the word itself, not the card, so it wins the hit
+                // test over the card-level tap-to-flip.
+                .onTapGesture { copy(word.word) }
+                // `.textSelection` keeps a long-press selection alive as long
+                // as this view stays mounted, and front/back never unmount —
+                // only their opacity toggles. Rekeying on `isFlipped` forces a
+                // fresh instance on every flip, which is the only reliable way
+                // to drop a selection stuck from the face just left.
+                .id(isFlipped)
 
             SpeakerButton(text: word.word)
 
@@ -163,10 +224,15 @@ struct CardView: View {
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.6)
                 .textSelection(.enabled)
+                .onTapGesture { copy(word.meaning) }
+                .id(isFlipped)
 
             if let sentence = word.exampleSentence, !sentence.isEmpty {
-                SentenceBox(sentence: sentence, targetWord: word.word)
+                SentenceBox(sentence: sentence, targetWord: word.word, onCopy: flashCopiedToast)
                     .padding(.top, 4)
+                    // Same reasoning as the word/meaning texts above: the
+                    // sentence's own selection would otherwise survive a flip.
+                    .id(isFlipped)
             }
 
             Spacer(minLength: 0)
