@@ -9,7 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel: WordViewModel
-    @State private var showingAbout = false
+
+    /// One sheet modifier for both screens — stacking two `.sheet`s on the same
+    /// view only ever presents one of them.
+    private enum Sheet: Identifiable {
+        case about
+        case howItWorks
+
+        var id: Self { self }
+    }
+
+    @State private var sheet: Sheet?
+
+    /// The how-it-works sheet is offered once, unasked, on the very first launch.
+    @AppStorage("hasSeenHowItWorks") private var hasSeenHowItWorks = false
 
     let boxLabels = [
         LocalizedStringKey("box 1"),
@@ -47,15 +60,25 @@ struct ContentView: View {
                     boxLabels: boxLabels,
                     progress: viewModel.progress,
                     buttonAction: { viewModel.fetchNextSet() },
-                    onAbout: { showingAbout = true }
+                    onAbout: { sheet = .about },
+                    onHowItWorks: { sheet = .howItWorks }
                 )
             }
         }
         .onAppear {
             viewModel.onAppear()
+            // `onAppear` fires again when a sheet is dismissed, so the flag goes
+            // down before the sheet goes up.
+            if !hasSeenHowItWorks {
+                hasSeenHowItWorks = true
+                sheet = .howItWorks
+            }
         }
-        .sheet(isPresented: $showingAbout) {
-            AboutScreen()
+        .sheet(item: $sheet) { sheet in
+            switch sheet {
+            case .about: AboutScreen()
+            case .howItWorks: HowItWorksScreen()
+            }
         }
     }
 }

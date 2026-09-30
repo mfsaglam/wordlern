@@ -23,8 +23,9 @@ bigger model, mechanical steps are not.
 | 13 | `step/13-attribution` | Attribution / About screen | sonnet | done |
 | 14 | `step/14-file-layout` | Group the source files by screen | sonnet | done |
 | 15 | `step/15-launch-on-summary` | Launch on the summary screen | sonnet | done |
-| 16 | `step/16-how-it-works` | "How it works" screen | opus | todo |
+| 16 | `step/16-how-it-works` | "How it works" screen | opus | done |
 | 17 | `step/17-voice-quality` | Pick the best installed German voice | sonnet | todo |
+| 18 | `step/18-retired-words` | Retired words must keep counting as mastered | sonnet | todo |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
@@ -326,3 +327,15 @@ Voices. `UIApplication.openSettingsURLString` only opens this app's own settings
 `App-Prefs:` style URLs are private API and risk App Store rejection. So the section must spell the
 path out in words; the button is a convenience that opens Settings, not a shortcut to the exact
 pane. Do not ship a private URL scheme.
+
+## 18 — Retired words must keep counting as mastered
+
+Found while writing step 16's copy. `LeitnerSystem.updateCard` removes a card from the system
+outright when it is answered correctly in the last box — it is retired, not promoted. So box 5's
+count drops, and because `masteredCount` is boxes 3+4+5, the `mastered` headline goes *down* when
+the user does the single best thing they can do. The session-end screen's `masteredAfter` has the
+same problem.
+
+Scope: the app side only — `LeitnerSwift` is not to be edited (see `CLAUDE.md`). Options to weigh:
+count retired cards by subtracting the live total from the seeded word count, or track retirements
+in the store. Decide in the step, and keep the summary screen's five bars as they are.
