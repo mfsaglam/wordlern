@@ -1,0 +1,68 @@
+default_platform(:ios)
+
+# gym is pointed at the workspace, not the .xcodeproj. The project uses the JSON
+# project.xcproj format, which the xcodeproj gem cannot parse — and gym reads the
+# project through that gem to list build configurations. On the workspace path it
+# swallows the parse failure, leaves `configuration:` alone, and everything else
+# comes from `xcodebuild -showBuildSettings`.
+WORKSPACE = "thousand.xcodeproj/project.xcworkspace"
+SCHEME    = "thousand"
+APP_ID    = "com.mfsaglam.thousand"
+WIDGET_ID = "com.mfsaglam.thousand.WordLernWidget"
+
+platform :ios do
+  desc "Build the app and upload it to TestFlight"
+  lane :beta do
+    setup_ci if is_ci
+
+    api_key = app_store_connect_api_key(
+      key_id: ENV.fetch("ASC_KEY_ID"),
+      issuer_id: ENV.fetch("ASC_ISSUER_ID"),
+      # Locally the .p8 lives outside the repo and ASC_KEY_FILEPATH points at it.
+      # On CI the same key is passed base64-encoded in ASC_KEY_CONTENT instead.
+      key_filepath: ENV["ASC_KEY_CONTENT"] ? nil : ENV.fetch("ASC_KEY_FILEPATH"),
+      key_content: ENV["ASC_KEY_CONTENT"],
+      # Only the CI copy is base64; the .p8 read from disk is already PEM.
+      is_key_content_base64: !ENV["ASC_KEY_CONTENT"].nil?
+    )
+
+    # App Store Connect is the source of truth for what has already been uploaded,
+    # so the build number is derived from it rather than bumped in the project file.
+    build_number = latest_testflight_build_number(
+      api_key: api_key,
+      app_identifier: APP_ID,
+      initial_build_number: 0
+    ) + 1
+
+    # Both provisioning profiles carry the App Group entitlement; the app cannot be
+    # signed without the widget's profile as well.
+    match(
+      type: "appstore",
+      app_identifier: [APP_ID, WIDGET_ID],
+      api_key: api_key,
+      readonly: is_ci
+    )
+
+    build_app(
+      workspace: WORKSPACE,
+      scheme: SCHEME,
+      configuration: "Release",
+      export_method: "app-store",
+      output_directory: "build",
+      output_name: "WordLern",
+      xcargs: "CURRENT_PROJECT_VERSION=#{build_number}",
+      export_options: {
+        signingStyle: "manual",
+        provisioningProfiles: {
+          APP_ID => "match AppStore #{APP_ID}",
+          WIDGET_ID => "match AppStore #{WIDGET_ID}"
+        }
+      }
+    )
+
+    upload_to_testflight(
+      api_key: api_key,
+      skip_waiting_for_build_processing: true
+    )
+  end
+end

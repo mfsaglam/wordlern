@@ -1,0 +1,9 @@
+git_url "git@github.com:mfsaglam/ios-certificates.git"
+storage_mode "git"
+
+type "appstore"
+
+app_identifier [
+  "com.mfsaglam.thousand",
+  "com.mfsaglam.thousand.WordLernWidget",
+]
