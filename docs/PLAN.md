@@ -32,8 +32,8 @@ bigger model, mechanical steps are not.
 | 22 | `step/22-nothing-due` | Say so when nothing is due | sonnet | done |
 | 23 | `step/23-daily-reminder` | Daily reminder notification | opus | done |
 | 24 | `step/24-progress-snapshot` | App Group + progress snapshot | sonnet | done |
-| 25 | `step/25-widget` | Summary widget | opus | todo |
-| 26 | `step/26-lock-screen-widget` | Lock screen widgets | sonnet | todo |
+| 25 | `step/25-widget` | Summary widget | opus | done |
+| 26 | `step/26-lock-screen-widget` | Lock screen widgets | sonnet | done |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
@@ -640,6 +640,24 @@ count on one line.
 Small step, worth doing only after 25 is proven. These render monochrome and are tiny — if the
 content does not survive at that size, say so and drop the step rather than shipping something
 unreadable.
+
+Done: no new target and no new file — `.accessoryCircular` and `.accessoryRectangular` joined
+`supportedFamilies` on the existing `SummaryWidget`, and `SummaryWidgetView` grew two cases.
+
+The content does survive, but only after dropping almost everything. Circular is a
+`Gauge` at `mastered / total` in `.accessoryCircularCapacity` with the count in the ring and
+nothing else — the due count alongside it was unreadable, so it lives on the rectangular family
+instead. Rectangular is an `.accessoryLinearCapacity` gauge whose label is the one line the plan
+asked for, `700/1000 mastered` on the left and the home screen widget's `WidgetStatusLine` —
+`12 cards due` / the live countdown / `all caught up` — on the right; the style puts the bar under
+that label on its own, which is why there is no separate bar view. The five box bars and
+`BoxPalette` are not used at all: the lock screen renders monochrome, so colour carries nothing
+and five bars at that height is noise.
+
+Two things the families force: `containerBackground` must be empty for them, or the opaque
+`systemBackground` from step 25 punches a card-shaped hole into the lock screen, so it is now
+applied conditionally inside `SummaryWidgetView`. And the nil-snapshot branch needs a circular
+case of its own — `open WordLern to start` does not fit in the ring, so it shows an empty gauge.
 
 ## 27 — The widget's countdown string is not localized
 

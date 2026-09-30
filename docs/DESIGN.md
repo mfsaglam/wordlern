@@ -79,6 +79,22 @@ which lands on the summary screen on its own, so there is no deep link.
 - Background is `systemBackground` rather than the translucent widget fill: the bar tracks are
   faint by design and need a solid surface to read against.
 
+## Lock screen widgets
+
+Same widget, same snapshot, two more families. These render monochrome and are a fraction of the
+size, so the palette and the box bars are dropped entirely — what survives is the mastered
+fraction.
+
+- `accessoryCircular`: a capacity ring at `mastered / 1000` with the count in the middle, and
+  nothing else. The due count does not fit next to it, and progress is what a glance is for.
+- `accessoryRectangular`: one line — `700/1000 mastered` on the left, the same status line as the
+  home screen widget on the right — with the bar underneath. That is
+  `accessoryLinearCapacity`'s own layout, label above the track.
+- No background: the lock screen supplies its own, and an opaque one would punch a card-shaped
+  hole in it.
+- With no snapshot yet, circular shows an empty ring rather than a sentence it cannot fit;
+  rectangular keeps `open WordLern to start`.
+
 ## Copy
 
 UI strings are English, sentence case, lower case for small labels (`mastered`, `moved up`).
