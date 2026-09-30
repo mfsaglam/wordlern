@@ -26,7 +26,8 @@ bigger model, mechanical steps are not.
 | 16 | `step/16-how-it-works` | "How it works" screen | opus | done |
 | 17 | `step/17-voice-quality` | Pick the best installed German voice | sonnet | done |
 | 18 | `step/18-retired-words` | Retired words must keep counting as mastered | sonnet | done |
-| 19 | `step/19-autoplay-word` | Speak the word once when a card appears | sonnet | done |
+| 19 | `step/19-autoplay-word` | Speak the word once when a card appears | sonnet | todo |
+| 20 | `step/20-tap-to-copy` | Tap word / meaning / sentence to copy | sonnet | done |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
@@ -389,11 +390,39 @@ cannot turn it off. Ship it without a toggle first and see whether it is annoyin
 adding a settings screen for one switch is worse than the problem it solves. If it does turn out to
 need one, that is its own step.
 
-Done: shipped without a toggle, per the open question above. `CardScreen` gets a
-`.task(id: cardID)` that calls `GermanSpeaker.shared.speak(word.word)` — keyed on the card's
-identity rather than its flip state, so flipping, undoing back to an already-seen card, or
-returning from a sheet does not replay it, but undo stepping to a genuinely different card does.
-`GermanSpeaker.speak(_:)` now sets the audio session category to `.ambient` (and activates it)
-before every utterance, manual or auto-played: `.ambient` respects the ringer switch like the
-app-default `.soloAmbient` did, but does not stop audio the user already had playing, which
-auto-play would otherwise do on every single card.
+## 20 — Tap word / meaning / sentence to copy
+
+Tapping the German word on the front, the English meaning on the back, or the example sentence on
+the back copies that text to the clipboard. No confirmation UI beyond what the tap already implies
+is out of scope for this step unless it turns out silent copying is confusing to test.
+
+Scope: `Card/CardView.swift` and `Card/SentenceBox.swift` only. The front and back of the card
+already flip on any tap via the card-level `onTapGesture`; the copy tap has to sit on the specific
+`Text` and take priority over that without disabling the flip elsewhere on the card.
+
+Done: `.onTapGesture` added directly to the German word `Text` (front), the English meaning `Text`
+(back), and the token `HStack` in `SentenceBox` (whole sentence, not per-token). Sitting on the
+specific view rather than the card wins the hit test, so the rest of the card still flips as
+before. Each writes to `UIPasteboard.general` and fires a new `Haptics.copied()` (reuses the
+`undo` generator's `.light` style).
+
+It turned out silent copying was confusing to test, per the option the step left open. `CardView`
+now shows a small "Copied" pill (`.overlay(alignment: .top)`, added after the flip's
+`.rotation3DEffect` so it stays upright through the animation instead of mirroring with the card),
+fading in on any of the three taps and out ~1.1s later; `SentenceBox` reports its own copy up
+through a new `onCopy` closure so all three routes through one pill instead of three.
+
+Also found while testing: `.textSelection(.enabled)` (kept from step 01, and worth keeping — the
+user wants the long-press selection, not just the tap-to-copy) left a selection stuck on screen
+with no way to clear it, because front and back never unmount — only their opacity toggles — so
+the underlying selection host stays alive across a flip. Both selectable `Text` views are now
+keyed `.id(isFlipped)`, forcing a fresh instance whenever the face changes and dropping whatever
+selection the previous face was left in.
+
+One more round: the example sentence itself was tap-to-copy only, not selectable, unlike the word
+and meaning. `SentenceBox` renders it as one `Text` per token so the target word can sit in its own
+accent-tinted pill (`docs/DESIGN.md`'s highlight, kept as-is rather than swapped for a selection-
+friendlier style) — `.textSelection(.enabled)` on the token `HStack` covers the whole row, letting
+a long-press drag select across tokens as one continuous span instead of one word at a time.
+`SentenceBox`'s call site in `CardView` gets the same `.id(isFlipped)` treatment as the two `Text`
+views, for the same reason.

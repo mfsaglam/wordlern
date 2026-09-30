@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import UIKit
 
 /// The `in a sentence` surface on the back of the card. German only — the
 /// target word sits in an accent-tinted pill so it is easy to spot.
 struct SentenceBox: View {
     let sentence: String
     let targetWord: String
+    /// Lets `CardView` show its single "Copied" pill regardless of which of
+    /// the three texts was tapped.
+    var onCopy: () -> Void = {}
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -35,6 +39,13 @@ struct SentenceBox: View {
             }
             .lineLimit(1)
             .minimumScaleFactor(0.7)
+            // Applies to every `Text` token in the row, letting a long-press
+            // drag select across them as one continuous span rather than one
+            // token at a time.
+            .textSelection(.enabled)
+            // The whole sentence copies as one string, not per-token — sits on
+            // the token row so it wins the hit test over the card-level flip.
+            .onTapGesture { copy(sentence) }
 
             SpeakerButton(text: sentence, diameter: 32)
         }
@@ -44,6 +55,12 @@ struct SentenceBox: View {
             RoundedRectangle(cornerRadius: 12, style: .continuous)
                 .fill(Color.primary.opacity(0.04))
         )
+    }
+
+    private func copy(_ text: String) {
+        UIPasteboard.general.string = text
+        Haptics.copied()
+        onCopy()
     }
 
     private struct Token {

@@ -41,4 +41,9 @@ enum Haptics {
     static func undo() {
         light.impactOccurred()
     }
+
+    /// The only feedback a tap-to-copy gets — there is no visible confirmation.
+    static func copied() {
+        light.impactOccurred()
+    }
 }
