@@ -767,10 +767,14 @@ recent Xcode. Confirm the runner image actually ships it and pin the version exp
 - Trigger on `push` to `main` only. Not on pull requests, not on `feature/gamify`.
 - Keep a `workflow_dispatch` trigger so a release can be re-run without an empty commit.
 
-Cost note worth raising with the user before enabling: GitHub's macOS runners bill at ten times
-the minute rate of Linux. If the repository is private and on the free tier, an archive-and-upload
-run of ten to fifteen minutes means only a dozen or so releases a month before the quota is gone.
-Triggering on `main` only keeps this affordable; triggering on every push would not.
+Cost: none. This repository is public, and GitHub Actions standard runners — macOS included — are
+free and unmetered for public repositories. The ten-times macOS multiplier only applies to private
+repositories. Do not switch to a larger runner, though: those are billed even on public repos, and
+the standard macOS runner is enough here.
+
+Because the repository is public, never use `pull_request_target`, and never echo a secret into the
+log. Secrets are not exposed to workflows triggered by pull requests from forks, which is the
+behaviour we want — keep it that way.
 
 ## 31 — Build + test check on pull requests
 
@@ -780,5 +784,5 @@ pull requests targeting `feature/gamify` and `main`.
 Build and test only — no archive, no signing, no upload. That is what keeps it inexpensive, and it
 is also what makes it reliable, since signing is the part that breaks.
 
-Reconsider this step if the macOS runner cost from step 30 turns out to bite. It is the first
-thing to drop.
+Runner minutes are free on this public repository, so there is no reason to hold back here. This
+check needs no secrets, which is also what lets it run safely on pull requests from forks.
