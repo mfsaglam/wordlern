@@ -88,6 +88,7 @@
           "path": "Support",
           "children": [
             { "path": "Haptics.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "ReminderScheduler.swift", "target-membership": [ "thousand/compile-sources" ] },
           ],
         },
         { "path": "Assets.xcassets", "target-membership": [ "thousand/resources" ] },
