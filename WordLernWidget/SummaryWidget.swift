@@ -14,11 +14,10 @@ struct SummaryWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: "SummaryWidget", provider: SummaryProvider()) { entry in
             SummaryWidgetView(entry: entry)
-                .containerBackground(Color(uiColor: .systemBackground), for: .widget)
         }
         .configurationDisplayName(LocalizedStringKey("progress"))
         .description(LocalizedStringKey("how many words you have mastered, and what is due."))
-        .supportedFamilies([.systemSmall, .systemMedium])
+        .supportedFamilies([.systemSmall, .systemMedium, .accessoryCircular, .accessoryRectangular])
     }
 }
 
@@ -78,7 +77,22 @@ struct SummaryWidgetView: View {
     @Environment(\.widgetFamily) private var family
     let entry: SummaryEntry
 
+    /// The lock screen renders monochrome and supplies its own backdrop, so
+    /// the home screen's opaque background would punch a card-shaped hole in
+    /// it. Everything else about the families is the same widget.
+    private var isAccessory: Bool {
+        family == .accessoryCircular || family == .accessoryRectangular
+    }
+
     var body: some View {
+        content
+            .containerBackground(for: .widget) {
+                if !isAccessory { Color(uiColor: .systemBackground) }
+            }
+    }
+
+    @ViewBuilder
+    private var content: some View {
         if let snapshot = entry.snapshot {
             switch family {
             case .systemMedium:
@@ -87,16 +101,84 @@ struct SummaryWidgetView: View {
                     WidgetBoxBars(boxCounts: snapshot.boxCounts)
                         .frame(maxWidth: .infinity)
                 }
+            case .accessoryCircular:
+                CircularAccessory(snapshot: snapshot)
+            case .accessoryRectangular:
+                RectangularAccessory(snapshot: snapshot, entry: entry)
             default:
                 WidgetHeadline(snapshot: snapshot, entry: entry)
             }
+        } else if family == .accessoryCircular {
+            // No room for a sentence: an empty ring is the honest placeholder.
+            MasteredGauge(fraction: 0, mastered: 0)
         } else {
             // Before the app's first launch the snapshot does not exist yet.
             Text(LocalizedStringKey("open WordLern to start"))
-                .font(.footnote)
+                .font(isAccessory ? .caption2 : .footnote)
                 .foregroundStyle(.secondary)
-                .multilineTextAlignment(.center)
+                .multilineTextAlignment(isAccessory ? .leading : .center)
         }
+    }
+}
+
+/// The mastered fraction as a ring, with the count in the middle. Shared by
+/// the circular accessory and the rectangular one's leading gauge.
+private struct MasteredGauge: View {
+    let fraction: Double
+    let mastered: Int
+
+    var body: some View {
+        Gauge(value: fraction) {
+            Text(LocalizedStringKey("mastered"))
+        } currentValueLabel: {
+            Text(verbatim: "\(mastered)")
+                .minimumScaleFactor(0.7)
+        }
+        .gaugeStyle(.accessoryCircularCapacity)
+    }
+}
+
+/// Lock screen, circular: the mastered fraction and nothing else. The due
+/// count does not fit alongside it, and progress is the thing worth glancing
+/// at — the rectangular family is where the due count lives.
+private struct CircularAccessory: View {
+    let snapshot: ProgressSnapshot
+
+    var body: some View {
+        MasteredGauge(
+            fraction: snapshot.total > 0
+                ? Double(snapshot.mastered) / Double(snapshot.total)
+                : 0,
+            mastered: snapshot.mastered
+        )
+    }
+}
+
+/// Lock screen, rectangular: one line — the mastered count over the list size
+/// and what is due — with the bar under it. `accessoryLinearCapacity` puts
+/// the label above the bar, which is exactly that layout.
+private struct RectangularAccessory: View {
+    let snapshot: ProgressSnapshot
+    let entry: SummaryEntry
+
+    var body: some View {
+        Gauge(
+            value: snapshot.total > 0
+                ? Double(snapshot.mastered) / Double(snapshot.total)
+                : 0
+        ) {
+            HStack(spacing: 4) {
+                Text(verbatim: "\(snapshot.mastered)/\(snapshot.total)")
+                    .fontWeight(.medium)
+                Text(LocalizedStringKey("mastered"))
+                Spacer(minLength: 4)
+                WidgetStatusLine(snapshot: snapshot, entry: entry)
+            }
+            .font(.caption2)
+            .lineLimit(1)
+            .minimumScaleFactor(0.7)
+        }
+        .gaugeStyle(.accessoryLinearCapacity)
     }
 }
 
@@ -208,6 +290,62 @@ private struct WidgetBoxBars: View {
 }
 
 #Preview("small", as: .systemSmall) {
+    SummaryWidget()
+} timeline: {
+    SummaryEntry(
+        date: Date(),
+        snapshot: ProgressSnapshot(
+            boxCounts: [900, 60, 30, 10, 0],
+            mastered: 40,
+            total: 1000,
+            dueCount: 12,
+            nextDue: nil,
+            updated: Date()
+        )
+    )
+    SummaryEntry(
+        date: Date(),
+        snapshot: ProgressSnapshot(
+            boxCounts: [120, 180, 240, 260, 200],
+            mastered: 700,
+            total: 1000,
+            dueCount: 0,
+            nextDue: Calendar.current.date(byAdding: .hour, value: 5, to: Date()),
+            updated: Date()
+        )
+    )
+    SummaryEntry(date: Date(), snapshot: nil)
+}
+
+#Preview("circular", as: .accessoryCircular) {
+    SummaryWidget()
+} timeline: {
+    SummaryEntry(
+        date: Date(),
+        snapshot: ProgressSnapshot(
+            boxCounts: [900, 60, 30, 10, 0],
+            mastered: 40,
+            total: 1000,
+            dueCount: 12,
+            nextDue: nil,
+            updated: Date()
+        )
+    )
+    SummaryEntry(
+        date: Date(),
+        snapshot: ProgressSnapshot(
+            boxCounts: [120, 180, 240, 260, 200],
+            mastered: 700,
+            total: 1000,
+            dueCount: 0,
+            nextDue: nil,
+            updated: Date()
+        )
+    )
+    SummaryEntry(date: Date(), snapshot: nil)
+}
+
+#Preview("rectangular", as: .accessoryRectangular) {
     SummaryWidget()
 } timeline: {
     SummaryEntry(
