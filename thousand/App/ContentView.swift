@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
     @ObservedObject var viewModel: WordViewModel
@@ -77,7 +78,12 @@ struct ContentView: View {
         .sheet(item: $sheet) { sheet in
             switch sheet {
             case .about: AboutScreen()
-            case .howItWorks: HowItWorksScreen()
+            case .howItWorks:
+                HowItWorksScreen(onOpenSettings: {
+                    if let url = URL(string: UIApplication.openSettingsURLString) {
+                        UIApplication.shared.open(url)
+                    }
+                })
             }
         }
     }

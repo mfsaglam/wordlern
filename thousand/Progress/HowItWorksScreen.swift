@@ -15,7 +15,8 @@ import SwiftUI
 /// (0, 3, 7, 14, 30 days). If the box count ever changes, this copy has to
 /// change with it.
 struct HowItWorksScreen: View {
-    /// Wired in step 17, which adds the voice picking this button supports.
+    /// Opens the app's own Settings page — the closest thing to a deep link
+    /// into Spoken Content › Voices that public API allows (step 17).
     var onOpenSettings: () -> Void = {}
 
     var body: some View {
@@ -43,6 +44,17 @@ struct HowItWorksScreen: View {
 
                 Section(title: "Pronunciation") {
                     Text(verbatim: "Tapping the speaker on a card reads the German out loud with the best German voice installed on your device.")
+
+                    if let currentVoice = GermanSpeaker.shared.currentVoiceDescription {
+                        HStack(spacing: 6) {
+                            Text(LocalizedStringKey("Currently using"))
+                                .foregroundStyle(.secondary)
+                            Text(verbatim: currentVoice)
+                                .fontWeight(.medium)
+                        }
+                        .font(.subheadline)
+                    }
+
                     Text(verbatim: "The built-in voice is fairly flat. A much better one is a free download in Settings › Accessibility › Spoken Content › Voices › German — once it is installed the app picks it up on its own.")
 
                     Button(action: onOpenSettings) {
