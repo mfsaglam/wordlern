@@ -121,6 +121,23 @@ class WordViewModel: ObservableObject {
             .min()
     }
 
+    /// When the next card comes due and how many will be waiting then — all the
+    /// reminder notification needs. Nil whenever `nextReviewDate` is.
+    var nextReview: NextReview? {
+        guard let date = nextReviewDate else { return nil }
+        let count = leitnerSystem.allBoxes.reduce(0) { count, box in
+            box.nextReviewDate <= date ? count + box.cards.count : count
+        }
+        return NextReview(date: date, count: count)
+    }
+
+    /// What `nextReview` reports. Kept as a value so `ReminderScheduler` never
+    /// touches the Leitner system itself.
+    struct NextReview: Equatable {
+        let date: Date
+        let count: Int
+    }
+
     /// 1-based box the card on screen currently lives in, for the header badge.
     var currentBoxNumber: Int? {
         guard let currentCard else { return nil }

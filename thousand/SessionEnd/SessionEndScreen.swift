@@ -14,6 +14,10 @@ struct SessionEndScreen: View {
     let summary: WordViewModel.SessionSummary
     /// Size of the whole word list, the denominator of the mastered bar.
     var wordCount: Int = 1000
+    /// Asking to send reminders belongs here and nowhere else: the user has
+    /// just seen what a session gives them. Runs a beat after the screen lands
+    /// so the system prompt does not cut across the check and the bar.
+    var onReminderOpportunity: () async -> Void = { }
     let onSeeProgress: () -> Void
 
     @State private var grown = false
@@ -65,6 +69,10 @@ struct SessionEndScreen: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(uiColor: .systemGroupedBackground))
         .onAppear { grown = true }
+        .task {
+            try? await Task.sleep(for: .seconds(1.2))
+            await onReminderOpportunity()
+        }
     }
 }
 

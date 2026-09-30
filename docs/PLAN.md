@@ -30,7 +30,7 @@ bigger model, mechanical steps are not.
 | 20 | `step/20-tap-to-copy` | Tap word / meaning / sentence to copy | sonnet | done |
 | 21 | `step/21-privacy-manifest` | Privacy manifest | sonnet | done |
 | 22 | `step/22-nothing-due` | Say so when nothing is due | sonnet | done |
-| 23 | `step/23-daily-reminder` | Daily reminder notification | opus | todo |
+| 23 | `step/23-daily-reminder` | Daily reminder notification | opus | done |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
@@ -506,3 +506,15 @@ local notification — `UNUserNotificationCenter` only, no server, no push entit
   worth it — same call as step 19.
 
 Copy should say what is waiting, not nag: "12 words are ready to review".
+
+Done: `ReminderScheduler` (in `Support/`) owns the whole thing — `requestAuthorization()` and
+`reschedule(for:)`, both static, both against `UNUserNotificationCenter.current()` only. One
+identifier, `next-review`, removed before every add, so a second request can never pile up.
+`WordViewModel.nextReview` pairs step 22's `nextReviewDate` with the number of cards that will be
+waiting at that moment, as a plain `NextReview` value, so the scheduler never touches the Leitner
+system. `SessionEndScreen` takes an `onReminderOpportunity` closure and calls it 1.2s after the
+screen lands, past the check and the bar animation; `ContentView` wires it to ask for permission
+and then schedule at once, and reschedules again on `scenePhase == .background`. `reschedule`
+declines to schedule when authorization is not granted, and a nil `nextReview` — cards already due,
+or an empty list — just clears the pending request: a user with cards waiting is not reminded of
+work they can do right now, and gets a reminder again as soon as they next finish a session.

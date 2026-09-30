@@ -22,6 +22,8 @@ struct ContentView: View {
 
     @State private var sheet: Sheet?
 
+    @Environment(\.scenePhase) private var scenePhase
+
     /// The how-it-works sheet is offered once, unasked, on the very first launch.
     @AppStorage("hasSeenHowItWorks") private var hasSeenHowItWorks = false
 
@@ -53,9 +55,17 @@ struct ContentView: View {
                     onUndo: { viewModel.undoLastAnswer() }
                 )
             } else if let finished = viewModel.finishedSession {
-                SessionEndScreen(summary: finished) {
-                    viewModel.dismissSessionEnd()
-                }
+                SessionEndScreen(
+                    summary: finished,
+                    onReminderOpportunity: {
+                        await ReminderScheduler.requestAuthorization()
+                        // Schedule straight away rather than waiting for the
+                        // app to go to the background: permission was just
+                        // granted and the next due date is already known.
+                        await ReminderScheduler.reschedule(for: viewModel.nextReview)
+                    },
+                    onSeeProgress: { viewModel.dismissSessionEnd() }
+                )
             } else {
                 SummaryScreen(
                     boxLabels: boxLabels,
@@ -77,6 +87,14 @@ struct ContentView: View {
                 hasSeenHowItWorks = true
                 sheet = .howItWorks
             }
+        }
+        .onChange(of: scenePhase) { _, phase in
+            // Leaving the app is the one moment the pending reminder is sure to
+            // be stale, and the only one where rescheduling costs the user
+            // nothing. Cancel-and-replace, so there is never a second request.
+            guard phase == .background else { return }
+            let review = viewModel.nextReview
+            Task { await ReminderScheduler.reschedule(for: review) }
         }
         .sheet(item: $sheet) { sheet in
             switch sheet {
