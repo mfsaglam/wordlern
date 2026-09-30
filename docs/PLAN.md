@@ -24,7 +24,7 @@ bigger model, mechanical steps are not.
 | 14 | `step/14-file-layout` | Group the source files by screen | sonnet | done |
 | 15 | `step/15-launch-on-summary` | Launch on the summary screen | sonnet | done |
 | 16 | `step/16-how-it-works` | "How it works" screen | opus | done |
-| 17 | `step/17-voice-quality` | Pick the best installed German voice | sonnet | todo |
+| 17 | `step/17-voice-quality` | Pick the best installed German voice | sonnet | done |
 | 18 | `step/18-retired-words` | Retired words must keep counting as mastered | sonnet | todo |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
@@ -327,6 +327,18 @@ Voices. `UIApplication.openSettingsURLString` only opens this app's own settings
 `App-Prefs:` style URLs are private API and risk App Store rejection. So the section must spell the
 path out in words; the button is a convenience that opens Settings, not a shortcut to the exact
 pane. Do not ship a private URL scheme.
+
+Done: `GermanSpeaker` drops the hardcoded `siri_female_de-DE_compact` identifier and instead
+filters `AVSpeechSynthesisVoice.speechVoices()` to German voices, picking the highest
+`AVSpeechSynthesisVoiceQuality` (premium > enhanced > default), re-read on every `speak(_:)`
+call so a voice downloaded mid-session is picked up without a relaunch. `ContentView` wires
+`HowItWorksScreen`'s `onOpenSettings` to `UIApplication.openSettingsURLString`, per the caveat
+above — no private URL scheme.
+
+Also added, at the user's request after the step's original scope: the Pronunciation section
+now shows which voice and quality tier is currently in use (`GermanSpeaker.currentVoiceDescription`),
+so "a better one can be downloaded" has something concrete to compare against. New
+`Localizable.xcstrings` key: `Currently using`.
 
 ## 18 — Retired words must keep counting as mastered
 
