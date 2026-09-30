@@ -22,7 +22,7 @@ bigger model, mechanical steps are not.
 | 12 | `step/12-cleanup` | Cleanup | sonnet | done |
 | 13 | `step/13-attribution` | Attribution / About screen | sonnet | done |
 | 14 | `step/14-file-layout` | Group the source files by screen | sonnet | done |
-| 15 | `step/15-launch-on-summary` | Launch on the summary screen | sonnet | todo |
+| 15 | `step/15-launch-on-summary` | Launch on the summary screen | sonnet | done |
 | 16 | `step/16-how-it-works` | "How it works" screen | opus | todo |
 | 17 | `step/17-voice-quality` | Pick the best installed German voice | sonnet | todo |
 

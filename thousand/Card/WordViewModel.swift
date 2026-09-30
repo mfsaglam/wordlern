@@ -65,11 +65,13 @@ class WordViewModel: ObservableObject {
         if finishedSession != nil {
             return
         }
-        if cardSet.isEmpty {
-            fetchNextSet()
-        } else {
-            loadNextCard()
-        }
+        // Opening the app (or re-appearing, e.g. after the About sheet is
+        // dismissed) should never start a session on its own — only restore
+        // one already in progress. With no session running this is a no-op,
+        // which leaves `currentCard` and `finishedSession` both nil and the
+        // summary screen on screen.
+        guard !cardSet.isEmpty else { return }
+        loadNextCard()
     }
     
     var progress: [Int] {
