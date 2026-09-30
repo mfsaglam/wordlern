@@ -17,7 +17,7 @@ bigger model, mechanical steps are not.
 | 07 | `step/07-sentences` | Remaining example sentences | opus | done |
 | 08 | `step/08-swiftdata` | Replace Realm with SwiftData | opus | done |
 | 09 | `step/09-swipe-undo` | Swipe gesture + undo | opus | done |
-| 10 | `step/10-summary-screen` | Summary screen redesign | opus | todo |
+| 10 | `step/10-summary-screen` | Summary screen redesign | opus | done |
 | 11 | `step/11-session-end` | Session end screen | opus | todo |
 | 12 | `step/12-cleanup` | Cleanup | sonnet | todo |
 | 13 | `step/13-attribution` | Attribution / About screen | sonnet | todo |

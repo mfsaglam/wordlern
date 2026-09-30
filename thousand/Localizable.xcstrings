@@ -1,39 +1,19 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "%lld cards" : {
-
-    },
-    "box %lld" : {
-
-    },
-    "Box 1" : {
-
-    },
-    "Box 2" : {
-
-    },
-    "Box 3" : {
-
-    },
-    "Box 4" : {
-
-    },
-    "Box 5" : {
-
-    },
-    "in a sentence" : {
-
-    },
-    "pronounce" : {
-
-    },
-    "tap the card to flip" : {
-
-    },
-    "undo" : {
-
-    }
+  "sourceLanguage": "en",
+  "strings": {
+    "/ %lld words": {},
+    "box %lld": {},
+    "box 1": {},
+    "box 2": {},
+    "box 3": {},
+    "box 4": {},
+    "box 5": {},
+    "in a sentence": {},
+    "mastered": {},
+    "pronounce": {},
+    "start session": {},
+    "tap the card to flip": {},
+    "undo": {}
   },
-  "version" : "1.0"
+  "version": "1.0"
 }

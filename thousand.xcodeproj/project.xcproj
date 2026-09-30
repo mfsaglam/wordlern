@@ -61,7 +61,7 @@
           "kind": "group",
           "path": "Progress",
           "children": [
-            { "path": "BoxesOverview.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "SummaryScreen.swift", "target-membership": [ "thousand/compile-sources" ] },
           ],
         },
         {

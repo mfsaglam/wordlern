@@ -11,11 +11,11 @@ struct ContentView: View {
     @ObservedObject var viewModel: WordViewModel
 
     let boxLabels = [
-        LocalizedStringKey("Box 1"),
-        LocalizedStringKey("Box 2"),
-        LocalizedStringKey("Box 3"),
-        LocalizedStringKey("Box 4"),
-        LocalizedStringKey("Box 5")
+        LocalizedStringKey("box 1"),
+        LocalizedStringKey("box 2"),
+        LocalizedStringKey("box 3"),
+        LocalizedStringKey("box 4"),
+        LocalizedStringKey("box 5")
     ]
 
     init(viewModel: WordViewModel) {
@@ -38,7 +38,7 @@ struct ContentView: View {
                     onUndo: { viewModel.undoLastAnswer() }
                 )
             } else {
-                BoxesOverview(
+                SummaryScreen(
                     boxLabels: boxLabels,
                     progress: viewModel.progress
                 ) {
