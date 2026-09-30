@@ -36,6 +36,7 @@
       "kind": "group",
       "path": "thousand",
       "children": [
+        { "path": "thousand.entitlements" },
         {
           "kind": "group",
           "path": "App",
@@ -43,8 +44,7 @@
             { "path": "thousandApp.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "ContentView.swift", "target-membership": [ "thousand/compile-sources" ] },
           ],
-        },
-        {
+        }, {
           "kind": "group",
           "path": "Card",
           "children": [
@@ -56,8 +56,7 @@
             { "path": "SpeakerButton.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "WordViewModel.swift", "target-membership": [ "thousand/compile-sources" ] },
           ],
-        },
-        {
+        }, {
           "kind": "group",
           "path": "Progress",
           "children": [
@@ -66,15 +65,13 @@
             { "path": "AboutScreen.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "HowItWorksScreen.swift", "target-membership": [ "thousand/compile-sources" ] },
           ],
-        },
-        {
+        }, {
           "kind": "group",
           "path": "SessionEnd",
           "children": [
             { "path": "SessionEndScreen.swift", "target-membership": [ "thousand/compile-sources" ] },
           ],
-        },
-        {
+        }, {
           "kind": "group",
           "path": "Persistence",
           "children": [
@@ -82,13 +79,13 @@
             { "path": "SwiftDataCardStore.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "StoredModels.swift", "target-membership": [ "thousand/compile-sources" ] },
           ],
-        },
-        {
+        }, {
           "kind": "group",
           "path": "Support",
           "children": [
             { "path": "Haptics.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "ReminderScheduler.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "ProgressSnapshot.swift", "target-membership": [ "thousand/compile-sources" ] },
           ],
         },
         { "path": "Assets.xcassets", "target-membership": [ "thousand/resources" ] },
@@ -154,6 +151,7 @@
       "build-settings": {
         "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
         "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
+        "CODE_SIGN_ENTITLEMENTS": "thousand/thousand.entitlements",
         "CODE_SIGN_STYLE": "Automatic",
         "CURRENT_PROJECT_VERSION": "1",
         "DEVELOPMENT_ASSET_PATHS": "\"thousand/Preview Content\"",
@@ -172,6 +170,7 @@
         "MARKETING_VERSION": "1.0",
         "PRODUCT_BUNDLE_IDENTIFIER": "com.mfsaglam.thousand",
         "PRODUCT_NAME": "$(TARGET_NAME)",
+        "REGISTER_APP_GROUPS": "YES",
         "SWIFT_EMIT_LOC_STRINGS": "YES",
         "SWIFT_VERSION": "5.0",
         "TARGETED_DEVICE_FAMILY": "1,2",

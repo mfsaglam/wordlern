@@ -63,6 +63,7 @@ class WordViewModel: ObservableObject {
         self.leitnerSystem = leitnerSystem
         self.totalWordCount = totalWordCount
         loadCachedProgress()
+        writeProgressSnapshot()
     }
 
     func onAppear() {
@@ -260,6 +261,21 @@ class WordViewModel: ObservableObject {
     private func saveProgress() {
         try! cardStore.saveBoxes(leitnerSystem.allBoxes)
         // Implement saving logic (e.g., UserDefaults, file storage)
+        writeProgressSnapshot()
+    }
+
+    /// The six numbers the widget needs, from the same values `SummaryScreen`
+    /// shows, so the two can never disagree. Called wherever progress
+    /// changes, plus once at launch so the file exists before any answer.
+    private func writeProgressSnapshot() {
+        ProgressSnapshot(
+            boxCounts: progress,
+            mastered: masteredWordCount,
+            total: totalWordCount,
+            dueCount: dueCount,
+            nextDue: nextReviewDate,
+            updated: Date()
+        ).write()
     }
 
     // Loads cached progress if available

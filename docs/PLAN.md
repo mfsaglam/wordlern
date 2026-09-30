@@ -31,7 +31,7 @@ bigger model, mechanical steps are not.
 | 21 | `step/21-privacy-manifest` | Privacy manifest | sonnet | done |
 | 22 | `step/22-nothing-due` | Say so when nothing is due | sonnet | done |
 | 23 | `step/23-daily-reminder` | Daily reminder notification | opus | done |
-| 24 | `step/24-progress-snapshot` | App Group + progress snapshot | sonnet | todo |
+| 24 | `step/24-progress-snapshot` | App Group + progress snapshot | sonnet | done |
 | 25 | `step/25-widget` | Summary widget | opus | todo |
 | 26 | `step/26-lock-screen-widget` | Lock screen widgets | sonnet | todo |
 
@@ -559,6 +559,21 @@ out before writing code. Use `group.` + the app's bundle identifier.
 New file: `thousand/Support/ProgressSnapshot.swift`, plus an entitlements file for the app target
 (none exists today). `project.xcproj` is the JSON project format — the entitlements file has to be
 wired into the build settings by hand.
+
+Done: `group.com.mfsaglam.thousand` registered on the developer account and the app's App ID; the
+App Group capability was added through Xcode's own Signing & Capabilities UI, which wrote
+`thousand/thousand.entitlements` (the `com.apple.security.application-groups` array) and updated
+`project.xcproj`'s build settings (`CODE_SIGN_ENTITLEMENTS`, `REGISTER_APP_GROUPS`) by hand for this
+project format — carried over from an in-progress state on `feature/gamify` onto this step's branch.
+
+`ProgressSnapshot` is a plain `Codable` struct matching the plan exactly, with a `write()` method
+that resolves the App Group container via `FileManager.containerURL(forSecurityApplicationGroupIdentifier:)`
+and does nothing if it is unavailable — a stale widget is not worth crashing the app over.
+`WordViewModel.writeProgressSnapshot()` builds one from the same `progress`, `masteredWordCount`,
+`totalWordCount`, `dueCount` and `nextReviewDate` the summary screen already reads, so the two can
+never disagree. It runs at the end of `saveProgress()` (after every answer and every undo, since
+both call it) and once at `init`, so the file exists on disk from first launch rather than only
+after the first answer.
 
 ## 25 — Summary widget
 
