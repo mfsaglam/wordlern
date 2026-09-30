@@ -640,3 +640,28 @@ count on one line.
 Small step, worth doing only after 25 is proven. These render monochrome and are tiny — if the
 content does not survive at that size, say so and drop the step rather than shipping something
 unreadable.
+
+## 27 — The widget's countdown string is not localized
+
+Left behind by step 25, deliberately. The widget's `next review in 5 hours` line is
+`Text(LocalizedStringKey("next review in \(nextDue, style: .relative)"))` in
+`WordLernWidget/SummaryWidget.swift` — a `Text.DateStyle` interpolation, which is what keeps the
+countdown ticking without the widget being reloaded. Xcode does **not** extract that
+interpolation into `Localizable.xcstrings`: two builds, with both `Text("…")` and
+`Text(LocalizedStringKey("…"))`, produced no key. So this one line falls back to its English
+literal in all twelve languages while the widget's other five strings translate normally.
+
+The fix is presumably to add the key by hand to the catalog, but the runtime lookup key has to be
+confirmed first — a `Date` + `style` interpolation is *assumed* to render as `%@`, and an entry
+under the wrong key is worse than none, because it looks translated and silently never applies.
+So: confirm the key, then add it.
+
+How to confirm: build, then read the compiled `Localizable.strings` out of the built widget for a
+language that has a translation, or set one language's value by hand and run the widget in the
+simulator under that language. Do not guess.
+
+If the key turns out not to be addressable at all, the fallback is to drop the interpolation and
+pass the whole sentence as a pre-formatted string, accepting that the countdown then only updates
+when the timeline reloads — which for this line means at `nextDue`, i.e. it would read
+`next review in 5 hours` for five hours. Say so and let the user choose; do not make that
+trade quietly.
