@@ -36,7 +36,7 @@ bigger model, mechanical steps are not.
 | 26 | `step/26-lock-screen-widget` | Lock screen widgets | sonnet | done |
 | 27 | `step/27-widget-countdown-localization` | The widget's countdown string is not localized | sonnet | done |
 | 28 | `step/28-release-hygiene` | Release hygiene before any pipeline | sonnet | done |
-| 29 | `step/29-fastlane-local` | Fastlane, proven from the laptop | opus | todo |
+| 29 | `step/29-fastlane` | Fastlane, proven from the laptop | opus | done |
 | 30 | `step/30-testflight-pipeline` | GitHub Actions: main → TestFlight | opus | todo |
 | 31 | `step/31-pr-check` | Build + test check on pull requests | sonnet | todo |
 
@@ -768,6 +768,81 @@ the errors are opaque. Everything that can be proven locally should be proven lo
 
 Note: this first upload ships the entire rewrite. Better that a human watches it land than that a
 pipeline does it unattended.
+
+Done. Version 2.0 build 1 was archived, signed and uploaded to TestFlight from the laptop on
+2026-09-30.
+
+`fastlane/Fastfile` has one `beta` lane: authenticate with an App Store Connect API key, read
+`latest_testflight_build_number + 1`, run `match(type: "appstore")` for both bundle ids, archive,
+export, upload. The build number is passed to the archive as
+`xcargs: "CURRENT_PROJECT_VERSION=…"` — the lane never writes to the project file. `setup_ci` runs
+only under CI so step 30 gets a temporary keychain for free.
+
+`fastlane/Matchfile` points at `git@github.com:mfsaglam/ios-certificates.git` (private) and lists
+both `com.mfsaglam.thousand` and `com.mfsaglam.thousand.WordLernWidget`.
+
+Signing is now manual in the **Release** configuration only, written directly into
+`project.xcproj` per target via the setting-condition syntax:
+`CODE_SIGN_STYLE[config=Debug] = Automatic` / `CODE_SIGN_STYLE[config=Release] = Manual`,
+`CODE_SIGN_IDENTITY[config=Release] = Apple Distribution`,
+`PROVISIONING_PROFILE_SPECIFIER[config=Release] = match AppStore <bundle id>`. Debug keeps
+automatic signing, so day-to-day work in Xcode is unchanged. Fastlane's
+`update_code_signing_settings` was not used: it goes through the `xcodeproj` gem, which cannot
+parse the JSON `project.xcproj` format.
+
+Two things about that format that cost a build each, and that step 30 must not undo:
+- A conditional setting does **not** override its unconditional sibling. Leaving
+  `CODE_SIGN_STYLE = Automatic` in place next to `CODE_SIGN_STYLE[config=Release] = Manual` left
+  the target automatically signed and the archive failed with "conflicting provisioning
+  settings". Both configurations have to be spelled out as conditions. Verify with
+  `xcodebuild -showBuildSettings -target <t> -configuration Release`, not by reading the file.
+- `build_app` is pointed at `thousand.xcodeproj/project.xcworkspace`, **not** at the `.xcodeproj`.
+  gym asks the `xcodeproj` gem for the project's build configurations; on the project path that
+  raises (no `project.pbxproj`) and the lane dies before compiling. On the workspace path the same
+  failure is rescued into an empty list, the explicit `configuration: "Release"` survives, and
+  scheme and build settings come from `xcodebuild` instead. `output_name` is set explicitly
+  because gym's app-name lookup returns the "App" default here.
+
+Ruby: `.ruby-version` pins 3.2.2 and a `Gemfile`/`Gemfile.lock` pin fastlane. Two environment
+traps on this machine, worth knowing before step 30:
+- The rbenv Rubies are x86_64 builds, but gem native extensions compile as arm64 by default and
+  then fail to load. Reinstalling a gem needs
+  `gem install <name> -- --with-cflags="-arch x86_64" --with-ldflags="-arch x86_64"`.
+- `json` 2.8+ will not compile against these Ruby 3.2 headers, so the `Gemfile` pins `~> 2.7.0`.
+Neither applies to a GitHub runner, which ships a native Ruby — do not carry these pins into the
+workflow without checking.
+
+To run it, with the `.p8` kept outside the repo:
+
+```
+export LANG=en_US.UTF-8
+export ASC_KEY_ID=…
+export ASC_ISSUER_ID=…
+export ASC_KEY_FILEPATH=~/…/AuthKey_XXXXXXXX.p8
+bundle exec fastlane beta
+```
+
+`ASC_KEY_CONTENT` is the CI alternative: base64 instead of a path, and
+`is_key_content_base64` follows whichever of the two is set. Setting it unconditionally makes
+fastlane base64-decode the PEM it read from disk and fail with "string contains null byte".
+
+`.gitignore` now excludes `*.p8`, `*.p12`, `*.mobileprovision`, `*.cer` and fastlane's generated
+output.
+
+Two one-off cleanups the first run needed, recorded so they are not mistaken for bugs later:
+- GitHub SSH. match clones the certificates repo in a subprocess that cannot be prompted, so a
+  passphrase-protected key that is not in the agent fails as `Permission denied (publickey)`. The
+  ed25519 key was added to the GitHub account and `~/.ssh/config` given `AddKeysToAgent` +
+  `UseKeychain` for `github.com`.
+- `ios-certificates` was not an empty repo — it held match material from earlier CI experiments
+  (`GithubActionsDemo`, `cicdTestApp`) including an expired distribution certificate, which match
+  refused with "certificate is not valid". `certs/distribution/BVXB724S9Q.{cer,p12}` were deleted
+  from that repo and match issued a fresh Apple Distribution certificate (`TA3N4XQ6DD`, valid to
+  2027-09-30) plus both `match AppStore …` profiles. The stale demo profiles were left alone.
+
+Still open for step 30: the GitHub runner needs its own read access to the private certificates
+repo — a deploy key or an HTTPS token — and `match` must run with `readonly: true` there, which
+the lane already does via `is_ci`.
 
 ## 30 — GitHub Actions: main → TestFlight
 

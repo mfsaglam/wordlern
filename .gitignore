@@ -20,3 +20,15 @@ xcuserdata/
 
 ## Build-time Python (tools/)
 .venv/
+
+## fastlane
+fastlane/report.xml
+fastlane/README.md
+fastlane/test_output/
+fastlane/.env*
+
+## Signing material — never commit
+*.p8
+*.p12
+*.mobileprovision
+*.cer
