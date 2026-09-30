@@ -598,6 +598,39 @@ not try to fit all five box labels into `systemSmall`.
 
 Add a widget section to `docs/DESIGN.md` describing what shipped.
 
+Done: `WordLernWidget`, an `app-extension` target written into `project.xcproj` by hand, embedded
+by an `Embed Foundation Extensions` copy phase on the app with
+`bundle-base-path: plugins-directory`. Three things about the JSON project format that cost time
+and are worth writing down.
+
+A build phase reference in `target-membership` is `<target>/<kind>`, and for kinds a target can
+hold more than one of — `copy` — a third component disambiguates by the phase's `name`:
+
+```
+"target-membership": [
+  { "build-phase": "thousand/copy/Embed Foundation Extensions", "code-sign-on-copy": true },
+]
+```
+
+Bare `thousand/copy` fails to load with "Could not uniquely resolve the build phase name",
+*even when the target has only one copy phase*, so the phase must be named. Object ids cannot be
+referenced at all. `code-sign-on-copy` only survives on that object form of a membership entry,
+not as a sibling of `path`.
+
+And `xcprojformatter` is not a trustworthy validator: it rejects the `copy/<name>` form that
+Xcode itself requires, silently drops keys it does not recognise, and `--update` deletes
+`project.xcworkspace/xcshareddata/swiftpm/Package.resolved`. Use
+`xcodebuild -list -project thousand.xcodeproj` instead — it loads the project and reports exactly
+the error Xcode would, without building anything.
+
+`ProgressSnapshot.swift` gained a `read()` and is compiled into both targets, as is
+`ProgressBars.swift`, so the widget's bars are literally the summary screen's `Bar` and
+`BoxPalette`. `Localizable.xcstrings` is a resource of both targets. The timeline is two entries
+at most — now, and `nextDue` — with policy `.never` when there is no future `nextDue`, since
+`WordViewModel.writeProgressSnapshot()` now calls `WidgetCenter.shared.reloadAllTimelines()` on
+every write. The entry at `nextDue` carries `dueSinceSnapshot` and shows `review ready` rather
+than a count: the snapshot records *when* the next card comes due, not how many will be waiting.
+
 ## 26 — Lock screen widgets
 
 `accessoryCircular` and `accessoryRectangular` variants of the same widget, reading the same

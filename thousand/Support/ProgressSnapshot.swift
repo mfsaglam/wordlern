@@ -35,6 +35,14 @@ struct ProgressSnapshot: Codable {
         }
     }
 
+    /// Reads the snapshot back. Nil before the app has ever run, or if the
+    /// container is unavailable — the widget shows a placeholder for both.
+    static func read() -> ProgressSnapshot? {
+        guard let url = containerURL,
+              let data = try? Data(contentsOf: url) else { return nil }
+        return try? JSONDecoder().decode(ProgressSnapshot.self, from: data)
+    }
+
     private static var containerURL: URL? {
         FileManager.default
             .containerURL(forSecurityApplicationGroupIdentifier: appGroupIdentifier)?

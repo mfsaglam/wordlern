@@ -60,6 +60,25 @@ finishing a session feel like nothing happened.
 - Bottom: an outlined pill button, `see progress`.
 - No confetti, no badges, no streak counter.
 
+## Home screen widget
+
+Screen 3 reduced to what fits. The widget is ambient presence, not a second interface: no
+animation (widgets do not get any), no audio, no interaction beyond tapping through to the app —
+which lands on the summary screen on its own, so there is no deep link.
+
+- `systemSmall`: the `mastered` caption, the count over `/ 1000`, the one thick mastered bar, and
+  a single status line at the bottom.
+- `systemMedium`: the same block on the left, the five box bars on the right. The bars are
+  labelled with bare digits `1`–`5` — `box 1` does not survive at that width, and the column
+  already reads top to bottom.
+- Same palette and same relative bar scaling as the summary screen, reusing `Bar` and
+  `BoxPalette` directly so the two cannot drift.
+- The status line, in order: `12 cards due` when something is due, `next review in 5 hours` with
+  a live countdown when nothing is, `all caught up` when the list is empty, and
+  `open WordLern to start` before the app has ever run.
+- Background is `systemBackground` rather than the translucent widget fill: the bar tracks are
+  faint by design and need a solid surface to read against.
+
 ## Copy
 
 UI strings are English, sentence case, lower case for small labels (`mastered`, `moved up`).

@@ -7,6 +7,7 @@
 
 import LeitnerSwift
 import SwiftUI
+import WidgetKit
 
 class WordViewModel: ObservableObject {
     @Published var currentCard: Card?  // The current card to display
@@ -276,6 +277,9 @@ class WordViewModel: ObservableObject {
             nextDue: nextReviewDate,
             updated: Date()
         ).write()
+        // The widget's own timeline only wakes at `nextDue`; every other
+        // change reaches it from here.
+        WidgetCenter.shared.reloadAllTimelines()
     }
 
     // Loads cached progress if available
