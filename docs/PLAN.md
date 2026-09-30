@@ -35,6 +35,10 @@ bigger model, mechanical steps are not.
 | 25 | `step/25-widget` | Summary widget | opus | done |
 | 26 | `step/26-lock-screen-widget` | Lock screen widgets | sonnet | done |
 | 27 | `step/27-widget-countdown-localization` | The widget's countdown string is not localized | sonnet | done |
+| 28 | `step/28-release-hygiene` | Release hygiene before any pipeline | sonnet | todo |
+| 29 | `step/29-fastlane-local` | Fastlane, proven from the laptop | opus | todo |
+| 30 | `step/30-testflight-pipeline` | GitHub Actions: main → TestFlight | opus | todo |
+| 31 | `step/31-pr-check` | Build + test check on pull requests | sonnet | todo |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
@@ -706,3 +710,75 @@ with them, since the app has no xib or storyboard to base-localize. `LocalizedSt
 catalog stay exactly as they are: the working agreement is that UI strings go through the catalog
 and the UI language is English, which is now what the project actually says. Re-adding a language
 is one entry in that list plus filling the catalog in, whenever that becomes a real step.
+
+## 28 — Release hygiene before any pipeline
+
+Small settings changes that have to be right before automation is worth building. No fastlane, no
+CI in this step.
+
+- `ITSAppUsesNonExemptEncryption` is not set anywhere. The app target generates its Info.plist, so
+  add `INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO` to its build settings (and the widget's
+  `WordLernWidget/Info.plist`). Without it every single TestFlight build stops and waits for the
+  export-compliance question to be answered by hand, which defeats the point of a pipeline. The
+  app makes no network calls and uses no encryption beyond what Apple exempts.
+- Decide the version. `MARKETING_VERSION` is `1.0` and that is what is on the App Store; what is
+  on `feature/gamify` is a rewrite, not a patch. `2.0` is the honest number.
+- Decide where the build number comes from. `CURRENT_PROJECT_VERSION` is `1` and TestFlight
+  rejects a build number it has seen before. Pick one rule and write it down: either the CI run
+  number, or `latest_testflight_build_number + 1` looked up at build time. Do not bump it by hand.
+- Check the App Store Connect record actually has the widget's bundle id
+  (`com.mfsaglam.thousand.WordLernWidget`) and an App Group registered for both targets. A missing
+  identifier surfaces as an opaque signing failure later.
+
+## 29 — Fastlane, proven from the laptop
+
+Set up fastlane and get one build to TestFlight **from the user's machine**, with a human watching.
+Do not write any GitHub Actions yet.
+
+Debugging code signing inside a CI runner is miserable — the feedback loop is ten minutes long and
+the errors are opaque. Everything that can be proven locally should be proven locally first.
+
+- `fastlane init`, then a single `beta` lane: bump the build number per step 28's rule, build the
+  archive, upload to TestFlight.
+- Authentication: an App Store Connect API key (`.p8` + key id + issuer id), not an Apple ID. The
+  user has to create it in App Store Connect; it cannot be generated from here. API keys have no
+  two-factor prompt, which is the whole reason CI can use them.
+- Code signing: this app now needs **two** provisioning profiles — the app and the widget
+  extension — both carrying the App Group entitlement. Use `match` with a private certificates
+  repo. Automatic signing works in Xcode because a human is logged in; CI has no such luxury, and
+  `match` is the thing that makes signing reproducible.
+- Deliverable: a build visible in TestFlight, installed on the user's own device, and a `Fastfile`
+  committed. Keep the `.p8` and the match passphrase out of the repo.
+
+Note: this first upload ships the entire rewrite. Better that a human watches it land than that a
+pipeline does it unattended.
+
+## 30 — GitHub Actions: main → TestFlight
+
+Only once step 29 has produced a real TestFlight build. The workflow runs the `beta` lane on every
+push to `main`.
+
+Check before writing anything: the project uses the JSON `project.xcproj` format, which needs a
+recent Xcode. Confirm the runner image actually ships it and pin the version explicitly with
+`xcode-select` — do not rely on the image default, which changes without warning.
+
+- Secrets: the API key `.p8` (base64), key id, issuer id, team id, the match git url and its
+  passphrase. Nothing else belongs in the repo.
+- Trigger on `push` to `main` only. Not on pull requests, not on `feature/gamify`.
+- Keep a `workflow_dispatch` trigger so a release can be re-run without an empty commit.
+
+Cost note worth raising with the user before enabling: GitHub's macOS runners bill at ten times
+the minute rate of Linux. If the repository is private and on the free tier, an archive-and-upload
+run of ten to fifteen minutes means only a dozen or so releases a month before the quota is gone.
+Triggering on `main` only keeps this affordable; triggering on every push would not.
+
+## 31 — Build + test check on pull requests
+
+A cheap guard so a broken branch cannot reach `main`: build the app and run `thousandTests` on
+pull requests targeting `feature/gamify` and `main`.
+
+Build and test only — no archive, no signing, no upload. That is what keeps it inexpensive, and it
+is also what makes it reliable, since signing is the part that breaks.
+
+Reconsider this step if the macOS runner cost from step 30 turns out to bite. It is the first
+thing to drop.
