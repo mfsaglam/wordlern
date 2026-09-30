@@ -17,6 +17,7 @@ struct SummaryScreen: View {
     var wordCount: Int = 1000
     let buttonAction: () -> Void
     var onAbout: () -> Void = {}
+    var onHowItWorks: () -> Void = {}
 
     private var mastered: Int {
         masteredCount(in: progress)
@@ -73,13 +74,23 @@ struct SummaryScreen: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(Color(uiColor: .systemGroupedBackground))
         .overlay(alignment: .topTrailing) {
-            Button(action: onAbout) {
-                Image(systemName: "info.circle")
-                    .font(.system(size: 17))
-                    .foregroundStyle(.secondary)
-                    .padding(12)
+            HStack(spacing: 0) {
+                Button(action: onHowItWorks) {
+                    Image(systemName: "questionmark.circle")
+                        .font(.system(size: 17))
+                        .foregroundStyle(.secondary)
+                        .padding(12)
+                }
+                .buttonStyle(.plain)
+
+                Button(action: onAbout) {
+                    Image(systemName: "info.circle")
+                        .font(.system(size: 17))
+                        .foregroundStyle(.secondary)
+                        .padding(12)
+                }
+                .buttonStyle(.plain)
             }
-            .buttonStyle(.plain)
         }
         .onAppear { filled = true }
     }

@@ -7,6 +7,9 @@
     "%lld cards reviewed" : {
 
     },
+    "Answering a card" : {
+
+    },
     "box %lld" : {
 
     },
@@ -25,6 +28,24 @@
     "box 5" : {
 
     },
+    "every 2 weeks" : {
+
+    },
+    "every 3 days" : {
+
+    },
+    "every day" : {
+
+    },
+    "every month" : {
+
+    },
+    "every week" : {
+
+    },
+    "How it works" : {
+
+    },
     "in a sentence" : {
 
     },
@@ -34,7 +55,13 @@
     "moved up" : {
 
     },
+    "Open Settings" : {
+
+    },
     "pronounce" : {
+
+    },
+    "Pronunciation" : {
 
     },
     "see progress" : {
@@ -52,10 +79,16 @@
     "tap the card to flip" : {
 
     },
+    "The five boxes" : {
+
+    },
     "to review" : {
 
     },
     "undo" : {
+
+    },
+    "What mastered counts" : {
 
     },
     "Word list" : {
