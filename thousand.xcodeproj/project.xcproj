@@ -63,6 +63,7 @@
           "children": [
             { "path": "SummaryScreen.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "ProgressBars.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "AboutScreen.swift", "target-membership": [ "thousand/compile-sources" ] },
           ],
         },
         {

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel: WordViewModel
+    @State private var showingAbout = false
 
     let boxLabels = [
         LocalizedStringKey("box 1"),
@@ -44,14 +45,17 @@ struct ContentView: View {
             } else {
                 SummaryScreen(
                     boxLabels: boxLabels,
-                    progress: viewModel.progress
-                ) {
-                    viewModel.fetchNextSet()
-                }
+                    progress: viewModel.progress,
+                    buttonAction: { viewModel.fetchNextSet() },
+                    onAbout: { showingAbout = true }
+                )
             }
         }
         .onAppear {
             viewModel.onAppear()
+        }
+        .sheet(isPresented: $showingAbout) {
+            AboutScreen()
         }
     }
 }

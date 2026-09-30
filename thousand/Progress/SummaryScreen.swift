@@ -16,6 +16,7 @@ struct SummaryScreen: View {
     /// Size of the whole word list, the denominator of the headline metric.
     var wordCount: Int = 1000
     let buttonAction: () -> Void
+    var onAbout: () -> Void = {}
 
     private var mastered: Int {
         masteredCount(in: progress)
@@ -71,6 +72,15 @@ struct SummaryScreen: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(Color(uiColor: .systemGroupedBackground))
+        .overlay(alignment: .topTrailing) {
+            Button(action: onAbout) {
+                Image(systemName: "info.circle")
+                    .font(.system(size: 17))
+                    .foregroundStyle(.secondary)
+                    .padding(12)
+            }
+            .buttonStyle(.plain)
+        }
         .onAppear { filled = true }
     }
 }
