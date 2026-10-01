@@ -903,6 +903,11 @@ Secrets the repository needs (all of them, nothing else): `ASC_KEY_ID`, `ASC_ISS
 `MATCH_PASSWORD`. The team id is not a secret — it is already committed in `fastlane/Appfile`.
 Nothing in the workflow echoes a secret; `xcodebuild -version` is the only thing it prints.
 
+All six are set on `mfsaglam/wordlern` as of 2026-10-01. `MATCH_GIT_BASIC_AUTHORIZATION` holds a
+fine-grained token scoped to `mfsaglam/ios-certificates` with `Contents: Read-only` — enough because
+`match` runs `readonly: true` under CI. Fine-grained tokens expire: when a run starts failing at the
+match step with a 403 or a clone error, that is the first thing to check, not the lane.
+
 ## 31 — Build + test check on pull requests
 
 A cheap guard so a broken branch cannot reach `main`: build the app and run `thousandTests` on
