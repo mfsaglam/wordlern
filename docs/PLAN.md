@@ -17,7 +17,7 @@ there so no branch name is ever reused.
 | 39 | `step/39-working-agreement` | Make the working agreement match reality | sonnet | done |
 | 40 | `step/40-plan-reset` | Archive the 2.0 plan, start a clean one | sonnet | done |
 | 41 | `step/41-app-icon` | New app icon | opus | done |
-| 42 | `step/42-website` | GitHub Pages site | opus | todo |
+| 42 | `step/42-website` | GitHub Pages site | opus | done |
 | 43 | `step/43-screenshot-mode` | Debug screenshot mode | sonnet | todo |
 | 44 | `step/44-listing-and-licence` | Finish the listing, decide the licence | sonnet | todo |
 
@@ -114,6 +114,35 @@ neither exists. A one-page site covers both and doubles as the app's marketing p
 
 Out of scope: a blog, analytics of any kind, a contact form.
 
+Done. `site/` holds three pages — landing, `/privacy`, `/support` — one stylesheet and no build
+step. `.github/workflows/pages.yml` uploads the directory as an artifact on a push to `main` that
+touches `site/`, and on `workflow_dispatch` from any branch, so the privacy URL can go live before
+2.0 is submitted.
+
+Settled along the way:
+
+- The App Store link is `apps.apple.com/app/id6740728130`, the 1.0 listing. The numeric id was
+  nowhere in the repository; it came from Apple's lookup API for `com.mfsaglam.thousand`.
+- The badge is Apple's own artwork from the marketing toolbox, unmodified, vendored as
+  `site/app-store-badge.svg`. The white variant, because the site's background is the icon's
+  near-black.
+- `tools/make_icon.swift` now also writes `site/icon.svg` and `site/icon-512.png` (link previews:
+  no scraper renders SVG). Pages serves `site/` alone, so it cannot reach `assets/`, and one
+  script writing both copies is what stops them drifting.
+- The workflow checks that every local `href` and `src` resolves to a committed file. There is no
+  build to fail, so a dead link is the only way this site can break.
+
+Not done here, deliberately: the landing page has no screenshot gallery, because there are no
+screenshots worth showing until step 43. Added to that step.
+
+The README carries its own copy of the privacy policy, which is now a second source of truth for
+the same text. Left alone — step 44 already opens the README for the licence, and that is the
+place to replace the section with a link.
+
+Needs a hand in GitHub settings before anything publishes: Settings → Pages → Source must be set
+to **GitHub Actions**. The site lands at `https://mfsaglam.github.io/wordlern/`, which is the URL
+the `og:` tags and step 44's App Store fields assume.
+
 ## 43 — Debug screenshot mode
 
 A fresh install shows `mastered 0 / 1000` and five empty bars. Screenshots of that would sell
@@ -127,6 +156,10 @@ screenshots by hand.
 - One demo state, used everywhere. The previews currently disagree with each other: `SummaryScreen`
   shows 700 mastered while `SessionEndScreen` shows `247 → 254`, and screenshots taken from both
   would not belong to the same story. Pick one set of numbers and make the previews match it too.
+
+Also in this step, added by 42: once the screenshots exist, put a gallery on the landing page at
+`site/index.html`. It was left out rather than filled with placeholders — the page currently goes
+from the badge straight to the feature list, and the gallery belongs between them.
 
 Note for whoever takes the screenshots: capture from the simulator with ⌘S, not from the Xcode
 preview canvas. App Store wants 1320×2868 for the 6.9" slot, which an iPhone 16 Pro Max simulator

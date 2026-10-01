@@ -1,0 +1,238 @@
+/* WordLern — one stylesheet for three pages. No build step, no framework.
+   The palette is the app's: the icon's near-black field, its off-white, and the
+   mastered green from BoxPalette (0.13, 0.45, 0.29). */
+
+:root {
+  --ink: #15181D;
+  --paper: #F7F5F0;
+  --muted: #9AA3AE;
+  --line: #262B33;
+  --surface: #1B1F26;
+  --green: #21734A;
+  --red: #D8232A;
+  --gold: #F0C419;
+  --slate: #3C434D;
+  --measure: 34rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0 1.5rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+a {
+  color: var(--paper);
+  text-underline-offset: 3px;
+  text-decoration-color: var(--muted);
+}
+
+a:hover {
+  text-decoration-color: var(--paper);
+}
+
+/* Header ------------------------------------------------------------------ */
+
+.masthead {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 4rem;
+}
+
+.masthead img {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px; /* the squircle iOS applies, approximated */
+}
+
+.masthead a {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+/* Type -------------------------------------------------------------------- */
+
+h1 {
+  margin: 0 0 1rem;
+  max-width: 18ch; /* two lines at the top of the page, at any width */
+  font-size: clamp(2rem, 7vw, 2.75rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+h2 {
+  margin: 3rem 0 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0 0 1rem;
+  max-width: var(--measure);
+}
+
+.lede {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+small,
+.fine {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* The icon's three-segment rule, reused as the page's one piece of colour. */
+.rule {
+  display: flex;
+  width: 120px;
+  height: 5px;
+  border-radius: 2.5px;
+  overflow: hidden;
+  margin: 2.5rem 0;
+}
+
+.rule span {
+  flex: 1;
+}
+
+.rule span:nth-child(1) { background: var(--slate); }
+.rule span:nth-child(2) { background: var(--red); }
+.rule span:nth-child(3) { background: var(--gold); }
+
+/* App Store badge --------------------------------------------------------- */
+
+/* Apple's artwork, unmodified. Their guidelines ask for clear space of at
+   least 10% of the badge's height on every side and a minimum height of
+   40px on the web, which the margin and height below satisfy. */
+.badge {
+  display: inline-block;
+  margin: 0.5rem 0 1rem;
+  padding: 0.4rem;
+}
+
+.badge img {
+  display: block;
+  height: 48px;
+  width: auto;
+}
+
+/* Features ---------------------------------------------------------------- */
+
+.features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.features h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.features p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* The claim that actually sells the app, so it gets its own surface. */
+.promise {
+  margin: 3.5rem 0 0;
+  padding: 1.5rem;
+  background: var(--surface);
+  /* The mastered green, pulled most of the way back into the hairline — the
+     app's one accent colour, used once. */
+  border: 1px solid color-mix(in srgb, var(--green) 55%, var(--line));
+  border-radius: 14px;
+}
+
+.promise p:last-child {
+  margin: 0;
+}
+
+.promise strong {
+  font-weight: 600;
+}
+
+/* Lists ------------------------------------------------------------------- */
+
+.page ul:not(.features) {
+  max-width: var(--measure);
+  padding-left: 1.2rem;
+}
+
+.page ul:not(.features) li {
+  margin-bottom: 0.5rem;
+}
+
+dl {
+  max-width: var(--measure);
+}
+
+dt {
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+dd {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+/* Footer ------------------------------------------------------------------ */
+
+footer {
+  margin-top: 4.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+}
+
+footer p {
+  max-width: none;
+}
+
+/* The site is dark in both colour schemes on purpose: it is the app's own
+   surface, and the icon is drawn for that background. */

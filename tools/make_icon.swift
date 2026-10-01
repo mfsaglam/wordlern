@@ -192,6 +192,18 @@ if sizes.contains(1024) {
     try! svg(path).write(to: svgURL, atomically: true, encoding: .utf8)
     print("wrote assets/icon.svg")
 
+    // The site is published from `site/` alone, so it needs its own copy rather than a
+    // path out of the directory. Written by the same run, so the two cannot drift.
+    let siteURL = root.appendingPathComponent("site/icon.svg")
+    try! svg(path).write(to: siteURL, atomically: true, encoding: .utf8)
+    print("wrote site/icon.svg")
+
+    // Link previews: no scraper renders an SVG, so the site needs a raster copy
+    // for og:image and for browsers that ignore an SVG favicon.
+    let sitePNG = root.appendingPathComponent("site/icon-512.png")
+    try! png(path, size: 512).write(to: sitePNG)
+    print("wrote site/icon-512.png")
+
     let iconURL = root.appendingPathComponent("thousand/Assets.xcassets/AppIcon.appiconset/icon-1024.png")
     try! png(path, size: 1024).write(to: iconURL)
     print("wrote thousand/Assets.xcassets/AppIcon.appiconset/icon-1024.png")
