@@ -18,7 +18,7 @@ there so no branch name is ever reused.
 | 40 | `step/40-plan-reset` | Archive the 2.0 plan, start a clean one | sonnet | done |
 | 41 | `step/41-app-icon` | New app icon | opus | done |
 | 42 | `step/42-website` | GitHub Pages site | opus | done |
-| 43 | `step/43-screenshot-mode` | Debug screenshot mode | sonnet | todo |
+| 43 | `step/43-screenshot-mode` | Debug screenshot mode | sonnet | done |
 | 44 | `step/44-listing-and-licence` | Finish the listing, decide the licence | sonnet | todo |
 
 Order is numeric. 41 before 42 because the site needs the icon.
@@ -160,6 +160,31 @@ screenshots by hand.
 Also in this step, added by 42: once the screenshots exist, put a gallery on the landing page at
 `site/index.html`. It was left out rather than filled with placeholders — the page currently goes
 from the badge straight to the feature list, and the gallery belongs between them.
+
+Done: `thousand/Support/DemoContent.swift`, the whole file inside `#if DEBUG`, triggered by a
+`-demoContent` launch argument set on the Run scheme. It wipes the store and loads a fixed
+distribution into the Leitner system in memory only — `WordViewModel` loads cached boxes just when
+the store has some, so an empty store leaves the demo standing and nothing touches disk until a
+card is answered.
+
+The distribution is forced, not chosen. Box 1 has a zero-day review interval, so it is due every
+day whatever its last-reviewed date; and the mastered count only moves when cards leave box 2 for
+box 3, so box 2 has to be due too or the session-end screen shows its bar not growing at all. That
+makes `due = box1 + box2` and `mastered = the rest` — the two always sum to 1000, so a modest
+mastered count would force an enormous due count. Hence an advanced learner:
+`[60, 140, 300, 300, 200]`, 800 mastered, 200 due, and a session of ten from box 2 ending
+`800 → 807` at seven correct.
+
+`das Haus`, `die Zeit`, `das Kind`, `die Frau`, `der Mann` and `das Wasser` are pushed to the head
+of box 2 — `dueForReview` walks the boxes backwards, so that is the box a session draws from, and
+those six all carry a short example sentence. Without it a session opens on whatever the frequency
+list starts with.
+
+The `SummaryScreen` and `SessionEndScreen` previews that disagreed (700 mastered against
+`247 → 254`) are replaced by one `demo — for screenshots` preview each, carrying these numbers.
+
+Still open: the screenshot gallery on `site/index.html`. The screenshots now exist on the user's
+machine but are not in the repository.
 
 Note for whoever takes the screenshots: capture from the simulator with ⌘S, not from the Xcode
 preview canvas. App Store wants 1320×2868 for the 6.9" slot, which an iPhone 16 Pro Max simulator

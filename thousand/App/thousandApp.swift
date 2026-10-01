@@ -43,8 +43,32 @@ struct thousandApp: App {
             markSeeded(contentVersion: languageData.contentVersion)
         }
 
+        #if DEBUG
+        if DemoContent.isRequested, let languageData {
+            applyDemoContent(to: system, from: languageData)
+        }
+        #endif
+
         return system
     }
+
+    #if DEBUG
+    /// Replaces whatever is stored with `DemoContent`'s fixed distribution.
+    ///
+    /// The store is emptied rather than rewritten: `WordViewModel` only loads
+    /// cached boxes when the store has some, so leaving it empty lets the demo
+    /// state stand and keeps it off disk until a card is actually answered.
+    func applyDemoContent(to system: LeitnerSystem, from languageData: LanguageData) {
+        wipeStoredContent()
+        system.loadBoxes(
+            boxes: DemoContent.boxes(
+                from: languageData.words,
+                languageCode: languageData.languageCode,
+                matching: system.allBoxes
+            )
+        )
+    }
+    #endif
 
     func addAllGermanWords(to system: LeitnerSystem, from languageData: LanguageData) {
         languageData.words.forEach { entry in

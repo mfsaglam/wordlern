@@ -216,10 +216,14 @@ private struct BoxRow: View {
     )
 }
 
-#Preview("advanced") {
+/// The state `-demoContent` puts the app into, so the preview and a store
+/// screenshot taken from the simulator show the same numbers. Keep it in step
+/// with `DemoContent.boxCounts`.
+#Preview("demo — for screenshots") {
     SummaryScreen(
         boxLabels: ["box 1", "box 2", "box 3", "box 4", "box 5"],
-        progress: [120, 180, 240, 260, 200],
+        progress: [60, 140, 300, 300, 200],
+        dueCount: 200,
         buttonAction: { }
     )
 }
