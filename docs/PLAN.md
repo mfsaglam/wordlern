@@ -40,7 +40,7 @@ bigger model, mechanical steps are not.
 | 30 | `step/30-github-actions` | GitHub Actions: main → TestFlight | opus | done |
 | 31 | `step/31-pr-check` | Build + test check on pull requests | sonnet | todo |
 | 32 | `step/32-shake-undo` | Shake to undo | opus | done |
-| 33 | `step/33-readme` | The README describes an app that no longer exists | sonnet | todo |
+| 33 | `step/33-readme` | The README describes an app that no longer exists | sonnet | done |
 | 34 | `step/34-store-listing` | App Store listing for 2.0 | sonnet | todo |
 | 35 | — | Merge into `main`: the 2.0 release | — | todo |
 
@@ -976,6 +976,22 @@ While here, decide the licence question. There is no `LICENSE` file, which legal
 reserved. That may well be deliberate for a commercial app, but on a public repository it reads as
 an oversight, and people will assume they may reuse the code. Either add a licence or add one line
 to the README saying the code is not open for reuse.
+
+Done. The README now describes SwiftUI + SwiftData (no Core Data, no Realm, no Combine —
+state is `@Observable`), the Leipzig-derived word list with its CC BY attribution pulled in
+from `docs/WORDLIST.md`, example sentences, pronunciation, the home screen and lock screen
+widgets, and the daily reminder. The "localisation ready" claim is gone — step 27 found the
+project declared twelve languages with nothing translated into any of them, and dropped the
+claim down to English only, which the README now says plainly. The roadmap section (other
+languages, pronunciation, gamification, iCloud sync) is removed: pronunciation and the
+gamification-era features it alluded to have shipped, and the rest is speculative.
+
+Licence: confirmed with the user — all rights reserved. The README's old "MIT License"
+line was wrong on two counts: there is no `LICENSE` file, and the MIT credit belongs to
+the dependency (`LeitnerSwift`), not to this app. No `LICENSE` file was added; the README
+now says plainly that the repository is public to read but no licence is granted to reuse
+it. The Privacy Policy section stayed as-is — it already matches the "no data collected"
+reality the step 21 privacy manifest declares.
 
 ## 34 — App Store listing for 2.0
 
