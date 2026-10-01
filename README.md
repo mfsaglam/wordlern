@@ -94,65 +94,9 @@ granted to reuse, modify, or redistribute it.
 
 ---
 
-# Privacy Policy
+## Privacy
 
-**Effective Date**: 18.01.2025
-
-**WordLern** ("we," "our," or "us") is committed to protecting your privacy. This Privacy
-Policy explains how we handle your information when you use our app.
-
----
-
-## Information We Collect
-
-We do not collect any personal information. All data related to your usage of the app is
-stored locally on your device and is not shared with us or any third parties.
-
----
-
-## How We Use Your Information
-
-Since we do not collect any personal information, there is no data for us to use. All app
-functionality operates locally on your device.
-
----
-
-## Data Sharing
-
-We do not share your data with any third parties. All information remains private and is
-stored on your device only.
-
----
-
-## Data Security
-
-Your data is stored securely on your device. We do not have access to it, nor do we
-transfer it over the internet.
-
----
-
-## Your Rights
-
-As no personal data is collected or stored externally, you retain full control over your
-data on your device. You can delete or modify your data through the app at any time.
-
----
-
-## Third-Party Services
-
-We do not use any third-party services that collect or process your data.
-
----
-
-## Changes to This Policy
-
-We may update this Privacy Policy periodically. We will notify you of changes by updating
-the "Effective Date" and providing notice within the app.
-
----
-
-## Contact Us
-
-If you have any questions about this Privacy Policy, please contact us:
-
-- **Email**: mfsaglam1@icloud.com
+WordLern collects nothing: no account, no analytics, no network calls at all. The policy the App
+Store listing points at lives at
+[mfsaglam.github.io/wordlern/privacy](https://mfsaglam.github.io/wordlern/privacy/), and that page
+is the only copy. A second one here would be free to drift out of step with it.

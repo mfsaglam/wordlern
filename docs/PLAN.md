@@ -19,7 +19,7 @@ there so no branch name is ever reused.
 | 41 | `step/41-app-icon` | New app icon | opus | done |
 | 42 | `step/42-website` | GitHub Pages site | opus | done |
 | 43 | `step/43-screenshot-mode` | Debug screenshot mode | sonnet | done |
-| 44 | `step/44-listing-and-licence` | Finish the listing, decide the licence | sonnet | todo |
+| 44 | `step/44-listing-and-licence` | Finish the listing, decide the licence | sonnet | done |
 
 Order is numeric. 41 before 42 because the site needs the icon.
 
@@ -216,6 +216,21 @@ retyped from memory at submission time:
 Also in this step: there is no `LICENSE` file. On a public repository that legally means all rights
 reserved while reading as an oversight. Either add a licence or state in the README that the code
 is not offered for reuse. Step 33 was meant to settle this and did not.
+
+Done. The listing copy now lives in `docs/RELEASE.md` — name, subtitle, keywords, promotional text,
+the full description, the 2.0 "what's new" and a TestFlight note — with the character counts and
+the reasoning beside each, so an edit later knows what it is trading away. The three URLs from
+step 42 are recorded against the fields that require them.
+
+The licence turned out to be settled already: step 33 did write a `License` section into the
+README (all rights reserved, public to read, no reuse granted). This plan's claim that it did not
+was wrong. No `LICENSE` file was added — a section saying the same thing is enough for a repository
+nobody is being invited to fork.
+
+What did need fixing was a second privacy policy. The README carried a full one dated 18.01.2025,
+from before step 42 put the canonical page on the site. Two policies at two addresses, free to
+drift, with the App Store listing pointing at only one of them. The README now links to the site
+page instead.
 
 ---
 
