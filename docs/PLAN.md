@@ -36,9 +36,10 @@ steps 03–05", and word content copied into Realm. Both rewritten — the list 
 one at `contentVersion` 3 with a sentence on all 1000 words, persistence is SwiftData, and Realm
 must not come back because realm-core will not build against the current iOS SDK.
 
-Left to the user: the GitHub default branch is still `main`, so new pull requests open against it.
-Repo → Settings → General → Default branch → `develop`. It does not affect the TestFlight workflow
-(which triggers on `main`) or the step 38 rulesets.
+The GitHub default branch was `main`, so new pull requests opened against the branch the App Store
+build comes from. The user switched it to `develop`. It does not affect the TestFlight workflow
+(which triggers on `main`) or the step 38 rulesets — only the base a new pull request picks and the
+README shown on the repository home page.
 
 ## 40 — Archive the 2.0 plan, start a clean one
 
