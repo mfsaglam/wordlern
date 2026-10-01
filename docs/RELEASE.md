@@ -59,14 +59,111 @@ Same typeface, size and position in every shot — six captions that work as a s
 each work alone. Background `#15181D` with `#F7F5F0` text, matching the icon and the site, so the
 app, the store page and the website read as one thing.
 
-## Description and "what's new"
+## Listing
 
-- [ ] Write the 2.0 description. Honest framing, per `docs/PLAN-2.0.md` step 34: a new word list
-      (steps 03–07), example sentences, pronunciation (step 17/19), widgets (prior widget step),
-      and reminders (step 23).
-- [ ] Write the "What's New in This Version" text for the 2.0 release — same framing, shorter.
-- [ ] Write the TestFlight "what to test" note for the build testers install before release, so
-      they know what changed since 1.0.
+Agreed in conversation; written down here so it is not retyped from memory at submission time.
+Character limits are App Store Connect's and are not negotiable.
+
+**Name** (30) — `WordLern: 1000 German Words` (27)
+
+The shipped name is the brand alone, which nobody searches for. The name field is the strongest
+ASO lever there is, so it carries the two words a learner would actually type.
+
+**Subtitle** (30) — `Spaced repetition flashcards` (28)
+
+Carries the method, which the name does not. Name and subtitle read together: what it teaches, how
+much of it, by what means.
+
+**Keywords** (100) — no spaces after the commas, and nothing already in the name or subtitle;
+Connect indexes those anyway and a repeat wastes the budget.
+
+```
+deutsch,vocabulary,vocab,a1,beginner,leitner,srs,language,study,pronunciation,offline,frequency
+```
+
+**Promotional text** (170) — editable without review, so it is the place for anything seasonal.
+
+```
+The 1000 words that make up most of everyday German - with a real example sentence for every one.
+No account, no ads, works offline.
+```
+
+**URLs** — both mandatory fields, both live from step 42.
+
+- Marketing: `https://mfsaglam.github.io/wordlern/`
+- Privacy policy: `https://mfsaglam.github.io/wordlern/privacy/`
+- Support: `https://mfsaglam.github.io/wordlern/support/`
+
+**Category** — Education primary, Reference secondary. **Age rating** 4+.
+
+## Description
+
+Only the first three lines show before someone taps "more", so they carry the whole pitch.
+
+```
+Learn the 1000 German words that cover most of everyday speech. Every word comes with a
+simple German example sentence, so you meet it in context instead of memorising a bare
+translation.
+
+HOW IT WORKS
+
+WordLern uses the Leitner system, a flashcard method built on spaced repetition. Every word
+lives in one of five boxes. Answer correctly and it moves up a box and comes back later;
+answer wrong and it drops back and returns sooner. The words you find hard come around
+often, the ones you know get out of your way.
+
+A session is ten cards. That is all it takes.
+
+WHAT YOU GET
+
+- 1000 words, chosen from real German corpora - not translated from an English list
+- A simple German example sentence for every word
+- Pronunciation in the best German voice your device has installed
+- Nouns with their articles (das Haus) and verbs in the infinitive
+- Home screen and lock screen widgets showing your progress
+- A reminder that arrives when cards are actually due, not on a timer
+
+WHAT IT DOESN'T DO
+
+No account. No ads. No subscription. No analytics, no tracking, no data collected - the app
+makes no network calls at all. Everything stays on your device and works offline.
+```
+
+The closing section is the real differentiator in this category and should survive any edit: every
+competitor asks for an account and most ask for a subscription.
+
+## What's new in 2.0
+
+The last line is not optional. Replacing the word list bumped `contentVersion`, which wipes the
+store and re-seeds — so a 1.0 user's progress is gone on update. Almost nobody is affected, but
+saying nothing would be worse than saying it.
+
+```
+WordLern 2.0 is a rebuild.
+
+- A new word list. The old one was an English frequency list translated word by word, with
+  duplicates and wrong senses. This one comes from German corpora, hand-checked, one meaning
+  per word.
+- A German example sentence for every word.
+- Redesigned cards: tap to flip, swipe to answer, shake to undo.
+- A progress screen that shows where your words actually sit.
+- Home screen and lock screen widgets.
+- Reminders that fire when cards come due.
+- Pronunciation now uses the highest-quality German voice on your device.
+
+Because the word list was replaced, progress from version 1.0 does not carry over and starts
+fresh.
+```
+
+## TestFlight "what to test"
+
+```
+This is a rebuild, so everything is worth a look. Most useful: whether the example sentences
+read naturally, whether pronunciation sounds right on your device, and whether the widget
+keeps up with your progress.
+
+Note that progress from 1.0 does not carry over.
+```
 
 ## App Privacy (App Store Connect)
 
