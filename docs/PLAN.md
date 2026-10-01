@@ -16,7 +16,7 @@ there so no branch name is ever reused.
 |---|--------|------|-------|--------|
 | 39 | `step/39-working-agreement` | Make the working agreement match reality | sonnet | done |
 | 40 | `step/40-plan-reset` | Archive the 2.0 plan, start a clean one | sonnet | done |
-| 41 | `step/41-app-icon` | New app icon | opus | todo |
+| 41 | `step/41-app-icon` | New app icon | opus | done |
 | 42 | `step/42-website` | GitHub Pages site | opus | todo |
 | 43 | `step/43-screenshot-mode` | Debug screenshot mode | sonnet | todo |
 | 44 | `step/44-listing-and-licence` | Finish the listing, decide the licence | sonnet | todo |
@@ -76,6 +76,23 @@ Deliverables:
 Check the result at 60×60 before calling it done, not just at full size. Out of scope: iOS 26
 layered icon variants (light / dark / tinted) — a single 1024 PNG is still accepted, and that is a
 separate decision.
+
+Done. `tools/make_icon.swift` draws the icon and writes both deliverables, so the SVG and the PNG
+cannot drift apart — the step assumed a hand conversion, but CoreGraphics is already on this
+machine and no dependency was added for it. `assets/icon.svg` 1.9 KB, `icon-1024.png` 33 KB and
+opaque (`hasAlpha: no`), replacing the 445 KB JPEG. The script also drops 60×60 and 120×120 proofs
+in `build/` (gitignored) — that is where the geometry was settled.
+
+Two judgements the concept left open:
+
+- The flag's black band is `#3C434D`, not black. On a `#15181D` background a true black segment is
+  invisible and the rule reads as two colours, not three.
+- The three segments meet edge to edge, like the flag's bands. Gaps between them closed into mush
+  at 60×60. The rule ended up 46pt tall rather than a hairline for the same reason: at 60×60 it is
+  2.7px, and anything thinner greyed out into one muddy line.
+
+The ß comes from the system font at semibold and is written out as an outline, so nothing depends
+on a font being installed — the website in step 42 can use the same file.
 
 ## 42 — GitHub Pages site
 
