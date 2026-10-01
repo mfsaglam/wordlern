@@ -14,7 +14,19 @@ final class GermanSpeaker {
 
     private let synthesizer = AVSpeechSynthesizer()
 
-    private init() {}
+    private init() {
+        // Set once, off the main thread: `setCategory` routes audio hardware and can
+        // block if called on the main thread, and the category never changes between
+        // utterances, so there is no reason to repeat it on every `speak(_:)` call.
+        // No `setActive(true)` — that is the synthesizer's job when it starts playing.
+        DispatchQueue.global(qos: .utility).async {
+            // `.ambient` instead of the app-default `.soloAmbient`: both respect the
+            // ringer switch, but `.soloAmbient` stops whatever the user was already
+            // listening to. With auto-play (step 19) that would kill their music on
+            // every card; a manual button press should not do that either.
+            try? AVAudioSession.sharedInstance().setCategory(.ambient)
+        }
+    }
 
     /// Every installed German voice, best quality first. Re-read on each call
     /// instead of cached, since a voice download while the app is open should
@@ -33,13 +45,6 @@ final class GermanSpeaker {
     }
 
     func speak(_ text: String) {
-        // `.ambient` instead of the app-default `.soloAmbient`: both respect the
-        // ringer switch, but `.soloAmbient` stops whatever the user was already
-        // listening to. With auto-play (step 19) that would kill their music on
-        // every card; a manual button press should not do that either.
-        try? AVAudioSession.sharedInstance().setCategory(.ambient)
-        try? AVAudioSession.sharedInstance().setActive(true)
-
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = bestGermanVoice ?? AVSpeechSynthesisVoice(language: "de")
         utterance.rate = 0.4
