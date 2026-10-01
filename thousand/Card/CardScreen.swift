@@ -26,6 +26,12 @@ struct CardScreen: View {
     var canUndo: Bool = false
     var onUndo: () -> Void = {}
 
+    /// Shake has no on-screen affordance, so it needs its own confirmation —
+    /// without one the user cannot tell whether the gesture registered or the
+    /// app ignored them. The button needs none: it is visible, and the card
+    /// behind it changes.
+    @StateObject private var undoneToast = ToastFlash()
+
     var body: some View {
         VStack(spacing: 0) {
             SessionHeader(
@@ -61,6 +67,13 @@ struct CardScreen: View {
             }
             .animation(.spring(response: 0.32, dampingFraction: 0.9), value: cardID)
             .padding(.horizontal, 20)
+            .overlay(alignment: .top) {
+                if undoneToast.isVisible {
+                    ToastPill(text: "undone")
+                        .padding(.top, 12)
+                        .transition(.opacity.combined(with: .move(edge: .top)))
+                }
+            }
 
             Spacer(minLength: 24)
 
@@ -69,12 +82,24 @@ struct CardScreen: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(uiColor: .systemGroupedBackground))
+        // Zero-size and behind everything, so it can never intercept a tap or
+        // a swipe meant for the card.
+        .background(ShakeDetector(onShake: shakeToUndo).frame(width: 0, height: 0))
         // Keyed on `cardID`, not `isFlipped`: flipping, undoing back to a card
         // already seen, or returning from a sheet must not speak again, but
         // undo stepping to a different card should — the user is seeing it fresh.
         .task(id: cardID) {
             GermanSpeaker.shared.speak(word.word)
         }
+    }
+
+    /// A shake with nothing to take back does nothing at all — no haptic, no
+    /// toast, no error. It has to be indistinguishable from not shaking.
+    private func shakeToUndo() {
+        guard canUndo else { return }
+        Haptics.undo()
+        onUndo()
+        undoneToast.flash()
     }
 }
 

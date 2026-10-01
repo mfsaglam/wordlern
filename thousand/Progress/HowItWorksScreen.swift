@@ -35,6 +35,7 @@ struct HowItWorksScreen: View {
                     Text(verbatim: "Got it moves the word up one box, so the next wait is longer.")
                     Text(verbatim: "Missed it sends the word all the way back to box 1, whichever box it came from.")
                     Text(verbatim: "Box 5 is the end of the line. Get a word right there and it leaves the rotation for good.")
+                    Text(verbatim: "Answered the wrong way? Shake the phone to take the last answer back, or tap the arrow in the top-left corner of the card screen.")
                 }
 
                 Section(title: "What mastered counts") {

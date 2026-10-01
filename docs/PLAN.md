@@ -39,7 +39,7 @@ bigger model, mechanical steps are not.
 | 29 | `step/29-fastlane` | Fastlane, proven from the laptop | opus | done |
 | 30 | `step/30-github-actions` | GitHub Actions: main → TestFlight | opus | done |
 | 31 | `step/31-pr-check` | Build + test check on pull requests | sonnet | todo |
-| 32 | `step/32-shake-undo` | Shake to undo | opus | todo |
+| 32 | `step/32-shake-undo` | Shake to undo | opus | done |
 | 33 | `step/33-readme` | The README describes an app that no longer exists | sonnet | todo |
 | 34 | `step/34-store-listing` | App Store listing for 2.0 | sonnet | todo |
 | 35 | — | Merge into `main`: the 2.0 release | — | todo |
