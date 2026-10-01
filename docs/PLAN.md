@@ -49,7 +49,7 @@ Step 14 was added and done after 09, out of numeric order: the flat `thousand/` 
 sorted before 10 and 11 pour new screen files into it.
 
 **Remaining order — not numeric.** The numbers are identifiers tied to branch names; the sequence
-is `36 → 31 → 34 → 35`. Everything about the app itself gets finished and merged into
+is `31 → 34 → 35`. Everything about the app itself gets finished and merged into
 `feature/gamify` first, and shipping comes last.
 
 Step 30's workflow is already merged but inert: it triggers on `push` to `main` only, and `main`
