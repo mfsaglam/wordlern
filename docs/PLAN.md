@@ -191,8 +191,9 @@ machine but are not in the repository.
 Note for whoever takes the screenshots: capture from the simulator with ⌘S, not from the Xcode
 preview canvas. App Store wants 1320×2868 for the 6.9" slot, which an iPhone 16 Pro Max simulator
 produces exactly; a canvas screenshot is scaled by the Mac's display and will be the wrong size.
-The widget shot cannot come from this mode at all — widgets live on the home screen, so that one
-has to be taken on a real device.
+The widget shot does not come from this mode — the widget reads the snapshot file, not the demo
+state — but it does come from the simulator: add the widget to the simulator's home screen and
+capture that.
 
 ## 44 — Finish the listing, decide the licence
 
@@ -282,8 +283,8 @@ The Pages workflow checks that every local `href` and `src` resolves to a commit
 missing image fails the build rather than reaching the site — but check the page at a phone width
 by eye anyway, since nothing automated can see a broken column.
 
-Out of scope: device frames, the widget shot (it comes off a real device and is not in the same
-visual family), and any carousel or lightbox. Static images in a grid.
+Out of scope: device frames, the widget shot (a home screen is not in the same visual family as
+the app's own screens), and any carousel or lightbox. Static images in a grid.
 
 Done. The four raw captures (1320×2868, 148–487 KB each) landed in `site/screenshot/` as
 untracked files at the start of this step — `.gitignore` now excludes the `*_raw.png` names so
@@ -303,3 +304,34 @@ single-column breakpoint was needed.
 Order follows the plan's own phrasing — card front, card back, summary, session end — which
 maps to the capture filenames as `card_faceup` (front, not yet flipped) and `card_facedown`
 (flipped, showing the English meaning and example sentence).
+
+## 46 — App Store marketing images
+
+The twelve raw captures exist — six screens at 1320×2868 (iPhone) and 2064×2752 (iPad), covering
+card front, card back, summary, session end, how it works and the widget. What goes to App Store
+Connect is those with a caption above them, per the table in `docs/RELEASE.md`.
+
+Build them with a script, not by hand. `tools/make_icon.swift` already established the pattern —
+`swift tools/make_icon.swift`, AppKit and CoreGraphics, no dependency added — and the same approach
+gives `tools/make_store_images.swift`: read a raw capture, compose it on the required canvas, write
+the PNG. Re-runnable, so a changed screenshot or a reworded caption is one command rather than an
+afternoon in a design tool.
+
+Composition, matching the icon and the site so the listing, the store page and the app read as one
+thing:
+
+- Canvas at the exact required size. No resampling of the capture itself beyond a uniform scale.
+- Background `#15181D`, caption `#F7F5F0` — the icon's two colours.
+- Caption at the top, same baseline in every image, centred, one line where it fits and two where
+  it does not. Identical size and position across the set matters more than any single image.
+- The capture below it, scaled to leave the caption room, with its corners rounded to the device's
+  own radius. No drawn device frame, no shadow, no gradient.
+
+Required of the result:
+
+- Six iPhone images and six iPad images, written somewhere gitignored. The raw captures stay out of
+  the repository as well; both are build inputs, not source.
+- Legible at the size App Store actually shows them, which is a thumbnail in a scrolling row. Check
+  one at thumbnail size before accepting the set.
+- Apple rejects listings whose images are mostly marketing rather than the app. A caption strip over
+  a real screen is well inside the line; drifting towards illustration is not.
