@@ -37,14 +37,22 @@ bigger model, mechanical steps are not.
 | 27 | `step/27-widget-countdown-localization` | The widget's countdown string is not localized | sonnet | done |
 | 28 | `step/28-release-hygiene` | Release hygiene before any pipeline | sonnet | done |
 | 29 | `step/29-fastlane` | Fastlane, proven from the laptop | opus | done |
-| 30 | `step/30-testflight-pipeline` | GitHub Actions: main → TestFlight | opus | todo |
+| 30 | `step/30-github-actions` | GitHub Actions: main → TestFlight | opus | done |
 | 31 | `step/31-pr-check` | Build + test check on pull requests | sonnet | todo |
 | 32 | `step/32-shake-undo` | Shake to undo | opus | todo |
 | 33 | `step/33-readme` | The README describes an app that no longer exists | sonnet | todo |
 | 34 | `step/34-store-listing` | App Store listing for 2.0 | sonnet | todo |
+| 35 | — | Merge into `main`: the 2.0 release | — | todo |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
+
+**Remaining order — not numeric.** The numbers are identifiers tied to branch names; the sequence
+is `32 → 33 → 31 → 34 → 35`. Everything about the app itself gets finished and merged into
+`feature/gamify` first, and shipping comes last.
+
+Step 30's workflow is already merged but inert: it triggers on `push` to `main` only, and `main`
+still holds the 1.0 App Store build. Nothing reaches TestFlight until step 35 moves `main`.
 
 ---
 
@@ -985,3 +993,27 @@ TestFlight build and a release, and none of it is code.
 - TestFlight "what to test" note, so testers know what is new.
 
 Deliver this as a checklist in `docs/RELEASE.md` rather than as code, and tick it off together.
+
+## 35 — Merge into `main`: the 2.0 release
+
+Not a development step and not done on a branch. This is the moment `feature/gamify` — 70-odd
+commits, a rewritten word list, five new screens, widgets, reminders — replaces the 1.0 build
+sitting on the App Store.
+
+Do it last, after 32, 33, 31 and 34 are all merged into `feature/gamify`. Everything before this is
+reversible; this is not.
+
+Order on the day:
+
+1. Confirm `feature/gamify` builds clean and the app runs on a device.
+2. Merge `feature/gamify` into `main`. That push fires `.github/workflows/testflight.yml`, which
+   runs the `beta` lane and uploads to TestFlight — the first time the pipeline does anything real.
+3. Watch that run. A failure here is a signing or runner problem, not an app problem; step 29
+   proved the lane works from the laptop, so the laptop is the fallback if CI misbehaves.
+4. Install the TestFlight build and use it for a day before promoting it. There is no rollback once
+   a version is released to users.
+5. Submit for review with the listing from step 34.
+
+The pipeline has never run on a real push: its trigger is `push` to `main`, and `main` has not
+moved since it was written. Expect the first run to surface something — that is why a human watches
+it rather than merging and walking away.
