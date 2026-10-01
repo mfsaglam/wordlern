@@ -32,8 +32,8 @@ Launch with the `-demoContent` argument on the Run scheme first (step 43), or th
 `mastered 0 / 1000` over five empty bars. It puts the app at 800 mastered with 200 cards due; a
 session of ten answered seven-correct ends on `800 → 807`, which is what the session-end shot
 should show. Turn the argument back off afterwards — it wipes local data on every launch. The
-widget shot cannot come from it at all: widgets live on the home screen, so that one comes off a
-real device.
+widget shot comes from the simulator too: add the widget to the simulator's own home screen and
+capture that, the same as any other screen.
 
 ### Captions
 
