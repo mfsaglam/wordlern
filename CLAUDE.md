@@ -6,8 +6,8 @@ Reply to the user in Turkish.
 
 ## Workflow — follow this for every task, without being asked
 
-1. Each step of the plan is one task. Start it on a new branch cut from `feature/gamify`, named `step/NN-slug` (e.g. `step/01-card-screen`). The `NN` comes from `docs/PLAN.md`.
-2. Never commit to `main`. Never merge into `feature/gamify` — the user does the merge.
+1. Each step of the plan is one task. Start it on a new branch cut from `develop`, named `step/NN-slug` (e.g. `step/01-card-screen`). The `NN` comes from `docs/PLAN.md`.
+2. Never commit to `main` or `develop`. Never merge into either — the user opens the pull request and merges. Both branches are protected on GitHub (step 38): no direct pushes, no deletion, no force-push, and a passing `build-and-test` check is required.
 3. Stay inside the step's scope as defined in `docs/PLAN.md`. If the work needs a change outside that scope, stop and ask instead of widening it.
 4. When the work is done, verify the build:
    `xcodebuild -project thousand.xcodeproj -scheme thousand -destination 'platform=iOS Simulator,name=iPhone 16' build`
