@@ -21,6 +21,11 @@ physical Leitner box. Animations stay simple; no elaborate choreography.
 - Below centre: one muted line of guidance, `tap the card to flip`.
 - Bottom: ✓ and ✗ as 52pt circles, tinted green and red, ✗ on the left.
 - The old "Show / Hide Translation" button is gone. The card itself is the control.
+- Gestures are shortcuts layered on top of visible controls, never replacements for them.
+  Swiping the card right answers ✓ and left answers ✗; shaking the phone undoes the last answer,
+  the same as the muted arrow left of the box badge. A shake with nothing to take back does
+  nothing. Because shake has no on-screen affordance, it confirms itself with a haptic and a
+  brief `undone` pill.
 
 ## Screen 2 — card, back
 
@@ -35,6 +40,7 @@ Reached by tapping the card, with a flip animation.
   words the learner has already met. The point is repeated exposure to known vocabulary.
 - When `exampleSentence` is nil, the whole surface is absent — no empty state, no placeholder.
 - The ✓/✗ buttons are unchanged and stay in place across the flip.
+- Swipe and shake work exactly as on the front — the flip changes nothing about them.
 
 ## Screen 3 — summary
 

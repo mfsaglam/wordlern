@@ -42,6 +42,7 @@
             { "path": "SentenceBox.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "SessionHeader.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "SpeakerButton.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "ToastPill.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "WordViewModel.swift", "target-membership": [ "thousand/compile-sources" ] },
           ],
         }, {
@@ -79,6 +80,7 @@
           "children": [
             { "path": "Haptics.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "ReminderScheduler.swift", "target-membership": [ "thousand/compile-sources" ] },
+            { "path": "ShakeDetector.swift", "target-membership": [ "thousand/compile-sources" ] },
             {
               "path": "ProgressSnapshot.swift",
               "target-membership": [

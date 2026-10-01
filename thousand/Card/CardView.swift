@@ -30,12 +30,8 @@ struct CardView: View {
     /// on the crossing rather than on every frame beyond it.
     @State private var isArmed = false
 
-    /// Drives the "Copied" pill. A token rather than a cancellable timer: a
-    /// second copy while the first pill is still fading just bumps the token,
-    /// so the stale dismissal from the first tap no-ops instead of cutting the
-    /// second pill short.
-    @State private var showCopiedToast = false
-    @State private var copiedToastToken = 0
+    /// Drives the "Copied" pill.
+    @StateObject private var copiedToast = ToastFlash()
 
     /// 0 at rest, 1 once the drag is far enough to commit.
     private var swipeProgress: CGFloat {
@@ -64,8 +60,8 @@ struct CardView: View {
         // After the rotation, not before: attaching it here keeps the pill
         // upright through the flip instead of mirroring with the card.
         .overlay(alignment: .top) {
-            if showCopiedToast {
-                copiedToast
+            if copiedToast.isVisible {
+                ToastPill(text: "copied")
                     .padding(.top, 12)
                     .transition(.opacity.combined(with: .move(edge: .top)))
             }
@@ -84,34 +80,10 @@ struct CardView: View {
     private func copy(_ text: String) {
         UIPasteboard.general.string = text
         Haptics.copied()
-        flashCopiedToast()
-    }
-
-    /// Shown for both this view's own copies and `SentenceBox`'s, via its
-    /// `onCopy` callback — one pill, regardless of which of the three texts
-    /// was tapped.
-    private func flashCopiedToast() {
-        copiedToastToken += 1
-        let token = copiedToastToken
-        withAnimation(.easeOut(duration: 0.15)) {
-            showCopiedToast = true
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
-            guard token == copiedToastToken else { return }
-            withAnimation(.easeIn(duration: 0.2)) {
-                showCopiedToast = false
-            }
-        }
-    }
-
-    private var copiedToast: some View {
-        Text(LocalizedStringKey("copied"))
-            .font(.footnote.weight(.semibold))
-            .padding(.horizontal, 14)
-            .padding(.vertical, 8)
-            .background(Capsule().fill(Color.primary.opacity(0.85)))
-            .foregroundStyle(Color(uiColor: .systemBackground))
-            .allowsHitTesting(false)
+        // Shown for both this view's own copies and `SentenceBox`'s, via its
+        // `onCopy` callback — one pill, regardless of which of the three texts
+        // was tapped.
+        copiedToast.flash()
     }
 
     /// The card borrows the answer buttons' colours as it travels, so the
@@ -228,7 +200,7 @@ struct CardView: View {
                 .id(isFlipped)
 
             if let sentence = word.exampleSentence, !sentence.isEmpty {
-                SentenceBox(sentence: sentence, targetWord: word.word, onCopy: flashCopiedToast)
+                SentenceBox(sentence: sentence, targetWord: word.word, onCopy: { copiedToast.flash() })
                     .padding(.top, 4)
                     // Same reasoning as the word/meaning texts above: the
                     // sentence's own selection would otherwise survive a flip.
