@@ -43,7 +43,7 @@ bigger model, mechanical steps are not.
 | 33 | `step/33-readme` | The README describes an app that no longer exists | sonnet | done |
 | 34 | `step/34-store-listing` | App Store listing for 2.0 | sonnet | todo |
 | 35 | — | Merge into `main`: the 2.0 release | — | todo |
-| 36 | `step/36-audio-session` | Audio session is configured on every utterance | sonnet | todo |
+| 36 | `step/36-audio-session` | Audio session is configured on every utterance | sonnet | done |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
@@ -1063,3 +1063,9 @@ Verify on a device, not the simulator, and check all three: the warning is gone,
 stays silent, and pronunciation does not interrupt music that is already playing.
 
 Out of scope: voice selection, the rate, and anything else about how the word is spoken.
+
+Done. `GermanSpeaker.init()` sets the `.ambient` category once, dispatched to a background
+`DispatchQueue.global(qos: .utility)` queue; `speak(_:)` no longer touches the audio session
+at all, and `setActive(true)` is gone outright. Verified on a device: the main-thread warning
+is gone, a muted phone stays silent, and pronunciation no longer interrupts music already
+playing.
