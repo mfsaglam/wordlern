@@ -1,0 +1,65 @@
+name: Pages
+
+# Publishes site/ to GitHub Pages. Static HTML — nothing is built, the directory
+# is uploaded as it stands.
+#
+# Pages' branch-folder setting can only serve a repository root or /docs, and
+# /docs holds the planning files, so this uses the artifact upload instead.
+#
+# workflow_dispatch is not a convenience: App Store Connect requires a live
+# privacy policy URL before 2.0 can be submitted, and waiting for a merge to
+# main would put those in the wrong order. Running this by hand from any branch
+# publishes the site ahead of the release.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never cancel a deploy in flight — a half-published site is worse than a late
+# one — but let a newer commit queue behind it.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # Catches a page that links to a file nobody committed, which is the only
+      # way this site can break: there is no build to fail.
+      - name: Check every local link resolves
+        run: |
+          status=0
+          while IFS=: read -r page target; do
+            case "$target" in
+              http*|mailto:*|'#'*) continue ;;
+            esac
+            resolved="$(dirname "$page")/${target%%#*}"
+            case "$resolved" in */) resolved="${resolved}index.html" ;; esac
+            if [ ! -e "$resolved" ]; then
+              echo "::error file=$page::links to missing $target"
+              status=1
+            fi
+          done <<< "$(grep -roE '(href|src)="[^"]+"' site --include='*.html' \
+                      | sed -E 's/:(href|src)="/:/; s/"$//')"
+          exit $status
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
