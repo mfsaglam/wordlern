@@ -202,7 +202,7 @@
         "REGISTER_APP_GROUPS": "YES",
         "SWIFT_EMIT_LOC_STRINGS": "YES",
         "SWIFT_VERSION": "5.0",
-        "TARGETED_DEVICE_FAMILY": "1,2",
+        "TARGETED_DEVICE_FAMILY": "1",
       },
     }, {
       "name": "thousandTests",
@@ -297,7 +297,7 @@
         "SKIP_INSTALL": "YES",
         "SWIFT_EMIT_LOC_STRINGS": "YES",
         "SWIFT_VERSION": "5.0",
-        "TARGETED_DEVICE_FAMILY": "1,2",
+        "TARGETED_DEVICE_FAMILY": "1",
       },
     },
   ],

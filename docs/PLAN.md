@@ -41,7 +41,7 @@ bigger model, mechanical steps are not.
 | 31 | `step/31-pr-check` | Build + test check on pull requests | sonnet | done |
 | 32 | `step/32-shake-undo` | Shake to undo | opus | done |
 | 33 | `step/33-readme` | The README describes an app that no longer exists | sonnet | done |
-| 34 | `step/34-store-listing` | App Store listing for 2.0 | sonnet | todo |
+| 34 | `step/34-store-listing` | App Store listing for 2.0 | sonnet | done |
 | 35 | — | Merge into `main`: the 2.0 release | — | todo |
 | 36 | `step/36-audio-session` | Audio session is configured on every utterance | sonnet | done |
 
@@ -1010,6 +1010,16 @@ TestFlight build and a release, and none of it is code.
 - TestFlight "what to test" note, so testers know what is new.
 
 Deliver this as a checklist in `docs/RELEASE.md` rather than as code, and tick it off together.
+
+Done. `docs/RELEASE.md` has the checklist: screenshots, description/what's-new/TestFlight note,
+App Privacy answers, export compliance, the App Store Connect record check, and the version
+confirmation — each cross-referenced to the step that already did the groundwork (21, 28).
+
+One code change outside the checklist: `TARGETED_DEVICE_FAMILY` on `thousand` and
+`WordLernWidget` was `"1,2"` (iPhone + iPad) but no screen in `docs/DESIGN.md` was ever designed
+or tested for iPad. Listing iPad support would have been dishonest, so both targets are now
+iPhone-only (`TARGETED_DEVICE_FAMILY = "1"`) — decided with the user 2026-10-01. This also drops
+the iPad screenshot requirement from the checklist.
 
 ## 35 — Merge into `main`: the 2.0 release
 
