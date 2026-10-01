@@ -43,12 +43,13 @@ bigger model, mechanical steps are not.
 | 33 | `step/33-readme` | The README describes an app that no longer exists | sonnet | done |
 | 34 | `step/34-store-listing` | App Store listing for 2.0 | sonnet | todo |
 | 35 | — | Merge into `main`: the 2.0 release | — | todo |
+| 36 | `step/36-audio-session` | Audio session is configured on every utterance | sonnet | todo |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
 
 **Remaining order — not numeric.** The numbers are identifiers tied to branch names; the sequence
-is `32 → 33 → 31 → 34 → 35`. Everything about the app itself gets finished and merged into
+is `36 → 31 → 34 → 35`. Everything about the app itself gets finished and merged into
 `feature/gamify` first, and shipping comes last.
 
 Step 30's workflow is already merged but inert: it triggers on `push` to `main` only, and `main`
@@ -1033,3 +1034,32 @@ Order on the day:
 The pipeline has never run on a real push: its trigger is `push` to `main`, and `main` has not
 moved since it was written. Expect the first run to surface something — that is why a human watches
 it rather than merging and walking away.
+
+## 36 — Audio session is configured on every utterance
+
+`GermanSpeaker.speak(_:)` sets the audio session category and activates the session on every call.
+The device logs a warning for it:
+
+```
+AVAudioSession_iOS.mm:978  This method can lead to UI unresponsiveness if called on the
+main thread. Consider using the asynchronous activate/deactivate API instead.
+```
+
+Two problems behind one warning:
+
+- `setActive(true)` is synchronous and routes audio hardware, so it can block the main thread.
+- Both calls repeat for every single utterance. A ten-card session speaks at least twenty times
+  (auto-play from step 19 plus the speaker buttons), and the category only ever needs setting once.
+
+Fix: configure the category **once**, off the main thread, and drop `setActive(true)` entirely. The
+category is what carries the behaviour the app depends on — `.ambient` respects the ringer switch
+and does not stop the user's music, which is why step 19 chose it over `.soloAmbient`. Activation
+is the system's job when the synthesizer starts playing.
+
+If activation does turn out to be needed, use the asynchronous activate API the warning points at
+rather than moving the synchronous call to a background queue and hoping the ordering works out.
+
+Verify on a device, not the simulator, and check all three: the warning is gone, a muted phone
+stays silent, and pronunciation does not interrupt music that is already playing.
+
+Out of scope: voice selection, the rate, and anything else about how the word is spoken.
