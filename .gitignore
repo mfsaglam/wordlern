@@ -1,0 +1,34 @@
+.DS_Store
+
+## Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Swift Package Manager
+.build/
+.swiftpm/
+
+## Scratch
+*.log
+
+## Build-time Python (tools/)
+.venv/
+
+## fastlane
+fastlane/report.xml
+fastlane/README.md
+fastlane/test_output/
+fastlane/.env*
+
+## Signing material — never commit
+*.p8
+*.p12
+*.mobileprovision
+*.cer

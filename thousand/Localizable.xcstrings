@@ -1,28 +1,142 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "%lld cards" : {
+    "/ %lld words" : {
 
     },
-    "Box 1" : {
+    "%lld cards due" : {
 
     },
-    "Box 2" : {
+    "%lld cards reviewed" : {
 
     },
-    "Box 3" : {
+    "%lld words are ready to review" : {
 
     },
-    "Box 4" : {
+    "1 word is ready to review" : {
 
     },
-    "Box 5" : {
+    "all caught up" : {
 
     },
-    "Hide Translation" : {
+    "Answering a card" : {
 
     },
-    "Show Translation" : {
+    "box %lld" : {
+
+    },
+    "box 1" : {
+
+    },
+    "box 2" : {
+
+    },
+    "box 3" : {
+
+    },
+    "box 4" : {
+
+    },
+    "box 5" : {
+
+    },
+    "copied" : {
+
+    },
+    "Currently using" : {
+
+    },
+    "every 2 weeks" : {
+
+    },
+    "every 3 days" : {
+
+    },
+    "every day" : {
+
+    },
+    "every month" : {
+
+    },
+    "every week" : {
+
+    },
+    "How it works" : {
+
+    },
+    "how many words you have mastered, and what is due." : {
+
+    },
+    "in a sentence" : {
+
+    },
+    "mastered" : {
+
+    },
+    "moved up" : {
+
+    },
+    "next review %@" : {
+
+    },
+    "next review in %@" : {
+
+    },
+    "Open Settings" : {
+
+    },
+    "open WordLern to start" : {
+
+    },
+    "progress" : {
+
+    },
+    "pronounce" : {
+
+    },
+    "Pronunciation" : {
+
+    },
+    "review ready" : {
+
+    },
+    "see progress" : {
+
+    },
+    "session complete" : {
+
+    },
+    "Software" : {
+
+    },
+    "start session" : {
+
+    },
+    "tap the card to flip" : {
+
+    },
+    "The five boxes" : {
+
+    },
+    "time to review" : {
+
+    },
+    "to review" : {
+
+    },
+    "undo" : {
+
+    },
+    "undone" : {
+
+    },
+    "What mastered counts" : {
+
+    },
+    "Word list" : {
+
+    },
+    "Word meanings" : {
 
     }
   },

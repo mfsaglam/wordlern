@@ -1,0 +1,1001 @@
+# rank	targetWord	sentence — step 06/07 example sentences. See tools/validate_sentences.py.
+1	der	Der Mann ist hier.
+2	und	Der Mann und die Frau.
+3	ein	Ein Kind ist da.
+4	sein	Das Wasser ist gut.
+5	in	Wir sind in der Stadt.
+6	werden	Das Kind wird groß.
+7	er	Er ist sehr gut.
+8	von	Er kommt von hier.
+9	mit	Ich komme mit dem Kind.
+10	im	Wir sind im Haus.
+11	zu	Das ist zu groß.
+12	für	Das ist für das Kind.
+13	auf	Ein Buch auf dem Tisch.
+14	haben	Ich habe ein Auto.
+15	sie	Heute ist sie hier.
+16	Sie	Sind Sie heute da?
+17	auch	Ich komme auch.
+18	es	Es ist sehr gut.
+19	als	Er ist größer als ich.
+20	dies	Dies ist mein Haus.
+21	an	Er ist an dem Tisch.
+22	nicht	Ich bin nicht hier.
+23	können	Ich kann es machen.
+24	ihr	Das ist ihr Buch.
+25	bei	Ich bin bei ihr.
+26	nach	Wir gehen nach Hause.
+27	am	Wir sind am Tisch.
+28	aus	Er kommt aus dem Haus.
+29	das Jahr	Das Jahr ist gut.
+30	dass	Sie sagt, dass es geht.
+31	um	Wir gehen um das Haus.
+32	zum	Ich gehe zum Auto.
+33	wie	Wie geht es dir?
+34	über	Das ist über mir.
+35	oder	Das Buch oder das Auto?
+36	bis	Ich bin bis heute hier.
+37	vor	Er ist vor dem Haus.
+38	noch	Ich bin noch hier.
+39	zur	Wir gehen zur Stadt.
+40	durch	Wir gehen durch das Haus.
+41	aber	Es ist gut, aber klein.
+42	nur	Ich habe nur ein Buch.
+43	so	Das ist so gut.
+44	geben	Ich gebe dir das Buch.
+45	alle	Alle Kinder sind hier.
+46	neu	Mein Auto ist neu.
+47	sollen	Du sollst nicht gehen.
+48	erst	Er kommt erst heute.
+49	müssen	Ich muss jetzt gehen.
+50	groß	Das Haus ist sehr groß.
+51	mehr	Ich habe mehr Bücher.
+52	man	Hier kann man essen.
+53	viel	Er hat viel Wasser.
+54	andere	Das andere Buch ist gut.
+55	unter	Das ist unter dem Tisch.
+56	gut	Das Buch ist sehr gut.
+57	kommen	Ich komme aus der Stadt.
+58	kein	Ich habe kein Auto.
+59	ich	Heute bin ich hier.
+60	vom	Er kommt vom Haus.
+61	wir	Wir gehen nach Hause.
+62	weit	Die Stadt ist weit.
+63	gehen	Wir gehen in die Stadt.
+64	wieder	Er ist wieder hier.
+65	zwei	Ich habe zwei Kinder.
+66	seit	Ich bin seit heute hier.
+67	stehen	Das Auto steht hier.
+68	wenn	Komm, wenn du kannst.
+69	ab	Ab heute arbeite ich.
+70	dann	Dann gehen wir nach Hause.
+71	machen	Was machst du heute?
+72	finden	Ich finde mein Buch nicht.
+73	was	Was machst du?
+74	dabei	Mein Kind ist dabei.
+75	beim	Ich bin beim Essen.
+76	da	Mein Buch ist da.
+77	gegen	Er kommt gegen zwei.
+78	sowie	Der Mann sowie die Frau.
+79	hier	Hier ist mein Haus.
+80	bereits	Er ist bereits hier.
+81	damit	Ich komme, damit du gehst.
+82	die Zeit	Ich habe keine Zeit.
+83	zwischen	Ich bin zwischen zwei Kindern.
+84	wollen	Ich will nach Hause gehen.
+85	lassen	Lass mich das machen.
+86	immer	Er ist immer hier.
+87	sehr	Das Wasser ist sehr gut.
+88	schon	Ich bin schon da.
+89	liegen	Das Buch liegt hier.
+90	hoch	Das Haus ist sehr hoch.
+91	der Mensch	Der Mensch will immer mehr.
+92	drei	Wir haben drei Kinder.
+93	sehen	Ich sehe das Kind.
+94	die Stadt	Die Stadt ist sehr groß.
+95	das Kind	Das Kind ist noch klein.
+96	doch	Es ist doch gut.
+97	stellen	Stell das Auto hier.
+98	wenig	Ich habe wenig Zeit.
+99	das Leben	Das Leben ist schön.
+100	zeigen	Zeig mir dein Haus.
+101	jedoch	Er kommt, jedoch nicht heute.
+102	etwa	Er kommt etwa um zwei.
+103	ganz	Das ganze Haus ist neu.
+104	nun	Nun gehen wir nach Hause.
+105	der Tag	Der Tag ist sehr schön.
+106	dort	Mein Auto steht dort.
+107	beide	Beide Kinder sind hier.
+108	klein	Mein Haus ist sehr klein.
+109	nehmen	Ich nehme das Buch.
+110	erhalten	Ich erhalte ein Buch.
+111	heute	Heute arbeite ich nicht.
+112	während	Während des Tages arbeite ich.
+113	der Teil	Ein Teil ist schon da.
+114	bleiben	Ich bleibe heute zu Hause.
+115	selbst	Ich mache es selbst.
+116	das Ende	Das Ende ist gut.
+117	deutsch	Das deutsche Buch ist neu.
+118	alt	Mein Auto ist sehr alt.
+119	das Land	Das Land ist sehr groß.
+120	rund	Der Tisch ist rund.
+121	führen	Sie führt das Kind.
+122	die Frau	Die Frau arbeitet hier.
+123	wichtig	Das ist sehr wichtig.
+124	ohne	Ich komme ohne mein Kind.
+125	dazu	Ich sage ja dazu.
+126	das Unternehmen	Das Unternehmen ist sehr groß.
+127	eigen	Ich habe eigene Kinder.
+128	spät	Er kommt heute sehr spät.
+129	der Euro	Ich habe zwei Euro.
+130	stark	Der Mann ist sehr stark.
+131	sagen	Was sagst du dazu?
+132	das Prozent	Zwei Prozent sind nicht viel.
+133	sondern	Nicht ich, sondern er.
+134	lang	Der Tag ist sehr lang.
+135	einige	Einige Kinder sind hier.
+136	allerdings	Er kommt, allerdings sehr spät.
+137	weiter	Wir gehen weiter.
+138	das Mal	Das ist das erste Mal.
+139	gelten	Das gilt für alle.
+140	dürfen	Du darfst jetzt gehen.
+141	jeder	Jedes Kind hat ein Buch.
+142	spielen	Die Kinder spielen hier.
+143	zweite	Das ist mein zweites Buch.
+144	kurz	Der Tag war sehr kurz.
+145	setzen	Ich setze mich hier.
+146	mehrere	Ich habe mehrere Bücher.
+147	möglich	Das ist nicht möglich.
+148	vier	Wir haben vier Kinder.
+149	neben	Er steht neben dem Auto.
+150	verschieden	Die Kinder sind verschieden.
+151	halten	Ich halte das Buch.
+152	ins	Wir gehen ins Haus.
+153	welcher	Welches Kind ist das?
+154	der Weg	Der Weg ist sehr lang.
+155	der Fall	Das ist nicht der Fall.
+156	unser	Unser Haus ist sehr alt.
+157	ob	Wir sehen, ob es geht.
+158	der Mann	Der Mann arbeitet sehr viel.
+159	die Arbeit	Die Arbeit ist sehr wichtig.
+160	der Ort	Der Ort ist sehr klein.
+161	nutzen	Ich nutze mein Auto.
+162	zudem	Zudem ist es sehr spät.
+163	erreichen	Wir erreichen die Stadt.
+164	bekannt	Die Stadt ist sehr bekannt.
+165	das Haus	Unser Haus ist neu.
+166	jung	Die Frau ist noch jung.
+167	wo	Wo ist mein Buch?
+168	etwas	Ich habe etwas für dich.
+169	gemeinsam	Wir arbeiten gemeinsam.
+170	du	Wo bist du jetzt?
+171	dafür	Ich habe keine Zeit dafür.
+172	das Spiel	Das Spiel war sehr gut.
+173	besonders	Das Kind ist besonders klein.
+174	bestehen	Mein Leben besteht aus Arbeit.
+175	denn	Komm, denn es ist spät.
+176	statt	Ich arbeite statt zu gehen.
+177	der Bereich	Das ist mein Bereich.
+178	der Platz	Der Platz ist sehr groß.
+179	die Uhr	Es ist zwei Uhr.
+180	meist	Ich arbeite meist zu Hause.
+181	also	Also gehen wir jetzt.
+182	der Deutsche	Der Deutsche arbeitet viel.
+183	jetzt	Jetzt gehe ich nach Hause.
+184	weil	Ich bleibe, weil du kommst.
+185	bringen	Ich bringe dir ein Buch.
+186	einfach	Die Arbeit ist sehr einfach.
+187	die Familie	Meine Familie ist sehr groß.
+188	ebenfalls	Ich komme ebenfalls.
+189	letzte	Das letzte Kind kommt jetzt.
+190	die Seite	Die Seite ist sehr lang.
+191	das Thema	Das Thema ist sehr wichtig.
+192	zurück	Ich gehe jetzt zurück.
+193	außerdem	Außerdem ist es sehr spät.
+194	insgesamt	Insgesamt sind wir vier.
+195	befinden	Wir befinden uns hier.
+196	die Million	Vier Millionen Menschen wohnen hier.
+197	arbeiten	Ich arbeite sehr viel.
+198	deutlich	Das ist sehr deutlich.
+199	die Person	Die Person ist sehr jung.
+200	die Frage	Die Frage ist sehr einfach.
+201	treffen	Ich treffe mein Kind heute.
+202	aktuell	Das Thema ist sehr aktuell.
+203	wissen	Ich weiß es nicht.
+204	beginnen	Die Arbeit beginnt jetzt.
+205	oft	Er kommt oft zu spät.
+206	schnell	Das Auto ist sehr schnell.
+207	die Woche	Die Woche war sehr lang.
+208	zusammen	Wir arbeiten zusammen.
+209	die Geschichte	Die Geschichte ist sehr alt.
+210	der Monat	Der Monat war sehr gut.
+211	davon	Ich habe zwei davon.
+212	darauf	Das Buch liegt darauf.
+213	der Grund	Das ist kein guter Grund.
+214	das Ziel	Das Ziel ist sehr weit.
+215	fünf	Ich habe fünf Bücher.
+216	entstehen	So entsteht mein Buch.
+217	hören	Ich höre dich nicht.
+218	nah	Die Stadt ist sehr nah.
+219	direkt	Das Haus ist direkt hier.
+220	handeln	Wir müssen jetzt handeln.
+221	der Name	Wie ist dein Name?
+222	zahlreich	Zahlreiche Menschen sind hier.
+223	die Schule	Die Kinder gehen zur Schule.
+224	bieten	Wir bieten viel Arbeit.
+225	bekommen	Ich bekomme ein Buch.
+226	daher	Daher gehe ich jetzt.
+227	die Art	Das ist eine neue Art.
+228	ziehen	Ich ziehe den Tisch.
+229	der September	Im September ist es schön.
+230	das Projekt	Das Projekt ist sehr wichtig.
+231	gleich	Ich komme gleich zurück.
+232	fast	Ich bin fast da.
+233	erklären	Ich erkläre es dir.
+234	das Beispiel	Das Beispiel ist sehr einfach.
+235	lange	Ich arbeite hier schon lange.
+236	international	Das Projekt ist international.
+237	entwickeln	Wir entwickeln ein Projekt.
+238	einmal	Ich war einmal dort.
+239	laut	Die Kinder sind sehr laut.
+240	zunächst	Zunächst gehen wir nach Hause.
+241	sprechen	Ich spreche mit dir.
+242	die Gemeinde	Die Gemeinde ist sehr klein.
+243	die Welt	Die Welt ist sehr groß.
+244	schwer	Die Arbeit ist sehr schwer.
+245	das Mitglied	Er ist Mitglied bei uns.
+246	wegen	Wegen der Arbeit bleibe ich.
+247	wer	Wer ist dort?
+248	der Oktober	Im Oktober kommt er zurück.
+249	der Mai	Im Mai ist es schön.
+250	der Einsatz	Der Einsatz war sehr gut.
+251	der Juni	Im Juni beginnt die Arbeit.
+252	schaffen	Ich schaffe die Arbeit.
+253	genau	Es ist genau zwei Uhr.
+254	darüber	Wir sprechen darüber.
+255	tragen	Ich trage das Kind.
+256	zwar	Er kommt zwar, aber spät.
+257	das Team	Das Team arbeitet sehr gut.
+258	die Straße	Die Straße ist sehr lang.
+259	recht	Er hat recht.
+260	unterstützen	Wir unterstützen die Familie.
+261	aufgrund	Aufgrund der Arbeit bleibe ich.
+262	öffentlich	Der Platz ist öffentlich.
+263	erfolgen	Die Arbeit soll heute erfolgen.
+264	das Bild	Das Bild ist sehr schön.
+265	die Entwicklung	Die Entwicklung ist sehr gut.
+266	sogar	Er kommt sogar heute.
+267	das Problem	Das ist kein Problem.
+268	zusätzlich	Zusätzlich habe ich zwei Bücher.
+269	schreiben	Ich schreibe ein Buch.
+270	mögen	Ich mag mein Auto.
+271	der Anfang	Der Anfang war sehr schwer.
+272	politisch	Das Thema ist politisch.
+273	die Möglichkeit	Es gibt keine Möglichkeit.
+274	früh	Er kommt sehr früh.
+275	die Gruppe	Die Gruppe ist sehr groß.
+276	je	Zwei Euro je Person.
+277	heißen	Wie heißen Sie?
+278	bestimmen	Ich bestimme, wer kommt.
+279	pro	Zwei Euro pro Buch.
+280	der Januar	Im Januar beginnt die Schule.
+281	nennen	Wir nennen es Arbeit.
+282	der Verein	Der Verein ist sehr alt.
+283	der Film	Der Film war sehr gut.
+284	verwenden	Ich verwende mein Auto.
+285	der November	Im November kommt der Film.
+286	die Folge	Das ist die Folge davon.
+287	der März	Im März beginnt die Arbeit.
+288	leicht	Die Arbeit ist sehr leicht.
+289	gerade	Ich arbeite gerade.
+290	der Meter	Der Tisch ist zwei Meter.
+291	deshalb	Deshalb gehe ich jetzt.
+292	treten	Ich trete gegen den Tisch.
+293	der April	Im April ist es schön.
+294	gewinnen	Wir gewinnen das Spiel.
+295	erfolgreich	Das Projekt ist sehr erfolgreich.
+296	folgen	Ich folge dir.
+297	laufen	Das Kind läuft sehr schnell.
+298	der Punkt	Das ist ein guter Punkt.
+299	sechs	Ich habe sechs Bücher.
+300	der Juli	Im Juli beginnt das Spiel.
+301	mein	Das ist mein Buch.
+302	legen	Ich lege das Buch dort.
+303	das Ergebnis	Das Ergebnis ist sehr gut.
+304	der Rahmen	Das Bild hat einen Rahmen.
+305	unterschiedlich	Die Bilder sind unterschiedlich.
+306	der August	Im August ist es schön.
+307	fest	Das Ziel ist fest.
+308	der Dezember	Im Dezember kommt der Film.
+309	gegenüber	Das Haus gegenüber ist neu.
+310	das Jahrhundert	Das Jahrhundert war sehr lang.
+311	die Region	Die Region ist sehr groß.
+312	die Kosten	Die Kosten sind zu hoch.
+313	häufig	Er kommt häufig zu spät.
+314	steigen	Die Kosten steigen.
+315	natürlich	Natürlich komme ich auch.
+316	nachdem	Nachdem er kam, ging ich.
+317	nichts	Ich sage nichts.
+318	zehn	Ich habe zehn Bücher.
+319	die Zahl	Die Zahl ist sehr hoch.
+320	die Rolle	Das spielt keine Rolle.
+321	danach	Danach gehe ich nach Hause.
+322	versuchen	Ich versuche es.
+323	die Stunde	Ich arbeite zwei Stunden.
+324	frei	Heute habe ich frei.
+325	die Stelle	Die Stelle ist sehr gut.
+326	hin	Ich gehe zum Haus hin.
+327	bisher	Bisher war alles gut.
+328	tun	Was kann ich tun?
+329	veröffentlichen	Wir veröffentlichen das Buch.
+330	solcher	Solche Bücher sind sehr gut.
+331	suchen	Ich suche mein Buch.
+332	sorgen	Ich sorge für das Kind.
+333	erneut	Er kommt erneut zu spät.
+334	schließen	Wir schließen das Haus.
+335	der Mitarbeiter	Der Mitarbeiter arbeitet sehr gut.
+336	weiterhin	Ich arbeite weiterhin hier.
+337	die Form	Die Form ist sehr schön.
+338	der Raum	Der Raum ist sehr groß.
+339	sowohl	Sowohl er als auch sie.
+340	die Information	Die Information ist sehr wichtig.
+341	insbesondere	Insbesondere er arbeitet viel.
+342	das Datum	Das Datum ist sehr wichtig.
+343	schließlich	Schließlich gehe ich nach Hause.
+344	der Preis	Der Preis ist zu hoch.
+345	gesamt	Die gesamte Stadt ist schön.
+346	wohl	Er kommt wohl heute nicht.
+347	die Minute	Ich komme in zwei Minuten.
+348	das Gebäude	Das Gebäude ist sehr hoch.
+349	der Februar	Im Februar beginnt die Schule.
+350	übernehmen	Ich übernehme die Arbeit.
+351	der Betrieb	Der Betrieb ist sehr groß.
+352	innerhalb	Innerhalb der Stadt wohnen wir.
+353	eigentlich	Eigentlich komme ich heute nicht.
+354	hinter	Er steht hinter dem Haus.
+355	der Erfolg	Das Projekt war ein Erfolg.
+356	einzeln	Jedes Kind kommt einzeln.
+357	der Schüler	Die Schüler gehen zur Schule.
+358	entsprechen	Das Ergebnis entspricht dem Ziel.
+359	die Aufgabe	Die Aufgabe ist sehr schwer.
+360	die Kirche	Die Kirche ist sehr alt.
+361	ehemalig	Der ehemalige Mitarbeiter kommt.
+362	fahren	Ich fahre mit dem Auto.
+363	offen	Das Haus ist offen.
+364	die Angabe	Die Angabe ist sehr wichtig.
+365	sicher	Der Weg ist sicher.
+366	das Angebot	Das Angebot ist sehr gut.
+367	das Wasser	Das Wasser ist hier gut.
+368	jeweils	Jeweils zwei Kinder kommen.
+369	das Buch	Das Buch ist sehr alt.
+370	die Höhe	Die Höhe ist zehn Meter.
+371	helfen	Ich helfe dir.
+372	berichten	Wir berichten über das Spiel.
+373	hinaus	Wir gehen zum Haus hinaus.
+374	anders	Das Kind ist anders.
+375	die Richtung	Wir gehen in diese Richtung.
+376	richtig	Die Zahl ist richtig.
+377	die Polizei	Die Polizei ist schon hier.
+378	das Geld	Ich habe kein Geld.
+379	die Mitte	Er steht in der Mitte.
+380	anschließend	Anschließend gehen wir nach Hause.
+381	starten	Wir starten das Projekt.
+382	erstmals	Er kommt erstmals nach Hause.
+383	einigen	Wir einigen uns darauf.
+384	entscheiden	Ich entscheide es selbst.
+385	der Wert	Der Wert ist sehr hoch.
+386	die Verfügung	Das Auto steht zur Verfügung.
+387	einsetzen	Wir müssen das Auto einsetzen.
+388	gehören	Die Bücher gehören mir.
+389	das Fahrzeug	Das Fahrzeug ist sehr neu.
+390	aktiv	Der Mitarbeiter ist sehr aktiv.
+391	ermöglichen	Wir wollen es ermöglichen.
+392	zählen	Ich zähle bis zehn.
+393	kaum	Ich habe kaum Zeit.
+394	beispielsweise	Er kommt beispielsweise heute nicht.
+395	sogenannt	Das ist ein sogenanntes Problem.
+396	die Gesellschaft	Die Gesellschaft ist sehr groß.
+397	die Regel	Die Regel ist sehr einfach.
+398	die Saison	Die Saison beginnt im Mai.
+399	bilden	Wir bilden eine Gruppe.
+400	damals	Damals war alles anders.
+401	dadurch	Dadurch wird alles einfach.
+402	die Wahl	Die Wahl war sehr schwer.
+403	der Vater	Mein Vater arbeitet viel.
+404	sozial	Das Problem ist sozial.
+405	trotz	Trotz der Arbeit komme ich.
+406	die Leistung	Die Leistung war sehr gut.
+407	planen	Wir planen das Projekt.
+408	die Eltern	Meine Eltern wohnen hier.
+409	ebenso	Ich komme ebenso.
+410	europäisch	Die Gesellschaft ist europäisch.
+411	die Hand	Die Hand ist sehr klein.
+412	das Programm	Das Programm ist sehr gut.
+413	der Staat	Der Staat ist sehr groß.
+414	klar	Das ist mir klar.
+415	gleichzeitig	Wir arbeiten gleichzeitig.
+416	somit	Somit ist alles klar.
+417	eher	Ich komme eher spät.
+418	derzeit	Derzeit arbeite ich hier.
+419	die Partei	Die Partei ist sehr groß.
+420	erscheinen	Das Buch erscheint im Mai.
+421	das Alter	Das Alter ist kein Problem.
+422	knapp	Die Zeit ist knapp.
+423	lernen	Ich lerne sehr viel.
+424	bedeuten	Was soll das bedeuten?
+425	zuvor	Zuvor war alles anders.
+426	die Mutter	Meine Mutter arbeitet hier.
+427	erfahren	Ich will mehr erfahren.
+428	nie	Ich war nie dort.
+429	das Werk	Das Werk ist sehr bekannt.
+430	meinen	Was meinen Sie?
+431	das System	Das System ist sehr gut.
+432	die Hilfe	Die Hilfe kommt sehr spät.
+433	das Wort	Das Wort ist sehr kurz.
+434	das Tier	Das Tier ist sehr klein.
+435	der Beginn	Der Beginn war sehr gut.
+436	der Titel	Der Titel ist sehr lang.
+437	persönlich	Das ist sehr persönlich.
+438	regelmäßig	Ich arbeite hier regelmäßig.
+439	erhöhen	Wir erhöhen die Kosten.
+440	die Universität	Die Universität ist sehr alt.
+441	die Lage	Die Lage ist sehr gut.
+442	bezeichnen	Wir bezeichnen es so.
+443	der Sohn	Mein Sohn geht zur Schule.
+444	die Unterstützung	Die Unterstützung war sehr gut.
+445	sterben	Das Tier wird sterben.
+446	das Gebiet	Das Gebiet ist sehr groß.
+447	der Tod	Der Tod kommt immer.
+448	kennen	Ich kenne dich nicht.
+449	enthalten	Das Buch soll alles enthalten.
+450	gering	Die Kosten sind sehr gering.
+451	der Sommer	Im Sommer ist es schön.
+452	schön	Das Bild ist sehr schön.
+453	voll	Das Haus ist voll.
+454	dienen	Wir dienen dem Staat.
+455	erwarten	Ich erwarte dich heute.
+456	die Entscheidung	Die Entscheidung war sehr schwer.
+457	fallen	Die Preise fallen.
+458	die Mannschaft	Die Mannschaft ist sehr gut.
+459	ähnlich	Die Bilder sind sehr ähnlich.
+460	verlassen	Ich verlasse das Haus.
+461	wirken	Die Hilfe soll wirken.
+462	paar	Ich habe ein paar Bücher.
+463	mindestens	Ich bleibe mindestens zwei Stunden.
+464	betragen	Die Kosten betragen zehn Euro.
+465	der Spieler	Der Spieler ist sehr gut.
+466	das Auto	Mein Auto ist sehr schnell.
+467	der Freund	Mein Freund kommt heute.
+468	die Zukunft	Die Zukunft ist offen.
+469	die Veranstaltung	Die Veranstaltung beginnt sehr früh.
+470	dennoch	Dennoch komme ich heute.
+471	tatsächlich	Er kommt tatsächlich nicht.
+472	der Kunde	Der Kunde ist sehr wichtig.
+473	die Regierung	Die Regierung ist neu.
+474	erkennen	Ich erkenne dich nicht.
+475	wählen	Wir wählen die Partei.
+476	acht	Ich komme um acht.
+477	dritte	Die dritte Frau kommt.
+478	das Produkt	Das Produkt ist sehr gut.
+479	das Interesse	Mein Interesse ist sehr groß.
+480	brauchen	Ich brauche mehr Zeit.
+481	die Idee	Das ist eine gute Idee.
+482	die Band	Die Band ist sehr bekannt.
+483	der Markt	Der Markt ist sehr groß.
+484	rot	Mein Auto ist rot.
+485	die Bedeutung	Die Bedeutung ist sehr klar.
+486	entsprechend	Wir arbeiten entsprechend der Regel.
+487	die Musik	Die Musik ist sehr laut.
+488	aufnehmen	Wir wollen die Musik aufnehmen.
+489	zuletzt	Zuletzt kommt das Kind.
+490	die Weise	Auf diese Weise geht es.
+491	gar	Ich habe gar keine Zeit.
+492	technisch	Das Problem ist technisch.
+493	der Zug	Der Zug kommt sehr spät.
+494	verkaufen	Ich verkaufe mein Auto.
+495	besuchen	Ich besuche meinen Vater.
+496	ja	Ja, ich komme heute.
+497	der Blick	Der Blick ist sehr schön.
+498	offiziell	Das Ergebnis ist offiziell.
+499	weltweit	Das Produkt ist weltweit bekannt.
+500	gründen	Wir gründen einen Verein.
+501	entfernen	Wir entfernen das Bild.
+502	modern	Das Gebäude ist sehr modern.
+503	historisch	Das Gebäude ist historisch.
+504	vergangen	Das vergangene Jahr war gut.
+505	gegeben	Das Wort ist gegeben.
+506	beteiligen	Wir beteiligen uns.
+507	tief	Das Wasser ist sehr tief.
+508	positiv	Das Ergebnis ist positiv.
+509	die Studie	Die Studie ist sehr neu.
+510	per	Wir fahren per Auto.
+511	inzwischen	Inzwischen arbeite ich hier.
+512	sieben	Ich habe sieben Bücher.
+513	zentral	Der Platz ist zentral.
+514	der Krieg	Der Krieg ist zu Ende.
+515	glauben	Ich glaube dir nicht.
+516	der Vergleich	Der Vergleich ist sehr gut.
+517	der Beitrag	Der Beitrag ist sehr wichtig.
+518	eröffnen	Wir eröffnen das Gebäude.
+519	obwohl	Ich gehe, obwohl du bleibst.
+520	scheinen	Es scheint sehr einfach.
+521	verfügen	Wir verfügen über das Geld.
+522	allein	Ich arbeite hier allein.
+523	das Amt	Das Amt ist heute offen.
+524	die Maßnahme	Die Maßnahme ist sehr wichtig.
+525	der Präsident	Der Präsident kommt heute.
+526	der Besucher	Die Besucher sind schon da.
+527	die Situation	Die Situation ist sehr schwer.
+528	fordern	Wir fordern mehr Geld.
+529	daran	Ich glaube nicht daran.
+530	die Firma	Die Firma ist sehr groß.
+531	verstehen	Ich verstehe dich nicht.
+532	der Kilometer	Es sind zehn Kilometer.
+533	die Erfahrung	Die Erfahrung ist sehr wichtig.
+534	der Gast	Der Gast kommt sehr spät.
+535	teilweise	Das ist teilweise richtig.
+536	der Schritt	Der erste Schritt ist schwer.
+537	das Modell	Das Modell ist sehr neu.
+538	wirklich	Das ist wirklich gut.
+539	benötigen	Wir benötigen mehr Zeit.
+540	notwendig	Das ist nicht notwendig.
+541	erleben	Wir erleben viel zusammen.
+542	der Stand	Der Stand ist sehr gut.
+543	selten	Er kommt sehr selten.
+544	die Wohnung	Die Wohnung ist sehr klein.
+545	heutig	Das heutige Spiel war gut.
+546	bald	Ich komme bald zurück.
+547	die Politik	Die Politik ist sehr wichtig.
+548	die Kraft	Ich habe keine Kraft mehr.
+549	mittlerweile	Mittlerweile arbeite ich hier.
+550	das Gespräch	Das Gespräch war sehr gut.
+551	lediglich	Ich habe lediglich ein Buch.
+552	die Grenze	Die Grenze ist sehr weit.
+553	gelingen	Die Arbeit wird gelingen.
+554	darin	Es steht alles darin.
+555	tätig	Ich bin hier tätig.
+556	bevor	Ich komme, bevor du gehst.
+557	erzielen	Wir erzielen ein gutes Ergebnis.
+558	darunter	Viele Kinder, darunter mein Sohn.
+559	fehlen	Hier soll nichts fehlen.
+560	digital	Das Modell ist digital.
+561	verlieren	Ich will nicht verlieren.
+562	dagegen	Ich bin dagegen.
+563	umfassen	Das Buch soll alles umfassen.
+564	privat	Das Gespräch ist privat.
+565	öffnen	Kannst du das Buch öffnen?
+566	schwarz	Mein Auto ist schwarz.
+567	erzählen	Ich erzähle dir alles.
+568	wachsen	Die Kinder wachsen sehr schnell.
+569	entdecken	Wir entdecken eine neue Stadt.
+570	ursprünglich	Das Haus war ursprünglich klein.
+571	verbessern	Wir verbessern das Produkt.
+572	ergeben	Die Studie soll etwas ergeben.
+573	präsentieren	Wir präsentieren das neue Modell.
+574	die Bevölkerung	Die Bevölkerung ist sehr jung.
+575	die Zusammenarbeit	Die Zusammenarbeit war sehr gut.
+576	stammen	Wir stammen aus der Stadt.
+577	das Tor	Das Tor ist sehr groß.
+578	die Stimme	Die Stimme ist sehr laut.
+579	die Funktion	Die Funktion ist sehr wichtig.
+580	komplett	Das Buch ist komplett.
+581	die Lösung	Die Lösung ist sehr einfach.
+582	die Reihe	Die Reihe ist sehr lang.
+583	bestätigen	Wir bestätigen das Datum.
+584	sofort	Ich komme sofort.
+585	speziell	Das Modell ist sehr speziell.
+586	der Landkreis	Der Landkreis ist sehr groß.
+587	beschäftigen	Wir beschäftigen zehn Menschen.
+588	schlagen	Er will mich schlagen.
+589	die Klasse	Die Klasse ist sehr groß.
+590	die Verbindung	Die Verbindung ist sehr gut.
+591	finanziell	Die Hilfe ist finanziell.
+592	wobei	Er kommt, wobei ich bleibe.
+593	die GmbH	Die GmbH ist sehr klein.
+594	das Stück	Das Stück ist sehr klein.
+595	oben	Das Buch liegt oben.
+596	die Sprache	Die Sprache ist sehr schwer.
+597	folgend	Der folgende Tag war schön.
+598	verbunden	Wir sind alle verbunden.
+599	besitzen	Ich besitze kein Auto.
+600	der Herr	Der Herr ist schon da.
+601	der Prozess	Der Prozess ist sehr lang.
+602	feiern	Wir feiern heute zusammen.
+603	jährlich	Die Kosten steigen jährlich.
+604	teilen	Wir teilen das Essen.
+605	breit	Die Straße ist sehr breit.
+606	der Kreis	Der Kreis ist sehr klein.
+607	die Nacht	Die Nacht war sehr lang.
+608	die Nähe	Er wohnt in der Nähe.
+609	warum	Warum ist das so?
+610	der Standort	Der Standort ist sehr gut.
+611	die Tochter	Meine Tochter geht zur Schule.
+612	sichern	Wir sichern das Gebäude.
+613	die Ausbildung	Die Ausbildung ist sehr gut.
+614	liefern	Wir liefern das Produkt.
+615	der Text	Der Text ist sehr lang.
+616	kaufen	Ich kaufe ein neues Auto.
+617	der Bau	Der Bau beginnt im Mai.
+618	die Organisation	Die Organisation ist sehr groß.
+619	die Fläche	Die Fläche ist sehr groß.
+620	der Plan	Der Plan ist sehr gut.
+621	der Bürger	Die Bürger sind hier.
+622	das Auge	Das Auge ist sehr klein.
+623	die Anlage	Die Anlage ist sehr neu.
+624	das Museum	Das Museum ist heute offen.
+625	die Wirtschaft	Die Wirtschaft ist sehr stark.
+626	wirtschaftlich	Das Problem ist wirtschaftlich.
+627	verhindern	Wir wollen das verhindern.
+628	schlecht	Das Ergebnis ist sehr schlecht.
+629	dauern	Es wird lange dauern.
+630	vorhanden	Das Geld ist vorhanden.
+631	erste	Der erste Tag war schön.
+632	die Einrichtung	Die Einrichtung ist sehr neu.
+633	das Gesetz	Das Gesetz ist sehr alt.
+634	lesen	Ich lese ein Buch.
+635	betroffen	Wir sind alle betroffen.
+636	die Chance	Die Chance ist sehr gering.
+637	leisten	Ich kann es mir leisten.
+638	französisch	Der Text ist französisch.
+639	das Gerät	Das Gerät ist sehr neu.
+640	die Hälfte	Die Hälfte ist schon da.
+641	früher	Früher war alles anders.
+642	verändern	Wir verändern das System.
+643	links	Das Haus steht links.
+644	zuständig	Ich bin dafür zuständig.
+645	bauen	Wir bauen ein neues Haus.
+646	vielleicht	Vielleicht komme ich heute.
+647	die Linie	Die Linie ist sehr lang.
+648	laden	Wir laden das Auto.
+649	der Vertrag	Der Vertrag ist sehr lang.
+650	vollständig	Der Text ist vollständig.
+651	informieren	Wir informieren die Bürger.
+652	der Zeitpunkt	Der Zeitpunkt ist sehr gut.
+653	der Kontakt	Der Kontakt ist sehr wichtig.
+654	reichen	Das Geld wird reichen.
+655	der Sinn	Das hat keinen Sinn.
+656	jeweilig	Der jeweilige Preis ist hoch.
+657	verletzen	Er will dich verletzen.
+658	der Schaden	Der Schaden ist sehr groß.
+659	reich	Der Mann ist sehr reich.
+660	erweitern	Wir erweitern das Gebäude.
+661	eng	Die Straße ist sehr eng.
+662	richten	Wir richten alles für dich.
+663	der Patient	Der Patient ist sehr alt.
+664	enden	Das Spiel wird bald enden.
+665	das Verfahren	Das Verfahren ist sehr lang.
+666	national	Das Gesetz ist national.
+667	das Bad	Das Bad ist sehr klein.
+668	der Teilnehmer	Die Teilnehmer sind schon da.
+669	der Sieg	Der Sieg war sehr wichtig.
+670	die Ausstellung	Die Ausstellung ist sehr schön.
+671	lösen	Wir lösen das Problem.
+672	der Bericht	Der Bericht ist sehr lang.
+673	erinnern	Ich erinnere mich daran.
+674	schützen	Wir schützen die Kinder.
+675	bitten	Ich bitte um Hilfe.
+676	bislang	Bislang war alles gut.
+677	der Zusammenhang	Der Zusammenhang ist sehr klar.
+678	trotzdem	Trotzdem komme ich heute.
+679	die Sicherheit	Die Sicherheit ist sehr wichtig.
+680	der Dienst	Der Dienst beginnt sehr früh.
+681	ändern	Wir ändern den Plan.
+682	das Gericht	Wir gehen zum Gericht.
+683	der Artikel	Der Artikel ist sehr lang.
+684	das Essen	Das Essen ist sehr gut.
+685	wechseln	Wir wollen das Auto wechseln.
+686	sitzen	Wir sitzen am Tisch.
+687	leiten	Er soll die Firma leiten.
+688	der Wald	Der Wald ist sehr groß.
+689	organisieren	Wir organisieren die Veranstaltung.
+690	der Kopf	Der Kopf ist sehr groß.
+691	der Boden	Das Buch liegt am Boden.
+692	die Bank	Die Bank ist heute offen.
+693	schwierig	Die Aufgabe ist sehr schwierig.
+694	der Inhalt	Der Inhalt ist sehr wichtig.
+695	die Kunst	Die Kunst ist sehr schön.
+696	das Zentrum	Das Zentrum ist sehr groß.
+697	der Anteil	Der Anteil ist sehr gering.
+698	der Abend	Der Abend war sehr schön.
+699	die Milliarde	Die Kosten sind zwei Milliarden.
+700	der Arzt	Der Arzt kommt sehr bald.
+701	allgemein	Das Problem ist allgemein bekannt.
+702	die Reise	Die Reise war sehr lang.
+703	melden	Wir melden das Ergebnis.
+704	beenden	Wir beenden die Arbeit heute.
+705	die Runde	Die erste Runde beginnt jetzt.
+706	dein	Ist das dein Buch?
+707	der Bürgermeister	Der Bürgermeister kommt heute.
+708	vertreten	Wir vertreten die Bürger.
+709	die Serie	Die Serie ist sehr gut.
+710	darstellen	Das Bild soll etwas darstellen.
+711	lokal	Der Markt ist lokal.
+712	der Kampf	Der Kampf war sehr schwer.
+713	vorstellen	Ich will mich vorstellen.
+714	der Besuch	Der Besuch war sehr schön.
+715	der Hinweis	Der Hinweis war sehr wichtig.
+716	die Untersuchung	Die Untersuchung beginnt heute.
+717	das Krankenhaus	Das Krankenhaus ist sehr groß.
+718	unabhängig	Das Gericht ist unabhängig.
+719	der Lauf	Der Lauf war sehr lang.
+720	wesentlich	Der Punkt ist wesentlich.
+721	hingegen	Er kommt, ich hingegen bleibe.
+722	geboren	Mein Sohn ist hier geboren.
+723	begleiten	Ich begleite dich nach Hause.
+724	das Hotel	Das Hotel ist sehr groß.
+725	die Strecke	Die Strecke ist sehr lang.
+726	die Kultur	Die Kultur ist sehr alt.
+727	einstellen	Wir wollen dich einstellen.
+728	kommend	Die kommende Woche ist frei.
+729	überzeugen	Du kannst mich überzeugen.
+730	täglich	Ich arbeite täglich hier.
+731	die Gefahr	Die Gefahr ist sehr groß.
+732	das Konzept	Das Konzept ist sehr gut.
+733	warten	Ich warte auf dich.
+734	das Mittel	Das Mittel ist sehr gut.
+735	russisch	Der Text ist russisch.
+736	bestehend	Das bestehende Haus ist alt.
+737	heraus	Komm bitte heraus.
+738	die Behörde	Die Behörde ist heute offen.
+739	holen	Ich hole das Buch.
+740	überhaupt	Ich habe überhaupt keine Zeit.
+741	der Schutz	Der Schutz ist sehr wichtig.
+742	weisen	Wir weisen den Weg.
+743	der Partner	Mein Partner arbeitet hier.
+744	wissenschaftlich	Die Studie ist wissenschaftlich.
+745	der Einwohner	Die Einwohner sind sehr jung.
+746	errichten	Wir errichten ein neues Gebäude.
+747	das Video	Das Video ist sehr kurz.
+748	englisch	Der Text ist englisch.
+749	indem	Wir lernen, indem wir lesen.
+750	weiß	Mein Auto ist weiß.
+751	die Beziehung	Die Beziehung ist sehr gut.
+752	belegen	Wir belegen den ersten Platz.
+753	gerne	Ich komme sehr gerne.
+754	der Abschluss	Der Abschluss war sehr gut.
+755	das Dorf	Das Dorf ist sehr klein.
+756	die Führung	Die Führung ist sehr gut.
+757	äußern	Ich will mich äußern.
+758	die Produktion	Die Produktion beginnt heute.
+759	der Hintergrund	Der Hintergrund ist sehr wichtig.
+760	der Start	Der Start war sehr gut.
+761	die Energie	Wir brauchen mehr Energie.
+762	das Institut	Das Institut ist sehr bekannt.
+763	die Position	Die Position ist sehr gut.
+764	konkret	Der Plan ist sehr konkret.
+765	abschließen	Wir wollen das Projekt abschließen.
+766	grün	Mein Auto ist grün.
+767	zumindest	Ich komme zumindest heute.
+768	interessieren	Das Thema soll dich interessieren.
+769	die Grundlage	Die Grundlage ist sehr gut.
+770	die Insel	Die Insel ist sehr klein.
+771	die Menge	Die Menge ist sehr groß.
+772	der Angriff	Der Angriff war sehr stark.
+773	produzieren	Wir produzieren das Produkt.
+774	der Sonntag	Am Sonntag arbeite ich nicht.
+775	das Foto	Das Foto ist sehr schön.
+776	die Zeitung	Die Zeitung ist sehr alt.
+777	niedrig	Der Preis ist sehr niedrig.
+778	fühlen	Ich fühle mich gut.
+779	der Körper	Der Körper ist sehr stark.
+780	neun	Ich komme um neun.
+781	die Leute	Die Leute sind schon da.
+782	die Anzahl	Die Anzahl ist sehr hoch.
+783	das Mädchen	Das Mädchen ist sehr jung.
+784	grundsätzlich	Das ist grundsätzlich richtig.
+785	die Karte	Die Karte ist sehr alt.
+786	sammeln	Wir sammeln Geld für dich.
+787	die Ausgabe	Die Ausgabe ist sehr neu.
+788	künftig	Künftig arbeite ich hier.
+789	der Druck	Der Druck ist sehr groß.
+790	die Version	Die Version ist sehr neu.
+791	wohnen	Ich wohne in der Stadt.
+792	sodass	Er kam, sodass wir gingen.
+793	der Anspruch	Der Anspruch ist sehr hoch.
+794	die Nutzung	Die Nutzung ist sehr einfach.
+795	der Baum	Der Baum ist sehr groß.
+796	bewegen	Wir bewegen den Tisch.
+797	erfüllen	Wir erfüllen die Aufgabe.
+798	erlauben	Wir erlauben es dir.
+799	die Natur	Die Natur ist sehr schön.
+800	rufen	Ich rufe den Arzt.
+801	völlig	Das ist völlig richtig.
+802	das Material	Das Material ist sehr gut.
+803	der Künstler	Der Künstler ist sehr bekannt.
+804	bereit	Ich bin bereit.
+805	bisherig	Der bisherige Plan war gut.
+806	das Opfer	Das Opfer ist sehr jung.
+807	die Sache	Die Sache ist sehr wichtig.
+808	die Kritik	Die Kritik war sehr stark.
+809	der Begriff	Der Begriff ist sehr neu.
+810	die Bildung	Die Bildung ist sehr wichtig.
+811	klassisch	Die Musik ist klassisch.
+812	der Hersteller	Der Hersteller ist sehr bekannt.
+813	zugleich	Er arbeitet und lernt zugleich.
+814	ersetzen	Wir ersetzen das Gerät.
+815	praktisch	Das Gerät ist sehr praktisch.
+816	erheblich	Die Kosten steigen erheblich.
+817	die Suche	Die Suche war sehr lang.
+818	günstig	Der Preis ist sehr günstig.
+819	traditionell	Das Essen ist traditionell.
+820	der Auftrag	Der Auftrag ist sehr groß.
+821	die Änderung	Die Änderung ist sehr klein.
+822	die Aktion	Die Aktion war sehr gut.
+823	regional	Das Produkt ist regional.
+824	der Einfluss	Der Einfluss ist sehr groß.
+825	zwölf	Ich komme um zwölf.
+826	der Trainer	Der Trainer ist sehr gut.
+827	der Jugendliche	Der Jugendliche ist hier.
+828	das Verhalten	Das Verhalten ist sehr schlecht.
+829	der Bund	Der Bund gibt mehr Geld.
+830	zunehmen	Die Zahl wird zunehmen.
+831	verfolgen	Wir verfolgen das Ziel.
+832	der Sitz	Der Sitz ist sehr klein.
+833	die Sicht	Die Sicht ist sehr gut.
+834	vierte	Der vierte Tag war schön.
+835	zahlen	Ich zahle das Essen.
+836	daraufhin	Daraufhin kam er zurück.
+837	individuell	Die Lösung ist individuell.
+838	einzig	Das ist mein einziges Buch.
+839	erforderlich	Das Gerät ist erforderlich.
+840	passieren	Das kann immer passieren.
+841	falsch	Die Zahl ist falsch.
+842	manchmal	Manchmal komme ich später.
+843	das Geschäft	Das Geschäft ist heute offen.
+844	ausschließlich	Ich arbeite ausschließlich hier.
+845	der Antrag	Der Antrag ist sehr lang.
+846	fördern	Wir fördern die Bildung.
+847	hinzu	Es kommt noch etwas hinzu.
+848	der Vorteil	Der Vorteil ist sehr groß.
+849	maximal	Wir bleiben maximal zwei Stunden.
+850	hängen	Das Bild soll hier hängen.
+851	echt	Das Bild ist echt.
+852	umsetzen	Wir wollen den Plan umsetzen.
+853	der Zugang	Der Zugang ist sehr einfach.
+854	der Rücken	Der Rücken ist sehr breit.
+855	der Wagen	Der Wagen ist sehr neu.
+856	das Ding	Das Ding ist sehr klein.
+857	das Jahrzehnt	Das Jahrzehnt war sehr lang.
+858	beobachten	Wir beobachten das Tier.
+859	die Nachricht	Die Nachricht war sehr gut.
+860	das Internet	Das Internet ist sehr schnell.
+861	unmittelbar	Er kommt unmittelbar nach mir.
+862	die Forschung	Die Forschung ist sehr wichtig.
+863	staatlich	Das Institut ist staatlich.
+864	prägen	Die Zeit soll uns prägen.
+865	die Generation	Die Generation ist sehr jung.
+866	die Förderung	Die Förderung ist sehr wichtig.
+867	die Herausforderung	Die Herausforderung ist sehr groß.
+868	die Größe	Die Größe ist sehr wichtig.
+869	die Qualität	Die Qualität ist sehr gut.
+870	der Vertreter	Der Vertreter kommt heute.
+871	ermitteln	Die Polizei will das ermitteln.
+872	der Verband	Der Verband ist sehr groß.
+873	der Autor	Der Autor ist sehr bekannt.
+874	darum	Darum komme ich heute.
+875	engagieren	Wir engagieren uns hier.
+876	der Bruder	Mein Bruder wohnt hier.
+877	die Farbe	Die Farbe ist sehr schön.
+878	reduzieren	Wir reduzieren die Kosten.
+879	stets	Er ist stets sehr gut.
+880	der Wettbewerb	Der Wettbewerb beginnt heute.
+881	das Schloss	Das Schloss ist sehr alt.
+882	erstellen	Wir erstellen einen Plan.
+883	verantwortlich	Ich bin dafür verantwortlich.
+884	britisch	Der Autor ist britisch.
+885	die Bewegung	Die Bewegung ist sehr gut.
+886	teilnehmen	Wir wollen daran teilnehmen.
+887	die Karriere	Die Karriere war sehr gut.
+888	der Haushalt	Der Haushalt ist sehr groß.
+889	rein	Das Wasser ist rein.
+890	stattfinden	Das Spiel soll heute stattfinden.
+891	rechts	Das Haus steht rechts.
+892	der Unfall	Der Unfall war sehr schwer.
+893	die Praxis	Die Praxis ist heute offen.
+894	die Basis	Die Basis ist sehr gut.
+895	die Verwaltung	Die Verwaltung ist sehr groß.
+896	das Studium	Das Studium ist sehr schwer.
+897	die Liebe	Die Liebe ist sehr schön.
+898	werfen	Er will das Buch werfen.
+899	greifen	Ich will nach dir greifen.
+900	die Umgebung	Die Umgebung ist sehr schön.
+901	sonst	Komm, sonst gehe ich.
+902	behandeln	Der Arzt soll mich behandeln.
+903	untersuchen	Der Arzt will mich untersuchen.
+904	geeignet	Das Gerät ist geeignet.
+905	intensiv	Die Arbeit ist sehr intensiv.
+906	der König	Der König ist sehr alt.
+907	die Technik	Die Technik ist sehr neu.
+908	der See	Der See ist sehr groß.
+909	der Anschluss	Der Anschluss ist sehr gut.
+910	annehmen	Wir wollen das annehmen.
+911	passen	Das Bild soll hier passen.
+912	ergänzen	Wir ergänzen den Text.
+913	der Herbst	Im Herbst ist es schön.
+914	möglichst	Komm möglichst früh.
+915	geschehen	Das kann immer geschehen.
+916	miteinander	Wir arbeiten gut miteinander.
+917	außerhalb	Wir wohnen außerhalb der Stadt.
+918	relativ	Das ist relativ einfach.
+919	die Antwort	Die Antwort ist sehr gut.
+920	das Risiko	Das Risiko ist sehr groß.
+921	die Veränderung	Die Veränderung ist sehr gut.
+922	der Samstag	Am Samstag arbeite ich nicht.
+923	die Liste	Die Liste ist sehr lang.
+924	wiederum	Er wiederum kommt nicht.
+925	rechnen	Wir rechnen mit dir.
+926	gestalten	Wir gestalten das Programm.
+927	verzichten	Ich will darauf verzichten.
+928	verstärken	Wir verstärken die Mannschaft.
+929	gelangen	Wir wollen zum Ziel gelangen.
+930	integrieren	Wir integrieren die Kinder.
+931	das Konzert	Das Konzert war sehr gut.
+932	das Schiff	Das Schiff ist sehr groß.
+933	mancher	Manche Leute kommen nicht.
+934	die Initiative	Die Initiative ist sehr gut.
+935	die Aussage	Die Aussage ist sehr klar.
+936	unterwegs	Ich bin gerade unterwegs.
+937	das Feld	Das Feld ist sehr groß.
+938	der Winter	Im Winter ist es schön.
+939	der Unterschied	Der Unterschied ist sehr klein.
+940	die Hochschule	Die Hochschule ist sehr groß.
+941	vermutlich	Er kommt vermutlich heute nicht.
+942	reagieren	Wir müssen schnell reagieren.
+943	die Tätigkeit	Die Tätigkeit ist sehr schwer.
+944	absolvieren	Ich will das Studium absolvieren.
+945	der Fuß	Der Fuß ist sehr klein.
+946	normal	Das ist ganz normal.
+947	stimmen	Die Zahl soll stimmen.
+948	kämpfen	Wir kämpfen für die Stadt.
+949	die Stiftung	Die Stiftung ist sehr alt.
+950	die Aufnahme	Die Aufnahme ist sehr gut.
+951	sinken	Die Preise sinken.
+952	das Engagement	Das Engagement ist sehr groß.
+953	der Montag	Am Montag arbeite ich.
+954	umfangreich	Der Bericht ist sehr umfangreich.
+955	nachhaltig	Das Konzept ist nachhaltig.
+956	wenden	Wir wenden den Wagen.
+957	die Anwendung	Die Anwendung ist sehr einfach.
+958	das Interview	Das Interview war sehr gut.
+959	der Satz	Der Satz ist sehr kurz.
+960	der Bewohner	Die Bewohner sind schon da.
+961	feststellen	Wir wollen das feststellen.
+962	diskutieren	Wir diskutieren das Thema.
+963	teuer	Das Auto ist sehr teuer.
+964	die Kontrolle	Die Kontrolle ist sehr wichtig.
+965	das Publikum	Das Publikum war sehr laut.
+966	demnach	Demnach kommt er nicht.
+967	her	Komm bitte her.
+968	das Verhältnis	Das Verhältnis ist sehr gut.
+969	der Nutzer	Die Nutzer sind sehr jung.
+970	der Bahnhof	Der Bahnhof ist sehr groß.
+971	die Bühne	Die Bühne ist sehr groß.
+972	der Rat	Der Rat war sehr gut.
+973	der Kollege	Mein Kollege arbeitet hier.
+974	verbreiten	Wir verbreiten die Nachricht.
+975	zerstören	Der Krieg kann alles zerstören.
+976	offenbar	Er kommt offenbar nicht.
+977	der Freitag	Am Freitag arbeite ich nicht.
+978	der Dienstag	Am Dienstag komme ich.
+979	der Mittwoch	Am Mittwoch bin ich hier.
+980	der Donnerstag	Am Donnerstag kommt mein Bruder.
+981	der Zuschauer	Die Zuschauer sind sehr laut.
+982	medizinisch	Die Hilfe ist medizinisch.
+983	der Leiter	Der Leiter ist sehr jung.
+984	hierbei	Hierbei ist alles klar.
+985	der Gott	Gott ist die Liebe.
+986	der Soldat	Der Soldat ist sehr jung.
+987	das Herz	Das Herz ist sehr stark.
+988	der Experte	Der Experte kommt heute.
+989	der Garten	Der Garten ist sehr schön.
+990	übrig	Es ist nichts übrig.
+991	halb	Das Buch ist halb gelesen.
+992	die Bahn	Die Bahn kommt sehr spät.
+993	der Lehrer	Der Lehrer ist sehr gut.
+994	kostenlos	Das Konzert ist kostenlos.
+995	online	Das Video ist online.
+996	wahrscheinlich	Er kommt wahrscheinlich heute nicht.
+997	der Grad	Es sind zehn Grad.
+998	hart	Die Arbeit ist sehr hart.
+999	der Park	Der Park ist sehr groß.
+1000	genug	Ich habe genug Zeit.
