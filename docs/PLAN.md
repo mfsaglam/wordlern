@@ -39,7 +39,7 @@ bigger model, mechanical steps are not.
 | 29 | `step/29-fastlane` | Fastlane, proven from the laptop | opus | done |
 | 30 | `step/30-testflight-pipeline` | GitHub Actions: main → TestFlight | opus | todo |
 | 31 | `step/31-pr-check` | Build + test check on pull requests | sonnet | todo |
-| 32 | `step/32-shake-undo` | Shake to undo, and move the undo button | opus | todo |
+| 32 | `step/32-shake-undo` | Shake to undo | opus | todo |
 | 33 | `step/33-readme` | The README describes an app that no longer exists | sonnet | todo |
 | 34 | `step/34-store-listing` | App Store listing for 2.0 | sonnet | todo |
 
@@ -922,9 +922,11 @@ is also what makes it reliable, since signing is the part that breaks.
 Runner minutes are free on this public repository, so there is no reason to hold back here. This
 check needs no secrets, which is also what lets it run safely on pull requests from forks.
 
-## 32 — Shake to undo, and move the undo button
+## 32 — Shake to undo
 
-Two changes to the same control.
+One addition, nothing moves. `UndoButton` stays exactly where it is, at the top-leading corner of
+`SessionHeader`, at its current size. Shake is a shortcut layered on top of it, the same way swipe
+was layered on top of ✓/✗ in step 09.
 
 **Shake.** Shaking the phone undoes the last answer. Bridge `UIEventSubtypeMotionShake` —
 `motionEnded(_:with:)` fires on the responder chain, so catch it in a `UIWindow` subclass or a
@@ -937,23 +939,19 @@ the app ignored them.
 
 Mention shake in `HowItWorksScreen`. A gesture nobody can see is a gesture nobody will find.
 
-**The button stays.** The request was to replace it with the shake, and that is the one part to
-push back on:
+**Why the button stays** — settled with the user, do not revisit:
 
-- Undo becomes undiscoverable. Nothing on screen would suggest the answer can be taken back.
-- It is an accessibility regression. A user with limited hand mobility, a phone in a stand, or
-  VoiceOver running cannot shake a device. iOS also has a system "Shake to Undo" toggle that users
-  switch off, and those users would reasonably expect our shake to be dead too.
-- It is the same call already made for ✓/✗ versus swipe in step 09: the visible control is the
-  affordance, the gesture is the shortcut. Being consistent with that is worth more than saving
-  28 points of screen.
+- Without it, undo is undiscoverable. Nothing on screen would suggest an answer can be taken back,
+  and nobody thinks to shake a phone on a hunch.
+- Shake alone would be an accessibility regression. A user with limited hand mobility, a phone in a
+  stand, or VoiceOver running cannot shake a device. iOS also has a system "Shake to Undo" toggle
+  that some users switch off, and they would reasonably expect ours to be dead too.
 
-**Placement.** The complaint is fair. Today `UndoButton` sits at the top-leading corner of
-`SessionHeader` at 28×28 — the far corner from where the thumb rests, and under the 44-point
-minimum touch target. Move it under the ✓/✗ row, centred, quiet, with a 44-point target. Centred
-and below, not beside ✗: next to the wrong-answer button it would get hit by accident.
+Out of scope: moving or resizing `UndoButton`, and any other change to `SessionHeader`'s layout.
+The user looked at the placement and is happy with it.
 
-Update `docs/DESIGN.md` for both screens 1 and 2.
+Add the shake gesture to `docs/DESIGN.md` under screens 1 and 2 — the card screen's description
+should mention it alongside swipe.
 
 ## 33 — The README describes an app that no longer exists
 
