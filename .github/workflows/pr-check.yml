@@ -1,0 +1,71 @@
+name: PR Check
+
+# A cheap guard so a broken branch cannot reach feature/gamify or main: build
+# the app and run thousandTests. Build and test only — no archive, no signing,
+# no upload — so this needs no secrets and can run safely on pull requests
+# from forks.
+on:
+  pull_request:
+    branches: [feature/gamify, main]
+
+concurrency:
+  group: pr-check-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    # Same image as the TestFlight lane — macOS 26's Xcode 26.x cannot read
+    # the JSON project.xcproj format this project uses.
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      XCODE_APP: /Applications/Xcode_27.2_beta.app
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pin Xcode
+        run: |
+          if [ ! -d "$XCODE_APP" ]; then
+            echo "::error::$XCODE_APP is not on this runner image. Installed:"
+            ls -d /Applications/Xcode*.app
+            exit 1
+          fi
+          sudo xcode-select -s "$XCODE_APP/Contents/Developer"
+          xcodebuild -version
+
+      # Cheap fail-fast: loading the project takes seconds and reports the
+      # exact error Xcode would if the JSON project file is not understood.
+      - name: Check the project file loads
+        run: xcodebuild -list -project thousand.xcodeproj
+
+      # The runner's available simulators can differ from a name pinned here,
+      # so resolve a UDID at run time rather than hardcoding a device name.
+      - name: Select a simulator
+        run: |
+          DEVICE_ID=$(xcrun simctl list devices available | grep -m1 'iPhone' | grep -oE '[0-9A-F]{8}-([0-9A-F]{4}-){3}[0-9A-F]{12}')
+          if [ -z "$DEVICE_ID" ]; then
+            echo "::error::No available iPhone simulator found on this runner."
+            xcrun simctl list devices available
+            exit 1
+          fi
+          echo "DEVICE_ID=$DEVICE_ID" >> "$GITHUB_ENV"
+
+      - name: Build and test
+        run: |
+          xcodebuild test \
+            -project thousand.xcodeproj \
+            -scheme thousand \
+            -destination "id=$DEVICE_ID" \
+            -only-testing:thousandTests
+
+      - name: Collect logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-logs
+          path: ~/Library/Logs/DiagnosticReports
+          if-no-files-found: ignore
