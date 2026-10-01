@@ -39,6 +39,9 @@ bigger model, mechanical steps are not.
 | 29 | `step/29-fastlane` | Fastlane, proven from the laptop | opus | done |
 | 30 | `step/30-testflight-pipeline` | GitHub Actions: main → TestFlight | opus | todo |
 | 31 | `step/31-pr-check` | Build + test check on pull requests | sonnet | todo |
+| 32 | `step/32-shake-undo` | Shake to undo | opus | todo |
+| 33 | `step/33-readme` | The README describes an app that no longer exists | sonnet | todo |
+| 34 | `step/34-store-listing` | App Store listing for 2.0 | sonnet | todo |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
@@ -867,6 +870,47 @@ Because the repository is public, never use `pull_request_target`, and never ech
 log. Secrets are not exposed to workflows triggered by pull requests from forks, which is the
 behaviour we want — keep it that way.
 
+Done (workflow committed; the first real run happens when this reaches `main`).
+`.github/workflows/testflight.yml` runs `bundle exec fastlane beta` on `push` to `main` and on
+`workflow_dispatch`, with `permissions: contents: read` and a `concurrency` group so two runs cannot
+claim the same build number.
+
+Runner image: **`xcode-27`**, not `macos-latest`. The check the step asked for came back negative —
+`macos-26` (which `macos-latest` points at) ships Xcode 26.0.1–26.6 only, none of which can read the
+JSON `project.xcproj` format. The `xcode-27` image carries 27.0 (default), 27.1 and 27.2 beta; the
+workflow pins `/Applications/Xcode_27.2_beta.app` via `sudo xcode-select`, which is the closest
+match to the laptop's 27.2 (27B5028f vs the image's 27B5019j). Two consequences worth remembering:
+- `xcode-27` is a **preview** image. If a run never starts, check the label still exists at
+  `actions/runner-images` before suspecting the lane.
+- The pinned path contains `_beta` and will change when 27.2 goes final. The "Pin Xcode" step fails
+  loudly with a listing of `/Applications/Xcode*.app` instead of silently falling back to 27.0.
+Not `xcode-27-xlarge`: larger runners are billed even on a public repository.
+
+A `xcodebuild -list -project thousand.xcodeproj` step runs before anything expensive, so an Xcode
+that cannot parse the project file fails in seconds rather than after a ten-minute archive.
+
+Ruby is `ruby/setup-ruby@v1` with `ruby-version: "3.2"` (cached on the image) and
+`bundler-cache: true`. The step 29 laptop workarounds do not cross over: the runner's Ruby is native
+arm64, so the `-arch x86_64` gem flags are unnecessary, and the `json ~> 2.7.0` pin in the `Gemfile`
+is kept because it is what 3.2 headers want anyway.
+
+Certificates access — the item step 29 left open. The runner has no SSH key and `match` clones in a
+subprocess that cannot be prompted, so CI uses HTTPS: `MATCH_GIT_URL` (https clone url) plus
+`MATCH_GIT_BASIC_AUTHORIZATION` (base64 of `<user>:<token>`, read-only). `readonly: is_ci` was
+already in the lane. The `Fastfile` now passes `git_url:` explicitly, defaulting to the SSH url, and
+the `Matchfile` keeps its SSH `git_url` for `fastlane match` on the command line — a Matchfile value
+wins over the environment, so the url cannot be overridden by `MATCH_GIT_URL` alone.
+
+Secrets the repository needs (all of them, nothing else): `ASC_KEY_ID`, `ASC_ISSUER_ID`,
+`ASC_KEY_CONTENT` (base64 of the `.p8`), `MATCH_GIT_URL`, `MATCH_GIT_BASIC_AUTHORIZATION`,
+`MATCH_PASSWORD`. The team id is not a secret — it is already committed in `fastlane/Appfile`.
+Nothing in the workflow echoes a secret; `xcodebuild -version` is the only thing it prints.
+
+All six are set on `mfsaglam/wordlern` as of 2026-10-01. `MATCH_GIT_BASIC_AUTHORIZATION` holds a
+fine-grained token scoped to `mfsaglam/ios-certificates` with `Contents: Read-only` — enough because
+`match` runs `readonly: true` under CI. Fine-grained tokens expire: when a run starts failing at the
+match step with a 403 or a clone error, that is the first thing to check, not the lane.
+
 ## 31 — Build + test check on pull requests
 
 A cheap guard so a broken branch cannot reach `main`: build the app and run `thousandTests` on
@@ -877,3 +921,67 @@ is also what makes it reliable, since signing is the part that breaks.
 
 Runner minutes are free on this public repository, so there is no reason to hold back here. This
 check needs no secrets, which is also what lets it run safely on pull requests from forks.
+
+## 32 — Shake to undo
+
+One addition, nothing moves. `UndoButton` stays exactly where it is, at the top-leading corner of
+`SessionHeader`, at its current size. Shake is a shortcut layered on top of it, the same way swipe
+was layered on top of ✓/✗ in step 09.
+
+**Shake.** Shaking the phone undoes the last answer. Bridge `UIEventSubtypeMotionShake` —
+`motionEnded(_:with:)` fires on the responder chain, so catch it in a `UIWindow` subclass or a
+small `UIViewRepresentable` and post it into SwiftUI. Only act when `canUndo` is true; a shake with
+nothing to take back must do nothing at all, not flash an error.
+
+Confirm it happened: the existing `Haptics.undo()` plus a brief `undone` toast. Shake has no
+on-screen affordance, so without feedback the user cannot tell whether the gesture registered or
+the app ignored them.
+
+Mention shake in `HowItWorksScreen`. A gesture nobody can see is a gesture nobody will find.
+
+**Why the button stays** — settled with the user, do not revisit:
+
+- Without it, undo is undiscoverable. Nothing on screen would suggest an answer can be taken back,
+  and nobody thinks to shake a phone on a hunch.
+- Shake alone would be an accessibility regression. A user with limited hand mobility, a phone in a
+  stand, or VoiceOver running cannot shake a device. iOS also has a system "Shake to Undo" toggle
+  that some users switch off, and they would reasonably expect ours to be dead too.
+
+Out of scope: moving or resizing `UndoButton`, and any other change to `SessionHeader`'s layout.
+The user looked at the placement and is happy with it.
+
+Add the shake gesture to `docs/DESIGN.md` under screens 1 and 2 — the card screen's description
+should mention it alongside swipe.
+
+## 33 — The README describes an app that no longer exists
+
+The repository is public, so the README is the front door, and it is wrong. It claims
+"Core Data/Realm" for persistence (Realm was removed in step 08), "Combine" for state management
+(the app uses `@Observable`), and localisation readiness that step 27 explicitly dropped. The
+roadmap still lists gamification and pronunciation as future work — both shipped.
+
+Rewrite it against what actually exists: SwiftUI + SwiftData, the Leipzig-derived word list with
+its CC BY attribution, example sentences, the widgets, the daily reminder. Keep the Leitner
+explanation — that part is still true and it is the clearest thing in the file.
+
+While here, decide the licence question. There is no `LICENSE` file, which legally means all rights
+reserved. That may well be deliberate for a commercial app, but on a public repository it reads as
+an oversight, and people will assume they may reuse the code. Either add a licence or add one line
+to the README saying the code is not open for reuse.
+
+## 34 — App Store listing for 2.0
+
+The pipeline can deliver a build; it cannot write the listing. This is the remaining work between a
+TestFlight build and a release, and none of it is code.
+
+- New screenshots. Every screen changed — the current store screenshots show an app that no longer
+  exists. Required sizes only; do not hand-decorate them.
+- Description and "what's new" text. The honest framing for 2.0 is a new word list, example
+  sentences, pronunciation, widgets and reminders.
+- App Privacy answers in App Store Connect: "Data Not Collected", matching the privacy manifest
+  from step 21. The two must agree, or review will ask why.
+- Export compliance is already answered by step 28's Info.plist key; confirm no build is sitting in
+  "Waiting for Export Compliance" before submitting.
+- TestFlight "what to test" note, so testers know what is new.
+
+Deliver this as a checklist in `docs/RELEASE.md` rather than as code, and tick it off together.

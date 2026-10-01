@@ -1,0 +1,90 @@
+name: TestFlight
+
+# Every push to main ships a build. Never on pull requests: this repository is
+# public, and a fork PR must not be able to reach the signing secrets. For the
+# same reason there is no pull_request_target trigger here — step 31 adds the
+# unsigned, secret-free pull request check.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# One upload at a time. The build number comes from App Store Connect, so two
+# concurrent runs would both claim the same number and the second would be
+# rejected.
+concurrency:
+  group: testflight
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  beta:
+    # The `xcode-27` image, not `macos-latest`: macOS 26 ships only Xcode 26.x,
+    # which cannot read the JSON `project.xcproj` format this project uses.
+    # It is a preview image — if a run fails to start, check that the label
+    # still exists at actions/runner-images before assuming the lane broke.
+    # Not `xcode-27-xlarge`: larger runners are billed even on public repos.
+    runs-on: xcode-27
+    timeout-minutes: 60
+    env:
+      # fastlane refuses to run under a non-UTF-8 locale.
+      LANG: en_US.UTF-8
+      LC_ALL: en_US.UTF-8
+      # The image default is Xcode 27.0; pin the version explicitly so an image
+      # refresh cannot silently change the compiler under us.
+      XCODE_APP: /Applications/Xcode_27.2_beta.app
+      FASTLANE_SKIP_UPDATE_CHECK: "1"
+      FASTLANE_HIDE_CHANGELOG: "1"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pin Xcode
+        run: |
+          if [ ! -d "$XCODE_APP" ]; then
+            echo "::error::$XCODE_APP is not on this runner image. Installed:"
+            ls -d /Applications/Xcode*.app
+            exit 1
+          fi
+          sudo xcode-select -s "$XCODE_APP/Contents/Developer"
+          xcodebuild -version
+
+      # Cheap fail-fast: loading the project takes seconds and reports the exact
+      # error Xcode would if the JSON project file is not understood here.
+      - name: Check the project file loads
+        run: xcodebuild -list -project thousand.xcodeproj
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          # 3.2 is cached on the image and matches the Ruby the lane was proven
+          # on locally. The Gemfile's `json ~> 2.7.0` pin needs 3.2 headers; the
+          # x86_64 native-extension workaround from step 29 is a laptop-only
+          # problem and does not apply to this native arm64 Ruby.
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: Upload to TestFlight
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          # base64 of the .p8. The lane switches to key_content when this is set.
+          ASC_KEY_CONTENT: ${{ secrets.ASC_KEY_CONTENT }}
+          # HTTPS clone url for the private certificates repo plus base64 of
+          # "<user>:<token>" — the runner has no SSH key, and match clones in a
+          # subprocess that cannot be prompted.
+          MATCH_GIT_URL: ${{ secrets.MATCH_GIT_URL }}
+          MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+        run: bundle exec fastlane beta
+
+      - name: Collect logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-logs
+          path: |
+            ~/Library/Logs/gym
+            fastlane/report.xml
+          if-no-files-found: ignore
