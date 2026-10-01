@@ -39,6 +39,9 @@ bigger model, mechanical steps are not.
 | 29 | `step/29-fastlane` | Fastlane, proven from the laptop | opus | done |
 | 30 | `step/30-testflight-pipeline` | GitHub Actions: main → TestFlight | opus | todo |
 | 31 | `step/31-pr-check` | Build + test check on pull requests | sonnet | todo |
+| 32 | `step/32-shake-undo` | Shake to undo, and move the undo button | opus | todo |
+| 33 | `step/33-readme` | The README describes an app that no longer exists | sonnet | todo |
+| 34 | `step/34-store-listing` | App Store listing for 2.0 | sonnet | todo |
 
 Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
 sorted before 10 and 11 pour new screen files into it.
@@ -918,3 +921,69 @@ is also what makes it reliable, since signing is the part that breaks.
 
 Runner minutes are free on this public repository, so there is no reason to hold back here. This
 check needs no secrets, which is also what lets it run safely on pull requests from forks.
+
+## 32 — Shake to undo, and move the undo button
+
+Two changes to the same control.
+
+**Shake.** Shaking the phone undoes the last answer. Bridge `UIEventSubtypeMotionShake` —
+`motionEnded(_:with:)` fires on the responder chain, so catch it in a `UIWindow` subclass or a
+small `UIViewRepresentable` and post it into SwiftUI. Only act when `canUndo` is true; a shake with
+nothing to take back must do nothing at all, not flash an error.
+
+Confirm it happened: the existing `Haptics.undo()` plus a brief `undone` toast. Shake has no
+on-screen affordance, so without feedback the user cannot tell whether the gesture registered or
+the app ignored them.
+
+Mention shake in `HowItWorksScreen`. A gesture nobody can see is a gesture nobody will find.
+
+**The button stays.** The request was to replace it with the shake, and that is the one part to
+push back on:
+
+- Undo becomes undiscoverable. Nothing on screen would suggest the answer can be taken back.
+- It is an accessibility regression. A user with limited hand mobility, a phone in a stand, or
+  VoiceOver running cannot shake a device. iOS also has a system "Shake to Undo" toggle that users
+  switch off, and those users would reasonably expect our shake to be dead too.
+- It is the same call already made for ✓/✗ versus swipe in step 09: the visible control is the
+  affordance, the gesture is the shortcut. Being consistent with that is worth more than saving
+  28 points of screen.
+
+**Placement.** The complaint is fair. Today `UndoButton` sits at the top-leading corner of
+`SessionHeader` at 28×28 — the far corner from where the thumb rests, and under the 44-point
+minimum touch target. Move it under the ✓/✗ row, centred, quiet, with a 44-point target. Centred
+and below, not beside ✗: next to the wrong-answer button it would get hit by accident.
+
+Update `docs/DESIGN.md` for both screens 1 and 2.
+
+## 33 — The README describes an app that no longer exists
+
+The repository is public, so the README is the front door, and it is wrong. It claims
+"Core Data/Realm" for persistence (Realm was removed in step 08), "Combine" for state management
+(the app uses `@Observable`), and localisation readiness that step 27 explicitly dropped. The
+roadmap still lists gamification and pronunciation as future work — both shipped.
+
+Rewrite it against what actually exists: SwiftUI + SwiftData, the Leipzig-derived word list with
+its CC BY attribution, example sentences, the widgets, the daily reminder. Keep the Leitner
+explanation — that part is still true and it is the clearest thing in the file.
+
+While here, decide the licence question. There is no `LICENSE` file, which legally means all rights
+reserved. That may well be deliberate for a commercial app, but on a public repository it reads as
+an oversight, and people will assume they may reuse the code. Either add a licence or add one line
+to the README saying the code is not open for reuse.
+
+## 34 — App Store listing for 2.0
+
+The pipeline can deliver a build; it cannot write the listing. This is the remaining work between a
+TestFlight build and a release, and none of it is code.
+
+- New screenshots. Every screen changed — the current store screenshots show an app that no longer
+  exists. Required sizes only; do not hand-decorate them.
+- Description and "what's new" text. The honest framing for 2.0 is a new word list, example
+  sentences, pronunciation, widgets and reminders.
+- App Privacy answers in App Store Connect: "Data Not Collected", matching the privacy manifest
+  from step 21. The two must agree, or review will ask why.
+- Export compliance is already answered by step 28's Info.plist key; confirm no build is sitting in
+  "Waiting for Export Compliance" before submitting.
+- TestFlight "what to test" note, so testers know what is new.
+
+Deliver this as a checklist in `docs/RELEASE.md` rather than as code, and tick it off together.
