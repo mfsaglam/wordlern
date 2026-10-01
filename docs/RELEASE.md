@@ -30,7 +30,7 @@ a number written down here without checking Connect first).
 
 ## Description and "what's new"
 
-- [ ] Write the 2.0 description. Honest framing, per `docs/PLAN.md` step 34: a new word list
+- [ ] Write the 2.0 description. Honest framing, per `docs/PLAN-2.0.md` step 34: a new word list
       (steps 03–07), example sentences, pronunciation (step 17/19), widgets (prior widget step),
       and reminders (step 23).
 - [ ] Write the "What's New in This Version" text for the 2.0 release — same framing, shorter.
