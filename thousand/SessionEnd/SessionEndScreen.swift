@@ -168,9 +168,12 @@ private struct MasteredGrowth: View {
     }
 }
 
-#Preview("a good session") {
+/// A session played from `DemoContent`'s state: ten cards out of box 2, seven
+/// correct, so the mastered count climbs from 800 to 807. Keep it in step with
+/// `DemoContent`.
+#Preview("demo — for screenshots") {
     SessionEndScreen(
-        summary: .init(reviewed: 10, movedUp: 7, masteredBefore: 247, masteredAfter: 254),
+        summary: .init(reviewed: 10, movedUp: 7, masteredBefore: 800, masteredAfter: 807),
         onSeeProgress: { }
     )
 }

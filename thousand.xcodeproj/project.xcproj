@@ -78,6 +78,7 @@
           "kind": "group",
           "path": "Support",
           "children": [
+            { "path": "DemoContent.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "Haptics.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "ReminderScheduler.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "ShakeDetector.swift", "target-membership": [ "thousand/compile-sources" ] },

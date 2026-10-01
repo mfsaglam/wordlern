@@ -28,6 +28,37 @@ a number written down here without checking Connect first).
 - [ ] Capture iPad screenshots too — unavoidable now that the app declares iPad support. The 1.0
       listing already has a set; new ones are needed because every screen changed for 2.0.
 
+Launch with the `-demoContent` argument on the Run scheme first (step 43), or the screenshots show
+`mastered 0 / 1000` over five empty bars. It puts the app at 800 mastered with 200 cards due; a
+session of ten answered seven-correct ends on `800 → 807`, which is what the session-end shot
+should show. Turn the argument back off afterwards — it wipes local data on every launch. The
+widget shot cannot come from it at all: widgets live on the home screen, so that one comes off a
+real device.
+
+### Captions
+
+One line burned into each screenshot, above the device.
+
+| # | Screen | Caption |
+|---|--------|---------|
+| 1 | Card, front | The words that actually come up |
+| 2 | Card, back | See it used, not just translated |
+| 3 | Summary | Know exactly where you stand |
+| 4 | Session end | Small sessions, every day |
+| 5 | How it works | Spaced repetition, not willpower |
+| 6 | Widget | Progress on your home screen |
+
+Shots 1 and 2 carry the sell — most people never scroll past them — which is why the example
+sentence, the thing no competitor offers, takes slot 2.
+
+Two of the six are "X, not Y" constructions and that is the limit. A third was drafted for the
+widget ("A nudge, not a notification") and dropped: read as a set, the repeated syntax starts to
+look like a tic rather than a voice.
+
+Same typeface, size and position in every shot — six captions that work as a set beat six that
+each work alone. Background `#15181D` with `#F7F5F0` text, matching the icon and the site, so the
+app, the store page and the website read as one thing.
+
 ## Description and "what's new"
 
 - [ ] Write the 2.0 description. Honest framing, per `docs/PLAN-2.0.md` step 34: a new word list
