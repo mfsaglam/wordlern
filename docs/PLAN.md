@@ -20,7 +20,7 @@ there so no branch name is ever reused.
 | 42 | `step/42-website` | GitHub Pages site | opus | done |
 | 43 | `step/43-screenshot-mode` | Debug screenshot mode | sonnet | done |
 | 44 | `step/44-listing-and-licence` | Finish the listing, decide the licence | sonnet | done |
-| 45 | `step/45-site-gallery` | Screenshot gallery on the site | sonnet | todo |
+| 45 | `step/45-site-gallery` | Screenshot gallery on the site | sonnet | done |
 
 Order is numeric. 41 before 42 because the site needs the icon; 45 was held back until step 43
 made it possible to take a screenshot worth showing.
@@ -284,3 +284,22 @@ by eye anyway, since nothing automated can see a broken column.
 
 Out of scope: device frames, the widget shot (it comes off a real device and is not in the same
 visual family), and any carousel or lightbox. Static images in a grid.
+
+Done. The four raw captures (1320×2868, 148–487 KB each) landed in `site/screenshot/` as
+untracked files at the start of this step — `.gitignore` now excludes the `*_raw.png` names so
+they can't be committed by accident, and the originals stay on disk rather than being deleted.
+
+Downscaled each to 640×1391 with `sips` and committed those under plain names (`card-front.png`,
+`card-back.png`, `summary.png`, `session-end.png`): 640 is 2x the ~320px column a two-up grid
+gives each image inside the page's 42rem measure, so retina stays sharp without shipping
+full-resolution capture. The four together come to 388 KB, against 1.2 MB raw.
+
+A new `<ul class="gallery">` sits in `index.html` between the App Store badge and "What it does",
+with `width`/`height` on every `<img>`, `loading="lazy"` on all but the first, and `alt` text
+describing each screen rather than numbering them. `.gallery` in `style.css` is a two-column grid
+at every width — two-up already reads fine at 375px CSS width in preview, so no separate
+single-column breakpoint was needed.
+
+Order follows the plan's own phrasing — card front, card back, summary, session end — which
+maps to the capture filenames as `card_faceup` (front, not yet flipped) and `card_facedown`
+(flipped, showing the English meaning and example sentence).

@@ -32,3 +32,6 @@ fastlane/.env*
 *.p12
 *.mobileprovision
 *.cer
+
+## Raw screenshot captures (step 45) — the site only commits the downscaled copies
+site/screenshot/*_raw.png
