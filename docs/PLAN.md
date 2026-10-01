@@ -20,8 +20,10 @@ there so no branch name is ever reused.
 | 42 | `step/42-website` | GitHub Pages site | opus | done |
 | 43 | `step/43-screenshot-mode` | Debug screenshot mode | sonnet | done |
 | 44 | `step/44-listing-and-licence` | Finish the listing, decide the licence | sonnet | done |
+| 45 | `step/45-site-gallery` | Screenshot gallery on the site | sonnet | done |
 
-Order is numeric. 41 before 42 because the site needs the icon.
+Order is numeric. 41 before 42 because the site needs the icon; 45 was held back until step 43
+made it possible to take a screenshot worth showing.
 
 ---
 
@@ -249,3 +251,55 @@ page instead.
   check on the voice.
 - `WordViewModel` swallows errors with `print(error)` in two places. A failed save loses progress
   silently.
+
+## 45 — Screenshot gallery on the site
+
+Carried over from step 42, which left the gallery out rather than fill it with placeholders, and
+from 43, which was what made a presentable screenshot possible. `site/index.html` currently goes
+from the App Store badge straight to the feature list; the gallery belongs between them.
+
+Source material: the screenshots the user captured from the iPhone 16 Pro Max simulator in the
+`-demoContent` state — card front, card back, summary, session end. Four is enough. The page
+already explains the features in words, so the gallery is there to show the app has a face, not to
+re-argue the pitch.
+
+Use the raw screenshots, not the App Store versions. The captions in `docs/RELEASE.md` are burned
+into the store images and would fight the page's own copy.
+
+Watch the weight. Each capture is 1320×2868 and a PNG of that size runs to a megabyte or more; four
+of them would make this the heaviest page in a site that is otherwise three HTML files and a
+stylesheet. Downscale to something a phone-shaped column actually needs and re-encode — `sips` is
+on the machine and no dependency is needed. Keep the originals out of the repository.
+
+Required of the markup:
+
+- `width` and `height` on every image, so the page does not reflow as they load.
+- `loading="lazy"` on all but the first.
+- Real `alt` text describing the screen, not "screenshot 1".
+- The layout has to survive a narrow viewport; four phone shots in a row will not.
+
+The Pages workflow checks that every local `href` and `src` resolves to a committed file, so a
+missing image fails the build rather than reaching the site — but check the page at a phone width
+by eye anyway, since nothing automated can see a broken column.
+
+Out of scope: device frames, the widget shot (it comes off a real device and is not in the same
+visual family), and any carousel or lightbox. Static images in a grid.
+
+Done. The four raw captures (1320×2868, 148–487 KB each) landed in `site/screenshot/` as
+untracked files at the start of this step — `.gitignore` now excludes the `*_raw.png` names so
+they can't be committed by accident, and the originals stay on disk rather than being deleted.
+
+Downscaled each to 640×1391 with `sips` and committed those under plain names (`card-front.png`,
+`card-back.png`, `summary.png`, `session-end.png`): 640 is 2x the ~320px column a two-up grid
+gives each image inside the page's 42rem measure, so retina stays sharp without shipping
+full-resolution capture. The four together come to 388 KB, against 1.2 MB raw.
+
+A new `<ul class="gallery">` sits in `index.html` between the App Store badge and "What it does",
+with `width`/`height` on every `<img>`, `loading="lazy"` on all but the first, and `alt` text
+describing each screen rather than numbering them. `.gallery` in `style.css` is a two-column grid
+at every width — two-up already reads fine at 375px CSS width in preview, so no separate
+single-column breakpoint was needed.
+
+Order follows the plan's own phrasing — card front, card back, summary, session end — which
+maps to the capture filenames as `card_faceup` (front, not yet flipped) and `card_facedown`
+(flipped, showing the English meaning and example sentence).
