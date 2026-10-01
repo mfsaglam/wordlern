@@ -6,10 +6,13 @@ review. Tick these off together before step 35.
 
 ## Device support
 
-- [x] `thousand` and `WordLernWidget` are now iPhone-only (`TARGETED_DEVICE_FAMILY = 1`). The app
-      was never designed or tested for iPad — every screen in `docs/DESIGN.md` assumes an iPhone
-      layout — so claiming iPad support in the listing would be dishonest. Decided 2026-10-01.
-      This also means no iPad screenshots are required below.
+- [x] `thousand` and `WordLernWidget` ship as iPhone **and** iPad (`TARGETED_DEVICE_FAMILY = 1,2`),
+      the same as the published 1.0. Dropping iPad was tried in step 34 and rejected by App Store
+      Connect at upload: *"This bundle does not support one or more of the devices supported by the
+      previous app version"* (error 90101). Device support can never be narrowed once a version is
+      live, so iPad stays. See step 37.
+- [ ] Open the app on an iPad before submitting. It runs the iPhone layout scaled up; make sure
+      nothing is broken or unreadable enough to draw a rejection.
 
 ## Screenshots
 
@@ -18,11 +21,12 @@ longer exists. Required sizes only — do not hand-decorate them, and use whatev
 Connect actually asks for at upload time (Apple has changed the required set before; do not trust
 a number written down here without checking Connect first).
 
-- [ ] Capture fresh screenshots from the **iPhone-only** required size(s) in App Store Connect's
-      Media Manager. Source material: card screen, summary screen, session-end screen,
+- [ ] Capture fresh screenshots for the required iPhone size(s) in App Store Connect's Media
+      Manager. Source material: card screen, summary screen, session-end screen,
       "how it works" screen, and the widget (if widgets get their own App Store Connect gallery
       slot).
-- [ ] No iPad screenshots — the device support decision above removed the requirement.
+- [ ] Capture iPad screenshots too — unavoidable now that the app declares iPad support. The 1.0
+      listing already has a set; new ones are needed because every screen changed for 2.0.
 
 ## Description and "what's new"
 

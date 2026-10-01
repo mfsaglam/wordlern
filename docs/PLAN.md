@@ -1021,6 +1021,8 @@ or tested for iPad. Listing iPad support would have been dishonest, so both targ
 iPhone-only (`TARGETED_DEVICE_FAMILY = "1"`) — decided with the user 2026-10-01. This also drops
 the iPad screenshot requirement from the checklist.
 
+**Reverted by step 37.** App Store Connect rejects an upload that narrows device support.
+
 ## 35 — Merge into `main`: the 2.0 release
 
 Not a development step and not done on a branch. This is the moment `feature/gamify` — 70-odd
@@ -1079,3 +1081,32 @@ Done. `GermanSpeaker.init()` sets the `.ambient` category once, dispatched to a 
 at all, and `setActive(true)` is gone outright. Verified on a device: the main-thread warning
 is gone, a muted phone stays silent, and pronunciation no longer interrupts music already
 playing.
+
+## 37 — iPad support cannot be dropped: the TestFlight upload is rejected
+
+The first run of the step 30 pipeline against App Store Connect failed in `altool`, not in the
+build:
+
+```
+This bundle does not support one or more of the devices supported by the previous app version.
+Your app update must continue to support all devices previously supported. You declare supported
+devices in Xcode with the Targeted Device Family build setting. (90101)
+```
+
+Step 34 set `TARGETED_DEVICE_FAMILY` to `"1"` on `thousand` and `WordLernWidget` because no screen
+was ever designed for iPad. That reasoning still holds, but it is not a decision that is ours to
+make: the published 1.0 declares iPhone + iPad, and Apple does not allow a later version to take a
+device family away. Someone who installed 1.0 on an iPad has to keep getting updates. The only ways
+out are shipping under a new bundle identifier or removing the app from sale — both far worse than
+scaling the iPhone layout up.
+
+Fix: put `TARGETED_DEVICE_FAMILY` back to `"1,2"` on both targets and correct `docs/RELEASE.md`,
+which had recorded the iPhone-only decision and dropped the iPad screenshot requirement. iPad
+screenshots are required again.
+
+Out of scope: designing an actual iPad layout. The app runs the iPhone layout scaled up, which is
+what 1.0 already did. If an iPad screen is embarrassing enough to risk a rejection, that is its own
+step.
+
+Done. Both targets are `"1,2"` again; `docs/RELEASE.md` records why narrowing is impossible, asks
+for iPad screenshots, and adds a pre-submission check on an iPad.
