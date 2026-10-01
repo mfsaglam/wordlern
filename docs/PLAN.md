@@ -1,6 +1,7 @@
 # Plan — gamify / UI overhaul
 
-Target branch for all of this: `feature/gamify`. One step = one branch = one task.
+Target branch: `develop`. (`feature/gamify` was merged into `main` as 2.0 and deleted; steps up to
+36 still name it because that is where they happened.) One step = one branch = one task.
 Status values: `todo`, `in progress`, `done`.
 
 `Model` is a suggestion, not a rule: steps needing design or language judgement are worth the
@@ -1110,3 +1111,39 @@ step.
 
 Done. Both targets are `"1,2"` again; `docs/RELEASE.md` records why narrowing is impossible, asks
 for iPad screenshots, and adds a pre-submission check on an iPad.
+
+## 38 — Protect `main` and `develop`
+
+Neither branch is protected: `gh api repos/mfsaglam/wordlern/rulesets` returns `[]` and
+`.../branches/main/protection` returns 404. Anyone with push access — in practice a mistyped
+`git push` — can rewrite or delete the branch that the App Store build comes from.
+
+Four rules, one GitHub ruleset covering both branches:
+
+- **Pull request required.** No direct pushes. Zero required approvals: this is a solo repo and
+  GitHub does not let an author approve their own pull request, so requiring one approval would
+  lock the branches outright.
+- **No deletion.**
+- **No force-push** (`non_fast_forward`).
+- **`build-and-test` must pass** — the job in `.github/workflows/pr-check.yml`.
+
+The last one forces a change to that workflow: it still triggers on `[feature/gamify, main]`, and
+`feature/gamify` no longer exists. A required check that never runs blocks every pull request
+forever, so the trigger becomes `[develop, main]` in the same step.
+
+No bypass actors, deliberately. The repository owner is subject to the rules too — that is the
+point of asking for them. Adding a bypass later is a one-line edit to the ruleset.
+
+The ruleset lives in `.github/rulesets/protect-main-and-develop.json` so it is reviewable and
+reproducible, but GitHub does not read it from the repo — it has to be applied through the API:
+
+```
+gh api -X POST repos/mfsaglam/wordlern/rulesets \
+  --input .github/rulesets/protect-main-and-develop.json
+```
+
+Also refresh the stale branch names in `CLAUDE.md` and this file's header, which still send new
+work to `feature/gamify`.
+
+Done. Workflow trigger, `CLAUDE.md` and the plan header updated; ruleset JSON committed. Applying
+it was blocked by this session's permission layer, so the user ran the command above.
