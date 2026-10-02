@@ -24,6 +24,7 @@ private struct CardSnapshot: Sendable {
     let languageCode: String
     let meaning: String
     let exampleSentence: String?
+    let lastReviewedDate: Date?
 }
 
 /// Writes happen here, on the actor's own background context, never on main.
@@ -60,10 +61,14 @@ private actor CardWriter {
         )
         for card in cards {
             if let existing = staleCards.removeValue(forKey: card.id) {
-                // Only the box can change while a session runs; word content
-                // is replaced wholesale by a re-seed, never edited in place.
+                // Only the box and the review date change while a session runs;
+                // word content is replaced wholesale by a re-seed, never edited
+                // in place.
                 if existing.boxIndex != card.boxIndex {
                     existing.boxIndex = card.boxIndex
+                }
+                if existing.lastReviewedDate != card.lastReviewedDate {
+                    existing.lastReviewedDate = card.lastReviewedDate
                 }
             } else {
                 modelContext.insert(
@@ -73,7 +78,8 @@ private actor CardWriter {
                         word: card.word,
                         languageCode: card.languageCode,
                         meaning: card.meaning,
-                        exampleSentence: card.exampleSentence
+                        exampleSentence: card.exampleSentence,
+                        lastReviewedDate: card.lastReviewedDate
                     )
                 )
             }
@@ -116,7 +122,8 @@ final class SwiftDataCardStore: CardStore {
                     word: card.word.word,
                     languageCode: card.word.languageCode,
                     meaning: card.word.meaning,
-                    exampleSentence: card.word.exampleSentence
+                    exampleSentence: card.word.exampleSentence,
+                    lastReviewedDate: card.lastReviewedDate
                 )
             }
         }
@@ -172,7 +179,8 @@ private extension StoredCard {
                 languageCode: languageCode,
                 meaning: meaning,
                 exampleSentence: exampleSentence
-            )
+            ),
+            lastReviewedDate: lastReviewedDate
         )
     }
 }

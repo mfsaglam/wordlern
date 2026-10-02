@@ -83,6 +83,69 @@ final class SwiftDataCardStoreTests: XCTestCase {
         XCTAssertEqual(try sut.context.fetch(FetchDescriptor<StoredCard>()).map(\.boxIndex), [2])
     }
 
+    // MARK: - Card-level review dates
+
+    func test_saveBoxes_thenFetch_roundTripsTheCardsOwnReviewDate() async throws {
+        let sut = try makeSUT()
+        let reviewedAt = Date(timeIntervalSince1970: 1_700_000_000)
+        let reviewed = makeCard(word: "lesen", meaning: "to read", lastReviewedDate: reviewedAt)
+        let neverReviewed = makeCard(word: "neu", meaning: "new")
+
+        try sut.store.saveBoxes([makeBox(cards: [reviewed, neverReviewed], lastReviewedDate: Date())])
+        await sut.store.waitForWrites()
+
+        let cards = readBack(sut)[0].cards
+        XCTAssertEqual(cards.first { $0.id == reviewed.id }?.lastReviewedDate, reviewedAt)
+        XCTAssertNil(
+            cards.first { $0.id == neverReviewed.id }?.lastReviewedDate,
+            "A card that was never answered must come back without a date so the library treats it as due."
+        )
+    }
+
+    func test_saveBoxes_answeringACard_persistsItsNewReviewDate() async throws {
+        let sut = try makeSUT()
+        let firstAnswer = Date(timeIntervalSince1970: 1_700_000_000)
+        let secondAnswer = Date(timeIntervalSince1970: 1_700_600_000)
+        let card = makeCard(word: "schreiben", meaning: "to write", lastReviewedDate: firstAnswer)
+
+        try sut.store.saveBoxes([makeBox(cards: [card]), makeBox(cards: [])])
+        await sut.store.waitForWrites()
+
+        // The same card is answered again and promoted: both the box and the
+        // date have to be written to the existing record.
+        let answeredAgain = Card(id: card.id, word: card.word, lastReviewedDate: secondAnswer)
+        try sut.store.saveBoxes([makeBox(cards: []), makeBox(cards: [answeredAgain])])
+        await sut.store.waitForWrites()
+
+        let stored = try sut.context.fetch(FetchDescriptor<StoredCard>())
+        XCTAssertEqual(stored.count, 1)
+        XCTAssertEqual(stored.first?.lastReviewedDate, secondAnswer, "An update used to write boxIndex only, leaving the date stale.")
+        XCTAssertEqual(readBack(sut)[1].cards.first?.lastReviewedDate, secondAnswer)
+    }
+
+    /// What the whole step is for: a card answered correctly must not come back
+    /// early after a relaunch, even when its new box was reviewed long ago.
+    func test_answeredCard_survivesARelaunch_withoutBecomingDueEarly() async throws {
+        let sut = try makeSUT()
+        let now = Date()
+        let staleBoxDate = Calendar.current.date(byAdding: .day, value: -10, to: now)!
+        let card = makeCard(word: "verstehen", meaning: "to understand", lastReviewedDate: now)
+
+        // Box 1 has a 3 day interval and was last touched 10 days ago.
+        try sut.store.saveBoxes([
+            makeBox(cards: [], reviewInterval: 0, lastReviewedDate: now),
+            makeBox(cards: [card], reviewInterval: 3, lastReviewedDate: staleBoxDate)
+        ])
+        await sut.store.waitForWrites()
+
+        // Relaunch: a fresh system loads what was persisted.
+        let system = LeitnerSystem(boxAmount: 2)
+        system.loadBoxes(boxes: readBack(sut))
+
+        XCTAssertEqual(system.dueCount, 0, "The persisted card date keeps the card scheduled 3 days out.")
+        XCTAssertThrowsError(try system.dueForReview())
+    }
+
     // MARK: - Helpers
 
     private struct SUT {
@@ -117,14 +180,15 @@ final class SwiftDataCardStoreTests: XCTestCase {
         Box(cards: cards, reviewInterval: reviewInterval, lastReviewedDate: lastReviewedDate)
     }
 
-    private func makeCard(word: String, meaning: String) -> Card {
+    private func makeCard(word: String, meaning: String, lastReviewedDate: Date? = nil) -> Card {
         Card(
             word: Word(
                 word: word,
                 languageCode: "de",
                 meaning: meaning,
                 exampleSentence: nil
-            )
+            ),
+            lastReviewedDate: lastReviewedDate
         )
     }
 }

@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mfsaglam/LeitnerSwift",
       "state" : {
-        "revision" : "94333953861665336cb106b3d34fe451f8f9aa2f",
-        "version" : "1.4.0"
+        "revision" : "f7a9e7fd08b78800430bab629b08f615ffd73622",
+        "version" : "1.5.0"
       }
     }
   ],
