@@ -21,7 +21,7 @@ there so no branch name is ever reused.
 | 43 | `step/43-screenshot-mode` | Debug screenshot mode | sonnet | done |
 | 44 | `step/44-listing-and-licence` | Finish the listing, decide the licence | sonnet | done |
 | 45 | `step/45-site-gallery` | Screenshot gallery on the site | sonnet | done |
-| 46 | `step/46-store-images` | App Store marketing images | opus | todo |
+| 46 | `step/46-store-images` | App Store marketing images | opus | done |
 | 47 | `refactor/use-library-due-api` | Use LeitnerSwift's own due query | sonnet | done |
 | 48 | `feat/persist-card-review-date` | Persist each card's own review date | sonnet | done |
 | 49 | — | Merge into `main`: the 2.0 release | — | todo |
@@ -345,6 +345,31 @@ Required of the result:
   one at thumbnail size before accepting the set.
 - Apple rejects listings whose images are mostly marketing rather than the app. A caption strip over
   a real screen is well inside the line; drifting towards illustration is not.
+
+Done. `tools/make_store_images.swift` composes all twelve in one run — `swift
+tools/make_store_images.swift`, AppKit and CoreText, no dependency added. The raws were on the
+user's Desktop rather than in the repository, so the script defaults to `~/Desktop` and takes
+`--in <dir>`; output goes to `build/store/`, which `build/` already ignores.
+
+Every measurement is a fraction of the canvas height, so the iPhone and iPad sets are one
+composition at two sizes rather than two compositions. The canvas is the capture's own size, the
+capture is scaled once (0.81) to clear the caption band and a bottom margin, and its corners are
+rounded to the display's own radius — 55pt at @3x, 30pt at @2x. No frame, no shadow, no gradient.
+
+The caption band always reserves two lines even when the caption needs one, which is what keeps
+the first baseline on the same pixel row across the set. Wrapping picks the balanced break rather
+than the greedy one: greedy leaves a stub second line that reads as an accident. It falls out that
+all six iPhone captions take two lines and all six iPad captions take one — the iPad canvas is
+wider relative to its height — so each set is internally consistent without the font size having to
+change between images.
+
+The script writes a 300px proof of each image beside the full set, which is roughly the width App
+Store gives a thumbnail in its scrolling row. Checked there before accepting: the captions hold up,
+and `how it works` reads as a dense reference screen rather than legible text — which is what it
+is, and the caption carries that image rather than the body copy.
+
+Not in scope and deliberately left: the iPad captures are the iPhone layout scaled up, so those six
+are mostly empty space. Fixing that is an iPad layout, not a marketing image.
 
 ## 47 — Use LeitnerSwift's own due query
 
