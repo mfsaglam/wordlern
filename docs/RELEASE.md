@@ -25,8 +25,11 @@ a number written down here without checking Connect first).
 - [x] Capture the raw screenshots. Six screens — card front, card back, summary, session end,
       how it works, widget — at both sizes: 1320×2868 (iPhone 16 Pro Max) and 2064×2752 (13" iPad).
       Twelve files, all off a simulator.
-- [ ] Compose the captioned versions (step 46) and upload them in App Store Connect's Media
-      Manager, both device sizes.
+- [x] Compose the captioned versions: `swift tools/make_store_images.swift` reads the raws from
+      `~/Desktop` (`--in <dir>` for anywhere else) and writes twelve finished images to
+      `build/store/`, with 300px proofs in `build/store/proof/`. Both directories are ignored —
+      re-run the script rather than looking for them in git.
+- [ ] Upload them in App Store Connect's Media Manager, both device sizes, in filename order.
 
 Launch with the `-demoContent` argument on the Run scheme first (step 43), or the screenshots show
 `mastered 0 / 1000` over five empty bars. It puts the app at 800 mastered with 200 cards due; a
