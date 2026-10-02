@@ -21,9 +21,19 @@ there so no branch name is ever reused.
 | 43 | `step/43-screenshot-mode` | Debug screenshot mode | sonnet | done |
 | 44 | `step/44-listing-and-licence` | Finish the listing, decide the licence | sonnet | done |
 | 45 | `step/45-site-gallery` | Screenshot gallery on the site | sonnet | done |
+| 46 | `step/46-store-images` | App Store marketing images | opus | todo |
+| 47 | `refactor/use-library-due-api` | Use LeitnerSwift's own due query | sonnet | done |
+| 48 | `feat/persist-card-review-date` | Persist each card's own review date | sonnet | done |
+| 49 | — | Merge into `main`: the 2.0 release | — | todo |
 
 Order is numeric. 41 before 42 because the site needs the icon; 45 was held back until step 43
 made it possible to take a screenshot worth showing.
+
+47 and 48 are recorded after the fact: they were found and fixed outside the plan, on branches
+named for the work rather than a step number. The numbers are theirs now so the record is whole;
+the branch column keeps the names that actually exist in the history.
+
+49 is the release. Everything before it is reversible.
 
 ---
 
@@ -335,3 +345,48 @@ Required of the result:
   one at thumbnail size before accepting the set.
 - Apple rejects listings whose images are mostly marketing rather than the app. A caption strip over
   a real screen is well inside the line; drifting towards illustration is not.
+
+## 47 — Use LeitnerSwift's own due query
+
+Found outside the plan. `WordViewModel` carried its own copy of the box-level due calculation for
+`dueCount`, `nextReviewDate` and `nextReview` — written in step 22, when the library had no such
+API. LeitnerSwift 1.4.0 exposes the same calculation, so the app defers to it rather than keeping a
+second implementation in step with the first.
+
+Two implementations of one rule is the kind of thing that stays correct right up until the library
+changes its mind about what "due" means.
+
+## 48 — Persist each card's own review date
+
+Found outside the plan, and a real bug rather than a tidy-up. LeitnerSwift 1.5.0 schedules a card
+from its own `lastReviewedDate`, but `StoredCard` never kept that date. Every launch handed the
+library cards with no date, it fell back to the box's date, and answered cards came back early —
+the card-level fix in the library had no effect on the app until the date round-tripped through
+storage.
+
+`StoredCard` gains an optional `lastReviewedDate` (a lightweight SwiftData migration, no
+`MigrationPlan`), `CardSnapshot` carries it into the writer, and updating an existing record now
+writes the date alongside `boxIndex`. Covered by new cases in `SwiftDataCardStoreTests`.
+
+Worth remembering when a scheduling bug next looks like a library problem: the library can only
+schedule from what the store gives it back.
+
+## 49 — Merge into `main`: the 2.0 release
+
+Not a development step and not done on a branch. `main` still holds the published 1.0 and is 27
+commits behind; this is the moment that changes.
+
+Do it after 46 and after the App Store Connect items in `docs/RELEASE.md` are ticked off.
+
+1. Confirm `develop` builds clean and the app runs on a device.
+2. Merge `develop` into `main`. That push fires `.github/workflows/testflight.yml`, which runs the
+   `beta` lane and uploads to TestFlight.
+3. Watch that run. The workflow has never fired on a real push — its trigger is `main`, and `main`
+   has not moved since it was written. A failure there is a signing or runner problem, not an app
+   problem, and step 29 proved the lane works from the laptop, so the laptop is the fallback.
+4. Install the TestFlight build and use it for a day before promoting it. There is no rollback once
+   a version is released.
+5. Submit for review with the listing from `docs/RELEASE.md`.
+
+The 1.0 upload attempt already failed once on device family (archived step 37). Expect the first
+real pipeline run to surface something; watch it rather than merging and walking away.
