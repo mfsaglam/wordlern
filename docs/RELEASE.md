@@ -176,6 +176,10 @@ Note that progress from 1.0 does not carry over.
 
 ## Export compliance
 
+A 2.0 build from `develop` is already in App Store Connect, uploaded by the pipeline through its
+`workflow_dispatch` trigger. The three checks below can be answered against that build now, well
+before the merge — they are the cheapest place to find a problem.
+
 - [ ] Confirm no build is sitting in "Waiting for Export Compliance" in App Store Connect before
       submitting. Step 28 already set `INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO` on both
       the `thousand` and `WordLernWidget` targets, so new builds should answer this

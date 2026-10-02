@@ -381,12 +381,17 @@ Do it after 46 and after the App Store Connect items in `docs/RELEASE.md` are ti
 1. Confirm `develop` builds clean and the app runs on a device.
 2. Merge `develop` into `main`. That push fires `.github/workflows/testflight.yml`, which runs the
    `beta` lane and uploads to TestFlight.
-3. Watch that run. The workflow has never fired on a real push — its trigger is `main`, and `main`
-   has not moved since it was written. A failure there is a signing or runner problem, not an app
-   problem, and step 29 proved the lane works from the laptop, so the laptop is the fallback.
+3. Watch that run, but it is no longer the unknown it was. The workflow was run from `develop` by
+   hand first, through its `workflow_dispatch` trigger, and it built, signed and uploaded to App
+   Store Connect. The runner image, `match` and the API key are all proven. A failure on the `main`
+   push now points at something about `main` itself rather than a broken lane — and step 29 proved
+   the lane works from the laptop, so the laptop is still the fallback.
 4. Install the TestFlight build and use it for a day before promoting it. There is no rollback once
    a version is released.
 5. Submit for review with the listing from `docs/RELEASE.md`.
 
-The 1.0 upload attempt already failed once on device family (archived step 37). Expect the first
-real pipeline run to surface something; watch it rather than merging and walking away.
+The 1.0 upload attempt already failed once on device family (archived step 37), so watch the run
+rather than merging and walking away.
+
+Keep `workflow_dispatch` in the workflow for the reason it paid off here: it exercises the whole
+pipeline from a branch, before the one push that cannot be taken back.
