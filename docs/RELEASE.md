@@ -2,7 +2,7 @@
 
 The pipeline (steps 29–31) can build and upload a binary. It cannot write the App Store
 listing. This is the remaining non-code work between a TestFlight build and submitting 2.0 for
-review. Tick these off together before step 35.
+review. Tick these off together before step 49, the merge into `main`.
 
 ## Device support
 
@@ -11,8 +11,9 @@ review. Tick these off together before step 35.
       Connect at upload: *"This bundle does not support one or more of the devices supported by the
       previous app version"* (error 90101). Device support can never be narrowed once a version is
       live, so iPad stays. See step 37.
-- [ ] Open the app on an iPad before submitting. It runs the iPhone layout scaled up; make sure
-      nothing is broken or unreadable enough to draw a rejection.
+- [x] Open the app on an iPad before submitting. It runs the iPhone layout scaled up; make sure
+      nothing is broken or unreadable enough to draw a rejection. Checked by the user; the iPad
+      screenshots were captured from the same run.
 
 ## Screenshots
 
@@ -21,12 +22,11 @@ longer exists. Required sizes only — do not hand-decorate them, and use whatev
 Connect actually asks for at upload time (Apple has changed the required set before; do not trust
 a number written down here without checking Connect first).
 
-- [ ] Capture fresh screenshots for the required iPhone size(s) in App Store Connect's Media
-      Manager. Source material: card screen, summary screen, session-end screen,
-      "how it works" screen, and the widget (if widgets get their own App Store Connect gallery
-      slot).
-- [ ] Capture iPad screenshots too — unavoidable now that the app declares iPad support. The 1.0
-      listing already has a set; new ones are needed because every screen changed for 2.0.
+- [x] Capture the raw screenshots. Six screens — card front, card back, summary, session end,
+      how it works, widget — at both sizes: 1320×2868 (iPhone 16 Pro Max) and 2064×2752 (13" iPad).
+      Twelve files, all off a simulator.
+- [ ] Compose the captioned versions (step 46) and upload them in App Store Connect's Media
+      Manager, both device sizes.
 
 Launch with the `-demoContent` argument on the Run scheme first (step 43), or the screenshots show
 `mastered 0 / 1000` over five empty bars. It puts the app at 800 mastered with 200 cards due; a
