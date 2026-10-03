@@ -1,1081 +1,430 @@
-# Plan — gamify / UI overhaul
+# Plan
 
-Target branch for all of this: `feature/gamify`. One step = one branch = one task.
-Status values: `todo`, `in progress`, `done`.
+One step = one branch = one task. Branch from `develop`, named `step/NN-slug`. `develop` and `main`
+are protected: the user opens the pull request and merges. Status values: `todo`, `in progress`,
+`done`.
 
 `Model` is a suggestion, not a rule: steps needing design or language judgement are worth the
 bigger model, mechanical steps are not.
 
+Steps 01–38 built and shipped 2.0 — the rewritten word list, the screens, the widgets, the
+TestFlight pipeline. They are archived in `docs/PLAN-2.0.md`, which is worth opening when a
+decision looks arbitrary; the rationale is recorded under each step. Numbering continues from
+there so no branch name is ever reused.
+
 | # | Branch | Step | Model | Status |
 |---|--------|------|-------|--------|
-| 01 | `step/01-card-screen` | Card screen redesign | opus | done |
-| 02 | `step/02-content-version` | `contentVersion` counter | sonnet | done |
-| 03 | `step/03-word-source` | Pick a real German frequency list | opus | done |
-| 04 | `step/04-dictionary-merge` | Merge frequency list with a dictionary | sonnet | done |
-| 05 | `step/05-word-list-editorial` | Editorial pass over the 1000 words | opus | done |
-| 06 | `step/06-sentence-pilot` | Example sentence pilot (50 words) | opus | done |
-| 07 | `step/07-sentences` | Remaining example sentences | opus | done |
-| 08 | `step/08-swiftdata` | Replace Realm with SwiftData | opus | done |
-| 09 | `step/09-swipe-undo` | Swipe gesture + undo | opus | done |
-| 10 | `step/10-summary-screen` | Summary screen redesign | opus | done |
-| 11 | `step/11-session-end` | Session end screen | opus | done |
-| 12 | `step/12-cleanup` | Cleanup | sonnet | done |
-| 13 | `step/13-attribution` | Attribution / About screen | sonnet | done |
-| 14 | `step/14-file-layout` | Group the source files by screen | sonnet | done |
-| 15 | `step/15-launch-on-summary` | Launch on the summary screen | sonnet | done |
-| 16 | `step/16-how-it-works` | "How it works" screen | opus | done |
-| 17 | `step/17-voice-quality` | Pick the best installed German voice | sonnet | done |
-| 18 | `step/18-retired-words` | Retired words must keep counting as mastered | sonnet | done |
-| 19 | `step/19-autoplay-word` | Speak the word once when a card appears | sonnet | done |
-| 20 | `step/20-tap-to-copy` | Tap word / meaning / sentence to copy | sonnet | done |
-| 21 | `step/21-privacy-manifest` | Privacy manifest | sonnet | done |
-| 22 | `step/22-nothing-due` | Say so when nothing is due | sonnet | done |
-| 23 | `step/23-daily-reminder` | Daily reminder notification | opus | done |
-| 24 | `step/24-progress-snapshot` | App Group + progress snapshot | sonnet | done |
-| 25 | `step/25-widget` | Summary widget | opus | done |
-| 26 | `step/26-lock-screen-widget` | Lock screen widgets | sonnet | done |
-| 27 | `step/27-widget-countdown-localization` | The widget's countdown string is not localized | sonnet | done |
-| 28 | `step/28-release-hygiene` | Release hygiene before any pipeline | sonnet | done |
-| 29 | `step/29-fastlane` | Fastlane, proven from the laptop | opus | done |
-| 30 | `step/30-github-actions` | GitHub Actions: main → TestFlight | opus | done |
-| 31 | `step/31-pr-check` | Build + test check on pull requests | sonnet | done |
-| 32 | `step/32-shake-undo` | Shake to undo | opus | done |
-| 33 | `step/33-readme` | The README describes an app that no longer exists | sonnet | done |
-| 34 | `step/34-store-listing` | App Store listing for 2.0 | sonnet | done |
-| 35 | — | Merge into `main`: the 2.0 release | — | todo |
-| 36 | `step/36-audio-session` | Audio session is configured on every utterance | sonnet | done |
+| 39 | `step/39-working-agreement` | Make the working agreement match reality | sonnet | done |
+| 40 | `step/40-plan-reset` | Archive the 2.0 plan, start a clean one | sonnet | done |
+| 41 | `step/41-app-icon` | New app icon | opus | done |
+| 42 | `step/42-website` | GitHub Pages site | opus | done |
+| 43 | `step/43-screenshot-mode` | Debug screenshot mode | sonnet | done |
+| 44 | `step/44-listing-and-licence` | Finish the listing, decide the licence | sonnet | done |
+| 45 | `step/45-site-gallery` | Screenshot gallery on the site | sonnet | done |
+| 46 | `step/46-store-images` | App Store marketing images | opus | done |
+| 47 | `refactor/use-library-due-api` | Use LeitnerSwift's own due query | sonnet | done |
+| 48 | `feat/persist-card-review-date` | Persist each card's own review date | sonnet | done |
+| 49 | — | Merge into `main`: the 2.0 release | — | todo |
 
-Step 14 was added and done after 09, out of numeric order: the flat `thousand/` directory had to be
-sorted before 10 and 11 pour new screen files into it.
+Order is numeric. 41 before 42 because the site needs the icon; 45 was held back until step 43
+made it possible to take a screenshot worth showing.
 
-**Remaining order — not numeric.** The numbers are identifiers tied to branch names; the sequence
-is `31 → 34 → 35`. Everything about the app itself gets finished and merged into
-`feature/gamify` first, and shipping comes last.
+47 and 48 are recorded after the fact: they were found and fixed outside the plan, on branches
+named for the work rather than a step number. The numbers are theirs now so the record is whole;
+the branch column keeps the names that actually exist in the history.
 
-Step 30's workflow is already merged but inert: it triggers on `push` to `main` only, and `main`
-still holds the 1.0 App Store build. Nothing reaches TestFlight until step 35 moves `main`.
+49 is the release. Everything before it is reversible.
 
 ---
 
-## 01 — Card screen redesign
-
-Implement screens 1 and 2 of `docs/DESIGN.md`: tap-to-flip, box badge and `n / 10` session
-indicator at the top, word + speaker on the front, meaning + example sentence box on the back.
-The sentence box is hidden entirely when `exampleSentence` is nil. Keep the ✓/✗ buttons.
-
-Out of scope: swipe (step 09), any ViewModel or data-layer behaviour change.
-Touch `ContentView.swift` and new view files only.
-
-## 02 — `contentVersion` counter
-
-Add `"contentVersion": 1` to `thousand/de.json`. Replace the `InitialCardsAdded: Bool`
-UserDefaults flag in `thousandApp.swift` with `seededContentVersion: Int`. On launch, if the
-bundled version is higher than the stored one, wipe the SwiftData store and re-seed from
-scratch, then store the new version.
-
-No progress preservation, no matching, no user-facing notice — see `CLAUDE.md`.
-
-## 03 — Pick a real German frequency list
-
-Source a lemmatised German frequency list with a licence that allows commercial redistribution.
-Leading candidate: Leipzig Corpora Collection (CC BY 4.0). Extract the top 1000 lemmas.
-Record the licence and the attribution text the app will have to show.
-
-Deliverable: the raw list plus a short note on why this source was chosen.
-No app code changes in this step.
-
-Done: `tools/de_frequency_top2000.tsv`, built by `tools/build_frequency_list.py` from three
-Leipzig corpora (news / web / Wikipedia, ~13.3M tokens). `docs/WORDLIST.md` records the
-licence, the attribution the app has to show, why the alternatives were rejected, and the
-defect list that step 05 has to work through.
-
-## 04 — Merge frequency list with a dictionary
-
-Write a script (Python, kept in `tools/`) that joins the frequency list with a Wiktionary-derived
-German→English dictionary. For each word, output the candidate English senses, the part of
-speech, and the article for nouns.
-
-Input is `tools/de_frequency_top2000.tsv` from step 03. The dictionary side is
-`https://kaikki.org/dictionary/German/kaikki.org-dictionary-German.jsonl` — the wiktextract
-dump of English Wiktionary's German entries, 1.0 GB, one JSON object per sense, carrying the
-English gloss, the POS and the noun gender. Stream it, do not load it; keep it out of the repo.
-
-Licence: Wiktionary is CC BY-SA, which is the share-alike this project dodged for the
-frequency list. The dump is therefore a *candidate generator only* — step 05 picks and writes
-the final one-sense gloss by hand, so what ships is the editorial choice rather than a copy
-of Wiktionary. Credit Wiktionary in step 13 regardless; it is free to do and settles the
-question.
-
-Deliverable: `de_draft.json` plus a report of words that found no dictionary match.
-
-Done: `tools/build_dictionary_draft.py` streams the kaikki dump and joins it with
-`de_frequency_top2000.tsv`. `tools/de_draft.json` has candidate glosses, POS and (for nouns)
-the article for all 1000 words — 991 matched directly, 9 fell back to no candidates (frequency-
-list stems like `jed`, `besonder`, `beid`, `zuminde`, and non-German corpus noise: `of`, `The`,
-`de`, `New`, `Thoma`). `tools/de_draft_report.md` lists the 9 misses for step 05 to resolve by
-hand. The kaikki dump itself (1GB) is not committed.
-
-## 05 — Editorial pass over the 1000 words
-
-Go through `de_draft.json` in batches of 100, presenting each batch to the user for approval.
-For every word pick exactly one, most common English sense. Prefix nouns with their article
-(`das Haus`), put verbs in the infinitive (`gehen`).
-
-Deliverable: the final `thousand/de.json`, same schema as today plus `contentVersion`.
-
-Done: `tools/de_editorial.tsv` is the hand-written result, `tools/editorial.py` turns it into
-`thousand/de.json` at `contentVersion` 2. 1000 words, every one with a single English gloss,
-nouns carrying their article and verbs in the infinitive.
-
-55 of the draft's 1000 entries were thrown away, and the list was filled back up with 51 words
-from ranks 1001–1057 of the frequency list plus `Sie` and three weekdays. What went: corpus
-noise (`of`, `The`, `de`, `New`, `A`, `m`, `II`), initialisms and organisation names
-(`FC`, `SPD`, `EU`, `AG`, `Union`), every proper noun including `Deutschland`, personal names,
-lemmatiser stems (`ander`, `jed`, `beid`, `zuminde`, `viert` …, restored to their citation
-forms instead of dropped), bare participles (`gefunden`, `gebracht`, `verloren`, `gebaut` …)
-and three lemmatiser slips where the stem is a rare word the corpus never used —
-`feilbieten`, `belieben`, `fällen`.
-
-Three calls from the `docs/WORDLIST.md` defect list went the way that file recommended:
-proper nouns are all gone, `sie` and `Sie` are two cards, and the four missing weekdays were
-added against frequency (`Dienstag` is rank 1836 in the corpus) because teaching five of
-seven is worse than teaching all of them. The preposition contractions (`im`, `am`, `zum`,
-`zur`, `vom`, `beim`, `ins`) were kept — they are worth a card each. Where two German words
-would have collided on one English gloss, the rarer one was given a narrower gloss
-(`schon` = "already" vs `bereits` = "already (formal)"); `build` fails if any collision is
-left.
-
-## 06 — Example sentence pilot
-
-Write a validation script (`tools/`) that checks each sentence: the target word appears in it,
-it is at most 5 words long, and every word in it is either an earlier-ranked word or a member of
-a small core allow-list (~40 basic words needed to form any sentence at all).
-
-Then write sentences for the first 50 words and present them to the user before going further.
-German only, A1 level, no English translation.
-
-Done: `tools/validate_sentences.py` enforces the three rules, comparing lemmas with simplemma
-(`ist` counts as `sein`, `Kinder` as `Kind`), so the same `.venv` as the frequency list is
-needed. `tools/de_sentences.tsv` holds the first 50 sentences, all passing.
-
-The allow-list ended up at ~50 words rather than 40: rank 3 has two earlier words to build
-from, so the floor has to carry the pronouns, `sein/haben/werden`, ten everyday nouns and nine
-verbs. Two sentences are stilted because the natural wording is not unlocked yet — `an` gets
-"an dem Tisch" because `am` is rank 27, and `zur` gets "zur Stadt" because Arbeit and Schule
-are not in the list. `sie`/`Sie` are checked case-sensitively and must appear mid-sentence,
-where the capital still carries information.
-
-No app code: writing the sentences into `de.json` and bumping `contentVersion` is step 07.
-
-## 07 — Remaining example sentences
-
-Same rules as step 06, in batches of 50, each batch passing the validation script.
-Bump `contentVersion` so the new sentences actually appear on device.
-
-The pipeline half is done ahead of the sentences: `WordToLearn` carries an optional
-`exampleSentence`, seeding passes it through instead of the hardcoded `nil`, and
-`editorial.py build` folds `de_sentences.tsv` into `thousand/de.json` at `contentVersion` 3,
-keyed by the shipped rank and refusing to attach a sentence written for a different word.
-A word with no sentence yet ships without the field, so the card draws without the box.
-
-Done: `tools/de_sentences.tsv` now carries all 1000 sentences, written 50 at a time and
-revalidated after every batch. `thousand/de.json` is at `contentVersion` 3 with an example
-sentence on every word.
-
-Four words needed an escape hatch in the validator. simplemma lemmatises their citation form
-to something their own inflected forms never reach — `gesamt` to `samen`, `vergangen` to
-`vergehen`, `folgend`/`kommend` to the plain verb — so the only token the lemma rules would
-accept reads badly in an A1 sentence. `INFLECTIONS` in `validate_sentences.py` lists the four
-declension paradigms by hand; each set counts as the target word and as an allowed token, for
-that target word only. The sentences are the natural attributive ones ("Das vergangene Jahr
-war gut.").
-
-## 08 — Replace Realm with SwiftData
-
-Done out of order, ahead of steps 02–07: `realm-core 14.13.1` does not compile against the
-iOS 27 SDK (`'is_pod' cannot be specialized`), which blocked every build.
-
-Realm is gone — package reference, `RealmBox/RealmCard/RealmWord/RealmCardStore` and the two
-`toRealm…` extensions with it. `StoredBox`/`StoredCard` are the SwiftData models; cards are flat
-and point at their box by index, so moving a card between boxes is one field write.
-
-This absorbs the old "persistence performance" step: `saveBoxes` no longer deletes and rewrites
-all 1000 cards, `try!` is gone, and writes run on a background `@ModelActor`, chained so they
-land in call order. The `CardStore` protocol and `WordViewModel` are untouched.
-
-`fetchBox(byId:)`, `updateBox` and `deleteBox` are dead API — nothing but the preview stub
-calls them. See step 12.
-
-## 09 — Swipe gesture + undo
-
-Add swipe as a shortcut on top of the ✓/✗ buttons: swipe toward ✓ is correct, toward ✗ is
-incorrect. The buttons stay. Ship undo in the same step — a mis-swipe must be recoverable.
-
-Done: `CardView` takes an optional `onSwipe`; a drag past 96pt flies the card off in 0.22s and
-answers, anything shorter springs back. While the finger is down the card carries the answer
-colour — a green or red border plus the matching ✓/✗ glyph, fading in with the distance. The
-✓/✗ buttons are untouched.
-
-The card is keyed on the card's id, because the usual flow is flip-then-swipe: without the key
-the next card inherits the previous card's flipped view and animates back to its front. With it
-every card is built fresh, front up. Its arrival is a fade from 96% scale over a ~0.3s spring —
-enough to read as a new card, too small to be a choreography. The answered card leaves with no
-transition at all: it is already off screen, and a fading exit gave it time to snap its drag
-offset back to centre — the old card visibly flashing in before the new one faded up.
-
-`Haptics` holds the four taps, primed generators so the first one of a drag is not late. One per
-thing the user did, at the moment they did it: a selection tick as the drag crosses the commit
-distance and again if it comes back under, then the answer on release — `.rigid` for correct,
-`.soft` for incorrect, told apart by texture rather than strength so neither is a reward or a
-reprimand. The ✓/✗ buttons give the same answer tap; undo gets a lighter one. Nothing fires on
-the new card's arrival: it lands 0.22s after the answer tap, and two taps per card is chatter.
-
-Undo is one level deep and lives only inside a session. `LeitnerSystem` has no reverse of
-`updateCard`, so `WordViewModel` snapshots `allBoxes` plus the session index before each answer
-and restores it through `loadBoxes`. The control is a small muted arrow left of the box badge,
-per the user's call — the ✓/✗ row stays exactly as `docs/DESIGN.md` specifies. It appears only
-when there is an answer to take back, and the last card of a session clears it, since finishing
-leaves the card screen.
-
-## 10 — Summary screen redesign
-
-Screen 3 of `docs/DESIGN.md`. Headline `mastered` metric over 1000, then five bars scaled
-relative to each other, animating in on appear. Replaces the current `total: 1000` bars.
-
-## 11 — Session end screen
-
-Screen 4 of `docs/DESIGN.md`, as its own view. Requires a session summary in the ViewModel
-(cards reviewed, moved up, to review). Today the app falls back to the summary screen, which
-conflates three different moments.
-
-## 12 — Cleanup
-
-- `Word.languageCode` is seeded as `""` in `thousandApp.swift`.
-- Meanings are looked up with `NSLocalizedString(englishWord)`, but `Localizable.xcstrings`
-  only holds the eight UI strings — no word meanings. So the call is a no-op passthrough today,
-  and duplicate English words would collide as keys if it were ever populated. Decide whether
-  word meanings are localised at all, and drop the mechanism if not.
-- The test files are entirely commented out; restore what still applies.
-  (`SwiftDataCardStoreTests` from step 08 is live and should stay.)
-- `CardStore.fetchBox(byId:)`, `updateBox` and `deleteBox` have no callers. Drop them.
-
-Done: `languageCode` now comes from `languageData.languageCode` ("de") instead of `""`. Word
-meanings are not localized — `Localizable.xcstrings` never carried word-meaning keys, so the
-`NSLocalizedString` call was always a no-op passthrough to `entry.englishWord`; the call is
-gone and `meaning` is assigned directly. `thousandTests.swift`'s old test targeted a
-`CacheService`/`LeitnerSystemProtocol` pair that no longer exists; replaced with a test of the
-same intent (cached boxes load into the Leitner system on init) against the current `CardStore`
-interface. The three unused `CardStore` methods are dropped from the protocol and both
-conformances (`SwiftDataCardStore`, `AnyCardStore`).
-
-## 13 — Attribution / About screen
-
-Not optional: CC BY is a licence *condition*, so the app may not ship the Leipzig-derived
-word list without carrying the notice. Step 03 established the debt, this pays it.
-
-A plain About screen reachable from the summary screen. Content:
-
-- the Leipzig copyright notice and CC BY line, verbatim from `docs/WORDLIST.md`
-- the Goldhahn/Eckart/Quasthoff citation Leipzig asks for
-- Wiktionary (CC BY-SA) as the source the meanings were drafted from, per step 04
-- `LeitnerSwift` and any other package licences
-
-Keep it one scrollable `Text` stack with a `#Preview`. No web view, no bundled HTML.
-
-Done: `AboutScreen.swift` in `Progress/` — three sections (word list, word meanings, software),
-all legal text as `Text(verbatim:)` so translation can never touch it. Reached from a quiet
-`info.circle` button in the top-trailing corner of `SummaryScreen`, opening as a sheet from
-`ContentView`. `LeitnerSwift` is the only third-party dependency the app ships (MIT, the user's
-own package); it is credited alongside Leipzig and Wiktionary.
-
-## 14 — Group the source files by screen
-
-Added after 09, done before 10: all 14 Swift files sat flat in `thousand/`, and steps 10 and 11
-were about to add a screen each.
-
-Grouped by screen rather than by layer — `App/`, `Card/`, `Progress/`, `Persistence/`, `Support/`
-— so everything one screen needs sits together, including its view model. A `Views/` folder holding
-seven files would flatten back out the moment the summary and session-end screens landed. Step 10
-gets `Summary/`, step 11 `SessionEnd/`.
-
-`Assets.xcassets`, `Preview Content`, `Localizable.xcstrings` and `de.json` stayed at the target
-root: the first two are where Xcode expects them and `Preview Content`'s path is baked into the
-`DEVELOPMENT_ASSET_PATHS` build setting.
-
-No code changed — folders carry no meaning in Swift, so no import needed touching. The moves were
-`git mv`, and `project.xcproj`'s flat file list became nested `group` nodes by hand, since this
-project format does not pick files up off disk.
-
-## 15 — Launch on the summary screen
-
-Today `ContentView.onAppear` calls through to `fetchNextSet()`, so opening the app drops the user
-straight into a review session. Opening the app should land on `SummaryScreen`; a session starts
-only when the user taps `start session`.
-
-Scope: `WordViewModel.onAppear` and `ContentView` only. Do not change how a session behaves once
-started, and do not touch the session-end flow — returning from `SessionEndScreen` already lands
-on the summary.
-
-Watch for: `onAppear` fires again when the About sheet is dismissed, so it must be idempotent and
-must not restart a session that is in progress.
-
-## 16 — "How it works" screen
-
-The app never explains the Leitner system. Users have no way to learn why a word came back, what
-`box 3` means, or that the `mastered` figure on the summary screen is boxes 3+4+5 combined.
-
-One screen, reachable from a quiet `questionmark.circle` button on `SummaryScreen`, presented as
-a sheet next to the existing About sheet. Sections:
-
-- What the five boxes are, and why the interval grows as a card moves up.
-- What a correct answer does (card moves up one box) and what a wrong answer does.
-- What `mastered` counts.
-- Pronunciation: the app uses the best German voice installed on the device, and a better one can
-  be downloaded in Settings. Ships with step 17's copy and button — write the section, leave the
-  button wiring to 17 if 17 is not done yet.
-
-Plain `Text` stack with a `#Preview`, same shape as `AboutScreen`. No onboarding flow, no
-multi-page tutorial, no illustrations. It may be shown automatically on first launch at most once.
-
-## 17 — Pick the best installed German voice
-
-`GermanSpeaker` in `Card/SpeakerButton.swift` asks for `siri_female_de-DE_compact`, which is
-Apple's lowest-quality variant, and falls back to any `de` voice. Instead, enumerate
-`AVSpeechSynthesisVoice.speechVoices()`, keep the German ones, and pick the highest
-`AVSpeechSynthesisVoiceQuality` available (premium > enhanced > default).
-
-Also add the button behind step 16's pronunciation section that sends the user to Settings so they
-can download a better voice.
-
-Caveat to respect: there is no public deep link to Settings → Accessibility → Spoken Content →
-Voices. `UIApplication.openSettingsURLString` only opens this app's own settings page, and
-`App-Prefs:` style URLs are private API and risk App Store rejection. So the section must spell the
-path out in words; the button is a convenience that opens Settings, not a shortcut to the exact
-pane. Do not ship a private URL scheme.
-
-Done: `GermanSpeaker` drops the hardcoded `siri_female_de-DE_compact` identifier and instead
-filters `AVSpeechSynthesisVoice.speechVoices()` to German voices, picking the highest
-`AVSpeechSynthesisVoiceQuality` (premium > enhanced > default), re-read on every `speak(_:)`
-call so a voice downloaded mid-session is picked up without a relaunch. `ContentView` wires
-`HowItWorksScreen`'s `onOpenSettings` to `UIApplication.openSettingsURLString`, per the caveat
-above — no private URL scheme.
-
-Also added, at the user's request after the step's original scope: the Pronunciation section
-now shows which voice and quality tier is currently in use (`GermanSpeaker.currentVoiceDescription`),
-so "a better one can be downloaded" has something concrete to compare against. New
-`Localizable.xcstrings` key: `Currently using`.
-
-## 18 — Retired words must keep counting as mastered
-
-Found while writing step 16's copy. `LeitnerSystem.updateCard` removes a card from the system
-outright when it is answered correctly in the last box — it is retired, not promoted. So box 5's
-count drops, and because `masteredCount` is boxes 3+4+5, the `mastered` headline goes *down* when
-the user does the single best thing they can do. The session-end screen's `masteredAfter` has the
-same problem.
-
-Scope: the app side only — `LeitnerSwift` is not to be edited (see `CLAUDE.md`). Options to weigh:
-count retired cards by subtracting the live total from the seeded word count, or track retirements
-in the store. Decide in the step, and keep the summary screen's five bars as they are.
-
-Done: went with subtracting the live total from the seeded word count — no new persistence, and it
-stays correct for free across undo (which just restores `allBoxes`). `thousandApp` reads
-`de.json`'s word count at every launch, re-seed or not, and hands it to `WordViewModel` as
-`totalWordCount`. `WordViewModel.retiredCount` is `totalWordCount` minus the live sum of
-`progress`; `masteredWordCount` is boxes 3–5 plus `retiredCount`, and both session-start and
-session-end figures use it instead of the bare `masteredCount(in:)`. `SummaryScreen` gets a
-`retiredCount` parameter it adds to its own headline; the five per-box bars are untouched, as
-asked. No change to `SessionEndScreen` — it already took its numbers from the view model.
-
-## 19 — Speak the word once when a card appears
-
-Reaching for the speaker button on every card is friction. When a card's front appears, speak the
-word once by itself.
-
-Scope: `CardScreen` and `GermanSpeaker` in `Card/SpeakerButton.swift`. The speaker buttons stay —
-auto-play is in addition to them, not a replacement, and the sentence on the back is never spoken
-automatically.
-
-Rules:
-
-- Exactly once per card. `CardScreen` already keys its transition on `cardID`, so drive the
-  playback off that (`.task(id: cardID)`) — flipping the card, undoing and redrawing, or returning
-  from a sheet must not make it speak again.
-- Undo steps back to a different `cardID`, so that card speaks again. That is correct: the user is
-  seeing it fresh.
-- Never override the ringer switch. Do not set the audio session to `.playback`. Audio the user did
-  not ask for must stay silent when the phone is muted.
-- Set the audio session category to `.ambient` before speaking. The default `.soloAmbient` stops
-  whatever the user was already listening to; with auto-play that would kill their music on every
-  single card, which a manual button press never did.
-
-Open question, decide while building: there is no settings screen, so shipping this means the user
-cannot turn it off. Ship it without a toggle first and see whether it is annoying in practice —
-adding a settings screen for one switch is worse than the problem it solves. If it does turn out to
-need one, that is its own step.
-
-## 20 — Tap word / meaning / sentence to copy
-
-Tapping the German word on the front, the English meaning on the back, or the example sentence on
-the back copies that text to the clipboard. No confirmation UI beyond what the tap already implies
-is out of scope for this step unless it turns out silent copying is confusing to test.
-
-Scope: `Card/CardView.swift` and `Card/SentenceBox.swift` only. The front and back of the card
-already flip on any tap via the card-level `onTapGesture`; the copy tap has to sit on the specific
-`Text` and take priority over that without disabling the flip elsewhere on the card.
-
-Done: `.onTapGesture` added directly to the German word `Text` (front), the English meaning `Text`
-(back), and the token `HStack` in `SentenceBox` (whole sentence, not per-token). Sitting on the
-specific view rather than the card wins the hit test, so the rest of the card still flips as
-before. Each writes to `UIPasteboard.general` and fires a new `Haptics.copied()` (reuses the
-`undo` generator's `.light` style).
-
-It turned out silent copying was confusing to test, per the option the step left open. `CardView`
-now shows a small "Copied" pill (`.overlay(alignment: .top)`, added after the flip's
-`.rotation3DEffect` so it stays upright through the animation instead of mirroring with the card),
-fading in on any of the three taps and out ~1.1s later; `SentenceBox` reports its own copy up
-through a new `onCopy` closure so all three routes through one pill instead of three.
-
-Also found while testing: `.textSelection(.enabled)` (kept from step 01, and worth keeping — the
-user wants the long-press selection, not just the tap-to-copy) left a selection stuck on screen
-with no way to clear it, because front and back never unmount — only their opacity toggles — so
-the underlying selection host stays alive across a flip. Both selectable `Text` views are now
-keyed `.id(isFlipped)`, forcing a fresh instance whenever the face changes and dropping whatever
-selection the previous face was left in.
-
-One more round: the example sentence itself was tap-to-copy only, not selectable, unlike the word
-and meaning. `SentenceBox` renders it as one `Text` per token so the target word can sit in its own
-accent-tinted pill (`docs/DESIGN.md`'s highlight, kept as-is rather than swapped for a selection-
-friendlier style) — `.textSelection(.enabled)` on the token `HStack` covers the whole row, letting
-a long-press drag select across tokens as one continuous span instead of one word at a time.
-`SentenceBox`'s call site in `CardView` gets the same `.id(isFlipped)` treatment as the two `Text`
-views, for the same reason.
-
-## 21 — Privacy manifest
-
-The app has no `PrivacyInfo.xcprivacy`, but it calls `UserDefaults` in `App/thousandApp.swift`
-(`seededContentVersion`) and `Card/WordViewModel.swift`. `UserDefaults` is on Apple's
-required-reason API list, so an App Store submission without a manifest declaring it is rejected.
-
-Add `thousand/PrivacyInfo.xcprivacy` and register it as a resource of the `thousand` target.
-Contents:
-
-- `NSPrivacyAccessedAPITypes`: `NSPrivacyAccessedAPICategoryUserDefaults` with reason `CA92.1`
-  (access to data stored by this app only).
-- `NSPrivacyCollectedDataTypes`: empty. The app collects nothing — no analytics, no crash
-  reporter, no network calls at all.
-- `NSPrivacyTracking`: `false`. No `NSPrivacyTrackingDomains`.
-
-Check `LeitnerSwift` while here: a dependency ships its own manifest, and if it does not use any
-required-reason API there is nothing to do, but confirm rather than assume.
-
-Remember `project.xcproj` is the JSON project format — a new file has to be added to the file
-list and the resources phase by hand, it is not picked up off disk.
-
-Done: `thousand/PrivacyInfo.xcprivacy` declares `NSPrivacyAccessedAPICategoryUserDefaults` with
-reason `CA92.1`, empty `NSPrivacyCollectedDataTypes`, and `NSPrivacyTracking` false with no
-tracking domains. Registered as a `thousand/resources` entry in `project.xcproj`, alongside
-`Localizable.xcstrings` and `de.json`. `LeitnerSwift`'s checked-out source (under
-`SourcePackages/checkouts` in DerivedData) carries no privacy manifest of its own and uses none
-of the required-reason APIs (`UserDefaults`, `FileManager` timestamps, etc.), so there is
-nothing for it to declare. `WordViewModel.swift`'s `UserDefaults` mention that motivated this
-step is a stale comment, not a call — the only real usage is `thousandApp.swift`'s
-`seededContentVersion`.
-
-## 22 — Say so when nothing is due
-
-Tapping `start session` when no card is due does nothing visible. `fetchNextSet()` gets an empty
-list, `loadNextCard()` correctly declines to show a `0 cards reviewed` celebration, and the user is
-left on the summary screen with no feedback. This happens every day, by design of the Leitner
-system — it is the normal state, not an edge case.
-
-On `SummaryScreen`:
-
-- Show how many cards are due right now, next to or under the button.
-- When that count is zero, disable `start session` and say when the next card comes due —
-  "next review in about 5 hours". Derive it from the earliest `lastReviewedDate + reviewInterval`
-  across the boxes; expose it from `WordViewModel` as a date, and let the view do the formatting.
-- Keep it one quiet line. No illustration, no empty-state artwork.
-
-Also in this step: delete the stray `print(dueCards.count)` at `WordViewModel.swift:123`.
-
-Out of scope: changing the session size, changing what `dueForReview` returns.
-
-Done: `WordViewModel.dueCount` counts cards across every box whose `nextReviewDate` has passed —
-the same check `LeitnerSystem.dueForReview` makes internally, but counting instead of throwing
-when there are none. `nextReviewDate` is nil once `dueCount` is positive, otherwise the earliest
-`nextReviewDate` among boxes that still hold cards. `SummaryScreen` shows "N cards due" under the
-box bars when `dueCount > 0`; at zero it disables `start session` (50% opacity) and shows "next
-review …" instead, formatted by `RelativeDateTimeFormatter` in the view, per the view model only
-exposing a date. The stray `print(dueCards.count)` in `fetchNextSet()` is gone.
-
-## 23 — Daily reminder notification
-
-Spaced repetition only works if the user comes back, and nothing in the app asks them to. Add a
-local notification — `UNUserNotificationCenter` only, no server, no push entitlement.
-
-- Ask for permission after the user finishes their first session, from `SessionEndScreen`. Never
-  at launch: a permission prompt before the app has shown its worth gets denied, and a denial is
-  permanent unless the user digs into Settings.
-- Schedule one notification for the moment the next card comes due — the same date step 22
-  computes. Reschedule it whenever the app goes to the background, so it always reflects the
-  current state.
-- Do not schedule a fixed daily repeat. A reminder that fires when nothing is due trains the user
-  to ignore it.
-- Cancel and reschedule rather than stacking requests; there should never be more than one pending.
-- No in-app toggle. iOS Settings is the off switch, and a settings screen for one boolean is not
-  worth it — same call as step 19.
-
-Copy should say what is waiting, not nag: "12 words are ready to review".
-
-Done: `ReminderScheduler` (in `Support/`) owns the whole thing — `requestAuthorization()` and
-`reschedule(for:)`, both static, both against `UNUserNotificationCenter.current()` only. One
-identifier, `next-review`, removed before every add, so a second request can never pile up.
-`WordViewModel.nextReview` pairs step 22's `nextReviewDate` with the number of cards that will be
-waiting at that moment, as a plain `NextReview` value, so the scheduler never touches the Leitner
-system. `SessionEndScreen` takes an `onReminderOpportunity` closure and calls it 1.2s after the
-screen lands, past the check and the bar animation; `ContentView` wires it to ask for permission
-and then schedule at once, and reschedules again on `scenePhase == .background`. `reschedule`
-declines to schedule when authorization is not granted, and a nil `nextReview` — cards already due,
-or an empty list — just clears the pending request: a user with cards waiting is not reminded of
-work they can do right now, and gets a reminder again as soon as they next finish a session.
-
-## 24 — App Group + progress snapshot
-
-Groundwork for the widget, app side only. Nothing visible changes; the step is done when the
-snapshot file exists on disk with the right numbers in it.
-
-A widget extension cannot read the app's private container, so the two need an App Group. The
-widget, however, only needs six numbers — it does not need the cards. So **do not move the
-SwiftData store into the group.** Leave `ModelContainer(for: StoredBox.self, StoredCard.self)` in
-`thousandApp.swift` exactly where it is, and instead write a small snapshot the widget can read:
-
-```
-struct ProgressSnapshot: Codable {
-    let boxCounts: [Int]      // five entries
-    let mastered: Int         // boxes 3+4+5, matching SummaryScreen
-    let total: Int            // 1000
-    let dueCount: Int
-    let nextDue: Date?
-    let updated: Date
-}
-```
-
-Written as JSON to the App Group container. Rewrite it whenever progress changes — after each
-answer and at the end of a session — from the same values `SummaryScreen` already shows, so the
-two can never disagree.
-
-Why not share the store: a widget extension gets a much smaller memory budget than the app, and
-standing up SwiftData inside it means the model types, the store code and every future schema
-change have to be shared with a second target. Six numbers in a JSON file cost nothing and cannot
-break the app if the widget is ever removed.
-
-Caveat worth checking first: an App Group identifier has to be registered on the Apple developer
-account and the provisioning profile regenerated. If that is not available, this step stalls — find
-out before writing code. Use `group.` + the app's bundle identifier.
-
-New file: `thousand/Support/ProgressSnapshot.swift`, plus an entitlements file for the app target
-(none exists today). `project.xcproj` is the JSON project format — the entitlements file has to be
-wired into the build settings by hand.
-
-Done: `group.com.mfsaglam.thousand` registered on the developer account and the app's App ID; the
-App Group capability was added through Xcode's own Signing & Capabilities UI, which wrote
-`thousand/thousand.entitlements` (the `com.apple.security.application-groups` array) and updated
-`project.xcproj`'s build settings (`CODE_SIGN_ENTITLEMENTS`, `REGISTER_APP_GROUPS`) by hand for this
-project format — carried over from an in-progress state on `feature/gamify` onto this step's branch.
-
-`ProgressSnapshot` is a plain `Codable` struct matching the plan exactly, with a `write()` method
-that resolves the App Group container via `FileManager.containerURL(forSecurityApplicationGroupIdentifier:)`
-and does nothing if it is unavailable — a stale widget is not worth crashing the app over.
-`WordViewModel.writeProgressSnapshot()` builds one from the same `progress`, `masteredWordCount`,
-`totalWordCount`, `dueCount` and `nextReviewDate` the summary screen already reads, so the two can
-never disagree. It runs at the end of `saveProgress()` (after every answer and every undo, since
-both call it) and once at `init`, so the file exists on disk from first launch rather than only
-after the first answer.
-
-## 25 — Summary widget
-
-A widget extension target with one widget: the summary screen, at a glance, on the home screen.
-The point is ambient presence — seeing the progress bar sitting there is the nudge to come back.
-
-- New target, `WordLernWidget`, embedded in the app. This is the fiddly part: in the JSON project
-  format the target, its build phases and the embed-extension step all have to be written by hand.
-  Do this first and get an empty widget rendering before designing anything.
-- The timeline provider reads the JSON from step 24. No SwiftData, no `LeitnerSwift` import.
-- `systemSmall`: the mastered count over 1000, a single progress bar, and the due count.
-- `systemMedium`: the same, plus the five box bars from `ProgressBars`.
-- Call `WidgetCenter.shared.reloadAllTimelines()` from the app wherever the snapshot is written.
-- Add one timeline entry at `nextDue` so the due count refreshes itself when cards come due, even
-  if the app is not opened.
-- Tapping the widget opens the app, which lands on the summary screen already (step 15). No
-  `widgetURL` and no deep-link routing needed.
-
-Constraints to design within: widgets do not animate, so the bars are static — the appear
-animation from step 10 does not apply. No audio, no interaction in this step. Text is small; do
-not try to fit all five box labels into `systemSmall`.
-
-Add a widget section to `docs/DESIGN.md` describing what shipped.
-
-Done: `WordLernWidget`, an `app-extension` target written into `project.xcproj` by hand, embedded
-by an `Embed Foundation Extensions` copy phase on the app with
-`bundle-base-path: plugins-directory`. Three things about the JSON project format that cost time
-and are worth writing down.
-
-A build phase reference in `target-membership` is `<target>/<kind>`, and for kinds a target can
-hold more than one of — `copy` — a third component disambiguates by the phase's `name`:
-
-```
-"target-membership": [
-  { "build-phase": "thousand/copy/Embed Foundation Extensions", "code-sign-on-copy": true },
-]
-```
-
-Bare `thousand/copy` fails to load with "Could not uniquely resolve the build phase name",
-*even when the target has only one copy phase*, so the phase must be named. Object ids cannot be
-referenced at all. `code-sign-on-copy` only survives on that object form of a membership entry,
-not as a sibling of `path`.
-
-And `xcprojformatter` is not a trustworthy validator: it rejects the `copy/<name>` form that
-Xcode itself requires, silently drops keys it does not recognise, and `--update` deletes
-`project.xcworkspace/xcshareddata/swiftpm/Package.resolved`. Use
-`xcodebuild -list -project thousand.xcodeproj` instead — it loads the project and reports exactly
-the error Xcode would, without building anything.
-
-`ProgressSnapshot.swift` gained a `read()` and is compiled into both targets, as is
-`ProgressBars.swift`, so the widget's bars are literally the summary screen's `Bar` and
-`BoxPalette`. `Localizable.xcstrings` is a resource of both targets. The timeline is two entries
-at most — now, and `nextDue` — with policy `.never` when there is no future `nextDue`, since
-`WordViewModel.writeProgressSnapshot()` now calls `WidgetCenter.shared.reloadAllTimelines()` on
-every write. The entry at `nextDue` carries `dueSinceSnapshot` and shows `review ready` rather
-than a count: the snapshot records *when* the next card comes due, not how many will be waiting.
-
-## 26 — Lock screen widgets
-
-`accessoryCircular` and `accessoryRectangular` variants of the same widget, reading the same
-snapshot. Circular shows the mastered fraction as a gauge; rectangular shows mastered plus the due
-count on one line.
-
-Small step, worth doing only after 25 is proven. These render monochrome and are tiny — if the
-content does not survive at that size, say so and drop the step rather than shipping something
-unreadable.
-
-Done: no new target and no new file — `.accessoryCircular` and `.accessoryRectangular` joined
-`supportedFamilies` on the existing `SummaryWidget`, and `SummaryWidgetView` grew two cases.
-
-The content does survive, but only after dropping almost everything. Circular is a
-`Gauge` at `mastered / total` in `.accessoryCircularCapacity` with the count in the ring and
-nothing else — the due count alongside it was unreadable, so it lives on the rectangular family
-instead. Rectangular is an `.accessoryLinearCapacity` gauge whose label is the one line the plan
-asked for, `700/1000 mastered` on the left and the home screen widget's `WidgetStatusLine` —
-`12 cards due` / the live countdown / `all caught up` — on the right; the style puts the bar under
-that label on its own, which is why there is no separate bar view. The five box bars and
-`BoxPalette` are not used at all: the lock screen renders monochrome, so colour carries nothing
-and five bars at that height is noise.
-
-Two things the families force: `containerBackground` must be empty for them, or the opaque
-`systemBackground` from step 25 punches a card-shaped hole into the lock screen, so it is now
-applied conditionally inside `SummaryWidgetView`. And the nil-snapshot branch needs a circular
-case of its own — `open WordLern to start` does not fit in the ring, so it shows an empty gauge.
-
-## 27 — The widget's countdown string is not localized
-
-Left behind by step 25, deliberately. The widget's `next review in 5 hours` line is
-`Text(LocalizedStringKey("next review in \(nextDue, style: .relative)"))` in
-`WordLernWidget/SummaryWidget.swift` — a `Text.DateStyle` interpolation, which is what keeps the
-countdown ticking without the widget being reloaded. Xcode does **not** extract that
-interpolation into `Localizable.xcstrings`: two builds, with both `Text("…")` and
-`Text(LocalizedStringKey("…"))`, produced no key. So this one line falls back to its English
-literal in all twelve languages while the widget's other five strings translate normally.
-
-The fix is presumably to add the key by hand to the catalog, but the runtime lookup key has to be
-confirmed first — a `Date` + `style` interpolation is *assumed* to render as `%@`, and an entry
-under the wrong key is worse than none, because it looks translated and silently never applies.
-So: confirm the key, then add it.
-
-How to confirm: build, then read the compiled `Localizable.strings` out of the built widget for a
-language that has a translation, or set one language's value by hand and run the widget in the
-simulator under that language. Do not guess.
-
-If the key turns out not to be addressable at all, the fallback is to drop the interpolation and
-pass the whole sentence as a pre-formatted string, accepting that the countdown then only updates
-when the timeline reloads — which for this line means at `nextDue`, i.e. it would read
-`next review in 5 hours` for five hours. Say so and let the user choose; do not make that
-trade quietly.
-
-Done — and both of the premises above turned out to be wrong, so nothing was added to the catalog.
-
-The key **is** extracted, as `next review in %@`. It entered `Localizable.xcstrings` in `0f512b7`,
-the step 26 build; it was absent in step 25's commit. So a `Text.DateStyle` interpolation does
-extract, exactly as `%@`, and step 25's note that two builds produced no key described a build
-that had not settled rather than a limitation. No fallback needed: the interpolation stays and the
-countdown stays live.
-
-The second premise — "falls back to English while the widget's other five strings translate
-normally" — was wrong in the other direction. Nothing translates. All 45 keys in the catalog are
-untranslated (zero `localizations` blocks, zero `stringUnit`s), while the project declared twelve
-supported languages. The build proves it: `thousand.app` and `WordLernWidget.appex` contain no
-`.lproj` directory at all, because with no translations the compiler emits no
-`Localizable.strings`. That countdown line was never the odd one out.
-
-So there was no value to add by hand, and the real defect was the twelve-language claim. On the
-user's call, `localizations.supported` in `project.xcproj` is now `["en"]` alone — `Base` went
-with them, since the app has no xib or storyboard to base-localize. `LocalizedStringKey` and the
-catalog stay exactly as they are: the working agreement is that UI strings go through the catalog
-and the UI language is English, which is now what the project actually says. Re-adding a language
-is one entry in that list plus filling the catalog in, whenever that becomes a real step.
-
-## 28 — Release hygiene before any pipeline
-
-Small settings changes that have to be right before automation is worth building. No fastlane, no
-CI in this step.
-
-- `ITSAppUsesNonExemptEncryption` is not set anywhere. The app target generates its Info.plist, so
-  add `INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO` to its build settings (and the widget's
-  `WordLernWidget/Info.plist`). Without it every single TestFlight build stops and waits for the
-  export-compliance question to be answered by hand, which defeats the point of a pipeline. The
-  app makes no network calls and uses no encryption beyond what Apple exempts.
-- Decide the version. `MARKETING_VERSION` is `1.0` and that is what is on the App Store; what is
-  on `feature/gamify` is a rewrite, not a patch. `2.0` is the honest number.
-- Decide where the build number comes from. `CURRENT_PROJECT_VERSION` is `1` and TestFlight
-  rejects a build number it has seen before. Pick one rule and write it down: either the CI run
-  number, or `latest_testflight_build_number + 1` looked up at build time. Do not bump it by hand.
-- Check the App Store Connect record actually has the widget's bundle id
-  (`com.mfsaglam.thousand.WordLernWidget`) and an App Group registered for both targets. A missing
-  identifier surfaces as an opaque signing failure later.
-
-Done. `INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO` is now on the `thousand` target's build
-settings and, since the widget ships a literal `Info.plist` rather than a fully generated one, on
-both the `WordLernWidget` target's build settings and `WordLernWidget/Info.plist` directly.
-`MARKETING_VERSION` is `2.0` on both targets.
-
-Build number rule: `CURRENT_PROJECT_VERSION` is set at build time in the fastlane lane (step 29) to
-`latest_testflight_build_number + 1`, looked up via `app_store_connect_api_key` +
-`latest_testflight_build_number`. Not the CI run number — App Store Connect is the source of truth
-for what's already been uploaded, and a CI run number has no relationship to it if a build is ever
-uploaded by hand or a workflow is re-run. Do not bump `CURRENT_PROJECT_VERSION` by hand in the
-project file.
-
-The App Store Connect record check (widget bundle id `com.mfsaglam.thousand.WordLernWidget` and an
-App Group registered for both targets) is a console check outside this repo — the user needs to
-confirm it in App Store Connect / the Apple Developer portal before step 29.
-
-## 29 — Fastlane, proven from the laptop
-
-Set up fastlane and get one build to TestFlight **from the user's machine**, with a human watching.
-Do not write any GitHub Actions yet.
-
-Debugging code signing inside a CI runner is miserable — the feedback loop is ten minutes long and
-the errors are opaque. Everything that can be proven locally should be proven locally first.
-
-- `fastlane init`, then a single `beta` lane: bump the build number per step 28's rule, build the
-  archive, upload to TestFlight.
-- Authentication: an App Store Connect API key (`.p8` + key id + issuer id), not an Apple ID. The
-  user has to create it in App Store Connect; it cannot be generated from here. API keys have no
-  two-factor prompt, which is the whole reason CI can use them.
-- Code signing: this app now needs **two** provisioning profiles — the app and the widget
-  extension — both carrying the App Group entitlement. Use `match` with a private certificates
-  repo. Automatic signing works in Xcode because a human is logged in; CI has no such luxury, and
-  `match` is the thing that makes signing reproducible.
-- Deliverable: a build visible in TestFlight, installed on the user's own device, and a `Fastfile`
-  committed. Keep the `.p8` and the match passphrase out of the repo.
-
-Note: this first upload ships the entire rewrite. Better that a human watches it land than that a
-pipeline does it unattended.
-
-Done. Version 2.0 build 1 was archived, signed and uploaded to TestFlight from the laptop on
-2026-09-30.
-
-`fastlane/Fastfile` has one `beta` lane: authenticate with an App Store Connect API key, read
-`latest_testflight_build_number + 1`, run `match(type: "appstore")` for both bundle ids, archive,
-export, upload. The build number is passed to the archive as
-`xcargs: "CURRENT_PROJECT_VERSION=…"` — the lane never writes to the project file. `setup_ci` runs
-only under CI so step 30 gets a temporary keychain for free.
-
-`fastlane/Matchfile` points at `git@github.com:mfsaglam/ios-certificates.git` (private) and lists
-both `com.mfsaglam.thousand` and `com.mfsaglam.thousand.WordLernWidget`.
-
-Signing is now manual in the **Release** configuration only, written directly into
-`project.xcproj` per target via the setting-condition syntax:
-`CODE_SIGN_STYLE[config=Debug] = Automatic` / `CODE_SIGN_STYLE[config=Release] = Manual`,
-`CODE_SIGN_IDENTITY[config=Release] = Apple Distribution`,
-`PROVISIONING_PROFILE_SPECIFIER[config=Release] = match AppStore <bundle id>`. Debug keeps
-automatic signing, so day-to-day work in Xcode is unchanged. Fastlane's
-`update_code_signing_settings` was not used: it goes through the `xcodeproj` gem, which cannot
-parse the JSON `project.xcproj` format.
-
-Two things about that format that cost a build each, and that step 30 must not undo:
-- A conditional setting does **not** override its unconditional sibling. Leaving
-  `CODE_SIGN_STYLE = Automatic` in place next to `CODE_SIGN_STYLE[config=Release] = Manual` left
-  the target automatically signed and the archive failed with "conflicting provisioning
-  settings". Both configurations have to be spelled out as conditions. Verify with
-  `xcodebuild -showBuildSettings -target <t> -configuration Release`, not by reading the file.
-- `build_app` is pointed at `thousand.xcodeproj/project.xcworkspace`, **not** at the `.xcodeproj`.
-  gym asks the `xcodeproj` gem for the project's build configurations; on the project path that
-  raises (no `project.pbxproj`) and the lane dies before compiling. On the workspace path the same
-  failure is rescued into an empty list, the explicit `configuration: "Release"` survives, and
-  scheme and build settings come from `xcodebuild` instead. `output_name` is set explicitly
-  because gym's app-name lookup returns the "App" default here.
-
-Ruby: `.ruby-version` pins 3.2.2 and a `Gemfile`/`Gemfile.lock` pin fastlane. Two environment
-traps on this machine, worth knowing before step 30:
-- The rbenv Rubies are x86_64 builds, but gem native extensions compile as arm64 by default and
-  then fail to load. Reinstalling a gem needs
-  `gem install <name> -- --with-cflags="-arch x86_64" --with-ldflags="-arch x86_64"`.
-- `json` 2.8+ will not compile against these Ruby 3.2 headers, so the `Gemfile` pins `~> 2.7.0`.
-Neither applies to a GitHub runner, which ships a native Ruby — do not carry these pins into the
-workflow without checking.
-
-To run it, with the `.p8` kept outside the repo:
-
-```
-export LANG=en_US.UTF-8
-export ASC_KEY_ID=…
-export ASC_ISSUER_ID=…
-export ASC_KEY_FILEPATH=~/…/AuthKey_XXXXXXXX.p8
-bundle exec fastlane beta
-```
-
-`ASC_KEY_CONTENT` is the CI alternative: base64 instead of a path, and
-`is_key_content_base64` follows whichever of the two is set. Setting it unconditionally makes
-fastlane base64-decode the PEM it read from disk and fail with "string contains null byte".
-
-`.gitignore` now excludes `*.p8`, `*.p12`, `*.mobileprovision`, `*.cer` and fastlane's generated
-output.
-
-Two one-off cleanups the first run needed, recorded so they are not mistaken for bugs later:
-- GitHub SSH. match clones the certificates repo in a subprocess that cannot be prompted, so a
-  passphrase-protected key that is not in the agent fails as `Permission denied (publickey)`. The
-  ed25519 key was added to the GitHub account and `~/.ssh/config` given `AddKeysToAgent` +
-  `UseKeychain` for `github.com`.
-- `ios-certificates` was not an empty repo — it held match material from earlier CI experiments
-  (`GithubActionsDemo`, `cicdTestApp`) including an expired distribution certificate, which match
-  refused with "certificate is not valid". `certs/distribution/BVXB724S9Q.{cer,p12}` were deleted
-  from that repo and match issued a fresh Apple Distribution certificate (`TA3N4XQ6DD`, valid to
-  2027-09-30) plus both `match AppStore …` profiles. The stale demo profiles were left alone.
-
-Still open for step 30: the GitHub runner needs its own read access to the private certificates
-repo — a deploy key or an HTTPS token — and `match` must run with `readonly: true` there, which
-the lane already does via `is_ci`.
-
-## 30 — GitHub Actions: main → TestFlight
-
-Only once step 29 has produced a real TestFlight build. The workflow runs the `beta` lane on every
-push to `main`.
-
-Check before writing anything: the project uses the JSON `project.xcproj` format, which needs a
-recent Xcode. Confirm the runner image actually ships it and pin the version explicitly with
-`xcode-select` — do not rely on the image default, which changes without warning.
-
-- Secrets: the API key `.p8` (base64), key id, issuer id, team id, the match git url and its
-  passphrase. Nothing else belongs in the repo.
-- Trigger on `push` to `main` only. Not on pull requests, not on `feature/gamify`.
-- Keep a `workflow_dispatch` trigger so a release can be re-run without an empty commit.
-
-Cost: none. This repository is public, and GitHub Actions standard runners — macOS included — are
-free and unmetered for public repositories. The ten-times macOS multiplier only applies to private
-repositories. Do not switch to a larger runner, though: those are billed even on public repos, and
-the standard macOS runner is enough here.
-
-Because the repository is public, never use `pull_request_target`, and never echo a secret into the
-log. Secrets are not exposed to workflows triggered by pull requests from forks, which is the
-behaviour we want — keep it that way.
-
-Done (workflow committed; the first real run happens when this reaches `main`).
-`.github/workflows/testflight.yml` runs `bundle exec fastlane beta` on `push` to `main` and on
-`workflow_dispatch`, with `permissions: contents: read` and a `concurrency` group so two runs cannot
-claim the same build number.
-
-Runner image: **`xcode-27`**, not `macos-latest`. The check the step asked for came back negative —
-`macos-26` (which `macos-latest` points at) ships Xcode 26.0.1–26.6 only, none of which can read the
-JSON `project.xcproj` format. The `xcode-27` image carries 27.0 (default), 27.1 and 27.2 beta; the
-workflow pins `/Applications/Xcode_27.2_beta.app` via `sudo xcode-select`, which is the closest
-match to the laptop's 27.2 (27B5028f vs the image's 27B5019j). Two consequences worth remembering:
-- `xcode-27` is a **preview** image. If a run never starts, check the label still exists at
-  `actions/runner-images` before suspecting the lane.
-- The pinned path contains `_beta` and will change when 27.2 goes final. The "Pin Xcode" step fails
-  loudly with a listing of `/Applications/Xcode*.app` instead of silently falling back to 27.0.
-Not `xcode-27-xlarge`: larger runners are billed even on a public repository.
-
-A `xcodebuild -list -project thousand.xcodeproj` step runs before anything expensive, so an Xcode
-that cannot parse the project file fails in seconds rather than after a ten-minute archive.
-
-Ruby is `ruby/setup-ruby@v1` with `ruby-version: "3.2"` (cached on the image) and
-`bundler-cache: true`. The step 29 laptop workarounds do not cross over: the runner's Ruby is native
-arm64, so the `-arch x86_64` gem flags are unnecessary, and the `json ~> 2.7.0` pin in the `Gemfile`
-is kept because it is what 3.2 headers want anyway.
-
-Certificates access — the item step 29 left open. The runner has no SSH key and `match` clones in a
-subprocess that cannot be prompted, so CI uses HTTPS: `MATCH_GIT_URL` (https clone url) plus
-`MATCH_GIT_BASIC_AUTHORIZATION` (base64 of `<user>:<token>`, read-only). `readonly: is_ci` was
-already in the lane. The `Fastfile` now passes `git_url:` explicitly, defaulting to the SSH url, and
-the `Matchfile` keeps its SSH `git_url` for `fastlane match` on the command line — a Matchfile value
-wins over the environment, so the url cannot be overridden by `MATCH_GIT_URL` alone.
-
-Secrets the repository needs (all of them, nothing else): `ASC_KEY_ID`, `ASC_ISSUER_ID`,
-`ASC_KEY_CONTENT` (base64 of the `.p8`), `MATCH_GIT_URL`, `MATCH_GIT_BASIC_AUTHORIZATION`,
-`MATCH_PASSWORD`. The team id is not a secret — it is already committed in `fastlane/Appfile`.
-Nothing in the workflow echoes a secret; `xcodebuild -version` is the only thing it prints.
-
-All six are set on `mfsaglam/wordlern` as of 2026-10-01. `MATCH_GIT_BASIC_AUTHORIZATION` holds a
-fine-grained token scoped to `mfsaglam/ios-certificates` with `Contents: Read-only` — enough because
-`match` runs `readonly: true` under CI. Fine-grained tokens expire: when a run starts failing at the
-match step with a 403 or a clone error, that is the first thing to check, not the lane.
-
-## 31 — Build + test check on pull requests
-
-A cheap guard so a broken branch cannot reach `main`: build the app and run `thousandTests` on
-pull requests targeting `feature/gamify` and `main`.
-
-Build and test only — no archive, no signing, no upload. That is what keeps it inexpensive, and it
-is also what makes it reliable, since signing is the part that breaks.
-
-Runner minutes are free on this public repository, so there is no reason to hold back here. This
-check needs no secrets, which is also what lets it run safely on pull requests from forks.
-
-## 32 — Shake to undo
-
-One addition, nothing moves. `UndoButton` stays exactly where it is, at the top-leading corner of
-`SessionHeader`, at its current size. Shake is a shortcut layered on top of it, the same way swipe
-was layered on top of ✓/✗ in step 09.
-
-**Shake.** Shaking the phone undoes the last answer. Bridge `UIEventSubtypeMotionShake` —
-`motionEnded(_:with:)` fires on the responder chain, so catch it in a `UIWindow` subclass or a
-small `UIViewRepresentable` and post it into SwiftUI. Only act when `canUndo` is true; a shake with
-nothing to take back must do nothing at all, not flash an error.
-
-Confirm it happened: the existing `Haptics.undo()` plus a brief `undone` toast. Shake has no
-on-screen affordance, so without feedback the user cannot tell whether the gesture registered or
-the app ignored them.
-
-Mention shake in `HowItWorksScreen`. A gesture nobody can see is a gesture nobody will find.
-
-**Why the button stays** — settled with the user, do not revisit:
-
-- Without it, undo is undiscoverable. Nothing on screen would suggest an answer can be taken back,
-  and nobody thinks to shake a phone on a hunch.
-- Shake alone would be an accessibility regression. A user with limited hand mobility, a phone in a
-  stand, or VoiceOver running cannot shake a device. iOS also has a system "Shake to Undo" toggle
-  that some users switch off, and they would reasonably expect ours to be dead too.
-
-Out of scope: moving or resizing `UndoButton`, and any other change to `SessionHeader`'s layout.
-The user looked at the placement and is happy with it.
-
-Add the shake gesture to `docs/DESIGN.md` under screens 1 and 2 — the card screen's description
-should mention it alongside swipe.
-
-## 33 — The README describes an app that no longer exists
-
-The repository is public, so the README is the front door, and it is wrong. It claims
-"Core Data/Realm" for persistence (Realm was removed in step 08), "Combine" for state management
-(the app uses `@Observable`), and localisation readiness that step 27 explicitly dropped. The
-roadmap still lists gamification and pronunciation as future work — both shipped.
-
-Rewrite it against what actually exists: SwiftUI + SwiftData, the Leipzig-derived word list with
-its CC BY attribution, example sentences, the widgets, the daily reminder. Keep the Leitner
-explanation — that part is still true and it is the clearest thing in the file.
-
-While here, decide the licence question. There is no `LICENSE` file, which legally means all rights
-reserved. That may well be deliberate for a commercial app, but on a public repository it reads as
-an oversight, and people will assume they may reuse the code. Either add a licence or add one line
-to the README saying the code is not open for reuse.
-
-Done. The README now describes SwiftUI + SwiftData (no Core Data, no Realm, no Combine —
-state is `@Observable`), the Leipzig-derived word list with its CC BY attribution pulled in
-from `docs/WORDLIST.md`, example sentences, pronunciation, the home screen and lock screen
-widgets, and the daily reminder. The "localisation ready" claim is gone — step 27 found the
-project declared twelve languages with nothing translated into any of them, and dropped the
-claim down to English only, which the README now says plainly. The roadmap section (other
-languages, pronunciation, gamification, iCloud sync) is removed: pronunciation and the
-gamification-era features it alluded to have shipped, and the rest is speculative.
-
-Licence: confirmed with the user — all rights reserved. The README's old "MIT License"
-line was wrong on two counts: there is no `LICENSE` file, and the MIT credit belongs to
-the dependency (`LeitnerSwift`), not to this app. No `LICENSE` file was added; the README
-now says plainly that the repository is public to read but no licence is granted to reuse
-it. The Privacy Policy section stayed as-is — it already matches the "no data collected"
-reality the step 21 privacy manifest declares.
-
-## 34 — App Store listing for 2.0
-
-The pipeline can deliver a build; it cannot write the listing. This is the remaining work between a
-TestFlight build and a release, and none of it is code.
-
-- New screenshots. Every screen changed — the current store screenshots show an app that no longer
-  exists. Required sizes only; do not hand-decorate them.
-- Description and "what's new" text. The honest framing for 2.0 is a new word list, example
-  sentences, pronunciation, widgets and reminders.
-- App Privacy answers in App Store Connect: "Data Not Collected", matching the privacy manifest
-  from step 21. The two must agree, or review will ask why.
-- Export compliance is already answered by step 28's Info.plist key; confirm no build is sitting in
-  "Waiting for Export Compliance" before submitting.
-- TestFlight "what to test" note, so testers know what is new.
-
-Deliver this as a checklist in `docs/RELEASE.md` rather than as code, and tick it off together.
-
-Done. `docs/RELEASE.md` has the checklist: screenshots, description/what's-new/TestFlight note,
-App Privacy answers, export compliance, the App Store Connect record check, and the version
-confirmation — each cross-referenced to the step that already did the groundwork (21, 28).
-
-One code change outside the checklist: `TARGETED_DEVICE_FAMILY` on `thousand` and
-`WordLernWidget` was `"1,2"` (iPhone + iPad) but no screen in `docs/DESIGN.md` was ever designed
-or tested for iPad. Listing iPad support would have been dishonest, so both targets are now
-iPhone-only (`TARGETED_DEVICE_FAMILY = "1"`) — decided with the user 2026-10-01. This also drops
-the iPad screenshot requirement from the checklist.
-
-## 35 — Merge into `main`: the 2.0 release
-
-Not a development step and not done on a branch. This is the moment `feature/gamify` — 70-odd
-commits, a rewritten word list, five new screens, widgets, reminders — replaces the 1.0 build
-sitting on the App Store.
-
-Do it last, after 32, 33, 31 and 34 are all merged into `feature/gamify`. Everything before this is
-reversible; this is not.
-
-Order on the day:
-
-1. Confirm `feature/gamify` builds clean and the app runs on a device.
-2. Merge `feature/gamify` into `main`. That push fires `.github/workflows/testflight.yml`, which
-   runs the `beta` lane and uploads to TestFlight — the first time the pipeline does anything real.
-3. Watch that run. A failure here is a signing or runner problem, not an app problem; step 29
-   proved the lane works from the laptop, so the laptop is the fallback if CI misbehaves.
+## 39 — Make the working agreement match reality
+
+Done. `CLAUDE.md`'s build command selected a simulator by name; with several runtimes installed
+`name=iPhone 16` matches more than one device and `xcodebuild` fails before compiling. Replaced
+with `-destination 'generic/platform=iOS Simulator'`, plus a line saying why not to go back.
+
+Its project facts also still described 1.0: the machine-translated word list "being replaced in
+steps 03–05", and word content copied into Realm. Both rewritten — the list is the Leipzig-derived
+one at `contentVersion` 3 with a sentence on all 1000 words, persistence is SwiftData, and Realm
+must not come back because realm-core will not build against the current iOS SDK.
+
+The GitHub default branch was `main`, so new pull requests opened against the branch the App Store
+build comes from. The user switched it to `develop`. It does not affect the TestFlight workflow
+(which triggers on `main`) or the step 38 rulesets — only the base a new pull request picks and the
+README shown on the repository home page.
+
+## 40 — Archive the 2.0 plan, start a clean one
+
+Done. The 2.0 plan reached 1112 lines and `CLAUDE.md` has every session read it, so it had become a
+standing cost on every task. Moved to `docs/PLAN-2.0.md` rather than deleted — the "Done:" notes
+under each step are the only record of why the word list dropped 55 entries, why Leipzig over
+OpenSubtitles, why the CI runner is pinned to `xcode-27`.
+
+Steps 37 and 38 were finished but never written into the table; added to the archive so the record
+is complete.
+
+## 41 — New app icon
+
+The shipped icon is a stack of cards in perspective inside a blue circle, on a grey-blue square.
+Four problems: iOS already masks icons into a squircle, so a circle inside wastes a third of the
+canvas; the perspective stack turns to mush at 60×60, which is the size that matters; the saturated
+blue belongs to no part of the app; and the file is a 456 KB JPEG, so hard colour edges carry
+compression artefacts.
+
+Replace it with concept C, agreed with the user: a near-black squircle (`#15181D`), a large
+off-white `ß` (`#F7F5F0`) centred, and a three-segment rule beneath it in black, red and gold
+(`#D8232A`, `#F0C419`). The `ß` is the point — a flag says *Germany*, which Austrian and Swiss
+users notice, while `ß` says *German* and exists in no other language. It also survives 60×60,
+which neither card concept did.
+
+Deliverables:
+
+- `assets/icon.svg` — the source, used by the website in step 42 as well as the app.
+- A 1024×1024 PNG in `AppIcon.appiconset`, replacing `wordlern_icon.jpg`. No alpha channel, no
+  rounded corners baked in (iOS masks them), PNG not JPEG.
+- The user converts the SVG; there is no rasteriser installed on this machine and none should be
+  added for one file.
+
+Check the result at 60×60 before calling it done, not just at full size. Out of scope: iOS 26
+layered icon variants (light / dark / tinted) — a single 1024 PNG is still accepted, and that is a
+separate decision.
+
+Done. `tools/make_icon.swift` draws the icon and writes both deliverables, so the SVG and the PNG
+cannot drift apart — the step assumed a hand conversion, but CoreGraphics is already on this
+machine and no dependency was added for it. `assets/icon.svg` 1.9 KB, `icon-1024.png` 33 KB and
+opaque (`hasAlpha: no`), replacing the 445 KB JPEG. The script also drops 60×60 and 120×120 proofs
+in `build/` (gitignored) — that is where the geometry was settled.
+
+Two judgements the concept left open:
+
+- The flag's black band is `#3C434D`, not black. On a `#15181D` background a true black segment is
+  invisible and the rule reads as two colours, not three.
+- The three segments meet edge to edge, like the flag's bands. Gaps between them closed into mush
+  at 60×60. The rule ended up 46pt tall rather than a hairline for the same reason: at 60×60 it is
+  2.7px, and anything thinner greyed out into one muddy line.
+
+The ß comes from the system font at semibold and is written out as an outline, so nothing depends
+on a font being installed — the website in step 42 can use the same file.
+
+## 42 — GitHub Pages site
+
+App Store Connect requires a working privacy policy URL and a support URL for every app, and
+neither exists. A one-page site covers both and doubles as the app's marketing page.
+
+- Static HTML, no build tooling, no framework. Match `docs/DESIGN.md` — calm, typographic, dark.
+- Pages: a landing page (what the app is, a few features, screenshots, Apple's official "Download
+  on the App Store" badge linking to the listing), `/privacy`, `/support`.
+- The privacy page is short because nothing is collected: no account, no analytics, no network
+  calls. It must agree with `PrivacyInfo.xcprivacy` and the App Privacy answers.
+- The badge artwork has to come from Apple's Marketing Resources and follow their guidelines; do
+  not draw a lookalike.
+- Deploy with GitHub Actions from a `site/` directory. Pages can only serve a repository root or
+  `/docs`, and `/docs` holds the planning files — so the artifact-upload workflow, not the
+  branch-folder setting.
+- Keep a `workflow_dispatch` trigger. The privacy URL has to be live *before* 2.0 is submitted, and
+  waiting on a merge to `main` would be the wrong order.
+
+Out of scope: a blog, analytics of any kind, a contact form.
+
+Done. `site/` holds three pages — landing, `/privacy`, `/support` — one stylesheet and no build
+step. `.github/workflows/pages.yml` uploads the directory as an artifact on a push to `main` that
+touches `site/`, and on `workflow_dispatch` from any branch, so the privacy URL can go live before
+2.0 is submitted.
+
+Settled along the way:
+
+- The App Store link is `apps.apple.com/app/id6740728130`, the 1.0 listing. The numeric id was
+  nowhere in the repository; it came from Apple's lookup API for `com.mfsaglam.thousand`.
+- The badge is Apple's own artwork from the marketing toolbox, unmodified, vendored as
+  `site/app-store-badge.svg`. The white variant, because the site's background is the icon's
+  near-black.
+- `tools/make_icon.swift` now also writes `site/icon.svg` and `site/icon-512.png` (link previews:
+  no scraper renders SVG). Pages serves `site/` alone, so it cannot reach `assets/`, and one
+  script writing both copies is what stops them drifting.
+- The workflow checks that every local `href` and `src` resolves to a committed file. There is no
+  build to fail, so a dead link is the only way this site can break.
+
+Not done here, deliberately: the landing page has no screenshot gallery, because there are no
+screenshots worth showing until step 43. Added to that step.
+
+The README carries its own copy of the privacy policy, which is now a second source of truth for
+the same text. Left alone — step 44 already opens the README for the licence, and that is the
+place to replace the section with a link.
+
+Needs a hand in GitHub settings before anything publishes: Settings → Pages → Source must be set
+to **GitHub Actions**. The site lands at `https://mfsaglam.github.io/wordlern/`, which is the URL
+the `og:` tags and step 44's App Store fields assume.
+
+## 43 — Debug screenshot mode
+
+A fresh install shows `mastered 0 / 1000` and five empty bars. Screenshots of that would sell
+nothing, so the simulator needs a way into a believable state before the user captures the store
+screenshots by hand.
+
+- A launch argument the app reads **only** under `#if DEBUG`, so the code is absent from release
+  builds entirely.
+- It seeds a demo distribution and leaves the app on a card worth photographing — `das Haus` over
+  `die Zeit`, a word with a short sentence.
+- One demo state, used everywhere. The previews currently disagree with each other: `SummaryScreen`
+  shows 700 mastered while `SessionEndScreen` shows `247 → 254`, and screenshots taken from both
+  would not belong to the same story. Pick one set of numbers and make the previews match it too.
+
+Also in this step, added by 42: once the screenshots exist, put a gallery on the landing page at
+`site/index.html`. It was left out rather than filled with placeholders — the page currently goes
+from the badge straight to the feature list, and the gallery belongs between them.
+
+Done: `thousand/Support/DemoContent.swift`, the whole file inside `#if DEBUG`, triggered by a
+`-demoContent` launch argument set on the Run scheme. It wipes the store and loads a fixed
+distribution into the Leitner system in memory only — `WordViewModel` loads cached boxes just when
+the store has some, so an empty store leaves the demo standing and nothing touches disk until a
+card is answered.
+
+The distribution is forced, not chosen. Box 1 has a zero-day review interval, so it is due every
+day whatever its last-reviewed date; and the mastered count only moves when cards leave box 2 for
+box 3, so box 2 has to be due too or the session-end screen shows its bar not growing at all. That
+makes `due = box1 + box2` and `mastered = the rest` — the two always sum to 1000, so a modest
+mastered count would force an enormous due count. Hence an advanced learner:
+`[60, 140, 300, 300, 200]`, 800 mastered, 200 due, and a session of ten from box 2 ending
+`800 → 807` at seven correct.
+
+`das Haus`, `die Zeit`, `das Kind`, `die Frau`, `der Mann` and `das Wasser` are pushed to the head
+of box 2 — `dueForReview` walks the boxes backwards, so that is the box a session draws from, and
+those six all carry a short example sentence. Without it a session opens on whatever the frequency
+list starts with.
+
+The `SummaryScreen` and `SessionEndScreen` previews that disagreed (700 mastered against
+`247 → 254`) are replaced by one `demo — for screenshots` preview each, carrying these numbers.
+
+Still open: the screenshot gallery on `site/index.html`. The screenshots now exist on the user's
+machine but are not in the repository.
+
+Note for whoever takes the screenshots: capture from the simulator with ⌘S, not from the Xcode
+preview canvas. App Store wants 1320×2868 for the 6.9" slot, which an iPhone 16 Pro Max simulator
+produces exactly; a canvas screenshot is scaled by the Mac's display and will be the wrong size.
+The widget shot does not come from this mode — the widget reads the snapshot file, not the demo
+state — but it does come from the simulator: add the widget to the simulator's home screen and
+capture that.
+
+## 44 — Finish the listing, decide the licence
+
+`docs/RELEASE.md` covers screenshots, App Privacy, export compliance and versioning, but the
+listing text itself was agreed in conversation and never written down. Record it, so it is not
+retyped from memory at submission time:
+
+- App name, 30 characters: `WordLern: 1000 German Words`. The current name is the brand alone,
+  which nobody searches for; the name field is the strongest ASO lever there is.
+- Subtitle, 30: `Spaced repetition flashcards`.
+- Keywords, 100, comma-separated with no spaces, not repeating the name or subtitle.
+- Promotional text, 170 — editable without review, so it is the place for anything seasonal.
+- Description, with the first three lines carrying the whole pitch; the rest is only seen by
+  someone who taps "more". The closing section — no account, no ads, no subscription, no tracking,
+  works offline — is the real differentiator in this category and should stay.
+- "What's new" for 2.0 must say that progress from 1.0 does not carry over. The word list was
+  replaced, so `contentVersion` wipes the store. Few users are affected, but not saying it is worse
+  than saying it.
+- Privacy policy URL and support URL from step 42 — both mandatory fields, neither currently in the
+  checklist.
+- Category: Education primary, Reference secondary. Age rating 4+.
+
+Also in this step: there is no `LICENSE` file. On a public repository that legally means all rights
+reserved while reading as an oversight. Either add a licence or state in the README that the code
+is not offered for reuse. Step 33 was meant to settle this and did not.
+
+Done. The listing copy now lives in `docs/RELEASE.md` — name, subtitle, keywords, promotional text,
+the full description, the 2.0 "what's new" and a TestFlight note — with the character counts and
+the reasoning beside each, so an edit later knows what it is trading away. The three URLs from
+step 42 are recorded against the fields that require them.
+
+The licence turned out to be settled already: step 33 did write a `License` section into the
+README (all rights reserved, public to read, no reuse granted). This plan's claim that it did not
+was wrong. No `LICENSE` file was added — a section saying the same thing is enough for a repository
+nobody is being invited to fork.
+
+What did need fixing was a second privacy policy. The README carried a full one dated 18.01.2025,
+from before step 42 put the canonical page on the site. Two policies at two addresses, free to
+drift, with the App Store listing pointing at only one of them. The README now links to the site
+page instead.
+
+---
+
+## Later — agreed as worth doing, not scheduled
+
+- `WordViewModel` has no tests. It is the brain of the app — sessions, undo, retired words, the
+  mastered count — and it has been rewritten repeatedly across 2.0 with no safety net.
+- No Dynamic Type or VoiceOver pass. The card screen uses fixed point sizes and has never been
+  opened at a large text setting.
+- Reverse mode, English → German. Recognition is the easy direction; production is where the skill
+  is, and the card machinery already exists.
+- An interactive card widget. Possible since iOS 17 via `AppIntent`, deferred in favour of the
+  summary widget.
+- Pre-rendered pronunciation audio. The corpus is fixed at 1000 words and 1000 sentences, so
+  shipping real audio would beat any on-device synthesiser — at the cost of app size and a licence
+  check on the voice.
+- `WordViewModel` swallows errors with `print(error)` in two places. A failed save loses progress
+  silently.
+
+## 45 — Screenshot gallery on the site
+
+Carried over from step 42, which left the gallery out rather than fill it with placeholders, and
+from 43, which was what made a presentable screenshot possible. `site/index.html` currently goes
+from the App Store badge straight to the feature list; the gallery belongs between them.
+
+Source material: the screenshots the user captured from the iPhone 16 Pro Max simulator in the
+`-demoContent` state — card front, card back, summary, session end. Four is enough. The page
+already explains the features in words, so the gallery is there to show the app has a face, not to
+re-argue the pitch.
+
+Use the raw screenshots, not the App Store versions. The captions in `docs/RELEASE.md` are burned
+into the store images and would fight the page's own copy.
+
+Watch the weight. Each capture is 1320×2868 and a PNG of that size runs to a megabyte or more; four
+of them would make this the heaviest page in a site that is otherwise three HTML files and a
+stylesheet. Downscale to something a phone-shaped column actually needs and re-encode — `sips` is
+on the machine and no dependency is needed. Keep the originals out of the repository.
+
+Required of the markup:
+
+- `width` and `height` on every image, so the page does not reflow as they load.
+- `loading="lazy"` on all but the first.
+- Real `alt` text describing the screen, not "screenshot 1".
+- The layout has to survive a narrow viewport; four phone shots in a row will not.
+
+The Pages workflow checks that every local `href` and `src` resolves to a committed file, so a
+missing image fails the build rather than reaching the site — but check the page at a phone width
+by eye anyway, since nothing automated can see a broken column.
+
+Out of scope: device frames, the widget shot (a home screen is not in the same visual family as
+the app's own screens), and any carousel or lightbox. Static images in a grid.
+
+Done. The four raw captures (1320×2868, 148–487 KB each) landed in `site/screenshot/` as
+untracked files at the start of this step — `.gitignore` now excludes the `*_raw.png` names so
+they can't be committed by accident, and the originals stay on disk rather than being deleted.
+
+Downscaled each to 640×1391 with `sips` and committed those under plain names (`card-front.png`,
+`card-back.png`, `summary.png`, `session-end.png`): 640 is 2x the ~320px column a two-up grid
+gives each image inside the page's 42rem measure, so retina stays sharp without shipping
+full-resolution capture. The four together come to 388 KB, against 1.2 MB raw.
+
+A new `<ul class="gallery">` sits in `index.html` between the App Store badge and "What it does",
+with `width`/`height` on every `<img>`, `loading="lazy"` on all but the first, and `alt` text
+describing each screen rather than numbering them. `.gallery` in `style.css` is a two-column grid
+at every width — two-up already reads fine at 375px CSS width in preview, so no separate
+single-column breakpoint was needed.
+
+Order follows the plan's own phrasing — card front, card back, summary, session end — which
+maps to the capture filenames as `card_faceup` (front, not yet flipped) and `card_facedown`
+(flipped, showing the English meaning and example sentence).
+
+## 46 — App Store marketing images
+
+The twelve raw captures exist — six screens at 1320×2868 (iPhone) and 2064×2752 (iPad), covering
+card front, card back, summary, session end, how it works and the widget. What goes to App Store
+Connect is those with a caption above them, per the table in `docs/RELEASE.md`.
+
+Build them with a script, not by hand. `tools/make_icon.swift` already established the pattern —
+`swift tools/make_icon.swift`, AppKit and CoreGraphics, no dependency added — and the same approach
+gives `tools/make_store_images.swift`: read a raw capture, compose it on the required canvas, write
+the PNG. Re-runnable, so a changed screenshot or a reworded caption is one command rather than an
+afternoon in a design tool.
+
+Composition, matching the icon and the site so the listing, the store page and the app read as one
+thing:
+
+- Canvas at the exact required size. No resampling of the capture itself beyond a uniform scale.
+- Background `#15181D`, caption `#F7F5F0` — the icon's two colours.
+- Caption at the top, same baseline in every image, centred, one line where it fits and two where
+  it does not. Identical size and position across the set matters more than any single image.
+- The capture below it, scaled to leave the caption room, with its corners rounded to the device's
+  own radius. No drawn device frame, no shadow, no gradient.
+
+Required of the result:
+
+- Six iPhone images and six iPad images, written somewhere gitignored. The raw captures stay out of
+  the repository as well; both are build inputs, not source.
+- Legible at the size App Store actually shows them, which is a thumbnail in a scrolling row. Check
+  one at thumbnail size before accepting the set.
+- Apple rejects listings whose images are mostly marketing rather than the app. A caption strip over
+  a real screen is well inside the line; drifting towards illustration is not.
+
+Done. `tools/make_store_images.swift` composes all twelve in one run — `swift
+tools/make_store_images.swift`, AppKit and CoreText, no dependency added. The raws were on the
+user's Desktop rather than in the repository, so the script defaults to `~/Desktop` and takes
+`--in <dir>`; output goes to `build/store/`, which `build/` already ignores.
+
+Every measurement is a fraction of the canvas height, so the sets are one composition at several
+sizes rather than several compositions. The capture is scaled once (~0.81) to clear the caption
+band, the bottom margin and the side margins, and its corners are rounded to the display's own
+radius — 55pt at @3x, 30pt at @2x. No frame, no shadow, no gradient.
+
+Eighteen images, not twelve. Connect rejected the first upload — *"Screenshots dimensions should
+be: 1242 × 2688px, 2688 × 1242px, 1284 × 2778px or 2778 × 1284px"* — because this listing's iPhone
+slot is the 6.5", which 1.0 shipped, and not the 6.9" the captures were taken at. So the canvas is
+no longer assumed to be the capture's own size: a device now carries a capture size and a canvas
+size separately, and the 6.5" set is composed from the same 6.9" raws onto a 1284×2778 canvas. One
+capture, two slots, nothing re-shot. The 6.9" output is unchanged, since on a canvas the capture's
+own shape the height is still what binds.
+
+The caption band always reserves two lines even when the caption needs one, which is what keeps
+the first baseline on the same pixel row across the set. Wrapping picks the balanced break rather
+than the greedy one: greedy leaves a stub second line that reads as an accident. It falls out that
+all six iPhone captions take two lines and all six iPad captions take one — the iPad canvas is
+wider relative to its height — so each set is internally consistent without the font size having to
+change between images.
+
+The script writes a 300px proof of each image beside the full set, which is roughly the width App
+Store gives a thumbnail in its scrolling row. Checked there before accepting: the captions hold up,
+and `how it works` reads as a dense reference screen rather than legible text — which is what it
+is, and the caption carries that image rather than the body copy.
+
+Not in scope and deliberately left: the iPad captures are the iPhone layout scaled up, so those six
+are mostly empty space. Fixing that is an iPad layout, not a marketing image.
+
+## 47 — Use LeitnerSwift's own due query
+
+Found outside the plan. `WordViewModel` carried its own copy of the box-level due calculation for
+`dueCount`, `nextReviewDate` and `nextReview` — written in step 22, when the library had no such
+API. LeitnerSwift 1.4.0 exposes the same calculation, so the app defers to it rather than keeping a
+second implementation in step with the first.
+
+Two implementations of one rule is the kind of thing that stays correct right up until the library
+changes its mind about what "due" means.
+
+## 48 — Persist each card's own review date
+
+Found outside the plan, and a real bug rather than a tidy-up. LeitnerSwift 1.5.0 schedules a card
+from its own `lastReviewedDate`, but `StoredCard` never kept that date. Every launch handed the
+library cards with no date, it fell back to the box's date, and answered cards came back early —
+the card-level fix in the library had no effect on the app until the date round-tripped through
+storage.
+
+`StoredCard` gains an optional `lastReviewedDate` (a lightweight SwiftData migration, no
+`MigrationPlan`), `CardSnapshot` carries it into the writer, and updating an existing record now
+writes the date alongside `boxIndex`. Covered by new cases in `SwiftDataCardStoreTests`.
+
+Worth remembering when a scheduling bug next looks like a library problem: the library can only
+schedule from what the store gives it back.
+
+## 49 — Merge into `main`: the 2.0 release
+
+Not a development step and not done on a branch. `main` still holds the published 1.0 and is 27
+commits behind; this is the moment that changes.
+
+Do it after 46 and after the App Store Connect items in `docs/RELEASE.md` are ticked off.
+
+1. Confirm `develop` builds clean and the app runs on a device.
+2. Merge `develop` into `main`. That push fires `.github/workflows/testflight.yml`, which runs the
+   `beta` lane and uploads to TestFlight.
+3. Watch that run, but it is no longer the unknown it was. The workflow was run from `develop` by
+   hand first, through its `workflow_dispatch` trigger, and it built, signed and uploaded to App
+   Store Connect. The runner image, `match` and the API key are all proven. A failure on the `main`
+   push now points at something about `main` itself rather than a broken lane — and step 29 proved
+   the lane works from the laptop, so the laptop is still the fallback.
 4. Install the TestFlight build and use it for a day before promoting it. There is no rollback once
-   a version is released to users.
-5. Submit for review with the listing from step 34.
+   a version is released.
+5. Submit for review with the listing from `docs/RELEASE.md`.
 
-The pipeline has never run on a real push: its trigger is `push` to `main`, and `main` has not
-moved since it was written. Expect the first run to surface something — that is why a human watches
-it rather than merging and walking away.
+The 1.0 upload attempt already failed once on device family (archived step 37), so watch the run
+rather than merging and walking away.
 
-## 36 — Audio session is configured on every utterance
-
-`GermanSpeaker.speak(_:)` sets the audio session category and activates the session on every call.
-The device logs a warning for it:
-
-```
-AVAudioSession_iOS.mm:978  This method can lead to UI unresponsiveness if called on the
-main thread. Consider using the asynchronous activate/deactivate API instead.
-```
-
-Two problems behind one warning:
-
-- `setActive(true)` is synchronous and routes audio hardware, so it can block the main thread.
-- Both calls repeat for every single utterance. A ten-card session speaks at least twenty times
-  (auto-play from step 19 plus the speaker buttons), and the category only ever needs setting once.
-
-Fix: configure the category **once**, off the main thread, and drop `setActive(true)` entirely. The
-category is what carries the behaviour the app depends on — `.ambient` respects the ringer switch
-and does not stop the user's music, which is why step 19 chose it over `.soloAmbient`. Activation
-is the system's job when the synthesizer starts playing.
-
-If activation does turn out to be needed, use the asynchronous activate API the warning points at
-rather than moving the synchronous call to a background queue and hoping the ordering works out.
-
-Verify on a device, not the simulator, and check all three: the warning is gone, a muted phone
-stays silent, and pronunciation does not interrupt music that is already playing.
-
-Out of scope: voice selection, the rate, and anything else about how the word is spoken.
-
-Done. `GermanSpeaker.init()` sets the `.ambient` category once, dispatched to a background
-`DispatchQueue.global(qos: .utility)` queue; `speak(_:)` no longer touches the audio session
-at all, and `setActive(true)` is gone outright. Verified on a device: the main-thread warning
-is gone, a muted phone stays silent, and pronunciation no longer interrupts music already
-playing.
+Keep `workflow_dispatch` in the workflow for the reason it paid off here: it exercises the whole
+pipeline from a branch, before the one push that cannot be taken back.

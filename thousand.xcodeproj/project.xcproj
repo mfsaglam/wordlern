@@ -78,6 +78,7 @@
           "kind": "group",
           "path": "Support",
           "children": [
+            { "path": "DemoContent.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "Haptics.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "ReminderScheduler.swift", "target-membership": [ "thousand/compile-sources" ] },
             { "path": "ShakeDetector.swift", "target-membership": [ "thousand/compile-sources" ] },
@@ -202,7 +203,7 @@
         "REGISTER_APP_GROUPS": "YES",
         "SWIFT_EMIT_LOC_STRINGS": "YES",
         "SWIFT_VERSION": "5.0",
-        "TARGETED_DEVICE_FAMILY": "1",
+        "TARGETED_DEVICE_FAMILY": "1,2",
       },
     }, {
       "name": "thousandTests",
@@ -297,7 +298,7 @@
         "SKIP_INSTALL": "YES",
         "SWIFT_EMIT_LOC_STRINGS": "YES",
         "SWIFT_VERSION": "5.0",
-        "TARGETED_DEVICE_FAMILY": "1",
+        "TARGETED_DEVICE_FAMILY": "1,2",
       },
     },
   ],

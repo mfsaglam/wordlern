@@ -34,6 +34,11 @@ final class StoredCard {
     var languageCode: String
     var meaning: String
     var exampleSentence: String?
+    /// When this card was last answered. LeitnerSwift schedules the card from
+    /// its own date, so it has to survive a relaunch — otherwise every launch
+    /// comes back `nil` and the card falls back to its box's date.
+    /// Optional, which makes adding it a lightweight migration.
+    var lastReviewedDate: Date?
 
     init(
         id: UUID,
@@ -41,7 +46,8 @@ final class StoredCard {
         word: String,
         languageCode: String,
         meaning: String,
-        exampleSentence: String?
+        exampleSentence: String?,
+        lastReviewedDate: Date?
     ) {
         self.id = id
         self.boxIndex = boxIndex
@@ -49,5 +55,6 @@ final class StoredCard {
         self.languageCode = languageCode
         self.meaning = meaning
         self.exampleSentence = exampleSentence
+        self.lastReviewedDate = lastReviewedDate
     }
 }

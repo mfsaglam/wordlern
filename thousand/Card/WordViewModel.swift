@@ -100,37 +100,23 @@ class WordViewModel: ObservableObject {
         masteredCount(in: progress) + retiredCount
     }
 
-    /// How many cards are due for review right now, across every box. Mirrors
-    /// `LeitnerSystem.dueForReview`'s own due check, but counts instead of
-    /// throwing when there are none.
+    /// How many cards are due for review right now, across every box.
     var dueCount: Int {
-        let today = Calendar.current.startOfDay(for: Date())
-        return leitnerSystem.allBoxes.reduce(0) { count, box in
-            Calendar.current.startOfDay(for: box.nextReviewDate) <= today
-                ? count + box.cards.count
-                : count
-        }
+        leitnerSystem.dueCount
     }
 
     /// The earliest moment a card next becomes due, across every box that
     /// still holds cards. Nil once `dueCount` is positive — there is nothing
     /// to wait for — or if the word list is empty outright.
     var nextReviewDate: Date? {
-        guard dueCount == 0 else { return nil }
-        return leitnerSystem.allBoxes
-            .filter { !$0.cards.isEmpty }
-            .map(\.nextReviewDate)
-            .min()
+        leitnerSystem.nextDueDate
     }
 
     /// When the next card comes due and how many will be waiting then — all the
     /// reminder notification needs. Nil whenever `nextReviewDate` is.
     var nextReview: NextReview? {
         guard let date = nextReviewDate else { return nil }
-        let count = leitnerSystem.allBoxes.reduce(0) { count, box in
-            box.nextReviewDate <= date ? count + box.cards.count : count
-        }
-        return NextReview(date: date, count: count)
+        return NextReview(date: date, count: leitnerSystem.dueCount(asOf: date))
     }
 
     /// What `nextReview` reports. Kept as a value so `ReminderScheduler` never

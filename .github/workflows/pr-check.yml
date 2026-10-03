@@ -1,12 +1,16 @@
 name: PR Check
 
-# A cheap guard so a broken branch cannot reach feature/gamify or main: build
-# the app and run thousandTests. Build and test only — no archive, no signing,
-# no upload — so this needs no secrets and can run safely on pull requests
-# from forks.
+# A cheap guard so a broken branch cannot reach develop or main: build the app
+# and run thousandTests. Build and test only — no archive, no signing, no
+# upload — so this needs no secrets and can run safely on pull requests from
+# forks.
+#
+# `build-and-test` is a required status check on both branches (step 38), so
+# this trigger list and the ruleset have to agree: a branch missing here can
+# never satisfy the check and its pull requests would block forever.
 on:
   pull_request:
-    branches: [feature/gamify, main]
+    branches: [develop, main]
 
 concurrency:
   group: pr-check-${{ github.ref }}
