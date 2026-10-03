@@ -30,14 +30,29 @@ let screens: [(file: String, caption: String)] = [
 
 struct Device {
     let name: String
-    let size: CGSize
+    /// Which raw capture feeds this set — `<screen>_<source>_raw.png`.
+    let source: String
+    /// The size of that raw capture, and so the size it must be to be used unresampled.
+    let capture: CGSize
+    /// The canvas App Store Connect wants for this slot. Need not match the capture.
+    let canvas: CGSize
     /// The display's own corner radius in capture pixels: 55pt at @3x, 30pt at @2x.
     let cornerRadius: CGFloat
 }
 
+let iPhoneCapture = CGSize(width: 1320, height: 2868)
+
+// Connect's iPhone slots take 6.9" or 6.5", and which one a listing is asked for depends
+// on what the published version already has. 1.0 shipped 6.5", so the 6.9" set alone was
+// rejected at upload: *"Screenshots dimensions should be: 1242 × 2688px … 1284 × 2778px"*.
+// Both sets are built from the one 6.9" capture, so there is nothing to re-shoot.
 let devices = [
-    Device(name: "iphone", size: CGSize(width: 1320, height: 2868), cornerRadius: 165),
-    Device(name: "ipad", size: CGSize(width: 2064, height: 2752), cornerRadius: 60),
+    Device(name: "iphone-6-9", source: "iphone", capture: iPhoneCapture,
+           canvas: CGSize(width: 1320, height: 2868), cornerRadius: 165),
+    Device(name: "iphone-6-5", source: "iphone", capture: iPhoneCapture,
+           canvas: CGSize(width: 1284, height: 2778), cornerRadius: 165),
+    Device(name: "ipad", source: "ipad", capture: CGSize(width: 2064, height: 2752),
+           canvas: CGSize(width: 2064, height: 2752), cornerRadius: 60),
 ]
 
 // MARK: - Design
@@ -53,6 +68,7 @@ let lineSpacing: CGFloat = 1.20  // × the caption size
 let topPadFraction: CGFloat = 0.032  // canvas top to the first line's ascender
 let gapFraction: CGFloat = 0.030  // last caption line to the capture
 let bottomFraction: CGFloat = 0.035  // capture to the canvas bottom
+let captureWidthFraction: CGFloat = 0.82  // the capture never grows past this
 let textWidthFraction: CGFloat = 0.82  // the caption wraps inside this
 
 // The caption band always reserves two lines, whether the caption needs them or not.
@@ -115,11 +131,13 @@ func wrap(_ caption: String, font: CTFont, maxWidth: CGFloat) -> [String] {
 // MARK: - Composition
 
 func compose(capture: CGImage, caption: String, device: Device) -> Data {
-    let width = device.size.width
-    let height = device.size.height
+    let width = device.canvas.width
+    let height = device.canvas.height
 
-    precondition(CGFloat(capture.width) == width && CGFloat(capture.height) == height,
-                 "capture is \(capture.width)×\(capture.height), expected \(Int(width))×\(Int(height))")
+    precondition(CGFloat(capture.width) == device.capture.width
+                 && CGFloat(capture.height) == device.capture.height,
+                 "capture is \(capture.width)×\(capture.height), expected "
+                 + "\(Int(device.capture.width))×\(Int(device.capture.height))")
 
     let space = CGColorSpace(name: CGColorSpace.sRGB)!
     guard let context = CGContext(data: nil,
@@ -133,7 +151,7 @@ func compose(capture: CGImage, caption: String, device: Device) -> Data {
     }
 
     context.setFillColor(colour(background))
-    context.fill(CGRect(origin: .zero, size: device.size))
+    context.fill(CGRect(origin: .zero, size: device.canvas))
 
     let fontSize = height * fontFraction
     let font = NSFont.systemFont(ofSize: fontSize, weight: .semibold) as CTFont
@@ -141,13 +159,18 @@ func compose(capture: CGImage, caption: String, device: Device) -> Data {
     let topPad = height * topPadFraction
     let band = topPad + lineHeight * reservedLines + height * gapFraction
 
-    // The capture keeps its aspect ratio: one scale, applied to both axes, chosen so
-    // the band and the bottom margin are left clear.
-    let scale = (height - band - height * bottomFraction) / height
-    let frame = CGRect(x: (width - width * scale) / 2,
-                       y: height * bottomFraction,
-                       width: width * scale,
-                       height: height * scale)
+    // The capture keeps its aspect ratio: one scale, applied to both axes, small enough
+    // to clear the band and the bottom margin and to stay inside the side margins. On a
+    // canvas the same shape as the capture the height is what binds; on the 6.5" canvas,
+    // which is slightly wider for its height, it still is — but only just, so the width
+    // is checked rather than assumed.
+    let scale = min((height - band - height * bottomFraction) / device.capture.height,
+                    width * captureWidthFraction / device.capture.width)
+    let drawn = CGSize(width: device.capture.width * scale, height: device.capture.height * scale)
+    let frame = CGRect(x: (width - drawn.width) / 2,
+                       y: height - band - drawn.height,
+                       width: drawn.width,
+                       height: drawn.height)
 
     context.saveGState()
     let radius = device.cornerRadius * scale
@@ -216,7 +239,7 @@ try! FileManager.default.createDirectory(at: proofs, withIntermediateDirectories
 
 for device in devices {
     for (number, screen) in screens.enumerated() {
-        let name = "\(screen.file)_\(device.name)_raw.png"
+        let name = "\(screen.file)_\(device.source)_raw.png"
         let source = inputDirectory.appendingPathComponent(name)
         guard FileManager.default.fileExists(atPath: source.path) else {
             fatalError("missing capture: \(source.path)")

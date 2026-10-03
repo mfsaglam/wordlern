@@ -351,10 +351,18 @@ tools/make_store_images.swift`, AppKit and CoreText, no dependency added. The ra
 user's Desktop rather than in the repository, so the script defaults to `~/Desktop` and takes
 `--in <dir>`; output goes to `build/store/`, which `build/` already ignores.
 
-Every measurement is a fraction of the canvas height, so the iPhone and iPad sets are one
-composition at two sizes rather than two compositions. The canvas is the capture's own size, the
-capture is scaled once (0.81) to clear the caption band and a bottom margin, and its corners are
-rounded to the display's own radius — 55pt at @3x, 30pt at @2x. No frame, no shadow, no gradient.
+Every measurement is a fraction of the canvas height, so the sets are one composition at several
+sizes rather than several compositions. The capture is scaled once (~0.81) to clear the caption
+band, the bottom margin and the side margins, and its corners are rounded to the display's own
+radius — 55pt at @3x, 30pt at @2x. No frame, no shadow, no gradient.
+
+Eighteen images, not twelve. Connect rejected the first upload — *"Screenshots dimensions should
+be: 1242 × 2688px, 2688 × 1242px, 1284 × 2778px or 2778 × 1284px"* — because this listing's iPhone
+slot is the 6.5", which 1.0 shipped, and not the 6.9" the captures were taken at. So the canvas is
+no longer assumed to be the capture's own size: a device now carries a capture size and a canvas
+size separately, and the 6.5" set is composed from the same 6.9" raws onto a 1284×2778 canvas. One
+capture, two slots, nothing re-shot. The 6.9" output is unchanged, since on a canvas the capture's
+own shape the height is still what binds.
 
 The caption band always reserves two lines even when the caption needs one, which is what keeps
 the first baseline on the same pixel row across the set. Wrapping picks the balanced break rather

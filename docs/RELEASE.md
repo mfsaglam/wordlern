@@ -26,10 +26,18 @@ a number written down here without checking Connect first).
       how it works, widget — at both sizes: 1320×2868 (iPhone 16 Pro Max) and 2064×2752 (13" iPad).
       Twelve files, all off a simulator.
 - [x] Compose the captioned versions: `swift tools/make_store_images.swift` reads the raws from
-      `~/Desktop` (`--in <dir>` for anywhere else) and writes twelve finished images to
+      `~/Desktop` (`--in <dir>` for anywhere else) and writes eighteen finished images to
       `build/store/`, with 300px proofs in `build/store/proof/`. Both directories are ignored —
       re-run the script rather than looking for them in git.
-- [ ] Upload them in App Store Connect's Media Manager, both device sizes, in filename order.
+- [ ] Upload them in App Store Connect's Media Manager, in filename order. Three sets: `-iphone-6-9`
+      (1320×2868), `-iphone-6-5` (1284×2778) and `-ipad` (2064×2752).
+
+Connect refused the 6.9" images with *"Screenshots dimensions should be: 1242 × 2688px,
+2688 × 1242px, 1284 × 2778px or 2778 × 1284px"*. That is the 6.5" slot, which is the one this
+listing has because 1.0 filled it; Connect asks for the slots the published version already uses,
+not the newest device. Hence the `-iphone-6-5` set, composed from the same captures. If a future
+submission asks for a size not in the list, add a `Device` to the script rather than resizing a
+finished image — a scaled 1320×2868 PNG is soft, and the caption stops matching the other sets.
 
 Launch with the `-demoContent` argument on the Run scheme first (step 43), or the screenshots show
 `mastered 0 / 1000` over five empty bars. It puts the app at 800 mastered with 200 cards due; a
