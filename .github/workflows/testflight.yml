@@ -32,9 +32,14 @@ jobs:
       # fastlane refuses to run under a non-UTF-8 locale.
       LANG: en_US.UTF-8
       LC_ALL: en_US.UTF-8
-      # The image default is Xcode 27.0; pin the version explicitly so an image
-      # refresh cannot silently change the compiler under us.
-      XCODE_APP: /Applications/Xcode_27.2_beta.app
+      # Pinned explicitly so an image refresh cannot silently change the
+      # compiler under us — and it must never be a beta. App Store Connect
+      # accepts a beta-built binary into TestFlight and then refuses it at
+      # review, so the mistake surfaces at the most expensive moment. Step 50
+      # is that mistake. The JSON `project.xcproj` format is readable by any
+      # Xcode 27, not only the 27.2 beta that introduced it, so there is no
+      # trade-off here.
+      XCODE_APP: /Applications/Xcode_27.0.app
       FASTLANE_SKIP_UPDATE_CHECK: "1"
       FASTLANE_HIDE_CHANGELOG: "1"
 
@@ -48,6 +53,15 @@ jobs:
             ls -d /Applications/Xcode*.app
             exit 1
           fi
+          # Refuse a beta before spending twenty minutes building something the
+          # App Store will not take. Only catches it by name, which is all the
+          # pin needs: the path is written in this file, not discovered.
+          case "$XCODE_APP" in
+            *beta*|*Beta*)
+              echo "::error::$XCODE_APP is a beta. App Store review rejects beta-built binaries."
+              exit 1
+              ;;
+          esac
           sudo xcode-select -s "$XCODE_APP/Contents/Developer"
           xcodebuild -version
 
