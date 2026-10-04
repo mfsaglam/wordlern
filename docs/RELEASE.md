@@ -185,6 +185,13 @@ Note that progress from 1.0 does not carry over.
       asks about data collection beyond what the manifest declares, something drifted — fix the
       mismatch before submitting, don't paper over it.
 
+## The build must come from a release Xcode
+
+- [ ] Confirm the build being submitted was produced by a run of the pipeline *after* step 50 —
+      that is, with `/Applications/Xcode_27.0.app`, not the 27.2 beta. A beta-built binary goes
+      into TestFlight without complaint and is then refused at review, so TestFlight passing says
+      nothing about this. The `Pin Xcode` step now fails the run on a beta path.
+
 ## Export compliance
 
 A 2.0 build from `develop` is already in App Store Connect, uploaded by the pipeline through its

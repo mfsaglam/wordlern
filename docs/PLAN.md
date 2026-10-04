@@ -25,6 +25,7 @@ there so no branch name is ever reused.
 | 47 | `refactor/use-library-due-api` | Use LeitnerSwift's own due query | sonnet | done |
 | 48 | `feat/persist-card-review-date` | Persist each card's own review date | sonnet | done |
 | 49 | — | Merge into `main`: the 2.0 release | — | todo |
+| 50 | `step/50-release-xcode` | Build the release with a non-beta Xcode | opus | todo |
 
 Order is numeric. 41 before 42 because the site needs the icon; 45 was held back until step 43
 made it possible to take a screenshot worth showing.
@@ -428,3 +429,40 @@ rather than merging and walking away.
 
 Keep `workflow_dispatch` in the workflow for the reason it paid off here: it exercises the whole
 pipeline from a branch, before the one push that cannot be taken back.
+
+Steps 1–4 are done: `develop` is merged into `main`, the pipeline ran, and the build reached
+TestFlight. Step 5 is where it stopped — see step 50. The step stays `todo` until a submittable
+build is in review.
+
+## 50 — Build the release with a non-beta Xcode
+
+Submitting 2.0 for review failed. The binary was built with the Xcode 27.2 beta, and App Store
+review does not accept a beta-built binary.
+
+The failure is not where it looks. `.github/workflows/testflight.yml` pinned
+`/Applications/Xcode_27.2_beta.app` — on purpose, back when the JSON `project.xcproj` format looked
+like it needed the beta that introduced it. It does not: the format is readable by any Xcode 27, and
+the runner image's own default was already the release 27.0. So the pin bought nothing and cost the
+submission.
+
+What makes this worth writing down is the shape of the failure, not the fix. **TestFlight accepts a
+beta-built binary; review rejects it.** Every cheap signal said the pipeline was healthy — it built,
+it signed, it uploaded, the build installed and ran. The one gate that cares came last, after the
+irreversible merge. A check that only fires at the end of the pipeline is not a check.
+
+The fix:
+
+1. Point `XCODE_APP` at the release Xcode 27.0 on the runner image.
+2. Fail the `Pin Xcode` step outright if the pinned path looks like a beta, before the twenty
+   minutes of building. It matches on the name only, which is enough — the path is written in the
+   workflow, not discovered at runtime.
+3. Re-run the lane. It takes a fresh build number from App Store Connect, so the rejected build
+   does not have to be cleaned up first; leave it, and pick the new build in the submission.
+
+If the runner image has renamed the release Xcode, the `Pin Xcode` step prints every installed
+`/Applications/Xcode*.app` and stops — read the list and correct the path rather than reaching for
+the beta again.
+
+Nothing has to be installed locally. The laptop's Xcode 27.2 beta is fine for development and for
+previews; only the archive that goes to review has to come from a release Xcode, and that archive
+is built on the runner.
