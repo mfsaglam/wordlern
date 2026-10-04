@@ -25,7 +25,7 @@ there so no branch name is ever reused.
 | 47 | `refactor/use-library-due-api` | Use LeitnerSwift's own due query | sonnet | done |
 | 48 | `feat/persist-card-review-date` | Persist each card's own review date | sonnet | done |
 | 49 | — | Merge into `main`: the 2.0 release | — | done |
-| 50 | `step/50-release-xcode` | Build the release with a non-beta Xcode | opus | todo |
+| 50 | `step/50-release-xcode` | Build the release with a non-beta Xcode | opus | done |
 
 Order is numeric. 41 before 42 because the site needs the icon; 45 was held back until step 43
 made it possible to take a screenshot worth showing.
@@ -478,3 +478,14 @@ the beta again.
 Nothing has to be installed locally. The laptop's Xcode 27.2 beta is fine for development and for
 previews; only the archive that goes to review has to come from a release Xcode, and that archive
 is built on the runner.
+
+`pr-check.yml` gets the same pin, even though nothing it builds is shipped. The point is not that a
+beta would hurt the pull request check — it would not. It is that the release Xcode's path would
+otherwise be exercised for the first time by the one run that cannot afford to be wrong. On the same
+pin, every pull request proves the path still exists on the image, which is the cheap early signal
+this step's whole lesson is about.
+
+Done for the workflow files. **Step 3 is not done**: the lane has not been re-run, so there is still
+no release-Xcode build in App Store Connect and nothing to submit. Trigger `TestFlight` by
+`workflow_dispatch` — from this branch is fine, and preferable to waiting for the merge — then pick
+the new build in the submission and leave the rejected beta-built one alone.
