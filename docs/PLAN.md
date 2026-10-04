@@ -24,7 +24,7 @@ there so no branch name is ever reused.
 | 46 | `step/46-store-images` | App Store marketing images | opus | done |
 | 47 | `refactor/use-library-due-api` | Use LeitnerSwift's own due query | sonnet | done |
 | 48 | `feat/persist-card-review-date` | Persist each card's own review date | sonnet | done |
-| 49 | — | Merge into `main`: the 2.0 release | — | todo |
+| 49 | — | Merge into `main`: the 2.0 release | — | done |
 | 50 | `step/50-release-xcode` | Build the release with a non-beta Xcode | opus | todo |
 
 Order is numeric. 41 before 42 because the site needs the icon; 45 was held back until step 43
@@ -430,9 +430,21 @@ rather than merging and walking away.
 Keep `workflow_dispatch` in the workflow for the reason it paid off here: it exercises the whole
 pipeline from a branch, before the one push that cannot be taken back.
 
-Steps 1–4 are done: `develop` is merged into `main`, the pipeline ran, and the build reached
-TestFlight. Step 5 is where it stopped — see step 50. The step stays `todo` until a submittable
-build is in review.
+Done. `develop` is merged into `main` (PR #21), the pipeline ran on the push, and the build reached
+TestFlight. The merge was the irreversible part and it is behind us.
+
+Step 5, the submission, is not done and is not this step's any more: review refused the binary, and
+that is step 50. Read `done` here as "`main` is 2.0", not "2.0 is on the App Store".
+
+Two things the merge turned up, neither of them the app:
+
+- The `Pages` run on the same push **failed**: *"Branch `main` is not allowed to deploy to
+  github-pages due to environment protection rules."* The site itself is live — all three URLs
+  answer 200, published earlier by `workflow_dispatch` from `develop` — so nothing is broken for
+  the submission. But every future push to `main` that touches `site/` will fail the same way until
+  the `github-pages` environment's allowed deployment branches include `main`. That is a repository
+  setting, not a file in here.
+- The release Xcode problem, step 50.
 
 ## 50 — Build the release with a non-beta Xcode
 
