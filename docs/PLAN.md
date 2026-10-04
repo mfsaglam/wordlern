@@ -24,7 +24,8 @@ there so no branch name is ever reused.
 | 46 | `step/46-store-images` | App Store marketing images | opus | done |
 | 47 | `refactor/use-library-due-api` | Use LeitnerSwift's own due query | sonnet | done |
 | 48 | `feat/persist-card-review-date` | Persist each card's own review date | sonnet | done |
-| 49 | — | Merge into `main`: the 2.0 release | — | todo |
+| 49 | — | Merge into `main`: the 2.0 release | — | done |
+| 50 | `step/50-release-xcode` | Build the release with a non-beta Xcode | opus | done |
 
 Order is numeric. 41 before 42 because the site needs the icon; 45 was held back until step 43
 made it possible to take a screenshot worth showing.
@@ -428,3 +429,63 @@ rather than merging and walking away.
 
 Keep `workflow_dispatch` in the workflow for the reason it paid off here: it exercises the whole
 pipeline from a branch, before the one push that cannot be taken back.
+
+Done. `develop` is merged into `main` (PR #21), the pipeline ran on the push, and the build reached
+TestFlight. The merge was the irreversible part and it is behind us.
+
+Step 5, the submission, is not done and is not this step's any more: review refused the binary, and
+that is step 50. Read `done` here as "`main` is 2.0", not "2.0 is on the App Store".
+
+Two things the merge turned up, neither of them the app:
+
+- The `Pages` run on the same push **failed**: *"Branch `main` is not allowed to deploy to
+  github-pages due to environment protection rules."* The site itself is live — all three URLs
+  answer 200, published earlier by `workflow_dispatch` from `develop` — so nothing is broken for
+  the submission. But every future push to `main` that touches `site/` will fail the same way until
+  the `github-pages` environment's allowed deployment branches include `main`. That is a repository
+  setting, not a file in here.
+- The release Xcode problem, step 50.
+
+## 50 — Build the release with a non-beta Xcode
+
+Submitting 2.0 for review failed. The binary was built with the Xcode 27.2 beta, and App Store
+review does not accept a beta-built binary.
+
+The failure is not where it looks. `.github/workflows/testflight.yml` pinned
+`/Applications/Xcode_27.2_beta.app` — on purpose, back when the JSON `project.xcproj` format looked
+like it needed the beta that introduced it. It does not: the format is readable by any Xcode 27, and
+the runner image's own default was already the release 27.0. So the pin bought nothing and cost the
+submission.
+
+What makes this worth writing down is the shape of the failure, not the fix. **TestFlight accepts a
+beta-built binary; review rejects it.** Every cheap signal said the pipeline was healthy — it built,
+it signed, it uploaded, the build installed and ran. The one gate that cares came last, after the
+irreversible merge. A check that only fires at the end of the pipeline is not a check.
+
+The fix:
+
+1. Point `XCODE_APP` at the release Xcode 27.0 on the runner image.
+2. Fail the `Pin Xcode` step outright if the pinned path looks like a beta, before the twenty
+   minutes of building. It matches on the name only, which is enough — the path is written in the
+   workflow, not discovered at runtime.
+3. Re-run the lane. It takes a fresh build number from App Store Connect, so the rejected build
+   does not have to be cleaned up first; leave it, and pick the new build in the submission.
+
+If the runner image has renamed the release Xcode, the `Pin Xcode` step prints every installed
+`/Applications/Xcode*.app` and stops — read the list and correct the path rather than reaching for
+the beta again.
+
+Nothing has to be installed locally. The laptop's Xcode 27.2 beta is fine for development and for
+previews; only the archive that goes to review has to come from a release Xcode, and that archive
+is built on the runner.
+
+`pr-check.yml` gets the same pin, even though nothing it builds is shipped. The point is not that a
+beta would hurt the pull request check — it would not. It is that the release Xcode's path would
+otherwise be exercised for the first time by the one run that cannot afford to be wrong. On the same
+pin, every pull request proves the path still exists on the image, which is the cheap early signal
+this step's whole lesson is about.
+
+Done for the workflow files. **Step 3 is not done**: the lane has not been re-run, so there is still
+no release-Xcode build in App Store Connect and nothing to submit. Trigger `TestFlight` by
+`workflow_dispatch` — from this branch is fine, and preferable to waiting for the merge — then pick
+the new build in the submission and leave the rejected beta-built one alone.

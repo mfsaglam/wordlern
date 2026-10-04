@@ -26,7 +26,12 @@ jobs:
     runs-on: xcode-27
     timeout-minutes: 30
     env:
-      XCODE_APP: /Applications/Xcode_27.2_beta.app
+      # Same Xcode as the TestFlight lane. Nothing built here is shipped, so a
+      # beta would do no harm by itself — but then no check would touch the
+      # release Xcode's path until the one run that matters. Keeping the two
+      # workflows on the same pin means every pull request proves the path the
+      # archive will use still exists on the image.
+      XCODE_APP: /Applications/Xcode_27.0.app
 
     steps:
       - uses: actions/checkout@v4
